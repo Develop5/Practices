@@ -1,0 +1,11 @@
+total 47
+drwxr-xr-x 1 lourdes 197121  0 abr. 12 14:15 ./
+drwxr-xr-x 1 lourdes 197121  0 abr. 12 14:10 ../
+-rw-r--r-- 1 lourdes 197121  0 abr. 12 14:17 log.txt
+-rwxr-xr-x 1 lourdes 197121 77 abr. 12 13:31 reading.sh*
+-rw-r--r-- 1 lourdes 197121 77 abr. 12 13:37 sample.txt
+-rw-r--r-- 1 lourdes 197121 15 abr. 12 14:10 thispatch.txt
+This is only one line
+The second line
+But I do not want this one
+ A last row

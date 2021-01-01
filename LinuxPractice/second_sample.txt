@@ -1,0 +1,13 @@
+This is only one line
+4399.
+The second line
+but I do not want this one.
+554b
+uiu789.
+A last row
+The unique 'x' 
+08:04:12_10'-' .02'-' .20
+Another unique '_' with a further '-' .
+One and again results more than one.
+A last row
+08:04:12_10'-' .02'-' .20

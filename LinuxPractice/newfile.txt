@@ -1,0 +1,3 @@
+This is a file created by using
+  cat > newfile.txt
+Then, use Ctrl+d to save and exit

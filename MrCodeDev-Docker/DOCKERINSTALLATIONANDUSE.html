@@ -1,0 +1,282 @@
+<h1>DOCKER: INSTALLATION AND USE</h1>
+<p align="center">
+<img src="https://gist.github.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/5574cd201ebf8b1b128fc20043cc9ade37cf4baa/image-docker.png">
+</p>
+<p>Vamos a empezar viendo primero que diferencias hay entre las máquinas virtuales y los contenedores de Docker, para ver porque son mejores los contenedores.</p>
+<h2>Virtual Machines Vs Containers</h2>
+<h3>Virtual Machines</h3>
+<p>Es un sistema operativo completo, funcionando de manera aislada sobre otro sistema operativo completo. La tecnología de VMs permite compartir el hardware de modo que lo puedan utilizar varios sistemas operativos al mismo tiempo.</p>
+<p>Obviamente, por debajo siempre tiene que haber algún tipo de hardware que lo sustente todo. Lo que se suele llamar coloquialmente como "hierro" y de forma ms marketiniana se suele llamar "infraestructura". Todo ese poder no vale mucho si no le añadimos el "cerebro" en forma de sistema operativo.</p>
+<p>Para que las máquinas virtuales puedan ejecutarse es necesario instalar otro componente por encima del Sistema Operativo: el hipervisor. Un hipervisor es un software especializado en exponer los recursos de hardware que están debajo del sistema operativo, de modo que puedan ser utilizados por otros sistemas operativos. Esto incluye las CPUs (o cores), la memoria y el espacio de almacenamiento adems del resto del hardware. Estas VMs "engañan" a un sistema operativo convencional para que crea que se está ejecutando sobre una máquina física. Los hipervisores vienen con productos como Hyper-V (incluido gratuitamente con Windows), VirtualBox o VMWare entre otros.</p>
+<p><strong>NOTA Adicional:</strong> existen hipervisores de tipo 1 que se instalan directamente sobre el hardware y evitan la necesidad de instalar a mayores un sistema operativo convencional en el medio. De hecho, estos son los que se suelen utilizar en los Data Center para aumentar todavía más el rendimiento.</p>
+<p align="center">
+<img src="https://gist.github.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/f39e17c07e3764b5a13f9ac75a442c153cd759b9/image-containervsvm.jpg">
+</p>
+<p>Gracias a esto podemos tener distintos sistemas operativos ejectutándose en paralelo sobre la misma máquina física, cada uno con su memoria y espacio en discos reservados (los "cores" se pueden compartir), y completamente aislados unos de otros. Gracias al avance de los hipervisores en los últimos años, y a las tecnologías orientadas a la virtualización que ofrecen los procesadores modernos, la pérdida de rendimiento es mínima y es una manera muy eficiente de compartir el hardware para sacarle más partido.</p>
+<h3>Containers</h3>
+<p>La filosofa de contenedores es totalmente diferente a la de las VMs. Si bien tratan también de aislar a las aplicaciones y de generar un entorno replicable y estable para que funcionen, en lugar de albergar un sistema operativo completo lo que hacen es compartir los recursos del propio ssitema operativo "host" sobre el que se ejecutan.</p>
+<p>Docker Engine (hay otros tipos de soluciones para contenedores como Virtuozzo, LXC/LXD, OpenVZ, DC/OS...) se encarga de lanzar y gestionar los contenedores con nuestras aplicaciones, pero en lugar de exponer los diferentes recursos de hardware de la máquina de manera discreta (es decir, 1 procesador y "x" GB de RAM... para cada aplicación), lo que hace es compartirlos entre todos los contenedores optimizando su uso y eliminando la necesidad de tener sistemas operativos separados para conseguir el aislamiento.</p>
+<p align="center">
+<img src="https://gist.githubusercontent.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/586960204f71e01bbb11deaa8806a9885753c531/image-hierrodocker.png">
+</p>
+<p>Docker funciona a partir de imágenes que se pueden reutilizar entre varias aplicaciones (fíjate en el esquema anterior, en que las aplicaciones 2 y 3 comparten el runtime). Cada una de esas imágenes se puede asimilar a una "capa" que se puede superponer a otras para formar un sistema de archivos que es la combinación de todas ellas. Por ejemplo, una capa puede llevar las bibliotecas o runtime que necesitamos utilizar (como Node.js o PHP), otra con unas bibliotecas determinadas de las que hace uso neustra aplicación, y otra capa final con el cdigo de nuestra aplicación. La combinación resultante (una nueva imagen, única para nuestra app), es lo que forma la base de nuestro contenedor.</p>
+<p>Cuando se lanzan uno o varios contenedores a partir de una imagen, a efectos de nuestra aplicación es como si estuviese ejecutándose en su propio sistema operativo, aislado de cualquier otra aplicación que hubiese en la máquina en ese momento. Pero la realidad es que están compartiendo el sistema operativo "host" que hay por debajo. Un contenedor ve su propio sisteama de archivos, el resultante de "superponer" las capas de las que se mencionaba antes, y los recursos hardware se van asignando dinámicamente en función de las necesidades, de lo cual se ocupa Docker Engine (o el equivalente si usamos otro tipo de contenedores). Es decir, Docker asla aplicaciones, no sistemas operativos completos.</p>
+<p><strong>NOTA:</strong> también es posible que acceda al sistema de archivos de la máquina local para persistir de forma permanente información propia de la aplicación, ya que si un contenedor se cierra, todos los cambios hechos en sus sistema de archivos virtual se pierden. Aunque existen opciones para conseguirlo sin tener que hacer esto. Pero eso es lo máximo que se puede romper, ese aislamiento entre el contenedor y el sistema operativo huésped.</p>
+<h2>Docker vs Máquinas Virtuales</h2>
+<p>En primer lugar debemos tener en cuenta que, en el caso de los contenedores, el hecho de que no necesiten un sistema operativo completo sino que reutilicen el subyacente reduce mucho la carga que debe soportar la máquina física, el espacio de almacenamiento utilizado y el tiempo necesario para lanzar las aplicaciones. Un sistema operativo puede ocupar desde poco menos de 1GB para algunas distribuciones de Linux con lo mínimo necesario, hasta más de 10GB en el caso de un sistema Windows completo. Además, estos sistemas operativos, para funcionar requieren un mínimo de memoria RAM reservada, que puede ir desde 1 hasta varios GB, dependiendo de nuestras necesidades. Por lo tanto los contenedores son mucho más ligeros que las máquinas virtuales.</p>
+<p>Cuando definimos una máquina virtual debemos indicar de antemano cuántos recursos físicos le debemos dedicar. Por ejemplo, podemos decir que nuestra VM va a necesitar 2 vCores (procesadores virtuales), 4GB de RAM y un espacio en disco de 100 GB. En el caso de los procesadores, es posible compartirlos entre varias máquinas virtuales (pero no conviene pasarse o irán fatal de rendimiento), y el espacio en disco se puede hacer que solo ocupe lo que de verdad se esté utilizando, de modo que crezca en función de las necesidades y no ocupe siempre tanto como habíamos reservado. Pero en el caso de la memoria y otros elementos (acceso a unidades externas o dispositivos USB) la reserva es total. Por eso, aunque nuestra aplicación no haga uso en realidad de los 4GB de RAM reservados da igual: no podrán ser utilizados por otras máquinas virtuales ni por nadie más. En el caso de los contenedores esto no es así. De hecho no indicamos qué recursos vamos a necesitar, sino que es Docker Engine, en función de las necesidades de cada momento, el encargado de asignar lo que sea necesario para que los contenedores funcionen adecuadamente.</p>
+<p>Esto hace que los entornos de ejecución de Docker sean mucho más ligeros, y que se aproveche mucho mejor el hardware, además de permitir levantar muchos más contenedores que VMs en la misma máquina física. Mientras que una VM puede tardar un minuto o más en arrancar y tener disponible nuestra aplicación, un contenedor Docker se levanta y responde en unos pocos segundos (o menos, según la imagen). El espacio ocupado en disco es muy inferior con Docker al no necesitar que instalemos el sistema operativo completo.</p>
+<p>Por otro lado, Docker no permite utilizar en un sistema operativo "host" contenedores/aplicaciones que no sean para ese mismo sistema operativo. Es decir, no podemos ejecutar un contenedor con una aplicación para Linux en Windows ni al revés. Lo cual puede suponer un impedimento en algunas ocasiones.</p>
+<p><strong>NOTA:</strong> Docker para Windows, paradójicamente, utiliza una máquina virtual Linux en segund plano para poder ejecutar aplicaciones Linux. Los contenedores Windows se ejecutan nativamente en Windows, claro.</p>
+<p>Además para poder hacer despliegues avanzados de aplicaciones en contenedores hay que ir más allá de Docker y utilizar tecnologías como Kubernetes, que nos permiten orquestar y controlar los despliegues con mucha partes en movimiento. Estas tecnologías pueden llegar a ser complejas de aprender y dominar.</p>
+<h2>RESUMIENDO</h2>
+<p>Los contenedores permiten desplegar aplicaciones más rápido, arrancarlas y pararlas más rápido y aprovechar mejor los recursos de hardware. Las máquinas virtuales nos permiten crear sistemas completos totalmente aislados, con mayor control sobre el entorno y mezclando sistemas operativos host y huésped.</p>
+<p>Cada tecnología tiene sus aplicaciones y sus ventajas según las necesidades y circunstancias de cada desarrollo. En la actualidad los contenedores en general y Docker en particular se están convirtiendo en una tecnología indispensable y cada vez se utilizan para más cosas, no solo para desplegar aplicaciones en producción, sino también para crear entornos de desarrollo replicables entre todos los miembros de un equipo, asegurar que las aplicaciones se van a ejecutar igual en todos los entornos (desarrollo, pruebas y producción), etc. Hay quien asegura que, a medio plazo, la mayoría de los desarrolladores usaremos Docker para desarrollar y desplegar aplicaciones.</p>
+<p><strong>FUENTE:</strong> https://www.campusmvp.es/recursos/post/que-diferencia-hay-entre-docker-contenedores-y-maquinas-virtuales.aspx</p>
+<h2>INSTALANDO DOCKER</h2>
+<p>Voy a realizar toda la instalación sobre Ubuntu ya que, esoy un usuario de este sistema operativo basado en Linux. ACtualmente en la redacción de este Gist utilizo Ubuntu 18.04.</p>
+<p>Para instalaro he utilizado el siguiente método:</p>
+<p><code>https://get.docker.com/</code></p>
+<p>He utilizado esa URL ya que revisa cual es la última versión de Docker y te lo instala, ya que Ubuntu a veces te instala versiones anteriores. Debes de utilizar este script de la siguiente manera en consola (usa sudo).</p>
+<pre><code>curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh
+</code></pre>
+<p>Una vez instalado podréis ver la versión del cliente y del server de docker. Para poder utilizarlo para usuarios que no sea root, debemos darle permisos de uso. Debemos de cambiar <code>your-user</code> por el usuario que usemos en Ubuntu:</p>
+<pre><code>sudo usermod -aG docker your-user
+</code></pre>
+<p>Si os pide permisos más adelante (cuando usemos <code>docker info</code> o <code>docker verrsion</code>), intentad utilizar los siguientes comandos:</p>
+<pre><code>sudo addgroup --system docker
+sudo adduser $USER docker
+newgrp docker
+</code></pre>
+<p>Con esto solucionariamos el tema de permisos <img title=":smile:" alt=":smile:" class="emoji" src="emoji/smile.png" align="absmiddle">.</p>
+<p>Para ver que todo es correcto, podemos usar el comando <code>docker</code> para ver que está bien instalado. Ponemos en la consola lo siguiente:</p>
+<pre><code>docker info
+docker version
+</code></pre>
+<p>Con <code>docker info</code> veremos información sobre la instalación de docker (podemos ver cuantos containers tenemos instalados, corriendo, pausados, imagenes descargadas, versión del servidor, plugins, kernel, etc). Y con <code>docker version</code> vamos a saber la versión de cliente y la versión del servidor.</p>
+<h2>OTROS SISTEMAS OPERATIVOS</h2>
+<p>Si queremos utilizar Docker en Windows o en Mac, podemos instalar Docker Toolbox, que es un instalador que te lo instala unas herramientas junto a Docker fácilmente. Lo que hace es instalar un VirtualBox con una maquina virtual Linux y así poder utilizar Docker.</p>
+<p>Podemos instalar también Docker sin la herramienta Docker Toolbox. Aquí tendremos que hacer cosas más de forma manual y no correrá por encima de una maquina virtual VirtualBox sino que utiliza Hyper-V (en Windows 10).</p>
+<h2>¿QUÉ SON LOS CONTENEDORES Y QUE SON LAS IMÁGENES?</h2>
+<h3>Imágenes</h3>
+<ul>
+<li>Plantilla de sólo lectura vacía o con una aplicación preinstalada para la creación de contenedores.</li>
+<li>Creadas por nosotros o por la comunidad (Docker Hub) (Docker Search).</li>
+</ul>
+<h3>Contenedores</h3>
+<ul>
+<li>Contiene lo necesario para ejecutar nuestras aplicaciones.</li>
+<li>Basados en una o más imágenes.</li>
+</ul>
+<p align="center">
+<img src="https://gist.github.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/6ed313716db5e499c73df553c87795d9c7296fa6/image-containerimages.png">
+</p>
+<h2>IMAGENES ¿DÓNDE BUSCARLAS?</h2>
+<p>Para poder ver imagenes tenemos http://hub.docker.com (no hace falta registrarse). Ahí veremos todas las imágenes disponibles para docker. Si queremos buscar en la terminal las imágenes debemos de usar el comando <code>docker search imagen-a-buscar</code>. Por ejemplo, si queremos buscar la imagen de Ubuntu usaremos lo siguiente:</p>
+<pre><code>docker search ubuntu
+</code></pre>
+<p>Nos dará el siguiente resultado:</p>
+<p align="center">
+<img src="https://gist.githubusercontent.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/4559f963218d4e1223a301257084c04608e3c33b/image-dockersearchubuntu.png">
+</p>
+<p>Podremos ver una columna donde pone <strong>OFFICIAL</strong>, que serían las imágenes oficiales en este caso de Ubuntu (Canonical) y no una imagen oficial de docker</p>
+<p>Podemos darnos cuenta que justamente hay las mismas imágenes en http://hub.docker.com que con el comando <code>docker search imagen-a-buscar</code>.</p>
+<h2>INSTALAR IMÁGENES</h2>
+<p>Una vez vista la imagen a instalar (podemos verla desde http://hub.docker.com o a través de <code>docker search nombre-imagen</code>) podemos instalarlo a través del siguiente comando:</p>
+<pre><code>docker pull nombre-de-la-imagen
+</code></pre>
+<p>Podemos ver también el comando a través del hub de docker, metiendonos dentro del apartado de la propia imagen de la página web.</p>
+<h2>¿QUÉ SON LOS TAGS?</h2>
+<p>Los tags son versiones de esa imagen. Por ejemplo Ubuntu puede tener la versión 16.04 o 18.04 y podemos descargar la versión que queramos. Si queremos ver los tags, tenemos que irnos a la web http://hub.docker.com, buscar la imagen que deseamos y después irnos a la pestaña de tags. En cambio desde la consola sólo podemos buscar mencionando que tag queremos, no podemos ver un listado de todos (se podría haciendo un script). En consola deberíamos usar el siguiente comando <code>docker search imagen:tag</code>. Por ejemplo, si queremos buscar una versión de la 18.04 haríamos lo siguiente:</p>
+<pre><code>docker search ubuntu:18.04
+</code></pre>
+<h2>¿CÓMO INSTALAR UNA IMAGEN CON UN TAG ESPECÍFICO?</h2>
+<p>Para instalar por ejemplo (si ya lo hemos visto ya) una ubuntu (nos sale nombre de ubuntu) y con la versión 18.04 (hemos visto que existe), utilizaríamos el siguiente comando:</p>
+<pre><code>docker pull ubuntu:18.04
+</code></pre>
+<h2>VER IMÁGENES INSTALADAS</h2>
+<p>Para ver las imágenes que hemos instalado utilizamos el comando:</p>
+<pre><code>docker images
+</code></pre>
+<h2>EJECUTAR UN CONTAINER</h2>
+<p>Para ejecutar un container usaremos el siguiente comando:</p>
+<pre><code>docker run nombre-imagen
+</code></pre>
+<p>Si no existe la imagen en local, la descargará a continuación y cuando acabe la descarga la ejecutará. También lo que hace es asignarle un nombre al container random.</p>
+<h2>VER CONTAINERS EN EJECUCIÓN</h2>
+<p>Para ver los containers debemos de poner el siguiente comando:</p>
+<pre><code>docker ps
+</code></pre>
+<h2>VER CONTAINERS CREADOS Y SU STATUS</h2>
+<p>Para ver los containers que han sido creados (ya que pueden haber containers que ya se hayan pausado) usamos el siguiente comando:</p>
+<pre><code>docker ps -a
+</code></pre>
+<h2>MI PRIMER CONTAINER "HELLO WORLD"</h2>
+<p>Como en cualquier idioma de programación, lo primero que se aprende es realizar un "Hello World", en docker vamos a hacer lo mismo.</p>
+<p>Hay una imagen llamada <code>hello-world</code> (podemos buscarla a través de <code>docker search hello-world</code>) que vamos a instalar para poder hacer este ejemplo. Para instalarla tenemos que aplicar el siguiente comando:</p>
+<pre><code>docker pull hello-world
+</code></pre>
+<p>Para ver que se ha instalado correctamente, listamos todas las imágenes instaladas:</p>
+<pre><code>docker images
+</code></pre>
+<p>Y veremos algo parecido a lo que vemos en la imagen de abajo.</p>
+<p><img src="https://gist.githubusercontent.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/ec69353994273b3d8e03d62d67c54270be941e7b/images-hello-world.png"></p>
+<p></p>
+<p>Después ejecutaremos la imagen:</p>
+<pre><code>docker run hello-world
+</code></pre>
+<p align="center">
+<img src="https://gist.githubusercontent.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/b56c2d3ea5a81f18ef89e0ec13226edd32f98fbb/images-hello-world-text.png">
+</p>
+<p>Tendremos el resultado que vemos en la imagen anterior. Después si queremos ver si se ha ejecutado (ha sido un proceso que se ejecuta, muestra el texto y se cierra) usaremos el comando <code>docker ps -a</code></p>
+<p align="center">
+<img src="https://gist.githubusercontent.com/mrcodedev/8f9c3cc5698f98adecfaebd797b5714e/raw/b56c2d3ea5a81f18ef89e0ec13226edd32f98fbb/images-hello-world-ps.png">
+</p>
+<h2>EJECUTAR COMANDOS EN CONTENEDORES CON DOCKER RUN</h2>
+<p>Para ejecutar en nuestros contenedores, podemos utilizar el siguiente comando:</p>
+<pre><code>docker run nombre-imagen comando
+</code></pre>
+<p>Ejemplo con una imagen de Ubuntu para listar archivos:</p>
+<pre><code>docker run ubuntu ls
+</code></pre>
+<p>Si queremos que sea interactivo (tenemos que ver si es interactivo, por ejemplo en ubuntu nos irá al bash que es la terminal), deberíamos utilizar el siguiente comando:</p>
+<pre><code>docker run -ti imagen
+</code></pre>
+<p>La el <code>-i</code> es para que nos deje ingresar contenido y <code>-t</code> para poder tener una pseudo-terminal.</p>
+<p>Para poner un ejemplo, si tenemos una imagen con el nombre de ubuntu, lo deberíamos de ejecutar de la siguiente forma:</p>
+<pre><code>docker run -ti ubuntu
+</code></pre>
+<h2>PARA CERRAR UNA CONSOLA INTERACTIVA SIN PARAR CONTENEDOR</h2>
+<p>Para salir de la consola interactiva (-ti) debemos de presionar <strong>CTRL+P+Q</strong>.</p>
+<h2>EJECUTAR CONTENEDOR YA CERRADO ANTERIORMENTE</h2>
+<p>Para poder ejecutar un contenedor ya cerrado utilizamos el comando:</p>
+<pre><code>docker ps -a
+</code></pre>
+<p>Nos fijamos en su ID y ejecutamos el siguiente comando:</p>
+<pre><code>docker start ID
+</code></pre>
+<p>Si tuvieramos un proceso Ubuntu por ejemplo, con una ID <code>a76ac184b768</code>, tendríamos que ejecutarlo de la siguiente manera:</p>
+<pre><code>docker start a76ac184b768 
+</code></pre>
+<h2>CREAR CONTENEDORES CON NOMBRES</h2>
+<p>Para crear un contenedor con un nombre en especfico debemos usar el siguiente comando:</p>
+<pre><code>docker run --name nombre-que-queramos imagen
+</code></pre>
+<p>Si queremos poner un contenedor con el nombre de <code>nikola_tesla</code> a una imagen de <code>ubuntu</code>, tendríamos que utilizar el siguiente comando:</p>
+<pre><code>docker run --name nikola_tesla ubuntu
+</code></pre>
+<h2>INICIAR O DETENER CONTENEDORES</h2>
+<h3>Para iniciar un contenedor</h3>
+<p>Para iniciar un contenedor debemos listar primero con <code>docker ps -a</code> los contenedores que fueron ejecutados anteriormente y después poner el siguiente comando:</p>
+<pre><code>docker start ID
+</code></pre>
+<p>Vamos a poner un ejemplo que tenemos un contenedor que se ejecutó con la ID <code>5d14b41bc01a</code>. Así que podemos inicializarlo introduciendo todos los carácteres de la ID o los dos o tres primeros (cuantos más carácteres mejor). Para ejecutar este comando lo usamos así:</p>
+<pre><code>docker start 5d14b41bc01a
+
+ó 
+
+docker start 5d1 
+</code></pre>
+<h3>Para detener un contenedor</h3>
+<p>Para detener un contenedor tenemos que primero listar que contenedores están ejecutándose (utilizamos el comando <code>docker ps</code>) y después utilizamos el siguiente comando:</p>
+<pre><code>docker stop ID
+</code></pre>
+<p>Podemos utilizar los tres primeros carácteres de la ID para detener el proceso. Si tuvieramos un contenedor que está ejecutándose con la ID <code>5d14b41bc01a</code> podremos utilizar uno de los siguientes comandos:</p>
+<pre><code>docker stop 5d1
+
+ó
+
+docker stop 5d14b41bc01a
+</code></pre>
+<h2>CONECTARNOS A UN CONTENEDOR QUE ESTÉ YA EJECUTÁNDOSE</h2>
+<p>Para conectarnos al contenedor haríamos lo siguiente:</p>
+<pre><code>docker attach ID
+</code></pre>
+<p>Si tenemos un contenedor con una ID <code>a76ac184b768</code>, lo utilizaríamos de la siguiente forma:</p>
+<pre><code>docker attach a76ac184b768 
+</code></pre>
+<h2>PERSONALIZAR CONTAINERS CON IMAGEN DE UBUNTU EN DOCKER</h2>
+<p>Vamos a arrancar un contenedor con una imagen que sea de <code>ubuntu</code> en la versión <code>18.04</code> y que se ejecute el bash <code>/bin/bash</code> en una consola interactiva. Para realizar esto utilizaríamos el siguiente comando:</p>
+<pre><code>docker run -it ubuntu:18.04 /bin/bash
+</code></pre>
+<h3>PERSONALIZAR CONTAINER CON IMAGEN DE UBUNTU</h3>
+<p>Cuando creamos un container con una imagen de Ubuntu, y estamos en una consola interactiva, no nos dejará utilizar <code>apt install</code>. Así que antes deberíamos de utilizar <code>apt update</code> (actualizamos dependencias) para poder instalar aplicaciones.</p>
+<h2>CREAR IMAGEN A PARTIR DE CONTENEDOR CON DOCKER COMMIT</h2>
+<p>Para crear una imagen de un contenedor usaremos el siguiente comando:</p>
+<pre><code>docker commit ID nombre-imagen-descripcion
+</code></pre>
+<p>Vamos a imaginar que hemos creado una imagen con ubuntu, donde hemos instalado varias cosas para poder trabajar y queremos guardarlo en una imagen. Vemos que ese contenedor tiene la ID <code>11b339b44f46</code> y la vamos a llamar <code>ubuntu_pro</code>. Deberíamos de usar el siguiente comando:</p>
+<pre><code>docker commit 11b339b44f46 ubuntu_pro
+</code></pre>
+<p>Después de esto veremos que se nos crea un <strong>sha256</strong> y lo podemos listar ya a través del comando <code>docker images</code>.</p>
+<h2>¿QUÉ ES DOCKERFILE?</h2>
+<p>Dockerfile es un documento de texto que contiene todos los comandos que un usuario puede llamar a la línea de comandos para montar una imagen.</p>
+<h3>"INGREDIENTES DE UN DOCKEFILE"</h3>
+<p>Un Dockerfile estaría escrito de la siguiente manera:</p>
+<pre><code>FROM ubuntu:16.04
+
+MAINTAINER Linus Torvalds version: 66.6
+
+RUN apt update &amp;&amp; apt install -y apache2 &amp;&amp; apt clean &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
+EXPOSE 80
+
+CMD ["usr/bin/apache2", "-D", "FOREGROUND"]
+</code></pre>
+<p>Vamos a ver que hace cada uno. Hay más "ingredientes" que podemos utilizar, pero estos son los más básicos.</p>
+<h4>FROM:</h4>
+<p>Definir una imagen base para crear nuestra nueva imagen con Dockerfile.</p>
+<pre><code>FROM Ubuntu:18.04
+</code></pre>
+<h4>MAINTAINER:</h4>
+<p>Hace referencia al creador de la receta.</p>
+<pre><code>MAINTAINER MrCodeDev mrcodedev@gmail.com
+</code></pre>
+<h4>RUN:</h4>
+<p>Nos permite ejecutar comandos en la imagen base antes de ser creada.</p>
+<pre><code>RUN apt update &amp;&amp; apt install apache2
+</code></pre>
+<h4>ADD/COPY:</h4>
+<p>Nos permite agregar o copiar archivos desde el equipo local a la imagen.</p>
+<pre><code>ADD index.html /var/www/html
+</code></pre>
+<h4>EXPOSE:</h4>
+<p>Nos permite exponer por defecto un puerto para el contendor.</p>
+<pre><code>EXPOSE 8080
+</code></pre>
+<h4>CMD:</h4>
+<p>Ejecutar acción por defecto al crear el contenedor, es la finalidad.</p>
+<pre><code>CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+</code></pre>
+<h2>CREANDO UNA IMAGEN CON UNA DOCKERFILE</h2>
+<p>Creamos un archivo llamado <code>Dockerfile</code> y le añadimos todos los "ingredientes" que hemos visto anteriormente.</p>
+<p>Después de esto ejecutamos el siguiente comando:</p>
+<pre><code>docker build -t nombre_de_nuestra_imagen /ruta/donde/esta/el/Dockerfile/
+</code></pre>
+<p>Vemos en consola como está haciendo los pasos que le hemos dado. Al acabar podemos ver con <code>docker images</code> que tenemos la nueva imagen creada.</p>
+<h2>COMANDO PARA ARRANCAR UN CONTENEDOR EN UN PUERTO</h2>
+<pre><code>docker run -d -p puerto_final:puerto_donde_apunta imagen
+</code></pre>
+<h2>CREA UNA IMAGEN EN DOCKER (REPO)</h2>
+<pre><code>docker commit -a "creador &lt;correo@correo.com&gt;" -m "Mensaje que se muestra (versión 1.0.)" containerID nombreImagen
+</code></pre>
+<h2>CREAR CONTENEDOR SIN EJECUTARLO</h2>
+<pre><code>docker create -it imagen comando
+</code></pre>
+<h2>EJECUTAR CONTAINER CON UN COMANDO</h2>
+<pre><code>docker run imagen comando
+</code></pre>
+<h2>BORRAR UN CONTENEDOR (NO TIENE QUE ESTAR ACTIVADO)</h2>
+<pre><code>docker rm containerID
+</code></pre>
+<h2>BORRAR TODOS LOS CONTENEDORES</h2>
+<pre><code>docker rm $(docker ps -a -q)
+</code></pre>
+<h2>BORRAR IMAGEN</h2>
+<pre><code>docker rmi imagenID
+</code></pre>

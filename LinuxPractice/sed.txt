@@ -1,0 +1,10 @@
+The sed command is widely used for string
+substitution in text file, Programmers frequently
+use this feature while renaming a variable in huge source code,
+Para esto, es necesario que todos nos unamos.
+
+
+Por ejemplo, nada se saca de aqui.
+Y debe haber habido un par de líneas en blanco.
+
+
