@@ -1,27 +1,21 @@
-#JMeter
-###Some plans and tests
+#All Practices
+###All folder practices here
 
-**Plan3:** 
-    10 and 10 threads, by using 2 different thread groups. 
-    Each thread has the complete URL
+**JMeter** 
+    Four plans
+        1. Plan 8
+        2. Plan 4
+        3. (Update the list, please)
 
-**Plan4:**
-    Only one thread group. 
-    Using Config > Synchronizing Timer to set order. 
-    Base URL is default
+**SeleniumPython**
+    With Python
 
-**Plan5:**
-    10 threads. 
-    URL and Path are variables. 
-    Composite graph: Response and Transaction
+**Behave**
+    BDD with Python
 
-**Plan6:**
-    Looking for h1
+**MrCodeDev-Docker**
+    Tutorial on Docker?
 
-**Plan8:**
-    Different HTML assertions:
-        1. Size 
-        2. Duration 
-        3. HTML Error 
-        4. Code Response 200
+**VBA**
+    An excercise for regular verbs in English
 
