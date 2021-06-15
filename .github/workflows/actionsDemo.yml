@@ -3,7 +3,7 @@ on:
   push:
     branches: [develop]
 jobs:
-  checking-right-flow
+  checking-right-flow:
     runs-on: ubuntu-latest
     steps:
       - name: Print a greeting
