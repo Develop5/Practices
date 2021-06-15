@@ -1,0 +1,12 @@
+name: only-github-actions
+on: 
+  push:
+    branches: [develop]
+jobs:
+  checking-right-flow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run: |
+          echo This is just a message. Do no get worry about that
+          
