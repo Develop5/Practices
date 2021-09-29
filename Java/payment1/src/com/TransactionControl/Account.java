@@ -1,4 +1,4 @@
-package com.UsingAccount;
+package com.TransactionControl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,15 +9,15 @@ public class Account {
     private double balance;
     private double annualInterestRate;
     private Date dateCreated;
+    private Client client;
+    private ArrayList<Transaction> transactions = new ArrayList<>();
 
-
-
-    public Account(int id, double balance, double annualInterestRate ) {
+    public Account(int id, double balance, double annualInterestRate, Client client ) {
         this.id = id;
         this.balance = balance;
         this.annualInterestRate = annualInterestRate;
+        this.client = client;
         this.dateCreated = new Date();
-
     }
 
     public boolean withdraw(double amountToWithDraw) {
@@ -25,19 +25,32 @@ public class Account {
             return false;
         }
         balance -= amountToWithDraw;                // Successful
+        transactions.add(new Transaction('W', amountToWithDraw, this.balance, "Withdrawn" ));
         return true;
     }
 
     public void deposit(double amountToDeposit) {
         balance += amountToDeposit;
+        transactions.add(new Transaction('D', amountToDeposit, this.balance, "Deposited"));
     }
 
+    public int countTransactions(char type) {
+        int counter = 0;
+        for (Transaction oneTransaction : transactions) {
+            if (oneTransaction.getTransactionType() == type) {counter++;}
+        }
+        return counter;
+    }
 
     public String toString(){
         return "Account id : " + this.id +
-                ", Account balance: " + this.balance +
-                ", Account annual interest: " + this.annualInterestRate +
-                ", Account creation date: " + this.dateCreated;
+                "\n Account balance: " + this.balance +
+                "\n Account annual interest: " + this.annualInterestRate +
+                "\n Account creation date: " + this.dateCreated +
+                "\n Total withdrawals: " + this.countTransactions('W') +
+                "\n Total deposits: " + this.countTransactions('D') +
+                "\n Transactions: " + this.transactions.toString() +
+                "\n Client: " + this.client;
     }
 
     public int getId() {
@@ -68,4 +81,7 @@ public class Account {
         return dateCreated;
     }
 
+    public Client getClient() { return client; }
+
+    public void setClient(Client client) { this.client = client; }
 }
