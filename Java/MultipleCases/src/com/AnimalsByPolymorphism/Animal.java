@@ -1,4 +1,4 @@
-package com.Animals;
+package com.AnimalsByPolymorphism;
 
 public class Animal {
     public void makeSound() {

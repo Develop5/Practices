@@ -1,4 +1,4 @@
-package com.Animals;
+package com.AnimalsByPolymorphism;
 
 public class Dog extends Animal {
     @Override

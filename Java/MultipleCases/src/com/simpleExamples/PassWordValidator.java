@@ -1,4 +1,4 @@
-package com.Angie;
+package com.simpleExamples;
 
 import org.jetbrains.annotations.NotNull;
 
