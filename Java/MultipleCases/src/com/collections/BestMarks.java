@@ -1,4 +1,4 @@
-package com.TestsResultsByCollections;
+package com.collections;
 
 import java.util.HashMap;
 import java.util.Map;

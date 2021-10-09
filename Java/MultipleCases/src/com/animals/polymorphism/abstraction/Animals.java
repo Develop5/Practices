@@ -1,4 +1,4 @@
-package com.AnimalsByAbstraction;
+package com.animals.polymorphism.abstraction;
 
 public abstract class Animals {
     public abstract void makeSound();                       // Abstract method. It must be implemented in subclass

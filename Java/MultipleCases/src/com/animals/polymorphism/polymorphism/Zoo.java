@@ -1,4 +1,4 @@
-package com.AnimalsByPolymorphism;
+package com.animals.polymorphism.polymorphism;
 
 public class Zoo {
     public static void main(String[] args) {

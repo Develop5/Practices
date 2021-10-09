@@ -1,4 +1,4 @@
-package com.Inheritance;
+package com.inheritance;
 
 public class BirthdayCake extends Cake {
     protected int candles;

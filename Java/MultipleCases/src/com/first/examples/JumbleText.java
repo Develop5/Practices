@@ -1,4 +1,4 @@
-package com.simpleExamples;
+package com.first.examples;
 
 public class JumbleText {
 

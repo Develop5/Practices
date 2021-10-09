@@ -1,4 +1,4 @@
-package com.Abstractions;
+package com.abstractions;
 
 public class ShapeTester {
     public static void main(String[] args) {

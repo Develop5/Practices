@@ -1,8 +1,4 @@
-package com.IteratorsAndLambdaExpressions;
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import org.w3c.dom.ls.LSOutput;
+package com.iterators;
 
 import java.util.*;
 

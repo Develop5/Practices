@@ -1,4 +1,4 @@
-package com.AnimalsByPolymorphism;
+package com.animals.polymorphism.polymorphism;
 
 public class Cat extends Animal {
 

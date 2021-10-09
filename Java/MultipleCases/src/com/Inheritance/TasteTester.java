@@ -1,4 +1,4 @@
-package com.Inheritance;
+package com.inheritance;
 
 public class TasteTester {
     public static void main(String[] args) {

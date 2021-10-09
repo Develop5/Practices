@@ -1,4 +1,4 @@
-package com.AnimalsByAbstraction;
+package com.animals.polymorphism.abstraction;
 
 public class Pig extends Animals{
     private String pigFood;

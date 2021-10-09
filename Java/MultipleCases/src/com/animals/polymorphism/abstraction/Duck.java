@@ -1,4 +1,4 @@
-package com.AnimalsByAbstraction;
+package com.animals.polymorphism.abstraction;
 
 public class Duck extends Animals {
 
