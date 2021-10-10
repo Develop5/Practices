@@ -24,4 +24,5 @@ public class Player {
     public void setGuess(String guess) {
         this.guess = guess;
     }
+
 }
