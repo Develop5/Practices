@@ -105,7 +105,6 @@ public class SetQueueListAndMap {
     }
 
 
-
     private static void setDemo() {
         Set<String> fruit = new HashSet<>();
         fruit.add("orange");
@@ -134,7 +133,5 @@ public class SetQueueListAndMap {
 
         System.out.println("Printing Set with shorten lambda expression");
         fruit.forEach(System.out::println);
-
-
     }
 }
