@@ -5,6 +5,9 @@
 **Java**
 
     1. Multiple Cases
+    2. Payment1
+    
+_Multiple Cases almost completely **lost**. Search for the the source of exercises **remake** this folder from scratch._
 
 ------------------------------------------------------
 The rest needs to be updated
