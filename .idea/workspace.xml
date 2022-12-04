@@ -20,23 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13b6d86-2642-4d68-857d-319e233438ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/ddc18a3b62c1cb132293c657efcdfb41ccf6f0d4" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/StaticPractices/src/AgainStatics/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Abstractions/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Abstractions/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Abstractions/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Abstractions/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Abstractions/ShapeTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Abstractions/ShapeTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Apple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Banana.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Banana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Fruit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Fruits/Market.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/BirthdayCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/BirthdayCake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/Cake.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/Cake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/TasteTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/TasteTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/WeddingCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Inheritance/WeddingCake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Interfaces/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Interfaces/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Interfaces/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Interfaces/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/MultipleCases/src/com/Interfaces/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/MultipleCases/src/com/Interfaces/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/StaticPractices/StaticPractices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/StaticPractices/StaticPractices.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +35,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2HlkSrdt9ebhC79mRg9hGhULueJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -70,6 +71,41 @@
       <recent name="D:\Lourdes\practicando\Practices\Java" />
       <recent name="D:\Lourdes\practicando\Practices" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.SimpleStatics">
+    <configuration name="MovementsOfAccounts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.TransactionControl.MovementsOfAccounts" />
+      <module name="Payment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.TransactionControl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleStatics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="AgainStatics.SimpleStatics" />
+      <module name="StaticPractices" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Java/StaticPractices" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MovementsOfAccounts" />
+      <item itemvalue="Application.SimpleStatics" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpleStatics" />
+        <item itemvalue="Application.MovementsOfAccounts" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -109,18 +145,62 @@
     <option name="LAST_COMMIT_MESSAGE" value="Gitignore moved to root Practice folder" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="352" y="135" key="FileChooserDialogImpl" timestamp="1670154505610">
+    <state x="0" y="0" key="#Project_Structure" timestamp="1670158988576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="135" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1670154505610" />
+    <state x="0" y="0" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1670158988576" />
+    <state x="414" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1670159798472">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1670159798472" />
+    <state x="689" y="308" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1670158063005">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="308" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1670158063005" />
+    <state x="352" y="135" key="FileChooserDialogImpl" timestamp="1670159795722">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="352" y="135" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1670159795722" />
+    <state width="1876" height="342" key="GridCell.Tab.0.bottom" timestamp="1670159969374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969374" />
+    <state width="1876" height="342" key="GridCell.Tab.0.center" timestamp="1670159969373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969373" />
+    <state width="1876" height="342" key="GridCell.Tab.0.left" timestamp="1670159969373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969373" />
+    <state width="1876" height="342" key="GridCell.Tab.0.right" timestamp="1670159969374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969374" />
+    <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1670159969374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969374" />
+    <state width="1876" height="342" key="GridCell.Tab.1.center" timestamp="1670159969374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969374" />
+    <state width="1876" height="342" key="GridCell.Tab.1.left" timestamp="1670159969374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969374" />
+    <state width="1876" height="342" key="GridCell.Tab.1.right" timestamp="1670159969374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1670159969374" />
     <state x="237" y="185" key="NewModule_or_Project.wizard" timestamp="1670154509504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="237" y="185" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1670154509504" />
-    <state x="314" y="59" key="SettingsEditor" timestamp="1670154851156">
+    <state x="314" y="59" key="SettingsEditor" timestamp="1670158929450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="314" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1670154851156" />
+    <state x="314" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1670158929450" />
     <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1670145479291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -129,9 +209,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1670153844365" />
-    <state x="342" y="129" key="new project wizard" timestamp="1670154776298">
+    <state x="530" y="247" width="860" height="634" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1670159705479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="342" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1670154776298" />
+    <state x="530" y="247" width="860" height="634" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1670159705479" />
+    <state x="342" y="129" key="new project wizard" timestamp="1670154939437">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1670154939437" />
   </component>
 </project>
