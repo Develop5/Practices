@@ -34,9 +34,7 @@ public class SetQueueListAndMap {
         System.out.println("------------------------------------------------");
 
         System.out.println("Printing Map with enhanced loop");
-        for(var entry : fruit.entrySet()) {
-            System.out.println("Key : " + entry.getKey() + "  , and Value : " + entry.getValue());
-        }
+        fruit.forEach((key, value) -> System.out.println("Key : " + key + "  , and Value : " + value));
 
         System.out.println("Printing Map with long lambda expression");
         fruit.forEach(
@@ -57,7 +55,7 @@ public class SetQueueListAndMap {
         System.out.println("------------------------------------------------");
 
         System.out.println("Printing Queue with iterator and While loop");
-        var i = fruit.iterator();
+        Iterator<String> i = fruit.iterator();
         while (i.hasNext()) {
             System.out.println(i.next());
         }
@@ -87,7 +85,7 @@ public class SetQueueListAndMap {
         System.out.println("------------------------------------------------");
 
         System.out.println("Printing List with iterator and While loop");
-        var i = fruit.iterator();
+        Iterator<String> i = fruit.iterator();
         while(i.hasNext()) {
             System.out.println(i.next());
         }
@@ -118,7 +116,7 @@ public class SetQueueListAndMap {
         System.out.println("================================================");
 
         System.out.println("Printing Set with iterator and While loop");
-        var i = fruit.iterator();
+        Iterator<String> i = fruit.iterator();
         while (i.hasNext()) {
             System.out.println(i.next());
         }

@@ -13,7 +13,7 @@ public class JumbleText {
      * @param myJumbleString String object that contains all words together
      */
     private static void createLogicalString(String myJumbleString) {
-        var simpleText = new StringBuilder(myJumbleString);
+        StringBuilder simpleText = new StringBuilder(myJumbleString);
         for (int i = 0; i < simpleText.length() ; i++) {
             if( i != 0 && Character.isUpperCase(simpleText.charAt(i))) {
                 simpleText.insert(i, " ");

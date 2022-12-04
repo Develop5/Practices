@@ -1,6 +1,7 @@
 package com.first.examples;
 
-import org.jetbrains.annotations.NotNull;
+
+import com.sun.istack.internal.NotNull;
 
 import java.util.Scanner;
 
