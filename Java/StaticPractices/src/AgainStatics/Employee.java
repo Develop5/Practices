@@ -38,6 +38,10 @@ public class Employee {
         // getNextId is also static. Then, similarly it belongs to the class, not to the object
 
     public static void main(String[] args) {
+        // Every class can have a main method
+        // If the upper application is called, then the current main method will not be executed
+        // To execute this main method, the current class should be called from here
+        // So, this is a kind of unit test
         Employee e = new Employee("Harry", 50000);
         System.out.println(e.getName()+ " " + e.getSalary());
     }
