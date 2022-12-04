@@ -22,5 +22,10 @@ public class SimpleStatics {
 
         int n = Employee.getNextId();       // calls static method
         System.out.println("Next available id= " + n);
+
+        // The following line should show a warning
+        System.out.println(staff[1].getNextId());       // As it takes the value from a static field
+                                                        // the result corresponds to the class, not to the object
+            // So, to avoid any confusion, the method should be referred to the class, not to the object
     }
 }

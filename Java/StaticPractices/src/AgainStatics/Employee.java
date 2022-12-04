@@ -34,6 +34,8 @@ public class Employee {
     public static int getNextId() {
         return nextId;
     }
+        // nextId is static. Then, it belongs to the class, not to the object
+        // getNextId is also static. Then, similarly it belongs to the class, not to the object
 
     public static void main(String[] args) {
         Employee e = new Employee("Harry", 50000);
