@@ -7,22 +7,22 @@ public class Employee {
     private double salary;
     private int id;
 
-    public Employee(String n, double s) {
-        name = n;
-        salary = s;
-        id = advanceId();
+    public Employee(String nameProvided, double salaryProvided) {
+        this.name = nameProvided;
+        this.salary = salaryProvided;
+        this.id = advanceId();
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public double getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public int getId(){
-        return id;
+        return this.id;
     }
 
     public static int advanceId(){
