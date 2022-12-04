@@ -1,4 +1,4 @@
-package AgainStatics;
+package com.example.staticfieldsandmethod;
 
 public class SimpleStatics {
     /**

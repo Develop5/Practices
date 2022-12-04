@@ -1,4 +1,4 @@
-package AgainStatics;
+package com.example.staticfieldsandmethod;
 
 public class Employee {
     private static int nextId= 1;
@@ -40,6 +40,7 @@ public class Employee {
     public static void main(String[] args) {
         // Every class can have a main method
         // If the upper application is called, then the current main method will not be executed
+        // because it is static.
         // To execute this main method, the current class should be called from here
         // So, this is a kind of unit test
         Employee e = new Employee("Harry", 50000);
