@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f13b6d86-2642-4d68-857d-319e233438ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Java/StaticPractices/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StaticPractices/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StaticPractices/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StaticPractices/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StaticPractices/StaticPractices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/StaticPractices/StaticPractices.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2HlkSrdt9ebhC79mRg9hGhULueJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Java/StaticPractices" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Lourdes\practicando\Practices" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f13b6d86-2642-4d68-857d-319e233438ac" name="Default Changelist" comment="" />
+      <created>1668867062623</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668867062623</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Gitignore moved to root Practice folder">
+      <created>1670145470457</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670145470458</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Gitignore moved to root Practice folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gitignore moved to root Practice folder" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="352" y="135" key="FileChooserDialogImpl" timestamp="1670153195199">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="352" y="135" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1670153195199" />
+    <state x="237" y="185" key="NewModule_or_Project.wizard" timestamp="1670152045869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="237" y="185" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1670152045869" />
+    <state x="314" y="59" key="SettingsEditor" timestamp="1670152952504">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="314" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1670152952504" />
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1670145479291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1670145479291" />
+    <state x="769" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1670152780552">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1670152780552" />
+    <state x="342" y="129" key="new project wizard" timestamp="1670153197043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1670153197043" />
+  </component>
+</project>
