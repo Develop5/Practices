@@ -1,4 +1,4 @@
-package com.inheritance;
+package com.Inheritance;
 
 public class Cake {
     protected String flavor;

@@ -1,4 +1,4 @@
-package com.interfaces;
+package com.Interfaces;
 
 public class Customer {
     public static void main(String[] args) {

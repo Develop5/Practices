@@ -1,4 +1,4 @@
-package com.inheritance;
+package com.Inheritance;
 
 public class WeddingCake extends Cake {
     protected String wifeName;

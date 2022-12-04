@@ -1,4 +1,4 @@
-package com.abstractions;
+package com.Abstractions;
 
 public class Rectangle extends Shape{
 

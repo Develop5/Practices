@@ -1,4 +1,4 @@
-package com.fruits;
+package com.Fruits;
 
 public class Apple extends Fruit {
 

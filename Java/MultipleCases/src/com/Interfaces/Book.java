@@ -1,4 +1,4 @@
-package com.interfaces;
+package com.Interfaces;
 
 public class Book implements Product{
     private double price;
