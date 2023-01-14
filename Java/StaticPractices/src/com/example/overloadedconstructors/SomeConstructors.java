@@ -9,7 +9,10 @@ public class SomeConstructors {
      4) An object initialization block
      5) A static initialization block
      6) An instance field initialization
+
+     See all implementations in the class Employee.java
      */
+
     public static void main(String[] args) {
         // Create the staff array with 3  Employee objects
         Employee[] staff = new Employee[3];

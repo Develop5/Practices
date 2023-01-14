@@ -29,9 +29,9 @@ public class Employee {
         this.salary = salary;
     }
 
+    // calls the Employee(String, double) constructor
+    // 2) A call to another constructor
     public Employee(double salary) {
-        // calls the Employee(String, double) constructor
-        // 2) A call to another constructor
         this("Employee #" + nextId, salary);
     }
 
