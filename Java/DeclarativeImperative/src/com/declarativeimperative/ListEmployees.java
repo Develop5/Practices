@@ -41,6 +41,7 @@ public class ListEmployees {
         females2.forEach(System.out::println);
 
     }
+
     static class Person {
         private final String name;
         private final Gender gender;
