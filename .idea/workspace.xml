@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13b6d86-2642-4d68-857d-319e233438ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/DeclarativeImperative/src/com/declarativeimperative/ListEmployees.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/DeclarativeImperative/src/com/declarativeimperative/ListEmployees.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/DeclarativeImperative/src/com/declarativeimperative/ListEmployees.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2HlkSrdt9ebhC79mRg9hGhULueJ" />
@@ -215,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673698998619</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Example of Declarative and Imperative paradigms">
+      <created>1673739639710</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673739639711</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Retrying to merge 4 commits">
+      <created>1673740723952</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673740723952</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +258,9 @@
     <MESSAGE value="Project about constructors" />
     <MESSAGE value="Analyze if these new classes are still valid." />
     <MESSAGE value="Updating comment to find implementations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating comment to find implementations" />
+    <MESSAGE value="Example of Declarative and Imperative paradigms" />
+    <MESSAGE value="Retrying to merge 4 commits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retrying to merge 4 commits" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="0" key="#Project_Structure" timestamp="1673737207462">
@@ -262,22 +283,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="352" y="135" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1673738293223" />
-    <state width="720" height="175" key="GridCell.Tab.0.bottom" timestamp="1673739502122">
+    <state width="1876" height="120" key="GridCell.Tab.0.bottom" timestamp="1673739857825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="720" height="175" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1673739502122" />
-    <state width="720" height="175" key="GridCell.Tab.0.center" timestamp="1673739502121">
+    <state width="1876" height="120" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
+    <state width="1876" height="120" key="GridCell.Tab.0.center" timestamp="1673739857825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="720" height="175" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1673739502121" />
-    <state width="720" height="175" key="GridCell.Tab.0.left" timestamp="1673739502121">
+    <state width="1876" height="120" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
+    <state width="1876" height="120" key="GridCell.Tab.0.left" timestamp="1673739857825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="720" height="175" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1673739502121" />
-    <state width="720" height="175" key="GridCell.Tab.0.right" timestamp="1673739502121">
+    <state width="1876" height="120" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
+    <state width="1876" height="120" key="GridCell.Tab.0.right" timestamp="1673739857825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="720" height="175" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1673739502121" />
+    <state width="1876" height="120" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1670174822507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -302,10 +323,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="314" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1673738583859" />
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1673699008791">
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1673740739463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1673699008791" />
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1673740739463" />
     <state x="1319" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1673736861702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
