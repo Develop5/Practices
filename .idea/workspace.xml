@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13b6d86-2642-4d68-857d-319e233438ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/DeclarativeImperative/src/com/declarativeimperative/ListEmployees.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/DeclarativeImperative/src/com/declarativeimperative/ListEmployees.java" afterDir="false" />
-    </list>
+    <list default="true" id="f13b6d86-2642-4d68-857d-319e233438ac" name="Default Changelist" comment="Adding source information" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,10 +54,10 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="18" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Java" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -234,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673740723952</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adding source information">
+      <created>1673742580046</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673742580061</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,7 +264,8 @@
     <MESSAGE value="Updating comment to find implementations" />
     <MESSAGE value="Example of Declarative and Imperative paradigms" />
     <MESSAGE value="Retrying to merge 4 commits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retrying to merge 4 commits" />
+    <MESSAGE value="Adding source information" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding source information" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="0" key="#Project_Structure" timestamp="1673737207462">
@@ -279,26 +284,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="308" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1670158063005" />
-    <state x="352" y="135" key="FileChooserDialogImpl" timestamp="1673738293223">
+    <state x="352" y="135" key="FileChooserDialogImpl" timestamp="1673742715494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="135" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1673738293223" />
-    <state width="1876" height="120" key="GridCell.Tab.0.bottom" timestamp="1673739857825">
+    <state x="352" y="135" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1673742715494" />
+    <state width="1876" height="303" key="GridCell.Tab.0.bottom" timestamp="1673742561227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="120" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
-    <state width="1876" height="120" key="GridCell.Tab.0.center" timestamp="1673739857825">
+    <state width="1876" height="303" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1673742561227" />
+    <state width="1876" height="303" key="GridCell.Tab.0.center" timestamp="1673742561227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="120" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
-    <state width="1876" height="120" key="GridCell.Tab.0.left" timestamp="1673739857825">
+    <state width="1876" height="303" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1673742561227" />
+    <state width="1876" height="303" key="GridCell.Tab.0.left" timestamp="1673742561227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="120" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
-    <state width="1876" height="120" key="GridCell.Tab.0.right" timestamp="1673739857825">
+    <state width="1876" height="303" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1673742561227" />
+    <state width="1876" height="303" key="GridCell.Tab.0.right" timestamp="1673742561227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="120" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1673739857825" />
+    <state width="1876" height="303" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1673742561227" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1670174822507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -319,22 +324,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="237" y="185" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1670154509504" />
-    <state x="314" y="59" key="SettingsEditor" timestamp="1673738583859">
+    <state x="314" y="59" key="SettingsEditor" timestamp="1673743056984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="314" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1673738583859" />
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1673740739463">
+    <state x="314" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1673743056984" />
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1673742589132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1673740739463" />
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1673742589132" />
     <state x="1319" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1673736861702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1319" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1673736861702" />
-    <state x="769" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1673698742374">
+    <state x="769" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1673742552220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1673698742374" />
+    <state x="769" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1673742552220" />
     <state x="530" y="247" width="860" height="634" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1670159705479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
