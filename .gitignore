@@ -4,6 +4,10 @@
 .classpath
 .project
 .settings
+*.class
+
+# Log file
+*.log
 
 # Package Files #
 *.jar
