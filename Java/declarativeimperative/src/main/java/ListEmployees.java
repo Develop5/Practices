@@ -1,4 +1,4 @@
-package com.declarativeimperative;
+package main.java;
 
 // Source: https://www.youtube.com/watch?v=rPSL1alFIjI
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.declarativeimperative.ListEmployees.Gender.*;
+import static main.java.ListEmployees.Gender.*;
 
 public class ListEmployees {
     public static void main(String[] args) {
