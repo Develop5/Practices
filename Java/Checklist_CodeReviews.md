@@ -1,4 +1,5 @@
-##### Source: https://www.tabnine.com/blog/code-review-checklist/
+###### Source: "Code Review Checklist: Why You Need It & How To Use It Effectively"     https://www.tabnine.com/blog/code-review-checklist/
+
 
 ## Before committing or merging code...
 
