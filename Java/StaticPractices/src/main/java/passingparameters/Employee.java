@@ -1,4 +1,4 @@
-package com.example.passingparameters;
+package main.java.passingparameters;
 
 class Employee {     // Simplified Employee class
     private String name;

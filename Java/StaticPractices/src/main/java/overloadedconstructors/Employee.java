@@ -1,4 +1,4 @@
-package com.example.overloadedconstructors;
+package main.java.overloadedconstructors;
 
 import java.util.Random;
 

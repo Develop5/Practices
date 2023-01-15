@@ -1,6 +1,6 @@
-package com.example.passingparameters;
+package main.java.passingparameters;
 
-
+// Possible source: "Core Java, Volume I: Fundamentals, 12th Edition"
 
 /**
  * To show how to pass parameters in Java

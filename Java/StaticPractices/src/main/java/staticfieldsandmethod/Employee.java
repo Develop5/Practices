@@ -1,4 +1,4 @@
-package com.example.staticfieldsandmethod;
+package main.java.staticfieldsandmethod;
 
 public class Employee {
     private static int nextId= 1;
