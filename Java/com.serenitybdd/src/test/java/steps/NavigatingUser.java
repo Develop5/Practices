@@ -5,7 +5,7 @@ import net.thucydides.core.annotations.Steps;
 
 public class NavigatingUser {
 
-    // "Steps" annotation not working. Project updated
+    // "Steps" annotation not working. Project updated with remote
     //@Steps
     public void isOnTheHomePage() {
     }
