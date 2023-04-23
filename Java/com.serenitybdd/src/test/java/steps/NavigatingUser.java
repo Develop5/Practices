@@ -5,15 +5,15 @@ import net.thucydides.core.annotations.Steps;
 
 public class NavigatingUser {
 
-    @Steps
+    //@Steps
     public void isOnTheHomePage() {
     }
 
-    @Steps
+    //@Steps
     public void shouldSeePageTitleContaining(String expectedTitle) {
     }
 
-    @Steps
+    //@Steps
     public void navigatesToCategory(Category category) {
     }
 }
