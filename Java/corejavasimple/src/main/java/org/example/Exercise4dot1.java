@@ -2,7 +2,7 @@ package org.example;
 import java.time.*;
 
 /**
- * @author Cay S. Horstmann
+ * See book Core Java, by Cay S. Horstmann
  */
 public class Exercise4dot1 {
     public static void main(String[] args) {
