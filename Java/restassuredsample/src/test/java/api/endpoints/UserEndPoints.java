@@ -21,7 +21,8 @@ public class UserEndPoints {
     }
     public static Response readUser(String userName) {
         Response response = given().
-                pathParam("username", userName).
+                //pathParam("username", userName).
+                pathParam("username", "Alberto").  //Have one created
         when().
                 get(Routes.urlUserWithUsernameParameter());
         return response;
