@@ -37,6 +37,7 @@ public class UserEndPoints {
                 put(Routes.urlUserWithUsernameParameter());
         return response;
     }
+
     public static Response deleteUser(String userName) {
         Response response = given().
                 pathParam("username", userName).
@@ -47,7 +48,7 @@ public class UserEndPoints {
 
     public static Response logUser(String userName, String userPassword) {
         Response response = given().
-                pathParam("username", "Alberto").
+                pathParam("username", userName).
                 pathParam("password", userPassword).
                 when().
                 get(Routes.urlLogin());
