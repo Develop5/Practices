@@ -46,4 +46,17 @@ public class UserTests {
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
+    @Test
+    public void testUpdateUser()
+    {
+        // Going to generate details: firstname, lastname and email to update user
+        userPayLoad.setFirstName(faker.name().firstName());
+        userPayLoad.setLastName(faker.name().lastName());
+        userPayLoad.setEmail(faker.internet().safeEmailAddress());
+
+        // Using details generated to update user in the global field
+        Response response = UserEndPoints.updateUser(this.userPayLoad.getUsername(), userPayLoad);
+        response.then().log().all();
+        Assertions.assertEquals(200, response.getStatusCode());
+    }
 }
