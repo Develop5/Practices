@@ -25,8 +25,17 @@ public class UserTests {
     }
 
     @Test
-    public void testPostUser(){
+    public void testPostUser()
+    {
         Response response = UserEndPoints.createUser(userPayLoad);
+        response.then().log().all();
+        Assertions.assertEquals(200, response.getStatusCode());
+    }
+
+    @Test
+    public void testGetUserByName()
+    {
+        Response response = UserEndPoints.readUser(this.userPayLoad.getUsername());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }

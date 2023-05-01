@@ -16,14 +16,14 @@ public class UserEndPoints {
                 accept(ContentType.JSON).
                 body(payload).
         when().
-                post(Routes.post_url);
+                post(Routes.urlUser());
         return response;
     }
     public static Response readUser(String userName) {
         Response response = given().
                 pathParam("username", userName).
         when().
-                get(Routes.get_url);
+                get(Routes.urlUserWithUsernameParameter());
         return response;
     }
     public static Response updateUser(String userName, User payload) {
@@ -33,14 +33,14 @@ public class UserEndPoints {
                 pathParam("username", userName).
                 body(payload).
         when().
-                put(Routes.update_url);
+                put(Routes.urlUserWithUsernameParameter());
         return response;
     }
     public static Response deleteUser(String userName) {
         Response response = given().
                 pathParam("username", userName).
         when().
-                delete(Routes.delete_url);
+                delete(Routes.urlUserWithUsernameParameter());
         return response;
     }
 

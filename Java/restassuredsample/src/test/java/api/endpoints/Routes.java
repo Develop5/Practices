@@ -1,5 +1,7 @@
 package api.endpoints;
 
+import javax.annotation.Nullable;
+
 /**
  * URI -> https://petstore.swagger.io/
  * Base URL: petstore.swagger.io/v2
@@ -8,14 +10,27 @@ package api.endpoints;
  * Get user
  * Update user
  * Delete user
- */
-public class Routes {
+ */public class Routes{
     // User module
     public static String base_url = "https://petstore.swagger.io/v2";
-    public static String post_url = base_url + "/user";
-    public static String get_url = base_url + "/user/{username}";
-    public static String update_url = base_url + "/user/{username}";
-    public static String delete_url = base_url + "/user/{username}";
+    public static String urlUser() {
+        return base_url + "/user";
+    }
+
+    public static String urlUserWithUsernameParameter() {
+        return base_url + "/user/{username}" ;
+    }
+
+
+    /**
+     *
+     *     public static String post_url = base_url + "/user";
+     *     public static String get_url = base_url + "/user/{username}" ;
+     *     public static String update_url = base_url + "/user/{username}";
+     *     public static String delete_url = base_url + "/user/{username}";
+     */
+
+
 
 
     // Store module
