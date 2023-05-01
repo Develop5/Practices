@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 public class UserTests {
     Faker faker;
     User userPayLoad;
+
     @BeforeEach
     public void setupData() {
         faker = new Faker();
@@ -20,35 +21,33 @@ public class UserTests {
         userPayLoad.setFirstName(faker.name().firstName());
         userPayLoad.setLastName(faker.name().lastName());
         userPayLoad.setEmail(faker.internet().safeEmailAddress());
-        userPayLoad.setPassword(faker.internet().password(5,10));
+        userPayLoad.setPassword(faker.internet().password(5, 10));
         userPayLoad.setPhone(faker.phoneNumber().cellPhone());
     }
 
     @Test
-    public void testPostUser()
-    {
+    public void testPostUser() {
         Response response = UserEndPoints.createUser(userPayLoad);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
 
     @Test
-    public void testGetUserByName()
-    {
+    public void testGetUserByName() {
         Response response = UserEndPoints.readUser(this.userPayLoad.getUsername());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
+
     @Test
-    public void testLogUserIntoSystem()
-    {
+    public void testLogUserIntoSystem() {
         Response response = UserEndPoints.logUser(this.userPayLoad.getUsername(), this.userPayLoad.getPassword());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
+
     @Test
-    public void testUpdateUser()
-    {
+    public void testUpdateUser() {
         // Going to generate details: firstname, lastname and email to update user
         userPayLoad.setFirstName(faker.name().firstName());
         userPayLoad.setLastName(faker.name().lastName());
@@ -56,7 +55,18 @@ public class UserTests {
 
         // Using details generated to update user in the global field
         Response response = UserEndPoints.updateUser(this.userPayLoad.getUsername(), userPayLoad);
-        response.then().log().all();
+        //response.then().log().body();
         Assertions.assertEquals(200, response.getStatusCode());
+
+        // Checking data after update
+        Response responseAfterUpdate = UserEndPoints.readUser(this.userPayLoad.getUsername());
+        //responseAfterUpdate.then().log().body();
+        Assertions.assertEquals(200, response.getStatusCode());
+
+        System.out.println("los 2 elementos a comparar  %%%%%%%%%%%%%%%");
+        System.out.println(responseAfterUpdate.body().asString());
+        System.out.println(this.userPayLoad);
+
+
     }
 }
