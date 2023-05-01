@@ -39,5 +39,11 @@ public class UserTests {
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
-
+    @Test
+    public void testLogUserIntoSystem()
+    {
+        Response response = UserEndPoints.logUser(this.userPayLoad.getUsername(), this.userPayLoad.getPassword());
+        response.then().log().all();
+        Assertions.assertEquals(200, response.getStatusCode());
+    }
 }

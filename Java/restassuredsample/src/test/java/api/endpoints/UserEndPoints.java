@@ -45,4 +45,13 @@ public class UserEndPoints {
         return response;
     }
 
+    public static Response logUser(String userName, String userPassword) {
+        Response response = given().
+                pathParam("username", "Alberto").
+                pathParam("password", userPassword).
+                when().
+                get(Routes.urlLogin());
+        return response;
+    }
+
 }

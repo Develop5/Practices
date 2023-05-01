@@ -21,6 +21,10 @@ import javax.annotation.Nullable;
         return base_url + "/user/{username}" ;
     }
 
+    public static String urlLogin() {
+        return base_url + "/user/login?{username}/{password}" ;
+    }
+
 
     // Store module
 
