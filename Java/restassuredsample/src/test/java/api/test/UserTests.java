@@ -13,6 +13,7 @@ public class UserTests {
     Faker faker;
     User userPayLoad;
     String usernameForFirstTime = "Alberto";
+    Response response;
 
     @BeforeEach
     public void setupData() {
@@ -30,22 +31,22 @@ public class UserTests {
 
     @Test
     public void testPostUser() {
-        Response response = UserEndPoints.createUser(userPayLoad);
+        response = UserEndPoints.createUser(userPayLoad);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
 
     @Test
     public void testGetUserByName() {
-        //Response response = UserEndPoints.readUser(this.userPayLoad.getUsername());
-        Response response = UserEndPoints.readUser(usernameForFirstTime);
+        // response = UserEndPoints.readUser(this.userPayLoad.getUsername());
+        response = UserEndPoints.readUser(usernameForFirstTime);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
 
     @Test
     public void testLogUserIntoSystem() {
-        Response response = UserEndPoints.logUser(this.userPayLoad.getUsername(), this.userPayLoad.getPassword());
+        response = UserEndPoints.logUser(this.userPayLoad.getUsername(), this.userPayLoad.getPassword());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }
@@ -61,7 +62,7 @@ public class UserTests {
         userPayLoad.setEmail(newEmail);
 
         // Using details generated to update user in the global field
-        Response response = UserEndPoints.updateUser(this.userPayLoad.getUsername(), userPayLoad);
+        response = UserEndPoints.updateUser(this.userPayLoad.getUsername(), userPayLoad);
         response.then().log().body();
         Assertions.assertEquals(200, response.getStatusCode());
 
@@ -72,7 +73,11 @@ public class UserTests {
         String responseAfterUpdateUsername = responseAfterUpdate.getBody().path("username").toString();
         // Compare class field with result of reading from the endpoint
         Assertions.assertEquals(this.userPayLoad.getUsername(), responseAfterUpdateUsername);
+    }
 
-
+    @Test
+    public void deleteUserByName() {
+        response = UserEndPoints.deleteUser(this.userPayLoad.getUsername());
+        Assertions.assertEquals(200, response.getStatusCode());
     }
 }
