@@ -4,6 +4,7 @@ import api.endpoints.UserEndPoints;
 import api.payload.User;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -68,6 +69,10 @@ public class UserTests {
         Response responseAfterUpdate = UserEndPoints.readUser(this.userPayLoad.getUsername());
         responseAfterUpdate.then().log().body();
         Assertions.assertEquals(200, responseAfterUpdate.getStatusCode());
+        String responseAfterUpdateUsername = responseAfterUpdate.getBody().path("username").toString();
+        // Compare class field with result of reading from the endpoint
+        Assertions.assertEquals(this.userPayLoad.getUsername(), responseAfterUpdateUsername);
+
 
     }
 }
