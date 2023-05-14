@@ -11,7 +11,8 @@ public class UserEndPoints {
     public static Response response;
 
 
-    public static Response createUser(User payload) {
+    public static Response createUser(User payload)
+    {
         response = given().
                 contentType(ContentType.JSON).
                 accept(ContentType.JSON).
@@ -20,7 +21,8 @@ public class UserEndPoints {
                 post(Routes.urlUser());
         return response;
     }
-    public static Response readUser(String userName) {
+    public static Response readUser(String userName)
+    {
         response = given().
                 pathParam("username", userName).
                 //pathParam("username", "Alberto").  //Have one created
@@ -28,7 +30,8 @@ public class UserEndPoints {
                 get(Routes.urlUserWithUsernameParameter());
         return response;
     }
-    public static Response updateUser(String userName, User payload) {
+    public static Response updateUser(String userName, User payload)
+    {
         response = given().
                 contentType(ContentType.JSON).
                 accept(ContentType.JSON).
@@ -39,7 +42,8 @@ public class UserEndPoints {
         return response;
     }
 
-    public static Response deleteUser(String userName) {
+    public static Response deleteUser(String userName)
+    {
         response = given().
                 pathParam("username", userName).
         when().
@@ -47,7 +51,8 @@ public class UserEndPoints {
         return response;
     }
 
-    public static Response logUser(String userName, String userPassword) {
+    public static Response logUser(String userName, String userPassword)
+    {
         response = given().
                 pathParam("username", userName).
                 pathParam("password", userPassword).
