@@ -13,10 +13,9 @@ public class ProbandoLecturaFichero {
     {
         try {
             // apply from: '{YOUR_PATH}/general.gradle'
-            String estaruta = System.getProperty("{UsersDataFile}");
-            String otraruta = System.getProperty("UsersDataFile");
-            System.out.println("Ruta del fichero ....... " + estaruta);
-            System.out.println("Otras propiedades -------------- " + otraruta);
+            System.out.println(" ahora sí  .........  " + System.getProperty("userDataFile"));
+            String estaRuta = System.getProperty("userDataFile");
+            System.out.println("Ruta del fichero ....... " + estaRuta);
 
 
             String path = System.getProperty("datafiles") + "//UserData.xlsx";
