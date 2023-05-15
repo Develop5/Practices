@@ -38,7 +38,7 @@ public class UserTests {
     @Test
     public void testGetUserByName() {
         // response = UserEndPoints.readUser(this.userPayLoad.getUsername());
-        response = UserEndPoints.readUser(usernameForFirstTime);
+        response = UserEndPoints.readUser(usernameForFirstTime);        // Needs to be after Post
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
     }

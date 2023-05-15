@@ -30,7 +30,7 @@ public class DDTest {
         assertTrue(Strings.isNotBlank(email));
         assertTrue(Strings.isNotBlank(password));
         assertTrue(Strings.isNotBlank(phone));
-        System.out.println(String.format("%-12s %-12s %-12s %-12s %-12s %-12s %-12s", userId, userName, firstName, lastName, email, password, phone));
+        //System.out.println(String.format("%-12s %-12s %-12s %-12s %-12s %-12s %-12s", userId, userName, firstName, lastName, email, password, phone));
     }
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getAllData")
@@ -54,7 +54,6 @@ public class DDTest {
         Assertions.assertEquals(200, response.getStatusCode());
     }
 
-
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getUserNames")
     public void testDeleteUserByName(String userName)
@@ -62,4 +61,13 @@ public class DDTest {
         response = UserEndPoints.deleteUser(userName);
         Assertions.assertEquals(200, response.getStatusCode());
     }
+
+    @ParameterizedTest
+    @MethodSource("api.utilities.DataProviders#getUserNames")
+    public void testGetUsers(String userName)
+    {
+        response = UserEndPoints.readUser(userName);
+        Assertions.assertEquals(200, response.getStatusCode());
+    }
+
 }
