@@ -1,4 +1,4 @@
-package api.utlities;
+package api.utilities;
 
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.DataFormatter;
