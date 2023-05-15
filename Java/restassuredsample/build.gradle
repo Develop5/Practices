@@ -22,9 +22,8 @@ dependencies {
 
 }
 
-String UsersDataFile = "$rootDir" + "/testData/UserData.xlsx"
-project.logger.lifecycle(UsersDataFile)
 
+//project.logger.lifecycle(" Ahora  >>>>>>>>>  "  + System.getProperty("userDataFile"))
 
 application {
     mainClass = 'RestAssuredDemoTest.App'
@@ -32,5 +31,4 @@ application {
 
 tasks.named('test') {
     useJUnitPlatform()
-    logger.lifecycle(project.property("userDataFile"))
 }

@@ -1,25 +1,20 @@
 package api.utlities;
 
 import java.io.IOException;
+import java.util.Properties;
 
 public class ProbandoLecturaFichero {
     public static void main(String[] args) throws IOException {
         String[][] resultados = getAllData();
         System.out.println(">>>>>>>>>>>>>>>>>>>");
-        System.out.println(resultados.toString());
+        System.out.println(resultados);
     }
 
     public static String[][] getAllData() throws IOException
     {
         try {
-            // apply from: '{YOUR_PATH}/general.gradle'
-            String estaruta = System.getProperty("{UsersDataFile}");
-            String otraruta = System.getProperty("UsersDataFile");
-            System.out.println("Ruta del fichero ....... " + estaruta);
-            System.out.println("Otras propiedades -------------- " + otraruta);
-
-
-            String path = System.getProperty("datafiles") + "//UserData.xlsx";
+            String relativeExcelFilePath = "\\restassuredsample\\testData\\UserData.xlsx";
+            String path = System.getProperty("user.dir") + relativeExcelFilePath;
             XLUtility xl = new XLUtility(path);
             int rowNumber = xl.getRowCount("Sheet1");
             int colCount = xl.getCellCount("Sheet1", 1);
