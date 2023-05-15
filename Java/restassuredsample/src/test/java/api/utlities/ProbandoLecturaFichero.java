@@ -12,7 +12,7 @@ public class ProbandoLecturaFichero {
     public static String[][] getAllData() throws IOException
     {
         try {
-            //Needs to be configured somewhere else
+            //This path needs to be configured somewhere else
             String relativeExcelFilePath = "\\restassuredsample\\testData\\UserData.xlsx";
             String path = System.getProperty("user.dir") + relativeExcelFilePath;
             XLUtility xl = new XLUtility(path);
@@ -20,7 +20,6 @@ public class ProbandoLecturaFichero {
             int colCount = xl.getCellCount("Sheet1", 1);
             String[][] apiData = new String[rowNumber][colCount];
 
-            System.out.println("Total de filas: " + rowNumber + ",    Total col: " + colCount);
             for (int i=1; i<=rowNumber; i++)
             {
                 for (int j=1; j<=colCount; j++) {
