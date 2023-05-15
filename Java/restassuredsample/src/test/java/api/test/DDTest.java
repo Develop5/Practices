@@ -27,7 +27,7 @@ public class DDTest {
                                 String password,
                                 String phone)
     {
-        assertTrue(Strings.isNotBlank(userId));
+        assertTrue(Strings.isBlank(userId));
         assertTrue(Strings.isNotBlank(userName));
         assertTrue(Strings.isNotBlank(firstName));
         assertTrue(Strings.isNotBlank(lastName));
