@@ -1,4 +1,10 @@
 package api.utilities;
+
+/*
+Review here,to fix when tests are failing
+https://stackoverflow.com/questions/51502168/extent-reports-tests-always-reporting-pass
+
+ */
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
