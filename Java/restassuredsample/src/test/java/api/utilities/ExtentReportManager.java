@@ -3,10 +3,14 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /*
  Usage:
@@ -23,12 +27,29 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
     private static ExtentReports extent = new ExtentReports();
     private ExtentSparkReporter spark = new ExtentSparkReporter("target\\report\\TestReport.html");
     private ExtentTest test;
+    String reportName;
+
+    public void onStart(ExtensionContext context){
+        // To be used to generate new names in reports
+        String timestamp = new SimpleDateFormat("yyyy.Mm.dd.HH.mm.ss")
+                .format(new Date());
+        reportName = "TestReport-" + timestamp + ".html";
+    }
 
     @Override
     public void beforeAll(ExtensionContext context) {
         extent.attachReporter(spark);
+        extent.setSystemInfo("Application", "Pet Store Users API");
+        extent.setSystemInfo("Operating System", System.getProperty("os.name"));
+        extent.setSystemInfo("User name", System.getProperty("user.name"));
+        extent.setSystemInfo("Environment", "QA");
+        extent.setSystemInfo("User", "Lourdes");
         context.getStore(ExtensionContext.Namespace.GLOBAL).put("TestReport", new CustomAfterSuite());
         test = extent.createTest(context.getDisplayName());
+        spark.config().setDocumentTitle("RestAssured_Automation_Project");
+        spark.config().setReportName("Pet Store Users API");
+        spark.config().setTheme(Theme.DARK);
+
     }
 
     @Override
