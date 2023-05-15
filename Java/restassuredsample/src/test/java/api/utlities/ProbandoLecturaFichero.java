@@ -1,6 +1,7 @@
 package api.utlities;
 
 import java.io.IOException;
+import java.util.Properties;
 
 public class ProbandoLecturaFichero {
     public static void main(String[] args) throws IOException {
@@ -12,8 +13,8 @@ public class ProbandoLecturaFichero {
     public static String[][] getAllData() throws IOException
     {
         try {
-            //String path = System.getProperty("userDataFile") + "//UserData.xlsx";
-            String path = System.getProperty("userDataFile");
+            String relativeExcelFilePath = "\\restassuredsample\\testData\\UserData.xlsx";
+            String path = System.getProperty("user.dir") + relativeExcelFilePath;
             XLUtility xl = new XLUtility(path);
             int rowNumber = xl.getRowCount("Sheet1");
             int colCount = xl.getCellCount("Sheet1", 1);
