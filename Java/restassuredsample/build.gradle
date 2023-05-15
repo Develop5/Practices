@@ -23,11 +23,9 @@ dependencies {
     testImplementation 'org.apache.logging.log4j:log4j-api:2.20.0'
     testImplementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     testImplementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.20.0'
+    testImplementation 'com.tngtech.java:junit-dataprovider:1.13.1'
 
 }
-
-
-//project.logger.lifecycle(" Ahora  >>>>>>>>>  "  + System.getProperty("userDataFile"))
 
 application {
     mainClass = 'RestAssuredDemoTest.App'
