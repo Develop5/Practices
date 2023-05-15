@@ -22,7 +22,8 @@ dependencies {
 
 }
 
-project.logger.lifecycle(" Ahora  >>>>>>>>>  "  + System.getProperty("userDataFile"))
+
+//project.logger.lifecycle(" Ahora  >>>>>>>>>  "  + System.getProperty("userDataFile"))
 
 application {
     mainClass = 'RestAssuredDemoTest.App'

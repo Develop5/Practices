@@ -6,19 +6,14 @@ public class ProbandoLecturaFichero {
     public static void main(String[] args) throws IOException {
         String[][] resultados = getAllData();
         System.out.println(">>>>>>>>>>>>>>>>>>>");
-        System.out.println(resultados.toString());
+        System.out.println(resultados);
     }
 
     public static String[][] getAllData() throws IOException
     {
         try {
-            // apply from: '{YOUR_PATH}/general.gradle'
-            System.out.println(" ahora sí  .........  " + System.getProperty("userDataFile"));
-            String estaRuta = System.getProperty("userDataFile");
-            System.out.println("Ruta del fichero ....... " + estaRuta);
-
-
-            String path = System.getProperty("datafiles") + "//UserData.xlsx";
+            //String path = System.getProperty("userDataFile") + "//UserData.xlsx";
+            String path = System.getProperty("userDataFile");
             XLUtility xl = new XLUtility(path);
             int rowNumber = xl.getRowCount("Sheet1");
             int colCount = xl.getCellCount("Sheet1", 1);
