@@ -25,7 +25,7 @@ import java.util.Date;
  */
 public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecutionCallback, AfterTestExecutionCallback {
     private static ExtentReports extent = new ExtentReports();
-    ExtentSparkReporter spark = new ExtentSparkReporter("target\\report\\Test2ResultsXXX.html");
+    ExtentSparkReporter spark = new ExtentSparkReporter("target\\report\\TestReport.html");
 
     private ExtentTest test;
     String reportName;
