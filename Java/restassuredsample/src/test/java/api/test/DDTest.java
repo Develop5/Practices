@@ -2,14 +2,18 @@ package api.test;
 
 import api.endpoints.UserEndPoints;
 import api.payload.User;
+import api.utilities.ExtentReportManager;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.util.Strings;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@ExtendWith(ExtentReportManager.class)
 public class DDTest {
     Response response;
     @Order(1)
@@ -35,6 +39,7 @@ public class DDTest {
     @Order(2)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getAllData")
+    @DisplayName("testPostUser with DDT")
     public void testPostUser(String userId,
                              String userName,
                              String firstName,
@@ -58,6 +63,7 @@ public class DDTest {
     @Order(3)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getUserNames")
+    @DisplayName("testDeleteUserByName with DDT")
     public void testDeleteUserByName(String userName)
     {
         response = UserEndPoints.deleteUser(userName);
@@ -66,6 +72,7 @@ public class DDTest {
 
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getUserNames")
+    @DisplayName("testGetUsers with DDT")
     public void testGetUsers(String userName)
     {
         response = UserEndPoints.readUser(userName);
