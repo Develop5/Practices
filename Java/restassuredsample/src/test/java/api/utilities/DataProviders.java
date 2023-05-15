@@ -22,7 +22,7 @@ public class DataProviders {
         return apiData;
     }
 
-    public String[] getUserNames() throws IOException
+    public static String[] getUserNames() throws IOException
     {
         //This path needs to be configured somewhere else
         String relativeExcelFilePath = "\\testData\\UserData.xlsx";

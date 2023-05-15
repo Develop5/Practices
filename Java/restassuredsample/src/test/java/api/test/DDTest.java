@@ -50,10 +50,16 @@ public class DDTest {
         userPayload.setEmail(email);
         userPayload.setPassword(password);
         userPayload.setPhone(phone);
-
         response = UserEndPoints.createUser(userPayload);
         Assertions.assertEquals(200, response.getStatusCode());
-
     }
 
+
+    @ParameterizedTest
+    @MethodSource("api.utilities.DataProviders#getUserNames")
+    public void testDeleteUserByName(String userName)
+    {
+        response = UserEndPoints.deleteUser(userName);
+        Assertions.assertEquals(200, response.getStatusCode());
+    }
 }
