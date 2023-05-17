@@ -14,6 +14,8 @@ import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.platform.engine.TestExecutionResult;
+import org.junit.platform.launcher.TestIdentifier;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -33,6 +35,10 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
     private static ExtentReports extent = new ExtentReports();
     private ExtentTest test;
     String reportName;
+    private int successTests;
+    private int failTests;
+    private int skipTests;
+
 
     @Override
     public void beforeAll(ExtensionContext context) {
@@ -55,6 +61,28 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
         test = extent.createTest(context.getDisplayName());
 
     }
+
+
+    public void onTestSuccess(TestIdentifier testIdentifier,
+                              TestExecutionResult testExecutionResult ) {
+        if(testExecutionResult.getStatus() == TestExecutionResult.Status.SUCCESSFUL) {
+            successTests++;
+        }
+    }
+
+    public void onTestFail(TestIdentifier testIdentifier,
+                              TestExecutionResult testExecutionResult ) {
+        if(testExecutionResult.getStatus() == TestExecutionResult.Status.FAILED) {
+            failTests++;
+        }
+    }
+    public void onTestSkip(TestIdentifier testIdentifier,
+                              TestExecutionResult testExecutionResult ) {
+        if(testExecutionResult.getStatus() == TestExecutionResult.Status.ABORTED) {
+            skipTests++;
+        }
+    }
+
 
     @Override
     public void beforeTestExecution(ExtensionContext context) {
