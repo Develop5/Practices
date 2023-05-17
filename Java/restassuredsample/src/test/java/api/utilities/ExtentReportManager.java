@@ -31,18 +31,15 @@ import java.util.Date;
  */
 public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecutionCallback, AfterTestExecutionCallback {
     private static ExtentReports extent = new ExtentReports();
-    ExtentSparkReporter spark = new ExtentSparkReporter("target\\report\\TestReport.html");
-
     private ExtentTest test;
     String reportName;
 
-
     @Override
     public void beforeAll(ExtensionContext context) {
-        // To be used to generate new names in reports
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss")
                 .format(new Date());
         reportName = "TestReport-" + timestamp + ".html";
+        ExtentSparkReporter spark = new ExtentSparkReporter("target\\report\\" + reportName);
 
         extent.attachReporter(spark);
         extent.setSystemInfo("Application", "Pet Store Users API");
