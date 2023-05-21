@@ -27,14 +27,13 @@ public class DDTest {
                                 String password,
                                 String phone)
     {
-        assertTrue(Strings.isBlank(userId));            // Change this to simulate
+        assertTrue(Strings.isNotBlank(userId));            // Change this to simulate
         assertTrue(Strings.isNotBlank(userName));
         assertTrue(Strings.isNotBlank(firstName));
         assertTrue(Strings.isNotBlank(lastName));
         assertTrue(Strings.isNotBlank(email));
         assertTrue(Strings.isNotBlank(password));
         assertTrue(Strings.isNotBlank(phone));
-        //System.out.println(String.format("%-12s %-12s %-12s %-12s %-12s %-12s %-12s", userId, userName, firstName, lastName, email, password, phone));
     }
     @Order(2)
     @ParameterizedTest
