@@ -57,6 +57,7 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
         spark.config().setDocumentTitle("RestAssured_Automation_Project");
         spark.config().setReportName("Pet Store Users API");
         spark.config().setTheme(Theme.DARK);
+        spark.config().setCss(".black-text { color: #fff !important; }");
         context.getStore(ExtensionContext.Namespace.GLOBAL).put("TestReport", new CustomAfterSuite());
         test = extent.createTest(context.getDisplayName());
 
@@ -86,7 +87,7 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
 
     @Override
     public void beforeTestExecution(ExtensionContext context) {
-        test.log(Status.INFO, context.getDisplayName() + " - started");
+        //test.log(Status.INFO, context.getDisplayName() + " - started");
         test.createNode(context.getDisplayName());
     }
 
@@ -95,10 +96,13 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
         if (!context.getExecutionException().isPresent()) {
             test.pass(context.getDisplayName() + " - passed");
         } else {
-            test.fail(context.getExecutionException().get().getLocalizedMessage());
-            test.addScreenCaptureFromPath("../../" + ScreenshotUtil.takeScreenshot().getPath(), context.getDisplayName());
+            test.fail(context.getDisplayName() + " - failed");
+            //test.addScreenCaptureFromPath("../../" + ScreenshotUtil.takeScreenshot().getPath(), context.getDisplayName());
         }
+
     }
+
+
 
     //Used as no AfterSuite annotation available in Junit5 (as of 5.8.2 version)
     private static class CustomAfterSuite implements ExtensionContext.Store.CloseableResource {
