@@ -7,7 +7,6 @@ https://stackoverflow.com/questions/51502168/extent-reports-tests-always-reporti
  */
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
@@ -45,7 +44,7 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss")
                 .format(new Date());
         reportName = "TestReport-" + timestamp + ".html";
-        ExtentSparkReporter spark = new ExtentSparkReporter("target\\report\\" + reportName);
+        ExtentSparkReporter spark = new ExtentSparkReporter(".\\reports\\" + reportName);
 
         extent.attachReporter(spark);
         extent.setSystemInfo("Application", "Pet Store Users API");
