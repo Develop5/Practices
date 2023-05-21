@@ -44,7 +44,7 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss")
                 .format(new Date());
         reportName = "TestReport-" + timestamp + ".html";
-        ExtentSparkReporter spark = new ExtentSparkReporter(".\\reports\\" + reportName);
+        ExtentSparkReporter spark = new ExtentSparkReporter("target\\reports\\" + reportName);
 
         extent.attachReporter(spark);
         extent.setSystemInfo("Application", "Pet Store Users API");
