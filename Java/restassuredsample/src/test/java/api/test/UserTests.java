@@ -2,12 +2,15 @@ package api.test;
 
 import api.endpoints.UserEndPoints;
 import api.payload.User;
+import api.utilities.ExtentReportManager;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+@ExtendWith(ExtentReportManager.class)
 public class UserTests {
     Faker faker;
     User userPayload;

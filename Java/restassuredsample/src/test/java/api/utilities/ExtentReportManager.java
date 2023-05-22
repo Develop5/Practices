@@ -7,6 +7,7 @@ https://stackoverflow.com/questions/51502168/extent-reports-tests-always-reporti
  */
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
@@ -56,15 +57,17 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
         spark.config().setDocumentTitle("RestAssured_Automation_Project");
         spark.config().setReportName("Pet Store Users API");
         spark.config().setTheme(Theme.DARK);
-        spark.config().setCss(".black-text { color: #fff !important; }");
         context.getStore(ExtensionContext.Namespace.GLOBAL).put("TestReport", new CustomAfterSuite());
         test = extent.createTest(context.getDisplayName());
-
     }
 
 
     public void onTestSuccess(TestIdentifier testIdentifier,
                               TestExecutionResult testExecutionResult ) {
+        test = extent.createTest(testIdentifier.getDisplayName())
+                .createNode(testIdentifier.getDisplayName())
+                .log(Status.PASS, "Test Passed");
+        //...
         if(testExecutionResult.getStatus() == TestExecutionResult.Status.SUCCESSFUL) {
             successTests++;
         }
@@ -72,12 +75,20 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
 
     public void onTestFail(TestIdentifier testIdentifier,
                               TestExecutionResult testExecutionResult ) {
+        test = extent.createTest(testIdentifier.getDisplayName())
+                .createNode(testIdentifier.getDisplayName())
+                .log(Status.FAIL, "Test Failed");
+        //...
         if(testExecutionResult.getStatus() == TestExecutionResult.Status.FAILED) {
             failTests++;
         }
     }
     public void onTestSkip(TestIdentifier testIdentifier,
                               TestExecutionResult testExecutionResult ) {
+        test = extent.createTest(testIdentifier.getDisplayName())
+                .createNode(testIdentifier.getDisplayName())
+                .log(Status.SKIP, "Test Skipped");
+        //...
         if(testExecutionResult.getStatus() == TestExecutionResult.Status.ABORTED) {
             skipTests++;
         }
@@ -94,14 +105,12 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
     public void afterTestExecution(ExtensionContext context) {
         if (!context.getExecutionException().isPresent()) {
             test.pass(context.getDisplayName() + " - passed");
+
         } else {
             test.fail(context.getDisplayName() + " - failed");
             //test.addScreenCaptureFromPath("../../" + ScreenshotUtil.takeScreenshot().getPath(), context.getDisplayName());
         }
-
     }
-
-
 
     //Used as no AfterSuite annotation available in Junit5 (as of 5.8.2 version)
     private static class CustomAfterSuite implements ExtensionContext.Store.CloseableResource {

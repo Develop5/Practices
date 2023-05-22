@@ -19,6 +19,7 @@ public class DDTest {
     @Order(1)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getAllData")
+    @DisplayName("DDTest testWithAllData")
     public void testWithAllData(String userId,
                                 String userName,
                                 String firstName,
@@ -38,7 +39,7 @@ public class DDTest {
     @Order(2)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getAllData")
-    @DisplayName("testPostUser with DDT")
+    @DisplayName("DDTest testPostUser")
     public void testPostUser(String userId,
                              String userName,
                              String firstName,
@@ -62,16 +63,17 @@ public class DDTest {
     @Order(3)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getUserNames")
-    @DisplayName("testDeleteUserByName with DDT")
+    @DisplayName("DDTest testDeleteUserByName")
     public void testDeleteUserByName(String userName)
     {
         response = UserEndPoints.deleteUser(userName);
         assertEquals(200, response.getStatusCode());
     }
 
+    @Order(4)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getUserNames")
-    @DisplayName("testGetUsers with DDT")
+    @DisplayName("DDTest testGetUsers")
     public void testGetUsers(String userName)
     {
         response = UserEndPoints.readUser(userName);
