@@ -12,14 +12,14 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 @ExtendWith(ExtentReportManager.class)
+@DisplayName("4 tests per 3 users = 12 total")
 public class DDTest {
     Response response;
     @Order(1)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getAllData")
-    @DisplayName("DDTest testWithAllData")
+    @DisplayName("DDTest each user has all fields")
     public void testWithAllData(String userId,
                                 String userName,
                                 String firstName,
@@ -39,7 +39,7 @@ public class DDTest {
     @Order(2)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getAllData")
-    @DisplayName("DDTest testPostUser")
+    @DisplayName("DDTest post each user")
     public void testPostUser(String userId,
                              String userName,
                              String firstName,
@@ -63,7 +63,7 @@ public class DDTest {
     @Order(3)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getUserNames")
-    @DisplayName("DDTest testDeleteUserByName")
+    @DisplayName("DDTest delete each user")
     public void testDeleteUserByName(String userName)
     {
         response = UserEndPoints.deleteUser(userName);
@@ -73,7 +73,7 @@ public class DDTest {
     @Order(4)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getUserNames")
-    @DisplayName("DDTest testGetUsers")
+    @DisplayName("DDTest able to get each user")
     public void testGetUsers(String userName)
     {
         response = UserEndPoints.readUser(userName);
