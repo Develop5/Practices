@@ -95,7 +95,7 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
             test.fail(context.getParent().get().getDisplayName()+ " "
                     + context.getDisplayName()
                     + "        >> passed");
-            //test.addScreenCaptureFromPath("../../" + ScreenshotUtil.takeScreenshot().getPath(), context.getDisplayName());
+            test.addScreenCaptureFromPath("../../" + ScreenshotUtil.takeScreenshot().getPath(), context.getDisplayName());
         }
     }
 
