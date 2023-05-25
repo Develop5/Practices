@@ -5,17 +5,27 @@ import api.payload.User;
 import api.utilities.ExtentReportManager;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+
+/*
+Start using log4j2
+https://sematext.com/blog/log4j2-tutorial/
+ */
 @ExtendWith(ExtentReportManager.class)
 public class UserTests {
     Faker faker;
     User userPayload;
     String usernameForFirstTime = "Alberto";
     Response response;
+    Logger logger;
 
     @BeforeEach
     public void setupData() {
@@ -29,21 +39,27 @@ public class UserTests {
         userPayload.setEmail(faker.internet().safeEmailAddress());
         userPayload.setPassword(faker.internet().password(5, 10));
         userPayload.setPhone(faker.phoneNumber().cellPhone());
+        logger = LogManager.getLogger(this.getClass());
     }
 
     @Test
     public void testPostUser() {
+        logger.info("***************  Creating user  ***************");
         response = UserEndPoints.createUser(userPayload);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("***************  User created  ***************");
     }
 
     @Test
     public void testGetUserByName() {
+        logger.info("***************  Getting user info by name  ***************");
+
         // response = UserEndPoints.readUser(this.userPayLoad.getUsername());
         response = UserEndPoints.readUser(usernameForFirstTime);        // Needs to be after Post
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("***************  Getting user command finished sddexfully7220  ***************");
     }
 
     @Test

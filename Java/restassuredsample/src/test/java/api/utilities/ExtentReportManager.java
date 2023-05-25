@@ -9,6 +9,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
@@ -58,6 +59,7 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
         spark.config().setTheme(Theme.DARK);
         context.getStore(ExtensionContext.Namespace.GLOBAL).put("TestReport", new CustomAfterSuite());
         test = extent.createTest(context.getDisplayName());
+
     }
 
 
