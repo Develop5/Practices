@@ -43,7 +43,7 @@ public class UserTests {
         logger = LogManager.getLogger(this.getClass());
 
         //logger.debug("My Debug Log");
-        //logger.info("My Info Log");
+        logger.info("My Info Log");
         //logger.warn("My Warn Log");
         //logger.error("My error log");
         //logger.fatal("My fatal log");
@@ -53,11 +53,11 @@ public class UserTests {
 
     @Test
     public void testPostUser() {
-        //logger.info("***************  Creating user  ***************");
+        logger.info("***************  Creating user  ***************");
         response = UserEndPoints.createUser(userPayload);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        //logger.info("***************  User created  ***************");
+        logger.info("***************  User created  ***************");
     }
 
     @Test
