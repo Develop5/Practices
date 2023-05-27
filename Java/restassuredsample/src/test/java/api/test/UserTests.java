@@ -42,11 +42,11 @@ public class UserTests {
         userPayload.setPhone(faker.phoneNumber().cellPhone());
         logger = LogManager.getLogger(this.getClass());
 
-        //logger.debug("My Debug Log");
+        logger.debug("My Debug Log");
         logger.info("My Info Log");
-        //logger.warn("My Warn Log");
-        //logger.error("My error log");
-        //logger.fatal("My fatal log");
+        logger.warn("My Warn Log");
+        logger.error("My error log");
+        logger.fatal("My fatal log");
 
 
     }
@@ -62,13 +62,13 @@ public class UserTests {
 
     @Test
     public void testGetUserByName() {
-        //logger.info("***************  Getting user info by name  ***************");
+        logger.info("***************  Getting user info by name  ***************");
 
         // response = UserEndPoints.readUser(this.userPayLoad.getUsername());
         response = UserEndPoints.readUser(usernameForFirstTime);        // Needs to be after Post
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        //logger.info("***************  Getting user command finished sddexfully7220  ***************");
+        logger.info("***************  Getting user command finished ***************");
     }
 
     @Test
