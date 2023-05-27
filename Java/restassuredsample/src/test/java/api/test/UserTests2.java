@@ -44,34 +44,30 @@ public class UserTests2 {
 
     @Test
     public void testPostUser() {
-        logger.info("*****  Creating user  *****") ;
+        logger.info("*****  Creating user  ***** " + this.userPayload.getUsername()) ;
         response = UserEndPoints2.createUser(userPayload);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("*****  User created  *****");
     }
 
     @Test
     public void testGetUserByName() {
-        logger.info("*****  Getting user info by name. UserTest2  ****");        // response = UserEndPoints2.readUser(this.userPayLoad.getUsername());
+        logger.info("*****  Getting user info by name. UserTest2  **** " + usernameForFirstTime);        // response = UserEndPoints2.readUser(this.userPayLoad.getUsername());
         response = UserEndPoints2.readUser(usernameForFirstTime);        // Needs to be after Post
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("*****   Getting user command finished  *****");
     }
 
     @Test
     public void testLogUserIntoSystem() {
-        logger.info("*****  Log User into system. UserTests2  ****");
+        logger.info("*****  Log User into system. UserTests2  **** " + this.userPayload.getUsername());
         response = UserEndPoints2.logUser(this.userPayload.getUsername(), this.userPayload.getPassword());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("*****  User logged  ****");
     }
 
     @Test
     public void testUpdateUser() {
-        logger.info("*****  Update User. UserTests2  ****");
         // Going to generate details: firstname, lastname and email to update user
         String newFirstName = faker.name().firstName();
         String newLastName = faker.name().lastName();
@@ -80,6 +76,9 @@ public class UserTests2 {
         userPayload.setLastName(newLastName);
         userPayload.setEmail(newEmail);
 
+        logger.info("*****  Update User. UserTests2  **** "
+                + this.userPayload.getUsername() + "  "
+                + userPayload);
         // Using details generated to update user in the global field
         response = UserEndPoints2.updateUser(this.userPayload.getUsername(), userPayload);
         response.then().log().body();
@@ -98,9 +97,8 @@ public class UserTests2 {
 
     @Test
     public void deleteUserByName() {
-        logger.info("*****  Delete user. UserTests2  ****");
+        logger.info("*****  Delete user. UserTests2  **** " + this.userPayload.getUsername());
         response = UserEndPoints2.deleteUser(this.userPayload.getUsername());
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("*****  User deleted  ****");
     }
 }

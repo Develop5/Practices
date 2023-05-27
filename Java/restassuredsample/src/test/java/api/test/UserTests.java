@@ -41,27 +41,19 @@ public class UserTests {
         userPayload.setPhone(faker.phoneNumber().cellPhone());
         logger = LogManager.getLogger(this.getClass());
 
-        /*
-        logger.debug("My Debug Log");
-        logger.info("My Info Log");
-        logger.warn("My Warn Log");
-        logger.error("My error log");
-        logger.fatal("My fatal log");
-         */
     }
 
     @Test
     public void testPostUser() {
-        logger.info("*****  Creating user  ****");
-        response = UserEndPoints.createUser(userPayload);
+        logger.info("*****  Creating user  **** " + this.userPayload.getUsername());
+        response = UserEndPoints.createUser(this.userPayload);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("*****  User created  ****");
     }
 
     @Test
     public void testGetUserByName() {
-        logger.info("*****  Getting user info by name  ****");
+        logger.info("*****  Getting user info by name  **** " + usernameForFirstTime);
         // response = UserEndPoints.readUser(this.userPayLoad.getUsername());
         response = UserEndPoints.readUser(usernameForFirstTime);        // Needs to be after Post
         response.then().log().all();
@@ -71,7 +63,7 @@ public class UserTests {
 
     @Test
     public void testLogUserIntoSystem() {
-        logger.info("*****  Log User into system  ****");
+        logger.info("*****  Log User into system  **** " + this.userPayload.getUsername());
         response = UserEndPoints.logUser(this.userPayload.getUsername(), this.userPayload.getPassword());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
@@ -80,7 +72,7 @@ public class UserTests {
 
     @Test
     public void testUpdateUser() {
-        logger.info("*****  Update User  ****");
+        logger.info("*****  Update User  **** " + this.userPayload.getUsername());
         // Going to generate details: firstname, lastname and email to update user
         String newFirstName = faker.name().firstName();
         String newLastName = faker.name().lastName();
@@ -107,7 +99,7 @@ public class UserTests {
 
     @Test
     public void deleteUserByName() {
-        logger.info("*****  Delete user  ****");
+        logger.info("*****  Delete user  **** " + this.userPayload.getUsername());
         response = UserEndPoints.deleteUser(this.userPayload.getUsername());
         Assertions.assertEquals(200, response.getStatusCode());
         logger.info("*****  User deleted  ****");
