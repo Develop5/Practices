@@ -14,7 +14,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-
 /*
 Start using log4j2
 https://sematext.com/blog/log4j2-tutorial/
@@ -42,44 +41,46 @@ public class UserTests {
         userPayload.setPhone(faker.phoneNumber().cellPhone());
         logger = LogManager.getLogger(this.getClass());
 
+        /*
         logger.debug("My Debug Log");
         logger.info("My Info Log");
         logger.warn("My Warn Log");
         logger.error("My error log");
         logger.fatal("My fatal log");
-
-
+         */
     }
 
     @Test
     public void testPostUser() {
-        logger.info("***************  Creating user  ***************");
+        logger.info("*****  Creating user  ****");
         response = UserEndPoints.createUser(userPayload);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("***************  User created  ***************");
+        logger.info("*****  User created  ****");
     }
 
     @Test
     public void testGetUserByName() {
-        logger.info("***************  Getting user info by name  ***************");
-
+        logger.info("*****  Getting user info by name  ****");
         // response = UserEndPoints.readUser(this.userPayLoad.getUsername());
         response = UserEndPoints.readUser(usernameForFirstTime);        // Needs to be after Post
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("***************  Getting user command finished ***************");
+        logger.info("*****  Getting user command finished  ****");
     }
 
     @Test
     public void testLogUserIntoSystem() {
+        logger.info("*****  Log User into system  ****");
         response = UserEndPoints.logUser(this.userPayload.getUsername(), this.userPayload.getPassword());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("*****  User logged  ****");
     }
 
     @Test
     public void testUpdateUser() {
+        logger.info("*****  Update User  ****");
         // Going to generate details: firstname, lastname and email to update user
         String newFirstName = faker.name().firstName();
         String newLastName = faker.name().lastName();
@@ -92,6 +93,7 @@ public class UserTests {
         response = UserEndPoints.updateUser(this.userPayload.getUsername(), userPayload);
         response.then().log().body();
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("*****  User update command successful  ****");
 
         // Checking data after update
         Response responseAfterUpdate = UserEndPoints.readUser(this.userPayload.getUsername());
@@ -100,13 +102,14 @@ public class UserTests {
         String responseAfterUpdateUsername = responseAfterUpdate.getBody().path("username").toString();
         // Compare class field with result of reading from the endpoint
         Assertions.assertEquals(this.userPayload.getUsername(), responseAfterUpdateUsername);
+        logger.info("*****  User updated and checked  ****");
     }
 
     @Test
     public void deleteUserByName() {
-        logger.info("*****   Trying to delete user , UserEndPoint  *****");
-
+        logger.info("*****  Delete user  ****");
         response = UserEndPoints.deleteUser(this.userPayload.getUsername());
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("*****  User deleted  ****");
     }
 }

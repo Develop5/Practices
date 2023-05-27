@@ -39,7 +39,6 @@ public class ExtentReportManager implements BeforeAllCallback, BeforeTestExecuti
     private int failTests;
     private int skipTests;
 
-
     @Override
     public void beforeAll(ExtensionContext context) {
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss")

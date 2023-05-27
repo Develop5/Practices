@@ -40,28 +40,20 @@ public class UserTests2 {
         userPayload.setPhone(faker.phoneNumber().cellPhone());
         logger = LogManager.getLogger(this.getClass());
 
-        logger.debug("My Debug Log");
-        logger.info("My Info Log");
-        logger.warn("My Warn Log");
-        logger.error("My error log");
-        logger.fatal("My fatal log");
-
-
     }
 
     @Test
     public void testPostUser() {
-        logger.info("***************  Creating user  *************** " + userPayload.getUsername()) ;
+        logger.info("*****  Creating user  *****") ;
         response = UserEndPoints2.createUser(userPayload);
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
-        logger.info("***************  User created  ***************");
+        logger.info("*****  User created  *****");
     }
 
     @Test
     public void testGetUserByName() {
-        logger.info("*****   Getting user info by name   *****");
-        // response = UserEndPoints2.readUser(this.userPayLoad.getUsername());
+        logger.info("*****  Getting user info by name. UserTest2  ****");        // response = UserEndPoints2.readUser(this.userPayLoad.getUsername());
         response = UserEndPoints2.readUser(usernameForFirstTime);        // Needs to be after Post
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
@@ -70,13 +62,16 @@ public class UserTests2 {
 
     @Test
     public void testLogUserIntoSystem() {
+        logger.info("*****  Log User into system. UserTests2  ****");
         response = UserEndPoints2.logUser(this.userPayload.getUsername(), this.userPayload.getPassword());
         response.then().log().all();
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("*****  User logged  ****");
     }
 
     @Test
     public void testUpdateUser() {
+        logger.info("*****  Update User. UserTests2  ****");
         // Going to generate details: firstname, lastname and email to update user
         String newFirstName = faker.name().firstName();
         String newLastName = faker.name().lastName();
@@ -89,6 +84,7 @@ public class UserTests2 {
         response = UserEndPoints2.updateUser(this.userPayload.getUsername(), userPayload);
         response.then().log().body();
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("*****  User update command successful. UserTest2  ****");
 
         // Checking data after update
         Response responseAfterUpdate = UserEndPoints2.readUser(this.userPayload.getUsername());
@@ -97,11 +93,14 @@ public class UserTests2 {
         String responseAfterUpdateUsername = responseAfterUpdate.getBody().path("username").toString();
         // Compare class field with result of reading from the endpoint
         Assertions.assertEquals(this.userPayload.getUsername(), responseAfterUpdateUsername);
+        logger.info("*****  User updated and checked. UserTests2  ****");
     }
 
     @Test
     public void deleteUserByName() {
+        logger.info("*****  Delete user. UserTests2  ****");
         response = UserEndPoints2.deleteUser(this.userPayload.getUsername());
         Assertions.assertEquals(200, response.getStatusCode());
+        logger.info("*****  User deleted  ****");
     }
 }

@@ -4,6 +4,8 @@ import api.endpoints.UserEndPoints;
 import api.payload.User;
 import api.utilities.ExtentReportManager;
 import io.restassured.response.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.util.Strings;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
@@ -16,6 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @DisplayName("4 tests per 3 users = 12 total")
 public class DDTest {
     Response response;
+    Logger logger;
+
     @Order(1)
     @ParameterizedTest
     @MethodSource("api.utilities.DataProviders#getAllData")
@@ -28,6 +32,8 @@ public class DDTest {
                                 String password,
                                 String phone)
     {
+        logger = LogManager.getLogger(this.getClass());
+        logger.info("*****  Check user is not blank  ****");
         assertTrue(Strings.isNotBlank(userId));            // Change this to simulate
         assertTrue(Strings.isNotBlank(userName));
         assertTrue(Strings.isNotBlank(firstName));
@@ -35,6 +41,8 @@ public class DDTest {
         assertTrue(Strings.isNotBlank(email));
         assertTrue(Strings.isNotBlank(password));
         assertTrue(Strings.isNotBlank(phone));
+        logger.info("*****  User is not blank  ****");
+
     }
     @Order(2)
     @ParameterizedTest
@@ -48,6 +56,8 @@ public class DDTest {
                              String password,
                              String phone)
     {
+        logger = LogManager.getLogger(this.getClass());
+        logger.info("*****  Post User  ****");
         User userPayload = new User();
         userPayload.setId(Integer.parseInt(userId));
         userPayload.setUsername(userName);
@@ -58,6 +68,7 @@ public class DDTest {
         userPayload.setPhone(phone);
         response = UserEndPoints.createUser(userPayload);
         assertEquals(200, response.getStatusCode());
+        logger.info("*****  Post user finished  ****");
     }
 
     @Order(3)
@@ -66,8 +77,11 @@ public class DDTest {
     @DisplayName("DDTest delete each user")
     public void testDeleteUserByName(String userName)
     {
+        logger = LogManager.getLogger(this.getClass());
+        logger.info("*****  Delete user by name  ****");
         response = UserEndPoints.deleteUser(userName);
         assertEquals(200, response.getStatusCode());
+        logger.info("*****  User deleted  ****");
     }
 
     @Order(4)
@@ -76,8 +90,11 @@ public class DDTest {
     @DisplayName("DDTest able to get each user")
     public void testGetUsers(String userName)
     {
+        logger = LogManager.getLogger(this.getClass());
+        logger.info("*****  Get user  ****");
         response = UserEndPoints.readUser(userName);
         assertEquals(200, response.getStatusCode());
+        logger.info("*****  Get user finished  ****");
     }
 
 }
