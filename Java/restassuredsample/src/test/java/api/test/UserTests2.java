@@ -101,9 +101,6 @@ public class UserTests2 {
 
     @Test
     public void deleteUserByName() {
-        logger.info("*****   Trying to delete user   *****");
-        logger.info("*****   deleteUser   ***** " + this.userPayload.getUsername());
-
         response = UserEndPoints2.deleteUser(this.userPayload.getUsername());
         Assertions.assertEquals(200, response.getStatusCode());
     }
