@@ -1,4 +1,21 @@
-# Log levels #
+## How to execute tests from command line ##
+```
+./gradlew clean test --info 
+```
+&nbsp;
+
+From this folder:
+```
+~/Documents/Lenovo_D/Lourdes/practicando/Practices/Java/restassuredsample
+```
+
+### Pending tasks ###
+- [x] Part 3
+- [ ] Part 4
+- [ ] Part 5 (if exists)
+
+&nbsp;
+### Log levels ###
 
 **TRACE** – log events with this level are the most fine-grained and are usually not needed unless you need to have the full visibility of what is happening in your application and inside the third-party libraries that you use. You can expect the TRACE logging level to be very verbose.
 
@@ -10,11 +27,9 @@
 
 **ERROR** – the log level that should be used when the application hits an issue preventing one or more functionalities from properly functioning. The ERROR log level can be used when one of the payment systems is not available, but there is still the option to check out the basket in the e-commerce application or when your social media logging option is not working for some reason. You can also see the ERROR log level associated with exceptions.
 
-
-
-
-## And also... ##
-
+&nbsp;
+#### And also... ####
+&nbsp;
 **ALL** indicates that all messages should be logged.
 
 **CONFIG** is a message level for static configuration messages.
