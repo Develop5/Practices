@@ -10,9 +10,23 @@ From this folder:
 ```
 
 ### Pending tasks ###
-- [x] Part 3
-- [ ] Part 4
-- [ ] Part 5 (if exists)
+- [x] Part 3 Reports with log4j2
+- [ ] Start with playlist for Rest Assured
+
+I stopped here:
+https://www.youtube.com/watch?v=r5R_TViegfY&t=45s
+&nbsp;
+
+
+This is not a playlist but several chapters.
+&nbsp;
+
+&nbsp;
+
+The following is a playlist for Rest Assured:
+https://www.youtube.com/playlist?list=PLUDwpEzHYYLvLZX_QEGTNolPvNADXid0I
+
+
 
 &nbsp;
 ### Log levels ###
