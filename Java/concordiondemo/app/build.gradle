@@ -29,7 +29,12 @@ application {
     mainClass = 'concordiondemo.App'
 }
 
-tasks.named('test') {
+test {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation: 'org.concordion:concordion:3.2.0'
+    testImplementation: 'org.junit.jupiter:junit-jupiter-api:5.8.1'
 }
