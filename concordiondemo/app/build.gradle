@@ -9,37 +9,36 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
-
 }
 
+
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
 dependencies {
+    testImplementation 'org.concordion:concordion:3.2.0'
     // Use JUnit Jupiter for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+    //testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 
     // This dependency is used by the application.
-    implementation 'com.google.guava:guava:31.1-jre'
+    //implementation 'com.google.guava:guava:31.1-jre'
 }
 
 application {
     mainClass = 'concordiondemo.GreetingService'
 }
 
+
 test {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
+    systemProperties['concordion.output.dir'] = "$reporting.baseDir/spec"
+    testLogging.showStandardStreams = true
+    outputs.upToDateWhen { false }
 }
 
+
 dependencies {
-    testImplementation 'org.concordion:concordion:3.2.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
-    testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.3'
+    //testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+    //testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.3'
     //testImplementation 'junit:junit:4.12'
-
-
-
 }
