@@ -11,6 +11,4 @@ public class HelloWorld {
     public String greetings(final String userName) {
         return greetingService.greetings(userName);
     }
-
-
 }
