@@ -16,3 +16,13 @@ Reference repository for build.gradle: [concordion-tutorial-java-markdown](https
 build/reports/spec/concordiondemo/HelloWorld.html
 
 Final route shown in the terminal after test runs.
+
+
+&nbsp;
+
+
+#### Other examples to run in the future ####
+* [Concordion - Automated Acceptance Testing in Java](https://www.methodsandtools.com/tools/concordion.php)
+
+* [Concordion Official Getting Started](https://concordion.org/tutorial/java/markdown/)
+
