@@ -7,11 +7,14 @@
 <h1>Primeros pasos con Concordion</h1>
 
 <h3>Ejemplo básico</h3>
+
 <p>
     Dado una persona llamada <b concordion:set="#userName">Frodo Bolsón</b><br/>
     el saludo deberá ser <span concordion:assertEquals="greetings(#userName)">Hola Frodo Bolsón!</span>
 </p>
+
 <h3>Ejemplo con tabla</h3>
+
 <p>
 <table concordion:execute="#greeting = greetings(#userNameInTable)">
     <tr>
@@ -28,7 +31,7 @@
     </tr>
     <tr>
         <td>Myca Vykos</td>
-        <td>Hola Myca Vykos!</td>
+        <td>Adiós Myca Vykos!</td>
     </tr>
 </table>
 </p>
