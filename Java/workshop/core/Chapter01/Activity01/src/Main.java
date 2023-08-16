@@ -2,10 +2,11 @@ public class Main {
     public static void main(String[] args) {
         double a = 3;
         double b = 4;
-        double m = 0; // variable for the minimum
+        double m = 0; // variable for the minimum;
 
         // string to be printed
         String r = "The minimum of numbers: " + a + " and " + b + " is ";
+        System.out.println("<<<<<<<<<<<     Close        >>>>>>>>>>>>");
 
         // mathematical operation
         m = Math.min(a,b);
