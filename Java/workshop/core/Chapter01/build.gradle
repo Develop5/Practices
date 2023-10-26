@@ -2,6 +2,10 @@ plugins {
     id 'java'
 }
 
+task('helloSuper').doLast{
+    println "I'am:   $project.name"
+}
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -9,11 +13,31 @@ repositories {
     mavenCentral()
 }
 
+/* This is only for the main project
+project ("Example01") {
+    apply plugin: 'java'
+    task('hello').doLast{
+        println "I'am $project.name"
+    }
+}
+*/
+
+// This one is for a project with multiple sub-modules and no src in the root
+subprojects {
+    apply plugin: 'java'
+    task('hellosub').doLast{
+        println "I'am:   $project.name"
+    }
+
+}
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform()      //This is for JUnit 5
+
+    // If you needed JUnit 4:
+    //useJUnit()
 }

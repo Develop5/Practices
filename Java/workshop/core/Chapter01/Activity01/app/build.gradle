@@ -26,7 +26,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'activity01.App'
+    mainClass = 'src/main/java/activity01/App'
 }
 
 tasks.named('test') {
