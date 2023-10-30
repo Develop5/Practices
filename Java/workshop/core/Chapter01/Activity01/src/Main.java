@@ -7,6 +7,9 @@ public class Main {
         // string to be printed
         String r = "The minimum of numbers: " + a + " and " + b + " is ";
         System.out.println("<<<<<<<<<<<     Close        >>>>>>>>>>>>");
+        System.out.println("<<<<<<<<<<<>>>>>>>>>>>>");
+        System.out.println("C:\\Users\\lourd\\Documents\\Lenovo_D\\Lourdes\\practicando\\Practices\\Java\\workshop\\core\\Chapter01\\Activity01\\src\\Main.java");
+        System.out.println("<<<<<<<<<<<>>>>>>>>>>>>");
 
         // mathematical operation
         m = Math.min(a,b);

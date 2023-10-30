@@ -10,3 +10,4 @@
 rootProject.name = 'Chapter01'
 include('app')
 include('Example01')
+include('Example02')

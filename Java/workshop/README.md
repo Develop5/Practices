@@ -1,6 +1,8 @@
 # The-Java-Workshop
 
-C:\Users\lourd\Documents\FromLenovo\DescargasAEstudiar_Nuevo\Java
+C:\Users\lourd\Documents\FromLenovo\DescargasAEstudiar_Nuevo\Java\
+The Java Workshop - A practical, no-nonsense guide to Java (2020).pdf
+
 
 ## Project name:  &ensp;&ensp;_workshop_  😁
 
