@@ -16,9 +16,9 @@ Note: **there are no** .iml files in the original code
 /c/Users/lourd/Documents/Lenovo_D/Lourdes/practicando/Practices/Java/thejavaworkshop/The-Java-Workshop
 
 ### Voy por aquí
-Pag 23 from 954
+Pag 59 from 954
 
-Exercise 5: Running the Code from the CLI
+Exercise 14: Using a While Loop
 
 Chapter02 Activity1 needs parameters, for example:
 Activity1 120 80
