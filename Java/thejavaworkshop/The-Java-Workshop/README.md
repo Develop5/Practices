@@ -6,6 +6,12 @@
 C:\Users\lourd\Documents\FromLenovo\DescargasAEstudiar_Nuevo\Java\
 The Java Workshop - A practical, no-nonsense guide to Java (2020).pdf
 
+### Code reference:
+https://github.com/TrainingByPackt/The-Java-Workshop
+
+
+Note: **there are no** .iml files in the original code
+
 ### Original project cloned to:
 /c/Users/lourd/Documents/Lenovo_D/Lourdes/practicando/Practices/Java/thejavaworkshop/The-Java-Workshop
 
@@ -14,7 +20,7 @@ Pag 23 from 954
 
 Exercise 5: Running the Code from the CLI
 
-
+[thejavaworkshop.iml](..%2F.idea%2Fthejavaworkshop.iml)
 ## Resources
 
 ### Steps followed to install the base code
@@ -23,9 +29,14 @@ Exercise 5: Running the Code from the CLI
 3) With this, the project was settled inside my original repository
 
 Every time we switch module, the folder needs to be marked as the only source in the project structure.
+
 That way, the Main file is found and becomes executable.
 
-###
+
+### Executing from command line
+1) javac Main.java
+2) java Main
+
 
 ###
 [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
