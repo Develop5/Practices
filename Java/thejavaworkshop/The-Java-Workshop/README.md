@@ -13,42 +13,13 @@ The Java Workshop - A practical, no-nonsense guide to Java (2020).pdf
 
 ## Resources
 
-Set remote repository:
-git remote set-url origin https://gonzalezeduardo01@github.com/gonzalezeduardo01/prueba01.git
-
-git remote set-url origin https://Develop5@github.com/Develop5/Practices.git
+### Steps followed to install the base code
+1) The project was cloned from the original inside a folder of my own.
+2) Then, it was needed to delete the /.git folder
+3) With this, the project was settled inside my original repository
 
 
 ###
-user.name=Develop
-
-user.email=lourdesalternativa@yahoo.com
-
-maDrid2010
-
-
-File config inside .git
-
-
-
-[user]
-email = your@email.com
-user = Develop5
-[core]
-repositoryformatversion = 0
-filemode = false
-bare = false
-logallrefupdates = true
-symlinks = false
-ignorecase = true
-[remote "origin"]
-url = https://github.com/Develop5/Practices.git
-fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "pageNosotros"]
-remote = origin
-merge = refs/heads/pageNosotros
-[credential]
-interactive = always
 
 ###
 [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
