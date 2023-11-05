@@ -20,6 +20,8 @@ Pag 23 from 954
 
 Exercise 5: Running the Code from the CLI
 
+Chapter02 Activity1 needs parameters, for example:
+Activity1 120 80
 
 ## Resources
 
@@ -31,6 +33,8 @@ Exercise 5: Running the Code from the CLI
 Every time we switch module, the folder needs to be marked as the only source in the project structure.
 
 That way, the Main file is found and becomes executable.
+
+The folder "production" must be also excluded in the project structure.
 
 
 ### Executing from command line
