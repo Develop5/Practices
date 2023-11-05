@@ -9,6 +9,10 @@ The Java Workshop - A practical, no-nonsense guide to Java (2020).pdf
 ### Original project cloned to:
 /c/Users/lourd/Documents/Lenovo_D/Lourdes/practicando/Practices/Java/thejavaworkshop/The-Java-Workshop
 
+### Voy por aquí
+Pag 23 from 954
+
+Exercise 5: Running the Code from the CLI
 
 
 ## Resources
