@@ -41,6 +41,13 @@ The folder "production" must be also excluded in the project structure.
 1) javac Main.java
 2) java Main
 
+### Contrast final with immutable. 
+An immutable object does not allow the data inside the
+object to change. A final object does not allow the object to point to another object.
+
+### Constructors
+Are used to initializing the basic properties of classes, and so are used when assigning values to
+variables, for instance.
 
 ### 
 [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
