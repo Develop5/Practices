@@ -18,6 +18,8 @@ The Java Workshop - A practical, no-nonsense guide to Java (2020).pdf
 2) Then, it was needed to delete the /.git folder
 3) With this, the project was settled inside my original repository
 
+Every time we switch module, the folder needs to be marked as the only source in the project structure.
+That way, the Main file is found and becomes executable.
 
 ###
 
