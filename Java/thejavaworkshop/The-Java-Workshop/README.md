@@ -20,7 +20,7 @@ Pag 23 from 954
 
 Exercise 5: Running the Code from the CLI
 
-[thejavaworkshop.iml](..%2F.idea%2Fthejavaworkshop.iml)
+
 ## Resources
 
 ### Steps followed to install the base code
@@ -38,5 +38,5 @@ That way, the Main file is found and becomes executable.
 2) java Main
 
 
-###
+### 
 [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
