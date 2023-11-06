@@ -15,14 +15,6 @@ Note: **there are no** .iml files in the original code
 ### Original project cloned to:
 /c/Users/lourd/Documents/Lenovo_D/Lourdes/practicando/Practices/Java/thejavaworkshop/The-Java-Workshop
 
-### Voy por aquí
-Pag 59 from 954
-
-Exercise 14: Using a While Loop
-
-Chapter02 Activity1 needs parameters, for example:
-Activity1 120 80
-
 ## Resources
 
 ### Steps followed to install the base code
@@ -51,3 +43,18 @@ variables, for instance.
 
 ### 
 [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
+
+
+##### Notes to the book.-
+Chapter02 Activity1 needs parameters, for example:
+Activity1 120 80
+
+
+### Voy por aquí
+Pag 75 from 954
+
+Working with Objects in Java
+
+
+
+
