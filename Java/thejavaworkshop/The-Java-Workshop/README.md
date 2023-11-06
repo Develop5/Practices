@@ -51,9 +51,9 @@ Activity1 120 80
 
 
 ### Voy por aquí
-Pag 75 from 954
+Pag 79 from 954
 
-Working with Objects in Java
+Exercise 1: Creating the WordTool Class
 
 
 
