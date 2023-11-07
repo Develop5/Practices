@@ -68,8 +68,8 @@ Activity1 120 80
 (Pag 79 from 954     - Skipped
 Exercise 1: Creating the WordTool Class)
 
-Pag 90 out of 954
-Overriding and Hiding Methods
+Pag 91 out of 954
+Example07
 
 
 
