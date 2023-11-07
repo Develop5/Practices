@@ -41,6 +41,20 @@ object to change. A final object does not allow the object to point to another o
 Are used to initializing the basic properties of classes, and so are used when assigning values to
 variables, for instance.
 
+
+### Access modifiers
+
+There are four types of Java access modifiers:
+
+**Private**: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+
+**Default**: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+
+**Protected**: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+
+**Public**: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+
+
 ### 
 [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
 
@@ -54,8 +68,8 @@ Activity1 120 80
 (Pag 79 from 954     - Skipped
 Exercise 1: Creating the WordTool Class)
 
-Pag 88 out of 954
-Inheritance in Java
+Pag 90 out of 954
+Overriding and Hiding Methods
 
 
 

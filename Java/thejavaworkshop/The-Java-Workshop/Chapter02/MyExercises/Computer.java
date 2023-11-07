@@ -1,6 +1,6 @@
 package MyExercises;
 
-public class Computer {
+class Computer {            // Oh, this is a default. So, only in the package
     // variables
     private double cpuSpeed;     // in GHz
 
