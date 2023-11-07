@@ -51,9 +51,12 @@ Activity1 120 80
 
 
 ### Voy por aquí
-Pag 79 from 954
+(Pag 79 from 954     - Skipped
+Exercise 1: Creating the WordTool Class)
 
-Exercise 1: Creating the WordTool Class
+Pag 88 out of 954
+Inheritance in Java
+
 
 
 
