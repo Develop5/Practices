@@ -17,7 +17,14 @@ public class App
 
         System.out.println( "Hello World!" );
         try (Playwright playwright = Playwright.create()) {
-            Browser browser = playwright.chromium().launch();
+
+            // Headless by default
+            //Browser browser = playwright.chromium().launch();
+
+            // Headed
+            Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+
+
             Page page = browser.newPage();
             page.navigate("http://playwright.dev");
             System.out.println(page.title());            // Expect a title "to contain" a substring.
