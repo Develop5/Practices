@@ -34,7 +34,7 @@ public class App
 
             // Expects page to have a heading with the name of Installation.
             assertThat(page.getByRole(AriaRole.HEADING,
-                    new Page.GetByRoleOptions().setName("XXXInstallation"))).isVisible();
+                    new Page.GetByRoleOptions().setName("Installation"))).isVisible();
 
 
 
