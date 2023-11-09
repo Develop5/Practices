@@ -36,4 +36,5 @@ set your screen to the max resolution and increase font size and scale
 By default, all Playwright tests on desktop browsers run on a OS level screen resolution of 1920x1080
 
 
+[How to debug Playwright](https://playwright.dev/java/docs/debug)
 
