@@ -14,7 +14,7 @@
 
 
 ### Page Factory
-![Diagram](Java/playwrightJava/pwjpom/Diagram.png)
+![Diagram](Diagram.png)
 
 
 
