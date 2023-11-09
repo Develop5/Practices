@@ -9,7 +9,7 @@ import com.microsoft.playwright.Playwright;
  * Hello world!
  *
  */
-public class App 
+public class FirstScript
 {
     public static void main( String[] args )
     {
@@ -23,9 +23,11 @@ public class App
             // Headed
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 
+            // First script
             Page page = browser.newPage();
             page.navigate("http://playwright.dev");
             System.out.println(page.title());
+
         }
     }
 
