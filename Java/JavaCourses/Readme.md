@@ -12,10 +12,15 @@
     [Curso Completo de Java para Principiantes (2021) - YouTube](https://www.youtube.com/watch?v=Z8zAKYLZBqc)
 
     En Español. Bastante completo
-   
 
 
-3. Oracle University:
+
+3. 10 hours. With Eclipse:
+
+   [Java Full Course in 10 Hours | Edureka - YouTube](https://www.youtube.com/watch?v=hBh_CC5y8-s)
+
+
+4. Oracle University:
 
    [Java Explorer - Oracle MyLearn](https://mylearn.oracle.com/ou/learning-path/java-explorer/79726)
    
@@ -23,35 +28,32 @@
    Java Explorer. Sólo hasta antes de Oracle Cloud and Beyond
 
 
-4. POO desde -10 💡: ¡Empezá por acá! 😉
+5. POO desde -10 💡: ¡Empezá por acá! 😉
 
     [POO desde -10 💡 ¡Empezá por acá! 😉](https://www.youtube.com/watch?v=voMOPqtnJto&list=PLOw7b-NX043aSC7ZNtEuVfY8xZoNzVqdJ&index=1)
 
 
-5. Java Full Course for free
+6. Java Full Course for free
 
    [Java Full Course for free](https://www.youtube.com/watch?v=xk4_1vDrzzo)
    
     Tutorial Youtube, 12 horas
 
 
-6. Java Web Development
+7. Java Web Development
 
     [Java Web Development](https://education.launchcode.org/java-web-development/)
 
     Con Intellij. No vídeo. Sólo lecturas
 
 
-7. Java - OOP Basics 1/5 (Class and Object)
+8. Java - OOP Basics 1/5 (Class and Object)
 
     [Java - OOP Basics 1/5 (Class and Object) - YouTube](https://www.youtube.com/watch?v=0NPR8GFHNmE&list=PL8rcHwQO3nbJIIEJH58PUHNBv_VxfJGgb)
 
     (Con Eclipse)
 
 
-8. 10 hours. With Eclipse:
-
-    [Java Full Course in 10 Hours | Edureka - YouTube](https://www.youtube.com/watch?v=hBh_CC5y8-s)
 
 
 9. Java Full Course for free ☕
