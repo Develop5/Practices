@@ -4,7 +4,7 @@ import com.microsoft.playwright.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class PlayFactory {
+public class PlaywrightFactory {
     Playwright playwright;
     protected Page page;
     Browser browser;
