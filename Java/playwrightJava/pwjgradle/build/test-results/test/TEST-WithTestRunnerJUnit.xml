@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WithTestRunnerJUnit" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-11-09T12:33:42" hostname="LAPTOP-84FJEUOV" time="3.023">
+  <properties/>
+  <testcase name="shouldCheckTheBox()" classname="WithTestRunnerJUnit" time="1.451"/>
+  <testcase name="shouldClickButton()" classname="WithTestRunnerJUnit" time="0.149"/>
+  <testcase name="shouldSearchWiki()" classname="WithTestRunnerJUnit" time="1.42"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
