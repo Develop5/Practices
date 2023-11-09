@@ -14,6 +14,7 @@ public class ScreenshotWebkit {
             // Headless
             Browser browser = playwright.webkit().launch();
             Page page = browser.newPage();
+
             page.navigate("https://playwright.dev/");
             page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("example2.png")));
         }

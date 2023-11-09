@@ -14,7 +14,6 @@ public class FirstScript
     public static void main( String[] args )
     {
 
-        System.out.println( "Hello World!" );
         try (Playwright playwright = Playwright.create()) {
 
             // Headless
@@ -27,6 +26,9 @@ public class FirstScript
             Page page = browser.newPage();
             page.navigate("http://playwright.dev");
             System.out.println(page.title());
+
+            System.out.println( "Hello World!" );
+
 
         }
     }

@@ -13,7 +13,7 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 public class FirstAssertions {
     public static void main(String[] args) {
         try (Playwright playwright = Playwright.create()) {
-            // HEadless
+            // Headless
             Browser browser = playwright.chromium().launch();
             Page page = browser.newPage();
             page.navigate("http://playwright.dev");
