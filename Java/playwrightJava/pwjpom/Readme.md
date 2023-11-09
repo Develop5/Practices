@@ -14,7 +14,7 @@
 
 
 ### Page Factory
-![Diagram](jetbrains://idea/navigate/reference?project=pwjpom&path=Diagram.png)
+![Diagram](Java/playwrightJava/pwjpom/Diagram.png)
 
 
 
