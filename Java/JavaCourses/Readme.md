@@ -54,16 +54,24 @@
     (Con Eclipse)
 
 
-
-
 9. Java Full Course for free ☕
 
    [Java Full Course for free ☕ - YouTube](https://www.youtube.com/watch?v=xk4_1vDrzzo)
    
    (Con Eclipse. 12 horas)
- 
 
-10. Advanced. Java Core Best Practices Every Java Programmer Should Know
+
+10. Intro to Java Programming - Course for Absolute Beginners
+
+   [Intro to Java Programming - Course for Absolute Beginners](https://www.youtube.com/watch?v=GoXwIVyNvX0)
+
+
+11. Intellij Idea Java IDE crash course | Intellij Idea tutorial + Shortcuts | Updated for 2023
+
+   [Intellij Idea Java IDE crash course | Intellij Idea tutorial + Shortcuts | Updated for 2023](https://www.youtube.com/watch?v=nEI88JI6HII)
+
+
+12. Advanced. Java Core Best Practices Every Java Programmer Should Know
    
     [10 Java Core Best Practices Every Java Programmer Should Know](https://www.codejava.net/coding/10-java-core-best-practices-every-java-programmer-should-know)
 
