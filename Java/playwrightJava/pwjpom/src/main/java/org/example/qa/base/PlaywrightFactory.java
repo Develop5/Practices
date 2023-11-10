@@ -15,8 +15,8 @@ public class PlaywrightFactory {
     public Page getPage(String appURL, String browserType) {
     }
     */
-    @ParameterizedTest
-    @CsvSource({"appURL", "browserType"}) // Passing strings
+    // @ParameterizedTest
+    // @CsvSource({"appURL", "browserType"}) // Passing strings
     public Page getPage(String appURL, String browserType) {
         playwright = Playwright.create();
         switch (browserType) {

@@ -15,12 +15,18 @@ public class BaseTest {
     protected SearchPage search;
     PlaywrightFactory play;
 
+    static final String  appURL = "http://automationpractice.com/index.php";
+    static final String  browserType = "chrome";
+
 
     @BeforeAll
-    @ParameterizedTest
-    @CsvSource({"appURL, http://automationpractice.com/index.php", "browserType, chrome"}) // Passing strings
+    //@ParameterizedTest
+    //@CsvSource({"appURL, http://automationpractice.com/index.php", "browserType, chrome"}) // Passing strings
     public void setUp(String appURL, String browserType) {
-    //public void setUp(String appURL, String browserType) {
+
+        System.out.println("\nappURL = " + appURL);
+        System.out.println("\nbrowserType = " + browserType);
+
         play = new PlaywrightFactory();
         page = play.getPage(appURL, browserType);
         hp = new HomePage(page);
@@ -28,6 +34,10 @@ public class BaseTest {
 
     @AfterAll
     public void tearDown() {
+        
+        System.out.println("\nappURL = " + appURL);
+        System.out.println("\nbrowserType = " + browserType);
+
         page.context().browser().close();
 
     }
