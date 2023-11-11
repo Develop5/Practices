@@ -2,16 +2,49 @@ package org.example.qa.pages;
 
 import com.microsoft.playwright.Page;
 
-public class SearchPage {
-    Page page;
+import java.util.List;
+import java.util.stream.Collectors;
 
-    SearchPage(Page page) {
-        this.page=page;
+import static com.microsoft.playwright.Page.WaitForSelectorOptions.State.ATTACHED;
+import static com.microsoft.playwright.Page.WaitForSelectorOptions.State.DETACHED;
+
+public class SearchPage {
+
+    private Page page;
+
+    private String locator_searchBar = "#searchBar";
+    private String locator_hiddenBooks = "li.ui-screen-hidden";
+    private String locator_visibleBooks = "li:not(.ui-screen-hidden)";
+    private String locator_visibleBookTitles = "li:not(.ui-screen-hidden) h2";
+
+
+    public SearchPage(Page page){
+        this.page = page;
     }
 
-    private String searchTxt="span.lighter";
+    public void search(String query) {
+        clearSearchBar();
+        page.fill(locator_searchBar, query);
 
-    public String getSearchText() {
-        return page.locator(searchTxt).textContent().toLowerCase().trim();
+        Page.WaitForSelectorOptions expectedState = new Page.WaitForSelectorOptions().withState(ATTACHED);
+        page.waitForSelector(locator_hiddenBooks,expectedState);
+    }
+
+    public void clearSearchBar(){
+        page.fill(locator_searchBar, "");
+
+        Page.WaitForSelectorOptions expectedState = new Page.WaitForSelectorOptions().withState(DETACHED);
+        page.waitForSelector(locator_hiddenBooks,expectedState);
+    }
+
+    public int getNumberOfVisibleBooks(){
+       return page.querySelectorAll(locator_visibleBooks).size();
+    }
+
+    public List<String> getVisibleBooks(){
+        return page.querySelectorAll(locator_visibleBookTitles)
+                .stream()
+                .map(e -> e.innerText())
+                .collect(Collectors.toList());
     }
 }

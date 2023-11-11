@@ -1,12 +1,12 @@
 package org.example.qa.testcases;
 
-import org.example.qa.pages.BaseTest;
+import org.example.qa.base.BaseTests;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PlayTests extends BaseTest {
+public class PlayTests extends BaseTests {
 
     @Test
     @Order(1)

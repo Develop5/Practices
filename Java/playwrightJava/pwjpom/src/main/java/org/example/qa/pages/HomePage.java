@@ -7,7 +7,7 @@ public class HomePage {
 
     private String search="input#search_query_top";
 
-    HomePage(Page page) {
+    public HomePage(Page page) {
         this.page=page;
     }
 
