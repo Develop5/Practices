@@ -12,11 +12,13 @@ public class BaseTestClass {
     BrowserContext context;
     protected Page page;
 
+    private String USER_AGENT = "{userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/109.0',}";
+
     public void launchPlaywright(String browserName, String headless) {
         playwright = Playwright.create();
         if (browserName.equalsIgnoreCase("chrome") || browserName.equalsIgnoreCase("msedge")
                 || browserName.equalsIgnoreCase("chromium")) {
-            browserType = playwright.chromium();
+            browserType = playwright.chromium().connect();
         } else if (browserName.equalsIgnoreCase("webkit")) {
             browserType = playwright.webkit();
         }
@@ -26,6 +28,7 @@ public class BaseTestClass {
             browser = browserType.launch(new BrowserType.LaunchOptions().setChannel(browserName).setHeadless(false));
         }
         context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1400, 700));
+
         context.close();
         page = browser.newPage();
         System.out.println("**** Project Browser Name and Version is : " + browserName + " : " + browser.version());

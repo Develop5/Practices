@@ -18,3 +18,16 @@
 git show origin
 ```
 
+### I am here ###
+
+Investigate user-agent, to avoid Captcha and probably allow headless execution
+
+https://playwright.dev/java/docs/api/class-browsertype
+
+https://www.scrapingbee.com/blog/web-scraping-without-getting-blocked/
+
+https://www.zenrows.com/blog/playwright-user-agent#use-a-random-user-agent
+
+https://www.checklyhq.com/learn/headless/challenging-flows/
+
+
