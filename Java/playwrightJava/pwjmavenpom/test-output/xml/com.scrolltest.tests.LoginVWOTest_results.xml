@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pwjmavenpom"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="8,133">
+    <properties></properties>
+
+            <testcase
+                name="loginTest"
+                time="8,133"
+                classname="com.scrolltest.tests.LoginVWOTest">
+
+            <failure type="com.microsoft.playwright.PlaywrightException" message="Error {
+  message=&apos;Target closed
+=========================== logs ===========================
+waiting for locator(&quot;[data-qa=&apos;lufexuloga&apos;]&quot;) to be visible
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+=========================== logs ===========================
+waiting for locator(&quot;[data-qa=&apos;lufexuloga&apos;]&quot;) to be visible
+============================================================
+    at C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crConnection.js:145:16
+    at new Promise (&lt;anonymous&gt;)
+    at CRSession.send (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crConnection.js:141:12)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crExecutionContext.js:78:28)
+    at FrameExecutionContext.evaluateWithArguments (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\javascript.js:61:61)
+    at evaluateExpression (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\javascript.js:241:26)
+    at async C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\frames.js:628:24
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\frames.js:912:24)
+    at async ProgressController.run (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\progress.js:92:22)
+    at async FrameDispatcher.waitForSelector (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\dispatchers\frameDispatcher.js:103:85)
+}">
+                <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target closed
+=========================== logs ===========================
+waiting for locator("[data-qa='lufexuloga']") to be visible
+============================================================
+  name='Error
+  stack='Error: Target closed
+=========================== logs ===========================
+waiting for locator("[data-qa='lufexuloga']") to be visible
+============================================================
+    at C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crConnection.js:145:16
+    at new Promise (<anonymous>)
+    at CRSession.send (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crConnection.js:141:12)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crExecutionContext.js:78:28)
+    at FrameExecutionContext.evaluateWithArguments (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\javascript.js:61:61)
+    at evaluateExpression (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\javascript.js:241:26)
+    at async C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\frames.js:628:24
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\frames.js:912:24)
+    at async ProgressController.run (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\progress.js:92:22)
+    at async FrameDispatcher.waitForSelector (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\dispatchers\frameDispatcher.js:103:85)
+}
+                com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1064)com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1054)com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$91(PageImpl.java:1440)com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1439)com.microsoft.playwright.Page.waitForSelector(Page.java:7779)com.scrolltest.pages.LoginVWOPage.login(LoginVWOPage.java:23)com.scrolltest.tests.LoginVWOTest.loginTest(LoginVWOTest.java:22)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:808)org.testng.TestRunner.run(TestRunner.java:603)org.testng.SuiteRunner.runTest(SuiteRunner.java:429)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)org.testng.SuiteRunner.run(SuiteRunner.java:326)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)org.testng.TestNG.runSuitesLocally(TestNG.java:1169)org.testng.TestNG.runSuites(TestNG.java:1092)org.testng.TestNG.run(TestNG.java:1060)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+                    Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target closed
+=========================== logs ===========================
+waiting for locator("[data-qa='lufexuloga']") to be visible
+============================================================
+  name='Error
+  stack='Error: Target closed
+=========================== logs ===========================
+waiting for locator("[data-qa='lufexuloga']") to be visible
+============================================================
+    at C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crConnection.js:145:16
+    at new Promise (<anonymous>)
+    at CRSession.send (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crConnection.js:141:12)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\chromium\crExecutionContext.js:78:28)
+    at FrameExecutionContext.evaluateWithArguments (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\javascript.js:61:61)
+    at evaluateExpression (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\javascript.js:241:26)
+    at async C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\frames.js:628:24
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\frames.js:912:24)
+    at async ProgressController.run (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\progress.js:92:22)
+    at async FrameDispatcher.waitForSelector (C:\Users\lourd\AppData\Local\Temp\playwright-java-1251682192582886050\package\lib\server\dispatchers\frameDispatcher.js:103:85)
+}
+                    com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1064)com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1054)com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$91(PageImpl.java:1440)com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1439)com.microsoft.playwright.Page.waitForSelector(Page.java:7779)com.scrolltest.pages.LoginVWOPage.login(LoginVWOPage.java:23)com.scrolltest.tests.LoginVWOTest.loginTest(LoginVWOTest.java:22)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:808)org.testng.TestRunner.run(TestRunner.java:603)org.testng.SuiteRunner.runTest(SuiteRunner.java:429)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)org.testng.SuiteRunner.run(SuiteRunner.java:326)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)org.testng.TestNG.runSuitesLocally(TestNG.java:1169)org.testng.TestNG.runSuites(TestNG.java:1092)org.testng.TestNG.run(TestNG.java:1060)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+                ]]>
+            </failure>
+    </testcase>
+
+
+</testsuite>
