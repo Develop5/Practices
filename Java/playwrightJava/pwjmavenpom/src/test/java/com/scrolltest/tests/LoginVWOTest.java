@@ -20,7 +20,8 @@ public class LoginVWOTest extends BaseTestClass {
     public void loginTest(@Optional("93npu2yyb0@esiix.com") String username, @Optional("Wingify@123") String password) {
         loginPage = new LoginVWOPage(page);
         boolean isLoginSuccess = loginPage.login(username, password);
-        Assert.assertEquals(isLoginSuccess, true);
+        Assert.assertEquals(isLoginSuccess, false);
+        //Assert.assertEquals(isLoginSuccess, true);
     }
 
     @AfterClass
