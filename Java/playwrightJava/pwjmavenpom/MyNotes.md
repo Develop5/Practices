@@ -17,4 +17,3 @@
 git show origin
 ```
 
-Git not working from IDE

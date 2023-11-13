@@ -20,6 +20,11 @@ import java.util.Map;
 /**
  * Unit test for simple App.
  */
+
+/**
+ * Lourdes: I have changed the name of the class, according to the file
+ */
+
 public class APIAutomationPlaywright
 {
 
