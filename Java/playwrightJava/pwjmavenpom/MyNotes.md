@@ -12,3 +12,9 @@
 [Markdown systax](https://www.markdownguide.org/basic-syntax/)
 
 
+#### Show remote origin ####
+```
+git show origin
+```
+
+Git not working from IDE

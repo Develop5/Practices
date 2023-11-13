@@ -1,6 +1,6 @@
 
 ## Reference
-[laywright for Java](https://playwright.dev/java/)
+[Playwright for Java](https://playwright.dev/java/)
 
 
 ### 
