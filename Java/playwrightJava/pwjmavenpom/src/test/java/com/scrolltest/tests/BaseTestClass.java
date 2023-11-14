@@ -18,7 +18,7 @@ public class BaseTestClass {
         playwright = Playwright.create();
         if (browserName.equalsIgnoreCase("chrome") || browserName.equalsIgnoreCase("msedge")
                 || browserName.equalsIgnoreCase("chromium")) {
-            browserType = playwright.chromium().connect();
+            browserType = playwright.chromium();
         } else if (browserName.equalsIgnoreCase("webkit")) {
             browserType = playwright.webkit();
         }
