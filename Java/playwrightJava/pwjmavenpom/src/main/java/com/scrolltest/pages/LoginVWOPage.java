@@ -20,17 +20,23 @@ public class LoginVWOPage {
         System.out.println("***** password *******:  " + password);
         boolean isLoginSuccess = false;
         page.fill(usernameBox, username);
-        page.fill(passwordBox, password);
+
+        /*
+        Should credentials be:      ?
+        ***** username *******:  93npu2yyb0@esiix.com
+        ***** password *******:  Wingify@123
+
+         */
+        page.fill(passwordBox, password);           // Issue here: check oiginal password
         page.click(loginButton);
 
-        /**
+
+
         page.waitForSelector(welcomeProfileButton).isVisible();
         boolean isEnabled = page.isEnabled("input");
         if (isEnabled) {
             isLoginSuccess = true;
         }
         return isLoginSuccess;
-         */
-        return true;
     }
 }
