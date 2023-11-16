@@ -16,6 +16,12 @@
 
 [Target page](https://app.vwo.com/#/login)
 
+#### Where to read codd ####
+
+[open jdk / jdk19](https://github.com/openjdk/jdk19/tree/master/src/java.base/share/classes/java)
+
+[spring-petclinic](https://github.com/spring-projects/spring-petclinic)
+
 #### Show remote origin ####
 ```
 git show origin
