@@ -27,6 +27,11 @@
 git show origin
 ```
 
+### Credentials for the web page under test ###
+username: 93npu2yyb0@esiix.com 
+password: Wingify@123
+
+
 ### I am here ###
 
 If you load the page without trying to login, no problem.
