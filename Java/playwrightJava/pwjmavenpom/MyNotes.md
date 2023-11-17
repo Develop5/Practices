@@ -1,7 +1,7 @@
 
 [Project reference](https://www.youtube.com/watch?v=DyiZnpdDTM4)
 
-[Code](https://github.com/PramodDutta/PlaywrightJavaPOM)
+[Code repository](https://github.com/PramodDutta/PlaywrightJavaPOM)
 
 
 [Why Solid Principles](SOLID principle_To_WebAutomation.pdf)
@@ -37,6 +37,11 @@ password: Wingify@123
 If you load the page without trying to login, no problem.
 But as soon as you try login and introduce a username and password that did not work the firs time, the CAPTCHA comes in.
 
+
+### Next step ###
+
+Start other classes with this target page. No login needed.
+http://the-internet.herokuapp.com/
 
 Investigate user-agent, to avoid Captcha and probably allow headless execution
 
