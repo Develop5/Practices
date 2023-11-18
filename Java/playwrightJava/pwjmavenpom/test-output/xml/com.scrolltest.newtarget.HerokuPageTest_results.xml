@@ -12,6 +12,6 @@
             <testcase
                 name="theTest"
                 time="0,000"
-                classname="com.scrolltest.newtarget.HerokuPageTest">
+                classname="com.scrolltest.herokutests.HerokuPageTest">
             </testcase>
 </testsuite>

@@ -1,7 +1,8 @@
-package com.scrolltest.newtarget;
+package com.scrolltest.herokutests;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.WaitUntilState;
+import org.apache.commons.io.IOUtils;
 
 
 public class BaseTestClass2 {
@@ -16,6 +17,9 @@ public class BaseTestClass2 {
     //private String USER_AGENT = "{userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/109.0',}";
 
     public void launchPlaywright(String browserName, String headless) {
+
+        System.out.println("I am launching Playwrihg from : " + this.getClass().getSimpleName());
+
         playwright = Playwright.create();
         if (browserName.equalsIgnoreCase("chrome") || browserName.equalsIgnoreCase("msedge")
                 || browserName.equalsIgnoreCase("chromium")) {
@@ -37,7 +41,9 @@ public class BaseTestClass2 {
 
     public void launchApplication(String url) {
         page.navigate(url, new Page.NavigateOptions().setWaitUntil(WaitUntilState.NETWORKIDLE));
-        page.waitForSelector("[data-qa='cemaxumuwu']");
+
+        // Here I need to specify selector to wait for. Better in a configuration?
+        //page.waitForSelector("[data-qa='cemaxumuwu']");
     }
 
     public void closePlaywright() {

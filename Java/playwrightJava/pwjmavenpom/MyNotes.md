@@ -10,8 +10,6 @@ This project will be moved later to Gradle
 
 [Solid Principles applied (Diagram)](SOLID principle_To_WebAutomation.pdf)
 
-<img width="530" alt="Access Modifiers" src="C:\Users\lourd\Documents\Lenovo_D\Lourdes\practicando\Practices\Java\playwrightJava\pwjmavenpom\AccessModifiers.png">
-
 
 
 ### Resources ###
@@ -23,7 +21,12 @@ This project will be moved later to Gradle
 
 [Target page](https://app.vwo.com/#/login)
 
-#### Where to read codd ####
+#### Access modifiers ####
+<img width="530" alt="Access Modifiers" src="C:\Users\lourd\Documents\Lenovo_D\Lourdes\practicando\Practices\Java\playwrightJava\pwjmavenpom\AccessModifiers.png">
+
+
+
+#### In general, where to read codd ####
 
 [open jdk / jdk19](https://github.com/openjdk/jdk19/tree/master/src/java.base/share/classes/java)
 
