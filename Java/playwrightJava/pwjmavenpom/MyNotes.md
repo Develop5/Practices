@@ -10,6 +10,9 @@ This project will be moved later to Gradle
 
 [Solid Principles applied (Diagram)](SOLID principle_To_WebAutomation.pdf)
 
+<img width="530" alt="Access Modifiers" src="C:\Users\lourd\Documents\Lenovo_D\Lourdes\practicando\Practices\Java\playwrightJava\pwjmavenpom\AccessModifiers.png">
+
+
 
 ### Resources ###
 [Error: maven-compiler-plugin not found](https://stackoverflow.com/questions/60120587/maven-compiler-plugin-not-found)
