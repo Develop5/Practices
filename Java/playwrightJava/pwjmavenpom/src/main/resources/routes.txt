@@ -1,0 +1,1 @@
+mainpage.url=file:///Users/rajagopalps/git/JCG/pageObjectModel/src/main/resources/login.html
