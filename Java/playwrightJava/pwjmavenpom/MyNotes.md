@@ -1,10 +1,14 @@
+### Playwright Maven using Page Object Model ###
+
+This project will be moved later to Gradle
+
 
 [Project reference](https://www.youtube.com/watch?v=DyiZnpdDTM4)
 
 [Code repository](https://github.com/PramodDutta/PlaywrightJavaPOM)
 
 
-[Why Solid Principles](SOLID principle_To_WebAutomation.pdf)
+[Solid Principles applied (Diagram)](SOLID principle_To_WebAutomation.pdf)
 
 
 ### Resources ###
