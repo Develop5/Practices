@@ -63,13 +63,11 @@ Investigate later about user-agent, to avoid Captcha and probably allow headless
 Not able to import org.json.simple.parser.JSONParser, then the version was settled in pom.xml
 Due to this (new version in pom for org.apache.maven.plugins), the repository for Maven compile in settings started to update
 
-#### Reading properties from commons.json ####
-Should it be in @BeforeClass or an utilities class apart that can be called to update the variable
+#### Highlight a DOM element ####
+.css('border', '4px solid red')
 
-In order to read properties from the commons.json file:
-System.out.println("Browser: " + jsonObject.get("browser"));
-System.out.println("headless condition: " + jsonObject.get("headless"));
-
+Example:
+$(['h1.heading'][0]).css('border', '7px solid red')
 
 
 https://playwright.dev/java/docs/api/class-browsertype

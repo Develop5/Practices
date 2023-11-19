@@ -2,6 +2,7 @@ package com.scrolltest.herokutests;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.WaitUntilState;
+import netscape.javascript.JSObject;
 import org.apache.commons.io.IOUtils;
 
 
@@ -45,8 +46,6 @@ public class BaseTestClass2 {
     public void launchApplication(String url) {
         page.navigate(url, new Page.NavigateOptions().setWaitUntil(WaitUntilState.NETWORKIDLE));
 
-        // Here I need to specify selector to wait for. Better in a configuration?
-        //page.waitForSelector("[data-qa='cemaxumuwu']");
         page.waitForSelector("h1.heading");
     }
 
@@ -54,6 +53,13 @@ public class BaseTestClass2 {
         page.close();
         browser.close();
         playwright.close();
+    }
+
+    public void highlightElement(String element) {
+        ElementHandle handle = page.querySelector(element);
+        // Still to investgate
+        // handle.wait. ...
+
     }
 
 }

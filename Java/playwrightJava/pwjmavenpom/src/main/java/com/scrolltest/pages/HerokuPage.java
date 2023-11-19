@@ -14,13 +14,16 @@ public class HerokuPage {
 
     private final Page page;
 
+    // All Selectors of this page must be here
+
     public HerokuPage(Page page) {
         this.page = page;
     }
 
-    public boolean tellMeItIsTrue() {
-        return true;
-    }
+    // All locators fo HerokuPage here:
+    String headWelcomeToTheInternet = "h1.heading";
+    String availableExamples = "h2";
+
 
 
 }
