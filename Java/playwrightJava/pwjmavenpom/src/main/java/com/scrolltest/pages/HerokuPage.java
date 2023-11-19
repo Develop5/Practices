@@ -22,11 +22,5 @@ public class HerokuPage {
         return true;
     }
 
-    public static JSONObject getAllFromCommons() throws IOException, URISyntaxException, ParseException, org.json.simple.parser.ParseException {
-        URL url = getClass().getClassLoader().getResource(String.format("commons.json"));
-        JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader(url.getPath()));
-        JSONObject jsonObject = (JSONObject)obj;
-        return jsonObject;
-    }
+
 }

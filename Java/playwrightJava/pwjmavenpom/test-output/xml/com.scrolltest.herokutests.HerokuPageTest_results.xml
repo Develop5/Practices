@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0,001">
+           time="0,005">
     <properties></properties>
 
 
 
             <testcase
                 name="theTest"
-                time="0,001"
+                time="0,005"
                 classname="com.scrolltest.herokutests.HerokuPageTest">
             </testcase>
 </testsuite>
