@@ -1,24 +1,47 @@
 package com.scrolltest.herokutests;
 
+import com.google.gson.*;
 import com.scrolltest.pages.HerokuPage;
-import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.Charsets;
+import org.json.JSONObject;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+
+import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
+
+import org.json.simple.parser.JSONParser;
+
 
 public class HerokuPageTest extends BaseTestClass2{
     HerokuPage herokuPage;
+
     @BeforeClass
-    public void doSomething() throws IOException {
+    public void doSomething() throws IOException, URISyntaxException {
         System.out.println("Starting Heroku Test ...");
 
-        String myResources;
-        myResources = IOUtils.toString( getClass().getClassLoader().getResourceAsStream("commons.txt"), StandardCharsets.UTF_8);
-        System.out.println("My Resources: " + myResources);
+        URL url = getClass().getClassLoader().getResource(String.format("commons.json"));
 
+        System.out.println("File Name: " + url);
+
+        Object obj;
+        obj = parser.parse(new FileReader(url));
+        JSONObject jsonObject = (JSONObject)obj;
+        String name = (String)jsonObject.get("browser");
+        String course = (String)jsonObject.get("headless");
+        /*
+        JSONObject obj= new JSONObject(url);
+        String browserName = obj.getString("browser");
+        String headlessCondition = obj.getString("headless");
+
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println(" Browser: " + browserName);
+        System.out.println(" headlessCondition: " + headlessCondition);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+         */
 
         // To make use of the following block, I need to be able to read the URL from resources
         /*
@@ -27,9 +50,9 @@ public class HerokuPageTest extends BaseTestClass2{
             launchPlaywright(browserName, headless);
             launchApplication(url);
         }
-
          */
     }
+
 
     @Test
     public void theTest(){

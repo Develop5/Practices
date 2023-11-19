@@ -55,6 +55,11 @@ http://the-internet.herokuapp.com/
 
 Investigate user-agent, to avoid Captcha and probably allow headless execution
 
+### With the new target Heroku ###
+
+Not able to import org.json.simple.parser.JSONParser, then the version was settled in pom.xml
+Due to this, the repository for Maven compile in settings started to update
+
 https://playwright.dev/java/docs/api/class-browsertype
 
 https://www.scrapingbee.com/blog/web-scraping-without-getting-blocked/
