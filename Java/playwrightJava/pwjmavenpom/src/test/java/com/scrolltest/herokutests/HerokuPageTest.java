@@ -33,6 +33,7 @@ public class HerokuPageTest extends BaseTestClass2{
     // Here we need to change the URL to point to the new site, as this is not working
     // It is better to have a variable in the resources folder or any other POM proposal
     public void browserStart() {
+
         launchPlaywright(configuration.get("browser").toString(), configuration.get("headless").toString());
         launchApplication((String)configuration.get("herokuapp_url"));
     }
@@ -51,6 +52,6 @@ public class HerokuPageTest extends BaseTestClass2{
     @AfterClass
     public void browserClose(){
         System.out.printf("...Getting out of Heroku Test");
-        closePlaywright();
+        //closePlaywright();
     }
 }

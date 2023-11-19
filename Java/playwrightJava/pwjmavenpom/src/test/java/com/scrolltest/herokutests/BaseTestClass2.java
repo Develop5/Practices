@@ -18,7 +18,10 @@ public class BaseTestClass2 {
 
     public void launchPlaywright(String browserName, String headless) {
 
-        System.out.println("I am launching Playwrihg from : " + this.getClass().getSimpleName());
+        System.out.println("*******************************");
+        System.out.println("Browser name : " + browserName);
+        System.out.println("Browser name : " + headless);
+        System.out.println("*******************************");
 
         playwright = Playwright.create();
         if (browserName.equalsIgnoreCase("chrome") || browserName.equalsIgnoreCase("msedge")
@@ -44,6 +47,7 @@ public class BaseTestClass2 {
 
         // Here I need to specify selector to wait for. Better in a configuration?
         //page.waitForSelector("[data-qa='cemaxumuwu']");
+        page.waitForSelector("h1.heading");
     }
 
     public void closePlaywright() {
