@@ -60,6 +60,11 @@ Investigate user-agent, to avoid Captcha and probably allow headless execution
 Not able to import org.json.simple.parser.JSONParser, then the version was settled in pom.xml
 Due to this (new version in pom for org.apache.maven.plugins), the repository for Maven compile in settings started to update
 
+In order to read properties from the commons.json file:
+System.out.println("Browser: " + jsonObject.get("browser"));
+System.out.println("headless condition: " + jsonObject.get("headless"));
+
+
 https://playwright.dev/java/docs/api/class-browsertype
 
 https://www.scrapingbee.com/blog/web-scraping-without-getting-blocked/

@@ -19,16 +19,14 @@ public class HerokuPageTest extends BaseTestClass2{
     HerokuPage herokuPage;
 
     @BeforeClass
-    public void doSomething() throws IOException, URISyntaxException, ParseException, org.json.simple.parser.ParseException {
+    public JSONObject getProperties() throws IOException, URISyntaxException, ParseException, org.json.simple.parser.ParseException {
         System.out.println("Starting Heroku Test ...");
         URL url = getClass().getClassLoader().getResource(String.format("commons.json"));
-        //System.out.println("\n Filename" + url.getPath());
         JSONParser parser = new JSONParser();
         Object obj = parser.parse(new FileReader(url.getPath()));
-        //System.out.println("\nObjeto: " + obj.toString());
         JSONObject jsonObject = (JSONObject)obj;
-        System.out.println("Browser: " + jsonObject.get("browser"));
-        System.out.println("headless condition: " + jsonObject.get("headless"));
+        return jsonObject;
+
     }
 
 
