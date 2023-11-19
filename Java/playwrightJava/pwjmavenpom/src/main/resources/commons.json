@@ -1,5 +1,6 @@
 {
   "browser" : "firefox",
-  "headless" : "true"
+  "headless" : "true",
+  "herokuapp_url" : "http://the-internet.herokuapp.com/"
 
 }

@@ -21,6 +21,9 @@ This project will be moved later to Gradle
 
 [Target page](https://app.vwo.com/#/login)
 
+[Second target page](http://the-internet.herokuapp.com/)
+
+
 #### Access modifiers ####
 <img width="530" alt="Access Modifiers" src="C:\Users\lourd\Documents\Lenovo_D\Lourdes\practicando\Practices\Java\playwrightJava\pwjmavenpom\AccessModifiers.png">
 
@@ -53,7 +56,7 @@ But as soon as you try login and introduce a username and password that did not 
 Start other classes with this target page. No login needed.
 http://the-internet.herokuapp.com/
 
-Investigate user-agent, to avoid Captcha and probably allow headless execution
+Investigate later about user-agent, to avoid Captcha and probably allow headless execution
 
 ### With the new target Heroku ###
 
