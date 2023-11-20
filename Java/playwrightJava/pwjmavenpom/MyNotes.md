@@ -55,7 +55,7 @@ http://the-internet.herokuapp.com/
 Note: Investigate later about user-agent, to avoid Captcha and probably allow headless execution
 
 
-#### Highlight a DOM element ####
+#### Highlight a DOM element (Investigate)####
 .css('border', '4px solid red')
 It works for the console of Chrome DevTools but there is no visible way to introduce it in Playwright.
 
@@ -63,7 +63,7 @@ Example:
 $(['h1.heading'][0]).css('border', '7px solid red')
 
 
-#### Discussions about not being blocked by a Catchap ####
+#### Discussions about not being blocked by a Catpcha (Investigate) ####
 
 https://playwright.dev/java/docs/api/class-browsertype
 
@@ -74,3 +74,9 @@ https://www.zenrows.com/blog/playwright-user-agent#use-a-random-user-agent
 https://www.checklyhq.com/learn/headless/challenging-flows/
 
 
+### Next steps ### 
+
+- Move the static method created in HerokuPageTest to the BaseTestClass2 because it is not a test
+  - Carefully, to avoid any problem with static vs non-static modifier
+  
+- Resolve the topics labeled above as "(Investigate)"

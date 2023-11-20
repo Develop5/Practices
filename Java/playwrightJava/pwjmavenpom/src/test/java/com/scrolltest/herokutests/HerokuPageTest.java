@@ -20,6 +20,8 @@ public class HerokuPageTest extends BaseTestClass2{
     }
 
     public static JSONObject getAllFromCommons() throws IOException, URISyntaxException, ParseException, org.json.simple.parser.ParseException {
+        // This is a utility method where all parameters are loaded from commons.json
+        // Consider to take it to the base page and let this class only for tests
         URL url = HerokuPageTest.class.getClassLoader().getResource(String.format("commons.json"));
         JSONParser parser = new JSONParser();
         Object obj = parser.parse(new FileReader(url.getPath()));
@@ -28,21 +30,19 @@ public class HerokuPageTest extends BaseTestClass2{
     }
 
     @BeforeClass
-   // @Parameters({ "url", "browserName" , "headless"})
-
-    // Here we need to change the URL to point to the new site, as this is not working
-    // It is better to have a variable in the resources folder or any other POM proposal
+    // Browser, url and other conditions are loaded from commons.json
     public void browserStart() {
-
         launchPlaywright(configuration.get("browser").toString(), configuration.get("headless").toString());
         launchApplication((String)configuration.get("herokuapp_url"));
+
+        System.out.println("\nThe browser is : " +  configuration.get("browser"));
+        System.out.println("The headless condition is : " +  configuration.get("headless"));
+        System.out.println("url is : " +  configuration.get("herokuapp_url"));
     }
 
     @Test
     public void theTest(){
-        System.out.println("\nThe browser is : " +  configuration.get("browser"));
-        System.out.println("The headless condition is : " +  configuration.get("headless"));
-        System.out.println("url is : " +  configuration.get("herokuapp_url"));
+
 
 
     }
