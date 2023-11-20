@@ -19,11 +19,6 @@ public class BaseTestClass2 {
 
     public void launchPlaywright(String browserName, String headless) {
 
-        System.out.println("*******************************");
-        System.out.println("Browser name : " + browserName);
-        System.out.println("Browser name : " + headless);
-        System.out.println("*******************************");
-
         playwright = Playwright.create();
         if (browserName.equalsIgnoreCase("chrome") || browserName.equalsIgnoreCase("msedge")
                 || browserName.equalsIgnoreCase("chromium")) {
@@ -45,8 +40,8 @@ public class BaseTestClass2 {
 
     public void launchApplication(String url) {
         page.navigate(url, new Page.NavigateOptions().setWaitUntil(WaitUntilState.NETWORKIDLE));
+        page.waitForSelector("h1.heading");         // Standard to check the page is loaded
 
-        page.waitForSelector("h1.heading");
     }
 
     public void closePlaywright() {

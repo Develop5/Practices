@@ -27,9 +27,9 @@ This project will be moved later to Gradle
 #### Access modifiers ####
 <img width="530" alt="Access Modifiers" src="C:\Users\lourd\Documents\Lenovo_D\Lourdes\practicando\Practices\Java\playwrightJava\pwjmavenpom\AccessModifiers.png">
 
+[How to check a page is loaded](https://sqa.stackexchange.com/questions/26776/how-to-verify-if-a-web-page-has-been-properly-loaded-or-not#:~:text=Verify%20the%20URL%20is%20shown%20as%20expected.%20Verify,above%20are%20met%2C%20a%20page%20is%20loaded%20properly.)
 
-
-#### In general, where to read codd ####
+#### In general, where to read code ####
 
 [open jdk / jdk19](https://github.com/openjdk/jdk19/tree/master/src/java.base/share/classes/java)
 
@@ -40,35 +40,30 @@ This project will be moved later to Gradle
 git show origin
 ```
 
-### Credentials for the web page under test ###
+### Credentials for the initial web page under test ###
 username: 93npu2yyb0@esiix.com 
 password: Wingify@123
 
 
-### I am here ###
 
-If you load the page without trying to login, no problem.
-But as soon as you try login and introduce a username and password that did not work the firs time, the CAPTCHA comes in.
+### Current page under test ###
 
-
-### Next step ###
-
-Start other classes with this target page. No login needed.
+After seen the captcha issue (not solved yet) the project has switched target site.
+In this one, no login is needed:
 http://the-internet.herokuapp.com/
 
-Investigate later about user-agent, to avoid Captcha and probably allow headless execution
+Note: Investigate later about user-agent, to avoid Captcha and probably allow headless execution
 
-### With the new target Heroku ###
-
-Not able to import org.json.simple.parser.JSONParser, then the version was settled in pom.xml
-Due to this (new version in pom for org.apache.maven.plugins), the repository for Maven compile in settings started to update
 
 #### Highlight a DOM element ####
 .css('border', '4px solid red')
+It works for the console of Chrome DevTools but there is no visible way to introduce it in Playwright.
 
 Example:
 $(['h1.heading'][0]).css('border', '7px solid red')
 
+
+#### Discussions about not being blocked by a Catchap ####
 
 https://playwright.dev/java/docs/api/class-browsertype
 
