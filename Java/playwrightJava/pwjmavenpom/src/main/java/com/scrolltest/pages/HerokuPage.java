@@ -1,14 +1,6 @@
 package com.scrolltest.pages;
 
 import com.microsoft.playwright.Page;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 public class HerokuPage {
 
@@ -23,6 +15,7 @@ public class HerokuPage {
     // All locators fo HerokuPage here:
     String headWelcomeToTheInternet = "h1.heading";
     String availableExamples = "h2";
+    public String abTesting = "a[href='/abtest']";
 
 
 

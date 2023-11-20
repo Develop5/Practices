@@ -48,6 +48,11 @@ public class BaseTestClass2 {
         playwright.close();
     }
 
+    public boolean checkElementVisibility(String element) {
+        return page.waitForSelector(element).isVisible();
+
+
+    }
     public void highlightElement(String element) {
         ElementHandle handle = page.querySelector(element);
         // Still to investgate

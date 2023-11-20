@@ -4,6 +4,7 @@ import com.scrolltest.pages.HerokuPage;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.FileReader;
@@ -41,10 +42,8 @@ public class HerokuPageTest extends BaseTestClass2{
     }
 
     @Test
-    public void theTest(){
-
-
-
+    public void abTestingTest(){
+        Assert.assertEquals(checkElementVisibility(herokuPage.abTesting), true);
     }
 
 
