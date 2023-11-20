@@ -51,7 +51,6 @@ public class HerokuPageTest extends BaseTestClass2{
 
     @AfterClass
     public void browserClose(){
-        System.out.printf("...Getting out of Heroku Test");
-        //closePlaywright();
+        closePlaywright();
     }
 }

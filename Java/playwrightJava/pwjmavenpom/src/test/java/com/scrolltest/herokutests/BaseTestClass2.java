@@ -2,8 +2,6 @@ package com.scrolltest.herokutests;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.WaitUntilState;
-import netscape.javascript.JSObject;
-import org.apache.commons.io.IOUtils;
 
 
 public class BaseTestClass2 {
