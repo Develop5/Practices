@@ -11,6 +11,7 @@ public class BaseTestClass2 {
     Browser browser;
     BrowserContext context;
     protected Page page;
+    //public Page page;             // Not a wise attempt
 
     // This User Agent was added by me to the other project. Maybe not needed
     //private String USER_AGENT = "{userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/109.0',}";
