@@ -15,6 +15,7 @@ import java.net.URL;
 
 public class HerokuPageTest extends BaseTestClass2{
     HerokuPage herokuPage;
+
     public JSONObject configuration  = this.getAllFromCommons();
 
     public HerokuPageTest() throws IOException, URISyntaxException, ParseException {
@@ -43,16 +44,20 @@ public class HerokuPageTest extends BaseTestClass2{
 
     @Test
     public void abTestingTest(){
-        System.out.println("object Page: " + page.waitForSelector("a[href='/abtest']"));
+        System.out.println("object Page: " + page);             // This object exists
+        System.out.println("object Page: " + herokuPage);       // This object does not exists
 
-        // This object is null
-        //System.out.println("object Page: " + herokuPage);
+        // This block works. An object page is created.
+        HerokuPage second = new HerokuPage(page);
+        System.out.println("Object page: " + second);
+        Assert.assertEquals(checkElementVisibility(second.abTesting), true);
 
+
+
+        // Issue: how to address the page with the object?
 
         //Assert.assertEquals(checkElementVisibility(herokuPage.abTesting), true);
 
-        // The locator is correct. Then, the page is not reached as an object
-        //Assert.assertEquals(checkElementVisibility("a[href='/abtest']"), true);
     }
 
 

@@ -12,6 +12,7 @@ public class HerokuPage {
         this.page = page;
     }
 
+
     // All locators fo HerokuPage here:
     String headWelcomeToTheInternet = "h1.heading";
     String availableExamples = "h2";
