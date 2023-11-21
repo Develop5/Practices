@@ -16,6 +16,8 @@ import java.net.URL;
 public class HerokuPageTest extends BaseTestClass2{
     HerokuPage herokuPage;
 
+    HerokuPage testPage = new HerokuPage(page);
+
     public JSONObject configuration  = this.getAllFromCommons();
 
     public HerokuPageTest() throws IOException, URISyntaxException, ParseException {
@@ -44,20 +46,7 @@ public class HerokuPageTest extends BaseTestClass2{
 
     @Test
     public void abTestingTest(){
-        System.out.println("object Page: " + page);             // This object exists
-        System.out.println("object Page: " + herokuPage);       // This object does not exists
-
-        // This block works. An object page is created.
-        HerokuPage second = new HerokuPage(page);
-        System.out.println("Object page: " + second);
-        Assert.assertEquals(checkElementVisibility(second.abTesting), true);
-
-
-
-        // Issue: how to address the page with the object?
-
-        //Assert.assertEquals(checkElementVisibility(herokuPage.abTesting), true);
-
+        Assert.assertEquals(checkElementVisibility(testPage.abTesting), true);
     }
 
 
