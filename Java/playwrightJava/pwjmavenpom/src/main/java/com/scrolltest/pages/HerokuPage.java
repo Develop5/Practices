@@ -19,7 +19,7 @@ public class HerokuPage {
     public String abTesting = "a[href='/abtest']";
     public String addRemoveElements = "a[href='/add_remove_elements/']";
 
-    public String BasicAuth = "a[href='/basic_auth']";
+    public String basicAuth = "a[href='/basic_auth']";
     public String brokenImages = "a[href='/broken_images']";
     public String challengingDOM = "a[href='/challenging_dom']";
     public String checkboxes = "a[href='/checkboxes']";

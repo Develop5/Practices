@@ -45,13 +45,52 @@ public class HerokuPageTest extends BaseTestClass2{
     }
 
     @Test
-    public void abTestingTestvVisible(){
+    public void allElementsVisible(){
         Assert.assertEquals(checkElementVisibility(testPage.abTesting), true);
-    }
-
-    @Test
-    public void abTestingTestvVisible(){
         Assert.assertEquals(checkElementVisibility(testPage.addRemoveElements), true);
+        Assert.assertEquals(checkElementVisibility(testPage.basicAuth), true);
+        Assert.assertEquals(checkElementVisibility(testPage.brokenImages), true);
+        Assert.assertEquals(checkElementVisibility(testPage.challengingDOM), true);
+        Assert.assertEquals(checkElementVisibility(testPage.checkboxes), true);
+        Assert.assertEquals(checkElementVisibility(testPage.contextMenu), true);
+        Assert.assertEquals(checkElementVisibility(testPage.digestAuthentication), true);
+        Assert.assertEquals(checkElementVisibility(testPage.disappearingElements), true);
+        Assert.assertEquals(checkElementVisibility(testPage.dragAndDrop), true);
+        Assert.assertEquals(checkElementVisibility(testPage.dropdown), true);
+        Assert.assertEquals(checkElementVisibility(testPage.dynamicContent), true);
+        Assert.assertEquals(checkElementVisibility(testPage.dynamicControls), true);
+        Assert.assertEquals(checkElementVisibility(testPage.dynamicLoading), true);
+        Assert.assertEquals(checkElementVisibility(testPage.entryAd), true);
+        Assert.assertEquals(checkElementVisibility(testPage.exitIntent), true);
+        Assert.assertEquals(checkElementVisibility(testPage.fileDownload), true);
+        Assert.assertEquals(checkElementVisibility(testPage.fileUpload), true);
+        Assert.assertEquals(checkElementVisibility(testPage.floatingMenu), true);
+        Assert.assertEquals(checkElementVisibility(testPage.forgotPassword), true);
+        Assert.assertEquals(checkElementVisibility(testPage.formAuthentication), true);
+        Assert.assertEquals(checkElementVisibility(testPage.frames), true);
+        Assert.assertEquals(checkElementVisibility(testPage.geolocation), true);
+        Assert.assertEquals(checkElementVisibility(testPage.horizontalSlider), true);
+        Assert.assertEquals(checkElementVisibility(testPage.hovers), true);
+        Assert.assertEquals(checkElementVisibility(testPage.infiniteScroll), true);
+        Assert.assertEquals(checkElementVisibility(testPage.inputs), true);
+        Assert.assertEquals(checkElementVisibility(testPage.JQueryUIMenus), true);
+        Assert.assertEquals(checkElementVisibility(testPage.javaScriptAlerts), true);
+        Assert.assertEquals(checkElementVisibility(testPage.javaScriptOnloadEventError), true);
+        Assert.assertEquals(checkElementVisibility(testPage.keyPresses), true);
+        Assert.assertEquals(checkElementVisibility(testPage.largeAndDeepDOM), true);
+        Assert.assertEquals(checkElementVisibility(testPage.multipleWindows), true);
+        Assert.assertEquals(checkElementVisibility(testPage.nestedFrames), true);
+        Assert.assertEquals(checkElementVisibility(testPage.notificationMessages), true);
+        Assert.assertEquals(checkElementVisibility(testPage.redirectLink), true);
+        Assert.assertEquals(checkElementVisibility(testPage.secureFileDownload), true);
+        Assert.assertEquals(checkElementVisibility(testPage.shadowDOM), true);
+        Assert.assertEquals(checkElementVisibility(testPage.shiftingContent), true);
+        Assert.assertEquals(checkElementVisibility(testPage.slowResources), true);
+        Assert.assertEquals(checkElementVisibility(testPage.sortableDataTables), true);
+        Assert.assertEquals(checkElementVisibility(testPage.statusCodes), true);
+        Assert.assertEquals(checkElementVisibility(testPage.typos), true);
+        Assert.assertEquals(checkElementVisibility(testPage.wYSIWYGEditor), true);
+
     }
 
 
