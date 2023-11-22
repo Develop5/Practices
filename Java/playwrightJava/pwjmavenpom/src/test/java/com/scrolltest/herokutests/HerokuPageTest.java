@@ -45,9 +45,17 @@ public class HerokuPageTest extends BaseTestClass2{
     }
 
     @Test
-    public void abTestingTest(){
+    public void abTestingTestvVisible(){
         Assert.assertEquals(checkElementVisibility(testPage.abTesting), true);
     }
+
+    @Test
+    public void abTestingTestvVisible(){
+        Assert.assertEquals(checkElementVisibility(testPage.addRemoveElements), true);
+    }
+
+
+
 
 
 
