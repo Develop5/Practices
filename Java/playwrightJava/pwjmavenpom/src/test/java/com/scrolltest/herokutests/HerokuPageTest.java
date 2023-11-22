@@ -14,7 +14,7 @@ import java.net.URL;
 
 
 public class HerokuPageTest extends BaseTestClass2{
-    HerokuPage herokuPage;
+    //HerokuPage herokuPage;
 
     HerokuPage testPage = new HerokuPage(page);
 
