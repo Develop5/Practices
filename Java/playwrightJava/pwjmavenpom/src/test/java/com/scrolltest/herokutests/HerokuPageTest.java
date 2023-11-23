@@ -23,6 +23,7 @@ public class HerokuPageTest extends BaseTestClass2{
     public HerokuPageTest() throws IOException, URISyntaxException, ParseException {
     }
 
+    /*
     public static JSONObject getAllFromCommons() throws IOException, URISyntaxException, ParseException, org.json.simple.parser.ParseException {
         // This is a utility method where all parameters are loaded from commons.json
         // Consider to take it to the base page and let this class only for tests
@@ -32,6 +33,8 @@ public class HerokuPageTest extends BaseTestClass2{
         JSONObject jsonObject = (JSONObject)obj;
         return jsonObject;
     }
+
+     */
 
     @BeforeClass
     // Browser, url and other conditions are loaded from commons.json
