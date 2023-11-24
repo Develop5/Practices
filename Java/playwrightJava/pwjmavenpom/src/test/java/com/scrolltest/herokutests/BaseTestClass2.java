@@ -51,9 +51,13 @@ public class BaseTestClass2 {
 
     public boolean checkElementVisibility(String element) {
         return page.waitForSelector(element).isVisible();
-
-
     }
+
+    public boolean checkTextContained(String element, String text) {
+        return page.waitForSelector(element,text);
+    }
+
+
     public void highlightElement(String element) {
         ElementHandle handle = page.querySelector(element);
         // Still to investgate

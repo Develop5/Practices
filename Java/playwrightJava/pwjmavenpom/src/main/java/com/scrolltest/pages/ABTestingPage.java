@@ -12,8 +12,10 @@ public class ABTestingPage {
 
     // IT looks this should not be like this but a class per page
 
-    String abTestingTitle = "A/B Test Control";
-    String abTestingURL = "http://the-internet.herokuapp.com/abtest";
+    public static String abTestingURL = "http://the-internet.herokuapp.com/abtest";
+    //public static String abTestingTitle = "A\/B Test Control";
+    public static String abTestingTitleText = "B Test Control";
+    public static String abTestingTitle = "Bh3[shub-ins='1']";
 
 
 }

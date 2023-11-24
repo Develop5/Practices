@@ -1,5 +1,6 @@
 package com.scrolltest.herokutests;
 
+import com.scrolltest.pages.ABTestingPage;
 import com.scrolltest.pages.HerokuPage;
 import com.scrolltest.utilities.UtilitiesHerokuSite;
 import org.json.simple.*;
@@ -84,7 +85,9 @@ public class HerokuPageTest extends BaseTestClass2{
 
     @Test
     public void abTestingNavigation(){
-
+        page.click(HerokuPage.abTesting);
+        //page.waitForSelector(ABTestingPage.abTestingTitle)
+        assertTrue(checkTextContained(ABTestingPage.abTestingTitle, ABTestingPage.abTestingTitleText));
 
     }
 
