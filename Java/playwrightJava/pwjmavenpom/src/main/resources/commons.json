@@ -1,6 +1,6 @@
 {
   "browser" : "chrome",
-  "headless" : "false",
+  "headless" : "true",
   "herokuapp_url" : "http://the-internet.herokuapp.com/"
 
 }
