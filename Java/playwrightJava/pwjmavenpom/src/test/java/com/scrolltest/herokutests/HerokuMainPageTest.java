@@ -13,7 +13,7 @@ import static com.scrolltest.pages.ABTestingPage.*;
 import static org.testng.Assert.*;
 
 
-public class HerokuMainPageTest extends BaseTestClass2{
+public class HerokuMainPageTest extends BaseTestHerokuClass {
     HerokuMainPage HerokuPage;
 
     public JSONObject configuration  = UtilitiesHerokuSite.getAllFromCommons();

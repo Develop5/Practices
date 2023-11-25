@@ -4,7 +4,7 @@ import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.WaitUntilState;
 
 
-public class BaseTestClass2 {
+public class BaseTestHerokuClass {
 
     Playwright playwright;
     BrowserType browserType;
