@@ -1,16 +1,15 @@
 package com.scrolltest.herokutests;
 
-import com.scrolltest.pages.ABTestingPage;
 import com.scrolltest.pages.HerokuPage;
 import com.scrolltest.utilities.UtilitiesHerokuSite;
 import org.json.simple.*;
 import org.json.simple.parser.ParseException;
-import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import static com.scrolltest.pages.ABTestingPage.*;
 import static org.testng.Assert.*;
 
 
@@ -86,12 +85,9 @@ public class HerokuPageTest extends BaseTestClass2{
     @Test
     public void abTestingNavigation(){
         page.click(HerokuPage.abTesting);
-        //page.waitForSelector(ABTestingPage.abTestingTitle)
-        assertTrue(checkTextContained(ABTestingPage.abTestingTitle, ABTestingPage.abTestingTitleText));
-
+        assertEquals(checkElementVisibility(abTestingTitle), true);
+        assertEquals(currentUrl(), abTestingURL);
     }
-
-
 
 
     @AfterClass
