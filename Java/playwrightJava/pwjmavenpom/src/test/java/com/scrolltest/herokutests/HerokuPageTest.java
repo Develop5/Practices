@@ -83,7 +83,7 @@ public class HerokuPageTest extends BaseTestClass2{
     }
 
     @Test
-    public void abTestingNavigation(){
+    public void navigateToABTestingPage(){
         page.click(HerokuPage.abTesting);
         assertEquals(checkElementVisibility(abTestingTitle), true);
         assertEquals(currentUrl(), abTestingURL);
