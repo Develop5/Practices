@@ -73,12 +73,13 @@ https://www.zenrows.com/blog/playwright-user-agent#use-a-random-user-agent
 
 https://www.checklyhq.com/learn/headless/challenging-flows/
 
+### What to execute ###
+
+All tests are in HerokuMainPageTest
 
 ### Next steps ### 
  
 - Resolve the topics labeled above as "(Investigate)"
+- Add pages related to Heroku site with their corresponding tests. Java classes for each of them
 
-### What to execute ###
-
-All tests are in HerokuMainPageTest
 
