@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0,559">
+           time="0,558">
     <properties></properties>
 
 
 
             <testcase
                 name="allElementsVisible"
-                time="0,290"
+                time="0,287"
                 classname="com.scrolltest.herokutests.HerokuMainPageTest">
             </testcase>
             <testcase
                 name="navigateToABTestingPage"
-                time="0,269"
+                time="0,271"
                 classname="com.scrolltest.herokutests.HerokuMainPageTest">
             </testcase>
 </testsuite>

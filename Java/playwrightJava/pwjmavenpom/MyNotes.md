@@ -75,8 +75,10 @@ https://www.checklyhq.com/learn/headless/challenging-flows/
 
 
 ### Next steps ### 
-
-- Move the static method created in HerokuPageTest to the BaseTestClass2 because it is not a test
-  - Carefully, to avoid any problem with static vs non-static modifier
-  
+ 
 - Resolve the topics labeled above as "(Investigate)"
+
+### What to execute ###
+
+All tests are in HerokuMainPageTest
+
