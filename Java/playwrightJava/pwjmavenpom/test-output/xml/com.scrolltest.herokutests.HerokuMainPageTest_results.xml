@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="pwjmavenpom"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="0,222">
+           time="0,514">
     <properties></properties>
 
 
 
             <testcase
+                name="allElementsVisible"
+                time="0,285"
+                classname="com.scrolltest.herokutests.HerokuMainPageTest">
+            </testcase>
+            <testcase
                 name="navigateToABTestingPage"
-                time="0,222"
+                time="0,229"
                 classname="com.scrolltest.herokutests.HerokuMainPageTest">
             </testcase>
 </testsuite>

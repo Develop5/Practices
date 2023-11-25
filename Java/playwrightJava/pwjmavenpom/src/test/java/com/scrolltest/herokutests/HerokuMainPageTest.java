@@ -1,6 +1,6 @@
 package com.scrolltest.herokutests;
 
-import com.scrolltest.pages.HerokuPage;
+import com.scrolltest.pages.HerokuMainPage;
 import com.scrolltest.utilities.UtilitiesHerokuSite;
 import org.json.simple.*;
 import org.json.simple.parser.ParseException;
@@ -13,12 +13,12 @@ import static com.scrolltest.pages.ABTestingPage.*;
 import static org.testng.Assert.*;
 
 
-public class HerokuPageTest extends BaseTestClass2{
-    HerokuPage HerokuPage;
+public class HerokuMainPageTest extends BaseTestClass2{
+    HerokuMainPage HerokuPage;
 
     public JSONObject configuration  = UtilitiesHerokuSite.getAllFromCommons();
 
-    public HerokuPageTest() throws IOException, URISyntaxException, ParseException {
+    public HerokuMainPageTest() throws IOException, URISyntaxException, ParseException {
     }
 
 
@@ -88,6 +88,7 @@ public class HerokuPageTest extends BaseTestClass2{
         assertEquals(checkElementVisibility(abTestingTitle), true);
         assertEquals(currentUrl(), abTestingURL);
     }
+
 
 
     @AfterClass

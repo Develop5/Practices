@@ -2,15 +2,15 @@ package com.scrolltest.pages;
 
 import com.microsoft.playwright.Page;
 
-public class HerokuPage {
+public class HerokuMainPage {
 
     private final Page page;
 
-    public HerokuPage(Page page) {
+    public HerokuMainPage(Page page) {
         this.page = page;
     }
 
-    // All locators fo HerokuPage here
+    // All locators fo HerokuMainPage here
     String headWelcomeToTheInternet = "h1.heading";
     String availableExamples = "h2";
     public static String abTesting = "a[href='/abtest']";
