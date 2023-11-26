@@ -1,12 +1,13 @@
 
 ### Note: ###
 
-These tests must be in a common space, to be called by all individual tests:
+These tests must be in a common space, to be called by every individual test:
 
         * [ ] Title
         * [ ] "Fork me ..." and properly linked
         * [ ] "Powered by..."
         * [ ] Body text content
+        * [ ] Check the new URL
 
 ------------------------------------------------
 
@@ -342,4 +343,67 @@ These tests must be in a common space, to be called by all individual tests:
            * [ ] Click on Excel will download a menu.xls file. Check content (just to learn)
 
     * [ ] JavaScript Alerts
-    * 
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Result area
+      * [ ] Buttons are shown: Click for JS Alert, Click for JS Confirm, Click for JS Prompt
+      * [ ] Click for JS Alert
+        * [ ] An alert pops up: "I am a JS Alert"
+        * Click Aceptar
+          * [ ] The pop up is closed and the Result area shows: "You successfully clicked an alert"
+      * [ ] Click for JS Confirm
+          * [ ] An alert pops up: "I am a JS Confirm" with Aceptar and Cancel buttons
+          * Click Aceptar
+            * [ ] The pop up is closed and the Result area shows: "You clicked: Ok"
+        * Click Cancelar
+            * [ ] The pop up is closed and the Result area shows: "You clicked: Cancel"
+      * [ ] Click for JS Prompt
+          * [ ] An alert pops up: "I am a JS prompt"
+          * Enter nothing and click Aceptar
+            * [ ] Result area shows exactly "You entered:"
+          * Enter "any T3xt" and click Aceptar
+            * [ ] Result area shows "You entered: any T3xt"
+          * Enter nothing and click Cancelar
+            * [ ] Result area shows "You entered: null"
+          * Enter any T3xt" and click Cancelar
+            * [ ] Result area shows "You entered: null"
+
+    * [ ] JavaScript onload event error
+      * [ ] the page shows an error message
+  
+    * [ ] Key Presses
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] An area to type characters is shown
+      * [ ] Press sequentially ALT, Ctrl, Escape, \, F2 and check their name in "You entered" area 
+      * [ ] Press any non-special character and see it in the box and in "You entered" area
+      
+    * [ ] Large & Deep DOM
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * [ ] Two h4 exist: Sibling and No Sibling
+      * [ ] Verify 50 levels of depth. Children are all listed in the table.
+      
+    * [ ] Multiple Windows
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Link to navigate to another window
+      * Click the link
+        * [ ] A new tag is open with the path "windows/new"
+        
+    * [ ] Nested Frames (no need. Repeated from Frames, above)
+    * [ ] Notification Messages
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * [ ] Action successful notice
+      * Click the link
+        * [ ] Notice changes to: "Action unsuccesful, please try again"
+      
+    * [ ] Redirect Link
