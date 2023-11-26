@@ -1,4 +1,7 @@
 
+## Tests to implement in Heroku page ##
+
+
 ### Note: ###
 
 These tests must be in a common space, to be called by every individual test:
@@ -446,3 +449,96 @@ These tests must be in a common space, to be called by every individual test:
           * [ ] "Powered by..."
           * [ ] New body text content
           * [ ] Link takes to "/status_codes"
+
+    * [ ] Secure File Download
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] List of files to download. Check content or proper format
+        * [ ] not_empty.txt
+        * [ ] LambdaTest.txt
+        * [ ] newScreenShot.png
+        * [ ] 5mb script.xml
+        * [ ] some-file.txt
+        * [ ] example.json
+        * [ ] test.txt       (This one is empty)
+        * [ ] sample.png     (This one has a wrong format or corrupted content)
+
+    * [ ] Shadow DOM    (No idea what to test here. Maybe the impossibility to find locators?)
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      
+    * [ ] Shifting Content
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * [ ] Example 1
+        * [ ] Title: "Shifting Content: Menu Element"
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] Body text content
+        * [ ] A group of buttons is shown
+        * Add a path: "?pixel_shift=100" and reload 5 times. 
+          * [ ] "Portfolio" button switch size each time
+      * [ ] Example 2
+        * [ ] Title: "Shifting Content: Image"
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] Body text content
+        * [ ] An image is shown
+          * Add a path: " ?pixel_shift=100" and reload 5 times.
+              * [ ] The image is shifted each time
+          * Add a path: " ?image_type=simple" and reload
+              * [ ] The image is changed
+        * [ ] Example 3
+          * [ ] Title: "Shifting Content: List"
+          * [ ] "Fork me ..." and properly linked
+          * [ ] "Powered by..."
+          * [ ] Body text content
+          * [ ] A list is shown. Remember it
+          * [ ] Reload the page 3 times and check that the content changes every time.
+        
+    * [ ] Slow Resources    (Not sure if this is really slow. The page loads in milliseconds)
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+    
+    * [ ] Sortable Data Tables
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * [ ] Edit/delete elements in he DOM (is it possible from Playwright?)
+      
+    * [ ] Status codes       (Included in the test Redirect Link)
+      * ### Note: Prepare the status code part from Redirect Link, here ###
+      
+    * [ ] Typos
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content. Only the first line
+      * Reload the page 5 times. Each time saving the content of te 2nd line
+        * [ ] Check that there is a typo in the second time, randomly.
+    
+    * [ ] WYSIWYG Editor
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] A TinyMCE WYSIWYG is shown
+      1. In case we need to test a TinyMCE WYSIWYG component
+        * Entering text
+        * Deleting text
+        * Bold font
+        * Italic font
+        * Align left
+        * Align center
+        * Align right
+        * Justify
+        * Increase indent
+        * Decrease indent
+        * Undo
+
