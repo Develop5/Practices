@@ -1,4 +1,15 @@
 
+### Note: ###
+
+These tests must be in a common space, to be called by all individual tests:
+
+        * [ ] Title
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] Body text content
+
+------------------------------------------------
+
 
 - In Heroku main page, test:
     - [ ] Title and subtitle
@@ -149,7 +160,7 @@
                 * [ ] A wait bar icon is visible
                 * [ ] When the wait bar icon is gone, a "Hello World!" text is shown in the page
         * [ ] Click Example 2
-            * (The same behaviour as for Example 1)
+            * (Same behaviour as for Example 1)
 
     * [ ] Entry Ad
         * [ ] Title
@@ -214,5 +225,79 @@
         * [ ] "Home", "News", "Contact" and "About" buttons are visible
         * [ ] Click each of them and verify that "#" with the corresponding name is added to the URL
 
-    * [ ] 
+    * [ ] Forgot password
+        * [ ] Title
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] Email box
+          * [ ] Retrieve button
+        * [ ] Retrieve without inputting any email
+            * [ ] The new URL has the path "forgot_password"
+            * [ ] Internal Server Error in the body of the new page
+        * [ ] Retrieve with an invalid email (Not in ther DB, for example: xxxx@yahoo.com)
+            * [ ] The new URL has the path "forgot_password"
+            * [ ] Internal Server Error in the body of the new page
     
+    * Form Authentication
+        * [ ] Title
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] Username box
+        * [ ] Password box
+        * [ ] Login button
+        * Invalid credentials - Username
+          1. Fill in username field with "anyusername"
+          2. Fill in password with "SuperSecretPassword!"
+          3. Click Login
+          3. [ ] "Your username is invalid!" red alert is shown
+        * Invalid credentials - Password
+          1. Fill in username field with "tomsmith"
+          2. Fill in password with "Anypassw0rd!"
+          3. Click Login
+          3. [ ] "Your username is invalid!" red alert is shown
+        * Invalid credentials - Both
+          1. Fill in username field with "anyusername"
+          2. Fill in password with "Anypassw0rd!"
+          3. Click Login
+          3. [ ] "Your username is invalid!" red alert is shown
+        * Valid credentials (tomsmith, SuperSecretPassword! )
+          1. Fill in username field with "tomsmith"
+          2. Fill in password with "SuperSecretPassword!"
+          3. Click Login
+          3. [ ] Correct login is done:
+             * [ ] "You logged into a secure area!" green alert is shown
+             * [ ] URL includes "/secure" path
+             * [ ] Title "Secure Area"
+             * [ ] "Fork me ..." and properly linked
+             * [ ] "Powered by..."
+             * [ ] Body text content 
+             * [ ] Logout button
+      
+    * [ ] Frames
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] List of two linked elements: Nested Frames and iFrame
+      * [ ] Nested Frames
+        1. Click Nested Frames
+          * [ ] "nested_frames" is in the path
+          * [ ] Four frames exist: Left, Middle, Right, Bottom
+        2. Go back to Frames
+      * [ ] iFrame
+        1. Click iFrame
+           * [ ] "iframe" in the path
+           * [ ] Title "An iFrame containing the TinyMCE WYSIWYG Editor"
+           * [ ] A tinymce box is shown. No need to check elements
+        2. Go back to Frames
+
+      * [ ] Geolocation
+        * [ ] Title
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] Body text content
+        * [ ] "Where am I?" button
+        * [ ] Click the buttom. (It will not work, due to security measures)
+        
+      * [ ] Horizontal Slider
+      * 
+
