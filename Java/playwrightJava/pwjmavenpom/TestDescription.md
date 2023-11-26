@@ -290,43 +290,56 @@ These tests must be in a common space, to be called by all individual tests:
            * [ ] A tinymce box is shown. No need to check elements
         2. Go back to Frames
 
-      * [ ] Geolocation
-        * [ ] Title
-        * [ ] "Fork me ..." and properly linked
-        * [ ] "Powered by..."
-        * [ ] Body text content
-        * [ ] "Where am I?" button
-        * [ ] Click the buttom. (It will not work, due to security measures)
+    * [ ] Geolocation
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * [ ] "Where am I?" button
+      * [ ] Click the buttom. (It will not work, due to security measures)
         
-      * [ ] Horizontal Slider
-        * [ ] Title
-        * [ ] "Fork me ..." and properly linked
-        * [ ] "Powered by..."
-        * [ ] Body text content
-        * [ ] Horizontal slider is present and value is 0
-        * [ ] Move the slider to the right and left and check the value changes
+    * [ ] Horizontal Slider
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * [ ] Horizontal slider is present and value is 0
+      * [ ] Move the slider to the right and left and check the value changes
 
-      * [ ] Hovers
-        * [ ] Title
-        * [ ] "Fork me ..." and properly linked
-        * [ ] "Powered by..."
-        * [ ] Body text content
-        * [ ] 3 images are visible
-        * [ ] Hover over each message and see "name" and "View Profile" shown each time
+    * [ ] Hovers
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * [ ] 3 images are visible
+      * [ ] Hover over each message and see "name" and "View Profile" shown each time
   
-      * [ ] Infinite Scroll
-        * [ ] Title
-        * [ ] "Fork me ..." and properly linked
-        * [ ] There is some text in the body
-        * Scroll down 3 times (how much ??)
-          * [ ] Check another paragraph is added to the body each time
+    * [ ] Infinite Scroll
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] There is some text in the body
+      * Scroll down 3 times (how much ??)
+        * [ ] Check another paragraph is added to the body each time
 
-      * [ ] Inputs
-        * [ ] Title
-        * [ ] "Fork me ..." and properly linked
-        * [ ] "Powered by..."
-        * [ ] Number is empty
-        1. [ ] Enter a value and check that it can be increased by using the up arrow
-        2. [ ] Decrease the value by using the down arrow
+    * [ ] Inputs
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Number is empty
+      1. [ ] Enter a value and check that it can be increased by using the up arrow
+      2. [ ] Decrease the value by using the down arrow
 
-      * [ ] JQuery UI Menus
+    * [ ] JQuery UI Menus
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] The menu of JQueryUI is already displayed with Disabled and Enabled members
+      * Hover over over Enabled
+         * [ ] 2 items are shown: Downloads and Back to JQuery UI
+         * [ ] Hover Downloads and 3 elements are shown: PDF, CSV and Excel
+           * ] Click on PDF will close the Downloads dialog
+           * [ ] Click on CSV will close the Downloads dialog
+           * [ ] Click on Excel will download a menu.xls file. Check content (just to learn)
+
+    * [ ] JavaScript Alerts
+    * 
