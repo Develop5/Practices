@@ -86,8 +86,9 @@ All tests are in HerokuMainPageTest
   - [ ] Correct link for each page
   - [ ] "Fork me..." visible and in green
   - [ ] "Powered by"
-- From Heroky main page, test navigation to other pages
+- From Heroky main page, test navigation to each of child pages
   - [ ] New URL for each
+  - [ ] Navigate back and verify the URL corresponds to Heroku main page
 - Once in another page, test it thoroughly:
     * [ ] A/B testing
       * [ ] Title
@@ -124,30 +125,93 @@ All tests are in HerokuMainPageTest
       * [ ] Click each element in the canvas and check what happens. Check the Answer box
       * [ ] Screenshot and mask each element in the table
      
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
-    * 
-    * [ ] Broken Images
+    * [ ] Checkboxes
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Check initial status: 1 unchecked, 2 checked
+      * [ ] Click 1 and verify both are checked
+      * [ ] Click 2 and verify only 1 is checked
+      * [ ] Click 1 and verify both are unchecked
+
+    * [ ] Context Menu 
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Text content in the body
+      * [ ] Right-click the box and a popup must be shown
+        * [ ] Accept the popup and a Javascript alert must be shown
+
+    * [ ] Digest Authentication
+      * (Looks like not available)
+  
+    * [ ] Disappearing Elements
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Text content in the body
+      * [ ] Click each button
+        * [ ] "Home" goes back to Heroku main page
+        * [ ] "About", "Contact us", "Portfolio" navigate to corresponding URLs and the text is "Not found"
       
+    * [ ] Drag and Drop
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Drag frame B to the left (A postion) and check names/positions have changed
+      * [ ] Drag frame B back to its original position and check names/positions
+      * [ ] Drag frame A to the left (B postion) and check names/positions have changed
+      * [ ] Drag frame A back to its original position and check names/positions
+      * [ ] Drag frame A down (out of B position) and see nothing changes
+      * [ ] Drag frame B up (out of A position) and see nothing changes
+
+    * [ ] Dropdown List
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Select Option 1 from the dropdown list and verify it is settled
+      * [ ] Select Option 2 from the dropdown list and verify it is settled
+  
+    * [ ] Dynamic Content
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Text content
+      * [ ] Image and text content for the first 2 elements
+      * [ ] Click the link indicated and check that image and text content change for the 3rd element
+
+    * [ ] Dynamic Controls
+        * [ ] Title
+        * [ ] "Fork me ..." ...
+        * [ ] "Powered by..."
+        * [ ] Text content
+        * [ ] Visibility of Remove/add and Enable/disable subtitles
+        * For Remove/add:
+          * [ ] A Remove button is shown 
+          * [ ] A aheckbox is shown
+            * [ ] Check and uncheck the checkbox and verify the status each time
+          1. Click Remove
+            * [ ] A wait bar icon is visible
+            * [ ] Once the "wait for it" bar is gone, the checkbox is gone as well.
+            * [ ] And an Add button is in place
+          2. Click Add
+             * [ ] A wait bar icon is visible
+             * [ ] Once the "wait for it" bar is gone, the checkbox is back.
+             * [ ] And an Remove button is in place again
+        * For Enable/disable:
+          * [ ] A disabled box is shown
+          * [ ] A Enable button is shown
+          1. Click Enable
+             * [ ] A wait bar icon becomes visible
+             * [ ] After a while a label "It's enabled!" is visible. The wait bar is still there
+               * [ ] A text can be written in the box
+               * [ ] A Disable button is shown
+          2. Click Disable
+             * Both wait bar icons remain visible
+             * The Enable button is shown again
+             * The box is disabled and contains the last text written in it.
+
+ 
 - Resolve the topics labeled above as "(Investigate)"
 - Add pages related to Heroku site with their corresponding tests. Java classes for each of them
 
