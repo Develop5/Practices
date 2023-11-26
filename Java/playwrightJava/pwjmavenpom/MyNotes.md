@@ -79,6 +79,75 @@ All tests are in HerokuMainPageTest
 
 ### Next steps ### 
  
+- In Heroku main page, test:
+  - [ ] Title and subtitle
+  - [ ] URL
+  - [ ] Visibility of the list. Link text and other texts for each
+  - [ ] Correct link for each page
+  - [ ] "Fork me..." visible and in green
+  - [ ] "Powered by"
+- From Heroky main page, test navigation to other pages
+  - [ ] New URL for each
+- Once in another page, test it thoroughly:
+    * [ ] A/B testing
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Body text
+      
+    * [ ] Add/Remove Elements
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Every time you click Add Element, a Delete button is shown
+      * [ ] When you click Delete, a Delete button disappears
+
+    * [ ] Basic Auth
+      * [ ] An popup to sign in is shown
+        * [ ] If you cancel, the popup disappears and you get "Not authorized"
+        * [ ] If sign in (admin admin), the popup disappears and you receive congratulations. Check:
+          * [ ] Title
+          * [ ] Content of the congratulation message
+          * [ ] "Fork me ..." ...
+          * [ ] "Powered by..."
+
+    * [ ] Broken Images
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Two images are broken, the third is not
+        
+    * [ ] Challenging DOM
+      * [ ] Title
+      * [ ] "Fork me ..." ...
+      * [ ] "Powered by..."
+      * [ ] Click each element in the canvas and check what happens. Check the Answer box
+      * [ ] Screenshot and mask each element in the table
+     
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+    * 
+    * [ ] Broken Images
+      
 - Resolve the topics labeled above as "(Investigate)"
 - Add pages related to Heroku site with their corresponding tests. Java classes for each of them
 
