@@ -261,8 +261,35 @@ All tests are in HerokuMainPageTest
       * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Name of 4 files as links
-      * 
+      * [ ] Click each file and a download should start
+      * [ ] Verify content or correct format of each file downloaded
+  
+    * [ ] File Upload
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] "Elegir archivo" button with a following text
+      * [ ] Upload button is shown
+      * [ ] A box with red dashed line is shown
+      * Click Elegir archivo
+        1. Choose LambdaTest.txt
+        2. Click Upload
+        3. [ ] the new URL is http://the-internet.herokuapp.com/upload
+        4. [ ] A message "File Uploaded!" is shown
+        5. [ ] The name of the selected file is in the box
+      * Click the red square
+        1. A dialog box pops up to choose a file. Select LambdaTest.txt
+        2. [ ] The name of the file is shown in the red box, followed by a checkmark
+        3. Click Upload
+        4. [ ] the new URL is http://the-internet.herokuapp.com/upload
+        5. [ ] A message "File Uploaded!" is shown
+        6. [ ] The name of the selected file is in the box
 
+    * [ ] Floating Menu
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+    
 
 - Resolve the topics labeled above as "(Investigate)"
 - Add pages related to Heroku site with their corresponding tests. Java classes for each of them
