@@ -84,7 +84,7 @@ All tests are in HerokuMainPageTest
   - [ ] URL
   - [ ] Visibility of the list. Link text and other texts for each
   - [ ] Correct link for each page
-  - [ ] "Fork me..." visible and in green
+  - [ ] "Fork me..." visible and in green. And properly linked
   - [ ] "Powered by"
 - From Heroky main page, test navigation to each of child pages
   - [ ] New URL for each
@@ -92,13 +92,13 @@ All tests are in HerokuMainPageTest
 - Once in another page, test it thoroughly:
     * [ ] A/B testing
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Body text
       
     * [ ] Add/Remove Elements
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Every time you click Add Element, a Delete button is shown
       * [ ] When you click Delete, a Delete button disappears
@@ -109,25 +109,25 @@ All tests are in HerokuMainPageTest
         * [ ] If sign in (admin admin), the popup disappears and you receive congratulations. Check:
           * [ ] Title
           * [ ] Content of the congratulation message
-          * [ ] "Fork me ..." ...
+          * [ ] "Fork me ..." and properly linked
           * [ ] "Powered by..."
 
     * [ ] Broken Images
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Two images are broken, the third is not
         
     * [ ] Challenging DOM
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Click each element in the canvas and check what happens. Check the Answer box
       * [ ] Screenshot and mask each element in the table
      
     * [ ] Checkboxes
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Check initial status: 1 unchecked, 2 checked
       * [ ] Click 1 and verify both are checked
@@ -136,7 +136,7 @@ All tests are in HerokuMainPageTest
 
     * [ ] Context Menu 
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Text content in the body
       * [ ] Right-click the box and a popup must be shown
@@ -147,7 +147,7 @@ All tests are in HerokuMainPageTest
   
     * [ ] Disappearing Elements
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Text content in the body
       * [ ] Click each button
@@ -156,7 +156,7 @@ All tests are in HerokuMainPageTest
       
     * [ ] Drag and Drop
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Drag frame B to the left (A postion) and check names/positions have changed
       * [ ] Drag frame B back to its original position and check names/positions
@@ -167,14 +167,14 @@ All tests are in HerokuMainPageTest
 
     * [ ] Dropdown List
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Select Option 1 from the dropdown list and verify it is settled
       * [ ] Select Option 2 from the dropdown list and verify it is settled
   
     * [ ] Dynamic Content
       * [ ] Title
-      * [ ] "Fork me ..." ...
+      * [ ] "Fork me ..." and properly linked
       * [ ] "Powered by..."
       * [ ] Text content
       * [ ] Image and text content for the first 2 elements
@@ -182,7 +182,7 @@ All tests are in HerokuMainPageTest
 
     * [ ] Dynamic Controls
         * [ ] Title
-        * [ ] "Fork me ..." ...
+        * [ ] "Fork me ..." and properly linked
         * [ ] "Powered by..."
         * [ ] Text content
         * [ ] Visibility of Remove/add and Enable/disable subtitles
@@ -207,11 +207,63 @@ All tests are in HerokuMainPageTest
                * [ ] A text can be written in the box
                * [ ] A Disable button is shown
           2. Click Disable
-             * Both wait bar icons remain visible
-             * The Enable button is shown again
-             * The box is disabled and contains the last text written in it.
+             * [ ] Both wait bar icons remain visible
+             * [ ] he Enable button is shown again
+             * [ ] The box is disabled and contains the last text written in it.
 
- 
+    * [ ] Dynamic Loading
+        * [ ] Title
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] Text content
+        * ### Difference between Example 1 and Example 2 **NOT clear** in behaviour ###
+        * [ ] Click Example 1
+          * Check new URL
+          * [ ] Title
+          * [ ] "Fork me ..." and properly linked
+          * [ ] "Powered by..."
+          * [ ] Subtitle
+          * [ ] Start button visible. Click
+          * [ ] Click Start
+            * [ ] A wait bar icon is visible
+            * [ ] When the wait bar icon is gone, a "Hello World!" text is shown in the page
+        * [ ] Click Example 2
+          * (The same behaviour as for Example 1)
+
+    * [ ] Entry Ad
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] A modal window is shown
+      * [ ] Verify title, text content and Close button present in modal window
+      1. Close the modal window
+      2. [ ] Reload the page and verify that the modal window does not popup anymore.
+      3. Navigate back to home and come again to Entry Ad
+         * [ ] Check that the modal window is not shown
+      4. Re-enable it by clicking the indicated link
+      5. Navigate back to home and come again to Entry Ad
+         * [ ] Check that te model window is back again
+    
+    * [ ] Exit Intent
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      1. Mouse out over the upper part of the browser window
+         * [ ] A modal window is shown
+         * [ ] Check title, content and visibility of the Close button
+      2. Close the modal window
+      3. Reload the page
+      4. Mouse out over the upper side of the browser
+         * [ ] The modal windows is shown again
+
+    * [ ] File download
+      * [ ] Title
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Name of 4 files as links
+      * 
+
+
 - Resolve the topics labeled above as "(Investigate)"
 - Add pages related to Heroku site with their corresponding tests. Java classes for each of them
 
