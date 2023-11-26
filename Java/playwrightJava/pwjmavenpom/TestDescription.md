@@ -397,6 +397,7 @@ These tests must be in a common space, to be called by every individual test:
         * [ ] A new tag is open with the path "windows/new"
         
     * [ ] Nested Frames (no need. Repeated from Frames, above)
+  
     * [ ] Notification Messages
       * [ ] Title
       * [ ] "Fork me ..." and properly linked
@@ -407,3 +408,41 @@ These tests must be in a common space, to be called by every individual test:
         * [ ] Notice changes to: "Action unsuccesful, please try again"
       
     * [ ] Redirect Link
+      * [ ] Title 
+      * [ ] "Fork me ..." and properly linked
+      * [ ] "Powered by..."
+      * [ ] Body text content
+      * Click the link
+        * [ ] Redirected to a page with path "/status_codes"
+        * [ ] Title: Status Codes
+        * [ ] "Fork me ..." and properly linked
+        * [ ] "Powered by..."
+        * [ ] New body text content
+        * [ ] Link 200
+          * [ ] Redirected to a page with path "/status_codes/200"
+          * [ ] Title: Status Codes
+          * [ ] "Fork me ..." and properly linked
+          * [ ] "Powered by..."
+          * [ ] New body text content
+          * [ ] Link takes to "/status_codes"
+        * [ ] Link 301
+          * [ ] Redirected to a page with path "/status_codes/301"
+          * [ ] Title: Status Codes
+          * [ ] "Fork me ..." and properly linked
+          * [ ] "Powered by..."
+          * [ ] New body text content
+          * [ ] Link takes to "/status_codes"
+        * [ ] Link 404
+          * [ ] Redirected to a page with path "/status_codes/404"
+          * [ ] Title: Status Codes
+          * [ ] "Fork me ..." and properly linked
+          * [ ] "Powered by..."
+          * [ ] New body text content
+          * [ ] Link takes to "/status_codes"
+        * [ ] Link 500
+          * [ ] Redirected to a page with path "/status_codes/500"
+          * [ ] Title: Status Codes
+          * [ ] "Fork me ..." and properly linked
+          * [ ] "Powered by..."
+          * [ ] New body text content
+          * [ ] Link takes to "/status_codes"
