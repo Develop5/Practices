@@ -17,7 +17,7 @@ This project will be moved later to Gradle
 
 [SelectorsHub tutorial](https://www.youtube.com/watch?v=Iqp0qh3Up44&list=PLmRg3gEG2XIZRnlY0x0yhBFJSHsdWcSuz&index=3)
 
-[Markdown systax](https://www.markdownguide.org/basic-syntax/)
+[Markdown syntax](https://www.markdownguide.org/basic-syntax/)
 
 [Target page](https://app.vwo.com/#/login)
 
@@ -81,5 +81,13 @@ All tests are in HerokuMainPageTest
 
 - Resolve the topics labeled above as "(Investigate)"
 - Add pages related to Heroku site with their corresponding tests. Java classes for each of them
+
+
+### What to study next ###
+
+[Dynatrace](https://www.bing.com/videos/riverview/relatedvideo?&q=dynatrace+tutorial&&mid=B3355B3C90B17AFAB5AFB3355B3C90B17AFAB5AF&&FORM=VRDGAR)
+
+[Observability](https://www.bing.com/videos/riverview/relatedvideo?&q=dynatrace+tutorial&&mid=9B9A8638BC7534E973129B9A8638BC7534E97312&&FORM=VRDGAR)
+
 
 
