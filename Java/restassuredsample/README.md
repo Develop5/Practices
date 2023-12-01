@@ -1,5 +1,7 @@
 ## How to execute tests from command line ##
 ```
+Select "src" folcer as Project Structure as sources module
+
 ./gradlew clean test --info 
 ```
 &nbsp;
