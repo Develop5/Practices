@@ -1,8 +1,9 @@
 ## How to execute tests from command line ##
 ```
-Select "src" folder as Project Structure as sources module
+Select "src" folder as Project Structure in module sources
 
-./gradlew clean test --info 
+./gradlew clean test --info
+
 ```
 &nbsp;
 
