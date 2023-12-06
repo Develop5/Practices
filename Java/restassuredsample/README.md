@@ -26,10 +26,16 @@ This is not a playlist but several chapters.
 
 &nbsp;
 
-The following is a playlist for Rest Assured:
+The following is a playlist for learning Rest Assured:
 https://www.youtube.com/playlist?list=PLUDwpEzHYYLvLZX_QEGTNolPvNADXid0I
 
 
+Which tool to use:
+[Karate vs REST-Assured](https://gorillalogic.com/blog/karate-vs-rest-assured-comparing-powerful-api-testing-frameworks#Why%20We%20Need%20API%20Testing)
+[REST-assured Examples](https://devqa.io/rest-assured-api-requests-examples/)
+
+Resources:
+[Java Full Course for Beginners](https://www.youtube.com/playlist?list=PLUDwpEzHYYLt8jYba459LEYrzlUKINCrk)
 
 &nbsp;
 ### Log levels ###
