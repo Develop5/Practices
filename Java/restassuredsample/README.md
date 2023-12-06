@@ -3,7 +3,6 @@
 Select "src" folder as Project Structure in module sources
 
 ./gradlew clean test --info
-
 ```
 &nbsp;
 
@@ -16,25 +15,28 @@ From this folder:
 - [x] Part 3 Reports with log4j2
 - [ ] Start with playlist for Rest Assured
 
-I stopped here:
+
+#### I stopped here: #### 
 https://www.youtube.com/watch?v=r5R_TViegfY&t=45s
-&nbsp;
-
-
-This is not a playlist but several chapters.
-&nbsp;
 
 &nbsp;
 
-The following is a playlist for learning Rest Assured:
+
+#### This is not a playlist but several chapters. ####
+&nbsp;
+
+
+&nbsp;
+#### The following is a playlist for learning Rest Assured: ####
 https://www.youtube.com/playlist?list=PLUDwpEzHYYLvLZX_QEGTNolPvNADXid0I
 
 
-Which tool to use:
+&nbsp;
+#### Which tool to use: ####
 [Karate vs REST-Assured](https://gorillalogic.com/blog/karate-vs-rest-assured-comparing-powerful-api-testing-frameworks#Why%20We%20Need%20API%20Testing)
 [REST-assured Examples](https://devqa.io/rest-assured-api-requests-examples/)
 
-Resources:
+#### Resources: ####
 [Java Full Course for Beginners](https://www.youtube.com/playlist?list=PLUDwpEzHYYLt8jYba459LEYrzlUKINCrk)
 
 &nbsp;
