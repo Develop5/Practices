@@ -4,6 +4,12 @@
 
 #### For Unit tests to be created/suggested automatically ####
 
+### Discussion ###
+You need to sign up with your account and then a free tria starts
+After 3 weeks they start charging you 10$/month or, if you prefer, 100$/year (saving 20$ a year)
+Go to your profile and you will find Copilot in the list
+
+
 
 Tutorials here:
 - [Github Copilot chat](https://github.com/features/copilot/)
