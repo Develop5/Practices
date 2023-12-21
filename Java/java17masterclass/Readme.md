@@ -27,7 +27,7 @@ jshell
 /list -all          List of built-in code
 {                   Long code starts. The prompt changes to ...>
 ```
-JShell has a default startup script that is silently and automatically executed before JShell starts, so that you can get to work quickly. 
+JShell has a **default startup script** that is silently and automatically executed before JShell starts, so that you can get to work quickly. 
 
 Entries from the startup script aren’t listed unless you request them with the /list -start or /list -all command.
 
