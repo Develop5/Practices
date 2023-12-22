@@ -1,4 +1,4 @@
-package src.main.java.org.example;
+//package src.main.java.org.example;
 
 public class Account {
     private String number;
