@@ -8,6 +8,15 @@ public class Account {
 
     public Account(String number, double balance, String customerName, String customerEmail, String customerPhome) {
         System.out.println("\n --> An account WITH all parameters has been created");
+        // As parameter names are equal to field names (which is a common pactice)
+        // then the keyword __this__ needs to be used to differentiate them.
+
+        this.number = number;            // this.field = parameter
+        this.balance = balance;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhome = customerPhome;
+
     }
     private String number;
     private double balance;
