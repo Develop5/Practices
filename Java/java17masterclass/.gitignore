@@ -3,3 +3,7 @@
 
 # Ignore Gradle build output directory
 build
+
+# Ignore build.gradle and settings.gradle as each time the main module changes
+settings.gradle
+build.gradle
