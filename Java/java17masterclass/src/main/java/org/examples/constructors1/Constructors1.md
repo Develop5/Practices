@@ -17,3 +17,13 @@ You should specify an appropriate access modifier, to control who should be able
         }
     }
     
+##
+#### Default constructor ####
+
+If the class contains no constructor declarations, then a default constructor is implicitly declared.
+
+This constructor has no parameters, and is often called the no-args (no arguments) constructor.
+
+If a class contains any other constructor declarations, then a default constructor is NOT implicitly declared.
+
+
