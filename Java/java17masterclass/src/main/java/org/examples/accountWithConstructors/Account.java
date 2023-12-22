@@ -6,7 +6,7 @@ public class Account {
         System.out.println("\n --> An account WITHOUT ANY parameters was created");
     }
 
-    public Account(String number, double balance, String customerName, String customerEmail, String customerPhome) {
+    public Account(String number, double balance, String customerName, String theCustomerEmail, String theCustomerPhome) {
         System.out.println("\n --> An account WITH all parameters has been created");
         // As parameter names are equal to field names (which is a common pactice)
         // then the keyword __this__ needs to be used to differentiate them.
@@ -14,8 +14,8 @@ public class Account {
         this.number = number;            // this.field = parameter
         this.balance = balance;
         this.customerName = customerName;
-        this.customerEmail = customerEmail;
-        this.customerPhome = customerPhome;
+        customerEmail = theCustomerEmail;
+        customerPhome = theCustomerPhome;
 
     }
     private String number;
