@@ -1,4 +1,4 @@
-//package src.main.java.org.example;
+package account;
 
 public class Main {
     public static void main(String[] args) {
