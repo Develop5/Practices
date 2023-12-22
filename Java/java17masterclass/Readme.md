@@ -33,7 +33,6 @@ Entries from the startup script aren’t listed unless you request them with the
 
 #### Some tips and resources ####
 
-(Apartently, not working):
 1.- Avoid to be asked for a merge message by adding this to the .bash_profile:
     
     export GIT_MERGE_AUTOEDIT=no
