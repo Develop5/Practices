@@ -31,6 +31,14 @@ JShell has a **default startup script** that is silently and automatically execu
 
 Entries from the startup script aren’t listed unless you request them with the /list -start or /list -all command.
 
+#### Some tips and resources ####
+1.- Avoid to be asked for a merge message by adding this to the .bash_profile:
+    
+    export GIT_MERGE_AUTOEDIT=no
+
+Then reload your .bash_profile file from the commad line with this:
+
+    ~/ .bash_profile
 
 #### Voy por aquí ####
 80.- Constructors Part 1
