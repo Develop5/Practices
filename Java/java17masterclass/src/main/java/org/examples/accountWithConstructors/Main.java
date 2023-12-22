@@ -11,6 +11,17 @@ public class Main {
         System.out.println("customerName: " + accountWithParameters.getCustomerName());
         System.out.println("Email: " + accountWithParameters.getCustomerEmail());
         System.out.println("Phone: " + accountWithParameters.getCustomerPhome());
+        System.out.println("\n--------------------------------------------\n");
+
+        accountWithParameters.withdrawFunds(100);
+        accountWithParameters.depositFunds(250);
+        accountWithParameters.withdrawFunds(50);
+
+        accountWithParameters.withdrawFunds(200);
+
+        accountWithParameters.depositFunds(100);
+        accountWithParameters.withdrawFunds(45.55);
+        accountWithParameters.withdrawFunds(54.46);
 
     }
 }
