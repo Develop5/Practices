@@ -26,4 +26,13 @@ This constructor has no parameters, and is often called the no-args (no argument
 
 If a class contains any other constructor declarations, then a default constructor is NOT implicitly declared.
 
+##
+#### Constructor overloading ####
+
+Constructor overloading is declaring multiple constructors, with different formal parameters.
+
+The number of parameters can be different between constructors.
+
+Or if the number of parameters is the same between two constructors, their types or order of the types must differ.
+
 
