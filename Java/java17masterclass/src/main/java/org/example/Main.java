@@ -6,6 +6,11 @@ public class Main {
         System.out.println("Hello world!");
         Account bobsAccount = new Account();
 
+        bobsAccount.setNumber("12345");
+        bobsAccount.setBalance(1000.00);
+        bobsAccount.setCustomerName("Bob Brown");
+        bobsAccount.setCustomerEmail("myemail@bob.com");
+        bobsAccount.setCustomerPhome("(087) 123-4567");
 
         bobsAccount.withdrawFunds(100);
         bobsAccount.depositFunds(250);
