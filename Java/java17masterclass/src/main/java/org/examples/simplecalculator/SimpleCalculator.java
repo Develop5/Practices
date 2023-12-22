@@ -1,3 +1,5 @@
+package simplecalculator;
+
 public class SimpleCalculator {
     // write code here
     double firstNumber;

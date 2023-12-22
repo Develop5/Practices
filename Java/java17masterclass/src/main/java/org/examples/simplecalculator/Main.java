@@ -1,3 +1,5 @@
+package simplecalculator;
+
 public class Main {
     public static void main(String[] args) {
         SimpleCalculator calculadora = new SimpleCalculator();
