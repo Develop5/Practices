@@ -6,23 +6,27 @@ public class Account {
         System.out.println("\n --> An account WITHOUT ANY parameters was created");
     }
 
-    protected Account(String number, double balance, String customerName, String theCustomerEmail, String theCustomerPhome) {
+    protected Account(String number, double balance, String customerName, String theCustomerEmail, String theCustomerPhone) {
         System.out.println("\n --> An account WITH all parameters has been created");
         // As parameter names are equal to field names (which is a common pactice)
         // then the keyword __this__ needs to be used to differentiate them.
-
         this.number = number;            // this.field = parameter
         this.balance = balance;
         this.customerName = customerName;
         customerEmail = theCustomerEmail;
-        customerPhome = theCustomerPhome;
-
+        customerPhone = theCustomerPhone;
     }
+
+    protected Account(String customerName, String customerEmail, String customerPhone) {
+        this("9999", 100.55, customerName, customerEmail, customerPhone);
+        System.out.println("\nAccount created with the first 2 parameters as default\n");
+    }
+
     private String number;
     private double balance;
     private String customerName;
     private String customerEmail;
-    private String customerPhome;
+    private String customerPhone;
 
     public void depositFunds(double depositAmount) {
         balance += depositAmount;
@@ -70,12 +74,12 @@ public class Account {
         this.customerEmail = customerEmail;
     }
 
-    public String getCustomerPhome() {
-        return customerPhome;
+    public String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setCustomerPhome(String customerPhome) {
-        this.customerPhome = customerPhome;
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
 

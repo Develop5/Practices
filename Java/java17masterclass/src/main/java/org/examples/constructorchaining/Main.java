@@ -8,7 +8,7 @@ public class Main {
         System.out.println("balance: " + accountChainingConstructor.getBalance());
         System.out.println("customerName: " + accountChainingConstructor.getCustomerName());
         System.out.println("Email: " + accountChainingConstructor.getCustomerEmail());
-        System.out.println("Phone: " + accountChainingConstructor.getCustomerPhome());
+        System.out.println("Phone: " + accountChainingConstructor.getCustomerPhone());
         System.out.println("\n--------------------------------------------\n");
 
         accountChainingConstructor.withdrawFunds(100);
