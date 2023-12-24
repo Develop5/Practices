@@ -1,4 +1,4 @@
-package accountWithConstructors;
+package main.java.org.examples.accountWithConstructors;
 
 public class Account {
 

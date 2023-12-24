@@ -1,7 +1,5 @@
 package main.java.org.examples.constructorchaining;
 
-import accountWithConstructors.Account;
-
 public class Main {
     public static void main(String[] args) {
         ChainingAccount accountChainingConstructor = new ChainingAccount();
