@@ -12,7 +12,12 @@ public class Customer {
     }
 
     protected Customer(){
-        this("AnyName", 20.56, "anyname@itsemail.com");
+        // Credit limit is nos needed.
+        // Is defined here, in case we need a default value, we must change it in two places
+        // Now, the default CreditLimit is taken now from the constructor with name and email only (90.0)
+        //this("AnyName", 20.56, "anyname@itsemail.com");
+
+        this("AnyName", "anyname@itsemail.com");
         System.out.println("Empty Customer constructor");
     }
 
