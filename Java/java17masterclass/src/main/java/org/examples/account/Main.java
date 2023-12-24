@@ -1,10 +1,10 @@
-package account;
+package main.java.org.examples.account;
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
-        Account bobsAccount = new Account();
+        account.Account bobsAccount = new account.Account();
 
         bobsAccount.setNumber("12345");
         bobsAccount.setBalance(1000.00);

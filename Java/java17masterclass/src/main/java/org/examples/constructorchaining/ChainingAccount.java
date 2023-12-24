@@ -1,16 +1,16 @@
-package constructorchaining;
+package main.java.org.examples.constructorchaining;
 
-public class Account {
+public class ChainingAccount {
 
-    protected Account() {
+    protected ChainingAccount() {
         // From the moment we write "this" here, the other constructor is referenced
         // and its parameters are expected to be declared here
         this ("56789", 2.50, "Default Name", "Default email", "Default phone");
         System.out.println("\n --> An account is created by using a CHAINING constructor");
     }
 
-    protected Account(String number, double balance, String customerName, String theCustomerEmail, String theCustomerPhome) {
-        System.out.println("\n --> An account WITH all parameters has been created");
+    protected ChainingAccount(String number, double balance, String customerName, String theCustomerEmail, String theCustomerPhome) {
+        System.out.println("\n --> An account WITH parameters settled by user has been created");
         // As parameter names are equal to field names (which is a common pactice)
         // then the keyword __this__ needs to be used to differentiate them.
 
