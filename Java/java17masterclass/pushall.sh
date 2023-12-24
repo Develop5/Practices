@@ -8,5 +8,5 @@ alias showurl='git remote get-url origin'
 echo "-------------------------------"
 echo "Congrats... All pushed to main!"
 echo "Now, you have a new commit at: "
-showurl
+echo showurl
 echo "-------------------------------"
