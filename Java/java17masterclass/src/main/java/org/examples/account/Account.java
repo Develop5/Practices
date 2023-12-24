@@ -1,19 +1,19 @@
-package account;
+package main.java.org.examples.account;
 
 public class Account {
     private String number;
     private double balance;
     private String customerName;
     private String customerEmail;
-    private String customerPhome;
+    private String customerPhone;
 
-    public void depositFunds(double depositAmount) {
+    protected void depositFunds(double depositAmount) {
         balance += depositAmount;
         System.out.println("Deposit of $" + depositAmount + " made. New balance is $" + balance);
 
     }
 
-    public void withdrawFunds(double withdrawalAmount){
+    protected void withdrawFunds(double withdrawalAmount){
         if (balance - withdrawalAmount < 0) {
             System.out.println("Insufficient funds! You only have $" + balance + " in your account");
         } else {
@@ -21,43 +21,43 @@ public class Account {
             System.out.println("Withdrawal of $" + withdrawalAmount + " processed. Remaining balance = $" + balance);
         }
     }
-    public String getNumber() {
+    protected String getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    protected void setNumber(String number) {
         this.number = number;
     }
 
-    public double getBalance() {
+    protected double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    protected void setBalance(double balance) {
         this.balance = balance;
     }
 
-    public String getCustomerName() {
+    protected String getCustomerName() {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
+    protected void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
 
-    public String getCustomerEmail() {
+    protected String getCustomerEmail() {
         return customerEmail;
     }
 
-    public void setCustomerEmail(String customerEmail) {
+    protected void setCustomerEmail(String customerEmail) {
         this.customerEmail = customerEmail;
     }
 
-    public String getCustomerPhome() {
-        return customerPhome;
+    protected String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setCustomerPhome(String customerPhome) {
-        this.customerPhome = customerPhome;
+    protected void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 }

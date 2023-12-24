@@ -9,7 +9,7 @@ public class ChainingAccount {
         System.out.println("\n --> An account is created by using a CHAINING constructor");
     }
 
-    protected ChainingAccount(String number, double balance, String customerName, String theCustomerEmail, String theCustomerPhome) {
+    protected ChainingAccount(String number, double balance, String customerName, String theCustomerEmail, String theCustomerPhone) {
         System.out.println("\n --> An account WITH parameters settled by user has been created");
         // As parameter names are equal to field names (which is a common pactice)
         // then the keyword __this__ needs to be used to differentiate them.
@@ -18,14 +18,14 @@ public class ChainingAccount {
         this.balance = balance;
         this.customerName = customerName;
         customerEmail = theCustomerEmail;
-        customerPhome = theCustomerPhome;
-
+        customerPhone = theCustomerPhone;
     }
+
     private String number;
     private double balance;
     private String customerName;
     private String customerEmail;
-    private String customerPhome;
+    private String customerPhone;
 
     public void depositFunds(double depositAmount) {
         balance += depositAmount;
@@ -73,12 +73,12 @@ public class ChainingAccount {
         this.customerEmail = customerEmail;
     }
 
-    public String getCustomerPhome() {
-        return customerPhome;
+    public String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setCustomerPhome(String customerPhome) {
-        this.customerPhome = customerPhome;
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
 
