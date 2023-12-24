@@ -5,7 +5,7 @@ public class Main {
         Account accountWithoutParameters = new Account();
 
         Account accountWithParameters = new Account("4", 34.36, "Julio", "julionadaes@julio.com","(9800) 340-68903" );
-        System.out.println("Account info for accountWithParameters follows: \n");
+        System.out.println("ChainingAccount info for accountWithParameters follows: \n");
         System.out.println("number: " + accountWithParameters.getNumber());
         System.out.println("balance: " + accountWithParameters.getBalance());
         System.out.println("customerName: " + accountWithParameters.getCustomerName());

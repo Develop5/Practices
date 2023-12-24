@@ -1,12 +1,11 @@
-package constructorchaining;
+package main.java.org.examples.constructorchaining;
 
 import accountWithConstructors.Account;
 
 public class Main {
     public static void main(String[] args) {
-        //Account accountChainingConstructor = new Account("4", 34.36, "Julio", "julionadaes@julio.com","(9800) 340-68903" );
-        Account accountChainingConstructor = new Account();
-        System.out.println("Account info for accountChainingConstructor follows: \n");
+        ChainingAccount accountChainingConstructor = new ChainingAccount();
+        System.out.println(" \nChainingAccount info for accountChainingConstructor follows:");
         System.out.println("number: " + accountChainingConstructor.getNumber());
         System.out.println("balance: " + accountChainingConstructor.getBalance());
         System.out.println("customerName: " + accountChainingConstructor.getCustomerName());
