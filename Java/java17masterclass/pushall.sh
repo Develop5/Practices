@@ -7,6 +7,4 @@ git checkout java17masterclass
 alias showurl='git remote get-url origin'
 echo "-------------------------------"
 echo "Congrats... All pushed to main!"
-echo "Now, you have a new commit at: "
-echo showurl
 echo "-------------------------------"
