@@ -25,6 +25,10 @@ public class Main {
         System.out.println(pojoStudent);
         System.out.println(recordStudent);
 
-        System.out.println(pojoStudent.getClass());
+        // Access to POJO object is done through getters
+        System.out.println(pojoStudent.getName() + " is taking " + pojoStudent.getClassList());
+
+        // No getters. Access to record object is done via the name of the field
+        System.out.println(recordStudent.name() + " is taking " + recordStudent.classList());
     }
 }
