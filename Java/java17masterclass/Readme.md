@@ -44,5 +44,5 @@ Then reload your .bash_profile file from the commad line with this:
 #### Voy por aquí ####
 
 Section 7
-85.- Static vs Instance methods
+87. Java's Implicit POJO Type, The Record
 
