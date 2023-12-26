@@ -14,4 +14,9 @@ Best of all you, the developer, don't have to write or generate any of this code
 * The accessor method for, for id in this example, is simply id()
 
 ###
+If you want to change data in your class, you won't be using a record.
+You can use the code generation options for the POJO, as shown in the POJO example.
+But if you are reading a whole lot of records, from a database or file source, and simply passing this data around, then the record is a big improvement.
+
+###
 **Note**: Pay attention to the format in the record output. You'll see squared brackets and no single quote signs, for example.
