@@ -3,6 +3,8 @@
 Reviewing the course with the same name
 https://www.udemy.com/share/101Wdq3@OliW-dXtu66pyzllIOE0_PGS-U1fhWVdsPd8zwBZxX0ZslMDeMRhSGUGLINlrl8=/
 
+**IMPORTANT:** At some point, download the slides in the course
+
 ### Introduction to JShell ###
 
 The Java Shell tool (JShell) is an interactive tool for learning the Java programming
