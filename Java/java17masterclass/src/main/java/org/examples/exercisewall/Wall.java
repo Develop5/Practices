@@ -1,4 +1,4 @@
-package main.java.org.examples.wallexercise;
+package main.java.org.examples.exercisewall;
 
 public class Wall {
     private double width;
