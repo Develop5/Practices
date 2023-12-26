@@ -30,5 +30,11 @@ public class Main {
 
         // No getters. Access to record object is done via the name of the field
         System.out.println(recordStudent.name() + " is taking " + recordStudent.classList());
+
+        // Setters to POJO
+        pojoStudent.setClassList(pojoStudent.getClassList() + ", Java OCP Exam 829");
+        // Setters to record type. Impossible because records are meant to be immutable
+        //recordStudent.setClassList(recordStudent.classList() + ", Java OCP Exam 829");
+
     }
 }
