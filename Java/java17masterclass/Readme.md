@@ -46,5 +46,5 @@ Then reload your .bash_profile file from the commad line with this:
 #### Voy por aquí ####
 
 Section 7
-88. Inheritance - Part 1
+89. Inheritance - Part 2
 
