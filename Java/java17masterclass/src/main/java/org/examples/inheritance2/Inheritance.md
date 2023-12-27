@@ -16,7 +16,7 @@ You override a parent class method, when you want the child class to show differ
 
 For example, when you create a makeNoise() method on Dog2 and there was another with the same signature on its parent Animal2, the output will show nothing.
 
-In this case you will see that Intellij labels it with a small blue square with tn "o" and upper arrow on the left margin of the code panel.
+In this case you will see that Intellij labels the method  with a small blue square with tn "o" and upper arrow on the left margin of the code panel.
 
 
 
