@@ -25,7 +25,9 @@ public class Main {
     public static void doAnimalStuff(Animal2 animal, String speed) {
         animal.makeNoise();
         animal.move(speed);
-        System.out.println(animal);
+        System.out.println(animal);                 // This does not call the Animal's toString() method
+                                                    // instead, it calls the Dog's toString() method
+        // Java sees a call to Animal, but it discovers that Dog is a more specific object
         System.out.println("_ _ _ _");
     }
 
