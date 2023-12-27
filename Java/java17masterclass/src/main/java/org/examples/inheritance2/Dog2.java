@@ -32,5 +32,9 @@ public class Dog2 extends Animal2{
                 "earShape='" + earShape + '\'' +
                 ", tailShape='" + tailShape + '\'' +
                 "} " + super.toString();                    // This one calls toString in super "Animal2{...}"
+                // Then, this "toString" calls the method in the parent classç
+                // which means that the code does not need to be duplicated
     }
+
+    public void makeNoise() {}
 }
