@@ -36,5 +36,19 @@ public class Dog2 extends Animal2{
                 // which means that the code does not need to be duplicated
     }
 
-    public void makeNoise() {}
+    public void makeNoise() {               // We are overriding the makeNoise parent method
+        // Manually created by us
+    }
+
+    @Override
+    public void move(String speed) {        // Generated with Intellij, from the parent class
+        super.move(speed);
+        //This calls the superclass method and overrides it,
+        //We can now extend the parent method
+        //If we do not add anything, it is overridden with an ampty method as the other one above
+        //If we add something else below, the parent method is enhanced:
+        System.out.println("Dogs run, walk and wag their tail");
+        //Now the parent class has an extended functionality created from a child class
+    }
 }
+
