@@ -49,6 +49,7 @@ public class Dog2 extends Animal2{
         //If we add something else below, the parent method is enhanced:
         System.out.println("Dogs run, walk and wag their tail");
         //Now the parent class has an extended functionality created from a child class
+        //Then, all objects created now from the parent class will have this functionality created in this subclass.
     }
 }
 
