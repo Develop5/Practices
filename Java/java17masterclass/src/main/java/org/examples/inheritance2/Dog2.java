@@ -32,13 +32,13 @@ public class Dog2 extends Animal2{
                 "earShape='" + earShape + '\'' +
                 ", tailShape='" + tailShape + '\'' +
                 "} " + super.toString();                    // This one calls toString in super "Animal2{...}"
-                // Then, this "toString" calls the method in the parent classç
+                // Then, this "toString" calls the method in the parent class
                 // which means that the code does not need to be duplicated
     }
 
     public void makeNoise() {               // We are overriding the makeNoise parent method
         // Manually created by us
-        // By now, this override the parent subclass, but do nothing
+        // By now, this override the parent subclass, but does nothing
 
         // Now, we will enhance the parent class by calling a bark method in Dog2 subclass
         if(type == "Wolf") {        // But type is private. Needs to be changed to protected
