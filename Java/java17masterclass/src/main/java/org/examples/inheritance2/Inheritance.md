@@ -27,7 +27,7 @@ The overridden method can do **one of three** things:
 
 ##
 ### Polymorphism ###
-Simple means "many forms"
+Simply means "many forms"
 Some advantages are:
 * It makes code simpler
   * We use code that is in the base class or the superclass. Ex: doAnimalStuff method. We did not have to check the type of the object, and then decide what method to call, Java did it all at runtime.

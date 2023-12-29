@@ -5,7 +5,7 @@ public class Physician extends GeneralPerson{
     private int yearsOfExperience;
 
     public Physician(String name, int age) {
-        this(name, age, 100.000, 7);
+        this(name, age, 100000, 7);
     }
 
     public Physician(String name, int age, double salary, int yearsOfExperience) {
@@ -14,6 +14,9 @@ public class Physician extends GeneralPerson{
         this.yearsOfExperience = yearsOfExperience;
     }
 
+    public void declareSalary() {
+        System.out.println("My salary is: " + salary);
+    }
     @Override
     public String toString() {
         return "Physician{" +
@@ -32,7 +35,6 @@ public class Physician extends GeneralPerson{
     @Override
     public void ageGroup() {
         super.ageGroup();
-        mainActivity();
         getUp();
         if (yearsOfExperience < 2 ) {
             noviceDoctor();
@@ -41,10 +43,6 @@ public class Physician extends GeneralPerson{
 
     private void getUp(){
         System.out.println("I get up at 6:00am");
-    }
-
-    private void mainActivity() {
-        System.out.println("I diagnose");
     }
 
     private void noviceDoctor(){

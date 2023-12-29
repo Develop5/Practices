@@ -31,6 +31,7 @@ public class GeneralPerson {
     }
 
 
+
     public void ageGroup(){
         System.out.println("I am " + (age > 55 ? "over 55 years old. " : "younger than 55. ") + "My age: " + age);
     }
@@ -39,6 +40,9 @@ public class GeneralPerson {
         System.out.println("I am a: " + ocupation);
     }
 
+    public void declareSalary() {
+
+    }
 
 
 }

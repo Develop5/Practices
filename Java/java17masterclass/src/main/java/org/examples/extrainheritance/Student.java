@@ -5,7 +5,7 @@ public class Student extends GeneralPerson{
     private double allowance;
 
     public Student(String university, double allowance) {
-        this("Generic Student", 17, university, allowance);
+        this("No given Name", 17, university, allowance);
     }
 
     public Student(String name, int age, String university, double allowance) {
@@ -14,6 +14,9 @@ public class Student extends GeneralPerson{
         this.allowance = allowance;
     }
 
+    public void declareSalary() {
+        System.out.println("I do not receive a salary. My allowance = " + allowance);
+    }
     @Override
     public String toString() {
         return "Student{" +
