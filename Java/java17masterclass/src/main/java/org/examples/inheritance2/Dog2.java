@@ -47,9 +47,28 @@ public class Dog2 extends Animal2{
         //We can now extend the parent method
         //If we do not add anything, it is overridden with an ampty method as the other one above
         //If we add something else below, the parent method is enhanced:
+        /*
         System.out.println("Dogs run, walk and wag their tail");
+
+         */
         //Now the parent class has an extended functionality created from a child class
         //Then, all objects created now from the parent class will have this functionality created in this subclass.
+
     }
+
+    private void bark(){
+        System.out.println("Wolf! ");
+    }
+    private void run(){
+        System.out.println("Dog Running ");
+    }
+    private void walk(){
+        System.out.println("Dog Walking ");
+    }
+    private void wayTail(){
+        System.out.println("Tail Wagging ");
+    }
+
+
 }
 
