@@ -25,6 +25,18 @@ The overridden method can do **one of three** things:
 * Or the method can call the parent class's method, and include other code to run, so it can extend the functionality for the Dog, for that behavior.
 
 
+##
+### Polymorphism ###
+Simply means "many forms"
+Some advantages are:
+* It makes code simpler
+  * We use code that is in the base class or the superclass. Ex: doAnimalStuff method. We did not have to check the type of the object, and then decide what method to call, Java did it all at runtime.
+* It encourages code extensibility
+  * It's very easy to subclass and override or extend the method
+
+
+
+
 
 
 
