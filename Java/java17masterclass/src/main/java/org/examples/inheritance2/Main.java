@@ -1,8 +1,5 @@
 package main.java.org.examples.inheritance2;
 
-import main.java.org.examples.inheritance2.Animal2;
-import main.java.org.examples.inheritance2.Dog2;
-
 public class Main {
     public static void main(String[] args) {
         Animal2 animal = new Animal2("Generic Animal", "Huge", 400);
@@ -19,6 +16,12 @@ public class Main {
         // Using constructor C in Dog2
         Dog2 retriever = new Dog2("Labrador Retriever", 65, "Floppy", "Swimmer" );
         doAnimalStuff(retriever, "slow");
+
+        Dog2 wolf = new Dog2("Wolf", 40);
+        doAnimalStuff(wolf, "slow");
+
+        Fish goldie = new Fish("Goldfish", 0.25, 2, 3);
+        doAnimalStuff(goldie, "fast");
 
     }
 

@@ -38,18 +38,54 @@ public class Dog2 extends Animal2{
 
     public void makeNoise() {               // We are overriding the makeNoise parent method
         // Manually created by us
+        // By now, this override the parent subclass, but do nothing
+
+        // Now, we will enhance the parent class by calling a bark method in Dog2 subclass
+        if(type == "Wolf") {        // But type is private. Needs to be changed to protected
+            System.out.println("Ow Woooooo! ");
+        }
+        bark();
+        System.out.println();
+
     }
 
     @Override
     public void move(String speed) {        // Generated with Intellij, from the parent class
-        super.move(speed);
-        //This calls the superclass method and overrides it,
+        super.move(speed);                  // Calls the move method in the parent class Animal
+        //This calls the superclass method AND overrides it,
         //We can now extend the parent method
-        //If we do not add anything, it is overridden with an ampty method as the other one above
+        //If we do not add anything, it is overridden with an empty method same as the other one above
         //If we add something else below, the parent method is enhanced:
+        /*
         System.out.println("Dogs run, walk and wag their tail");
+
+         */
         //Now the parent class has an extended functionality created from a child class
         //Then, all objects created now from the parent class will have this functionality created in this subclass.
+
+        if (speed == "slow"){
+            walk();
+            wagTail();
+        } else {
+            run();
+            bark();
+        }
+        System.out.println();       // Apart from calling the other methods we do nothing
     }
+
+    private void bark(){
+        System.out.println("Wolf! ");
+    }
+    private void run(){
+        System.out.println("Dog Running ");
+    }
+    private void walk(){
+        System.out.println("Dog Walking ");
+    }
+    private void wagTail(){
+        System.out.println("Tail Wagging ");
+    }
+
+
 }
 
