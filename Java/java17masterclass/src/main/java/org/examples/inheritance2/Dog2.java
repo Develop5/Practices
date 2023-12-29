@@ -40,7 +40,10 @@ public class Dog2 extends Animal2{
         // Manually created by us
         // By now, this override the parent subclass, but do nothing
 
-        // Now, we will enhance the parent class by calling a method in Dog2 subclass
+        // Now, we will enhance the parent class by calling a bark method in Dog2 subclass
+        if(type == "Wolf") {        // But type is private. Needs to be changed to protected
+            System.out.println("Ow Woooooo! ");
+        }
         bark();
         System.out.println();
 

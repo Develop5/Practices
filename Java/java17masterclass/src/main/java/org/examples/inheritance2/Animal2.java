@@ -1,7 +1,7 @@
 package main.java.org.examples.inheritance2;
 
 public class Animal2 {
-    private String type;
+    protected String type;
     private String size;
     private double weight;
 
