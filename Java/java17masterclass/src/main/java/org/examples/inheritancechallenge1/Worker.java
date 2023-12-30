@@ -22,7 +22,7 @@ public class Worker {
         return currentYear - birthYear;                  // Fixed age, just to compile
     }
 
-    protected double collectPay(){
+    public double collectPay(){
         return 0.0;
     }
 

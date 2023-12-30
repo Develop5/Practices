@@ -28,7 +28,7 @@ public class Employee extends Worker{
     }
 
     @Override
-    protected double collectPay() {
+    public double collectPay() {
         return super.collectPay();
     }
 
