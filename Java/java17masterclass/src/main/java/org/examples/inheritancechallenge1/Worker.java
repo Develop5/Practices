@@ -1,38 +1,40 @@
 package main.java.org.examples.inheritancechallenge1;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+
 import java.util.Calendar;
 
 public class Worker {
     private String name;
-    private String birthday;
-    private String endDate;
+    private String birthDate;
+    protected String endDate;
 
     public Worker() {
     }
 
-    public Worker(String name, String birthday, String endDate) {
+    public Worker(String name, String birthDate) {
         this.name = name;
-        this.birthday = birthday;
-        this.endDate = endDate;
+        this.birthDate = birthDate;
     }
 
-
     public int getAge() {
-        Calendar date = Calendar.getInstance();
-        DateFormat formatter = new SimpleDateFormat("yyyyMMdd");
-        int d1 = Integer.parseInt(formatter.format(birthday));
-        int d2 = Integer.parseInt(formatter.format(date));
-        System.out.println("--- Today is: " + date.toString());
-        return ((d2-d1)/10000);
+        int currentYear = 2024;
+        int birthYear = Integer.parseInt(birthDate.substring(6));
+        return currentYear - birthYear;                  // Fixed age, just to compile
+    }
+
+    protected double collectPay(){
+        return 0.0;
+    }
+
+    public void terminate (String endDate) {
+        this.endDate = endDate;
     }
 
     @Override
     public String toString() {
         return "Worker{" +
                 "name='" + name + '\'' +
-                ", birthday='" + birthday + '\'' +
+                ", birthDate='" + birthDate + '\'' +
                 ", endDate='" + endDate + '\'' +
                 '}';
     }

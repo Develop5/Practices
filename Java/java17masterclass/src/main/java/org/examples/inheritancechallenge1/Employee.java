@@ -4,6 +4,7 @@ public class Employee extends Worker{
 
     private long employeeId;
     private String hireDate;
+    private static int employeeNo = 1;
 
 
     public Employee(long employeeId, String hireDate) {
@@ -11,18 +12,24 @@ public class Employee extends Worker{
         this.hireDate = hireDate;
     }
 
-    public Employee() {
-        super("FromWorker", "02/07/1990", "20/4/2024");
-    }
 
-    public Employee(String name, String birthday, String endDate) {
-        this(name, birthday, endDate, 397601534, "16/7/1993");
-    }
 
-    public Employee(String name, String birthday, String endDate, long employeeId, String hireDate) {
-        super(name, birthday, endDate);
-        this.employeeId = employeeId;
+
+
+    public Employee(String name, String birthDate, String hireDate) {
+        super(name, birthDate);
+        this.employeeId = Employee.employeeNo++;
         this.hireDate = hireDate;
+    }
+
+    @Override
+    public void terminate(String endDate) {
+        super.terminate(endDate);
+    }
+
+    @Override
+    protected double collectPay() {
+        return super.collectPay();
     }
 
     @Override

@@ -1,6 +1,8 @@
-package main.java.org.examples.inheritancechallenge1;
+package main.java.org.examples.DeleteThis;
 
-public class SalariedEmployee extends Employee{
+import main.java.org.examples.inheritancechallenge1.Employee;
+
+public class SalariedEmployee extends Employee {
 
     private double annualSalary;
     private boolean isRetired;
@@ -14,6 +16,12 @@ public class SalariedEmployee extends Employee{
     public void retire() {
         System.out.println("Am I retired? " + (isRetired ? "Yes" : "No"));
     }
+
+    @Override
+    protected double collectPay() {
+        return annualSalary;
+    }
+
     @Override
     public String toString() {
         return "SalariedEmployee{" +
