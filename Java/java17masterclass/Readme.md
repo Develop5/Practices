@@ -46,5 +46,5 @@ Then reload your .bash_profile file from the commad line with this:
 #### Voy por aquí ####
 
 Section 7
-91. What is java.lang.Object?
+92. Inheritance Challenge - Part 1
 
