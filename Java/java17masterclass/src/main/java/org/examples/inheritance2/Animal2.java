@@ -1,7 +1,7 @@
 package main.java.org.examples.inheritance2;
 
 public class Animal2 {
-    protected String type;                  // Conditional encapsulation
+    protected String type;                  // "protected" creates a conditional encapsulation
     // With "protected", subclasses can access the field, but also classes in the same package
     private String size;
     private double weight;
