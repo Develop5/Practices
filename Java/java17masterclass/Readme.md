@@ -54,5 +54,5 @@ Not: From Section 30 to 44 this is all old content
 #### Voy por aquí ####
 
 Section 7
-94. this vs super
+97. Another Look at the String
 
