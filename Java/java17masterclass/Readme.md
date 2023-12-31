@@ -43,8 +43,16 @@ Then reload your .bash_profile file from the commad line with this:
 
     ~/ .bash_profile
 
+#### Needs to read ####
+6.71 Exception Handling, and Introduction to Scanner
+5.57 More switch statement      (and around)
+
+Not: From Section 30 to 44 this is all old content
+
+
+
 #### Voy por aquí ####
 
 Section 7
-93. Inheritance Challenge Part 2
+94. this vs super
 
