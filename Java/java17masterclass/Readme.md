@@ -35,7 +35,7 @@ Entries from the startup script aren’t listed unless you request them with the
 
 #### Some tips and resources ####
 
-1.- Avoid to be asked for a merge message by adding this to the .bash_profile:
+1. Avoid to be asked for a merge message by adding this to the .bash_profile:
     
     export GIT_MERGE_AUTOEDIT=no
 
@@ -43,6 +43,8 @@ Then reload your .bash_profile file from the commad line with this:
 
     ~/ .bash_profile
 
+2. [Markdown table syntax](https://www.tablesgenerator.com/markdown_tables#:~:text=As%20the%20official%20Markdown%20documentation%20states%2C%20Markdown%20does,which%20provide%20additional%20syntax%20for%20creating%20simple%20tables.)
+##
 #### Needs to read ####
 6.71 Exception Handling, and Introduction to Scanner
 5.57 More switch statement      (and around)
