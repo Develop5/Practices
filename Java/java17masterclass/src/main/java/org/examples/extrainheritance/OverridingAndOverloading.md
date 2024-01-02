@@ -1,17 +1,20 @@
 
 ### Overloading and Overriding ###
 
-Table:
+Resources:
+[Markdown table generator](https://www.tablesgenerator.com/markdown_tables)
+[Markdown syntax guide](https://www.markdownguide.org/extended-syntax/#markdown-processors)
 
-|                |      |        |   |   |
-|----------------|------|--------|---|---|
-| Cualquier cosa | 999  |        |   |   |
-|                |      | 13     |   |   |
-|                |      |        |   |   |
+##
 
+| **Overloading**                                                       | **Overriding**                                                                   |
+|-----------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| Provides functionality to reuse a method name with different parameters | Used to override a behavior which the class has inherited from the parent class. |
+| Usually in a single class but may also be used in a child class.      | **Always in two classes** that have a child-parent or IS-A relationship.         |
+| **Must have** different parameters.                                   | **Must have** the same parameters and same name.                                 |
+| May have different return types.                                      | Must have the same return type or covariant return type(child class).                                                                                 |
+| May have different access modifiers(private, protected, public).      | **Must NOT** have a lower modifier but may have a higher modifier.                                                                                 |
+| May throw different exceptions.                                       | **Must NOT** throw a new or broader checked exception.                                                                                 |
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+##
+
