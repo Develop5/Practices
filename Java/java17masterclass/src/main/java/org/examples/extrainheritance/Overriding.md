@@ -1,5 +1,5 @@
 ### Overriding ###
-
+##
 Method overriding means defining a method in a child class, that already exists in the parent class, with the same signature (the **same name**, **same arguments**).
 
 By extending the parent class, the child class gets all the methods defined in the parent class (those methods are also known as derived methods).
