@@ -50,11 +50,9 @@ Then reload your .bash_profile file from the commad line with this:
 5.57 More switch statement      (and around)
 
 Not: From Section 30 to 44 this is all old content
-
-
+##
 
 #### Voy por aquí ####
 
-Section 7
-97. Another Look at the String
+99. The StringBuilder class
 

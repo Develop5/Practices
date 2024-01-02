@@ -24,7 +24,7 @@ A method will be considered overridden, if we follow these rules.
 
 
 There's also some important points about method overriding to keep in mind.
-* Only inherited methods can be overridden, in other words, methods can be overridden only in child classes.
+* Only **inherited methods** can be overridden, in other words, methods can be overridden only in child classes.
 * Constructors and private methods cannot be overridden.
 * Methods that are final cannot be overridden.
 * A subclass can use super.methodName() to call the superclass version of an overridden method.
