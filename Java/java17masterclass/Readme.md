@@ -44,17 +44,16 @@ Then reload your .bash_profile file from the commad line with this:
     ~/ .bash_profile
 
 2. [Markdown table syntax](https://www.tablesgenerator.com/markdown_tables#:~:text=As%20the%20official%20Markdown%20documentation%20states%2C%20Markdown%20does,which%20provide%20additional%20syntax%20for%20creating%20simple%20tables.)
+3. [Extended Markdown syntax](https://www.markdownguide.org/extended-syntax/#tables)
 ##
 #### Needs to read ####
 6.71 Exception Handling, and Introduction to Scanner
 5.57 More switch statement      (and around)
 
-Not: From Section 30 to 44 this is all old content
-
-
+**Can be Skipped**: From Section 30 to 44 this is all old content
+##
 
 #### Voy por aquí ####
 
-Section 7
-97. Another Look at the String
+99. The StringBuilder class
 

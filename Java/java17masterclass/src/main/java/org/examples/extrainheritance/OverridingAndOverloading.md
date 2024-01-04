@@ -1,10 +1,6 @@
 
 ### Overloading and Overriding ###
 
-Resources:
-[Markdown table generator](https://www.tablesgenerator.com/markdown_tables)
-[Markdown syntax guide](https://www.markdownguide.org/extended-syntax/#markdown-processors)
-
 ##
 
 | **Overloading**                                                       | **Overriding**                                                                   |
@@ -17,4 +13,8 @@ Resources:
 | May throw different exceptions.                                       | **Must NOT** throw a new or broader checked exception.                                                                                 |
 
 ##
+
+Resources:
+[Markdown table generator](https://www.tablesgenerator.com/markdown_tables)
+[Markdown syntax guide](https://www.markdownguide.org/extended-syntax/#markdown-processors)
 
