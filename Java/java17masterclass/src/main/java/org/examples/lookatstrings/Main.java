@@ -10,7 +10,11 @@ public class Main {
         StringBuilder helloWorldBuilder = new StringBuilder("Hello" + " World");
         helloWorldBuilder.append(" and Goodbye");
         printInformation(String.valueOf(helloWorldBuilder));    // String has been changed
+
+        // Note: the following cannot be used, differently to the course
+        //printInformation(helloWorldBuilder);
     }
+
 
     public static void printInformation(String string) {
         System.out.println("String = " + string);
