@@ -11,27 +11,25 @@ public class Main {
         helloWorldBuilder.append(" and Goodbye");
         printInformation(helloWorldBuilder);    // String has been changed
 
-
-        /*
-        Conclusion:
-        String methods create a new object in memory, and return a reference to this new object.
-        StringBuilder methods return a StringBuilder reference, but it's really a self-reference.
-         */
-
+        StringBuilder emptyStart = new StringBuilder();
+        StringBuilder emptyStart32 = new StringBuilder(32);     // An integer
+        printInformation(emptyStart);
+        printInformation(emptyStart32);         // As a string, length is 0
 
     }
 
-    private static void printInformation(StringBuilder string) {
-        // This method is specifically for the StringBuilder object
+    private static void printInformation(StringBuilder builder) {
+        // This is the method particularly for the StringBuilder object
         // instead of using value.of() method
-        System.out.println("String = " + string);
-        System.out.println("length = " + string.length());
+        System.out.println("String = " + builder);
+        System.out.println("length = " + builder.length());
+        System.out.println("capacity = " + builder.capacity());
     }
 
 
-    public static void printInformation(String string) {
-        System.out.println("String = " + string);
-        System.out.println("length = " + string.length());
+    public static void printInformation(String builder) {
+        System.out.println("String = " + builder);
+        System.out.println("length = " + builder.length());
     }
 
 
