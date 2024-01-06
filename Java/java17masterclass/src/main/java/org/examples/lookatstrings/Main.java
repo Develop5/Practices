@@ -17,6 +17,11 @@ public class Main {
         StringBuilder emptyStart32 = new StringBuilder(32);     // capacity = 32
         emptyStart32.append("a".repeat(17));    // capacity: 32 + needed of 17 = 32
 
+        StringBuilder builderPlus = new StringBuilder("Hello" + " World");
+        builderPlus.append(" and Goodbye");
+        builderPlus.deleteCharAt(16).insert(16,"g");
+        printInformation(builderPlus);
+
         printInformation(emptyStart);
         printInformation(emptyStart32);
 
