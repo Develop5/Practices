@@ -19,8 +19,13 @@ public class Main {
 
         StringBuilder builderPlus = new StringBuilder("Hello" + " World");
         builderPlus.append(" and Goodbye");
-        builderPlus.deleteCharAt(16).insert(16,"g");
+        builderPlus.deleteCharAt(16).insert(16,"g");    // replacing
         printInformation(builderPlus);
+
+        builderPlus.replace(16, 17,"G");        // Simpler replacement
+        printInformation(builderPlus);
+
+
 
         printInformation(emptyStart);
         printInformation(emptyStart32);
