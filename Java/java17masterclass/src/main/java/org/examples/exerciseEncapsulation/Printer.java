@@ -1,6 +1,7 @@
 package main.java.org.examples.exerciseEncapsulation;
 
 public class Printer {
+    // Note: This whole is the code from the course, and it fails on their platform!! 😁🫢
     private int tonerLevel;
     private int pagesPrinted;
     private boolean duplex;
@@ -21,9 +22,6 @@ public class Printer {
     }
 
     public int printPages(int pages) {
-        if (duplex) {
-            System.out.println("Printing in duplex mode");
-        }
         int jobPages = (duplex) ? (pages / 2) + (pages % 2) : pages;
         pagesPrinted += jobPages;
         return jobPages;
