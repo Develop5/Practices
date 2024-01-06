@@ -17,6 +17,9 @@ public class PersonalComputer extends Product{
         this.motherboard = motherboard;
     }
 
+    /*
+    // We are hiding these methods now to create the needed methods in PersonalComputer
+    // because we do not want anyone else to be able to access these elements directly
     public ComputerCase getComputerCase() {
         return computerCase;
     }
@@ -28,4 +31,16 @@ public class PersonalComputer extends Product{
     public Motherboard getMotherboard() {
         return motherboard;
     }
+
+     */
+
+    private void drawLogo(){
+        monitor.drawPixelAt(1200, 50, "yellow");
+    }
+
+    public void powerUp(){
+        computerCase.pressPowerButton();
+        drawLogo();
+    }
+
 }

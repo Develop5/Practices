@@ -13,10 +13,18 @@ public class Main {
                 theMonitor,
                 theMotherboard);
 
+        /*
         // We built this personal computer by passing objects to the constructor
         // like a typical assembling of a computer
         thePC.getMonitor().drawPixelAt(10, 10, "red");
         thePC.getMotherboard().loadProgram("Windows OS");
         thePC.getComputerCase().pressPowerButton();
+
+         */
+
+        thePC.powerUp();
+        // This way, this code does not need to interact
+        // with PersonalComputer parts, to get the PC to do something
+
     }
 }
