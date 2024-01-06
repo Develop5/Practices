@@ -25,6 +25,9 @@ public class Main {
         thePC.powerUp();
         // This way, this code does not need to interact
         // with PersonalComputer parts, to get the PC to do something
+        // The PersonalComputer is managing and looking after all its parts
+        // and uses composition to achieve that.
+
 
     }
 }
