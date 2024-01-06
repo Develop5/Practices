@@ -17,18 +17,23 @@ public class Main {
         StringBuilder emptyStart32 = new StringBuilder(32);     // capacity = 32
         emptyStart32.append("a".repeat(17));    // capacity: 32 + needed of 17 = 32
 
+        printInformation(emptyStart);
+        printInformation(emptyStart32);
+
+        System.out.println("\n\n === delete, insert, replace, revert, setLength ===\n");
+
         StringBuilder builderPlus = new StringBuilder("Hello" + " World");
         builderPlus.append(" and Goodbye");
         builderPlus.deleteCharAt(16).insert(16,"g");    // replacing
-        printInformation(builderPlus);
+        System.out.println(builderPlus);
 
         builderPlus.replace(16, 17,"G");        // Simpler replacement
-        printInformation(builderPlus);
+        System.out.println(builderPlus);
+
+        builderPlus.reverse().setLength(7);
+        System.out.println(builderPlus);
 
 
-
-        printInformation(emptyStart);
-        printInformation(emptyStart32);
 
     }
 
