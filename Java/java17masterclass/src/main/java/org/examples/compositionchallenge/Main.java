@@ -2,12 +2,23 @@ package main.java.org.examples.compositionchallenge;
 
 public class Main {
     public static void main(String[] args) {
-        Refrigerator theRefrigerator = new Refrigerator(false);
-        CoffeMaker theCoffeMaker = new CoffeMaker(false);
-        DishWasher theDishWasher = new DishWasher(false);
-        SmartKitchen theSmartKitchen = new SmartKitchen(theRefrigerator, theCoffeMaker, theDishWasher);
 
-        theSmartKitchen.doSmartKitchenStuff(theRefrigerator, theCoffeMaker, theDishWasher);
+        SmartKitchen theSmartKitchen = new SmartKitchen();
 
+        /*
+        // Initializing instance variable
+        // Using passing objects
+        theSmartKitchen.getDishWasher().setHasWorkToDo(true);
+        theSmartKitchen.getIceBox().setHasWorkToDo(false);
+        theSmartKitchen.getBrewMaster().setHasWorkToDo(true);
+
+        theSmartKitchen.getDishWasher().doDishes();
+        theSmartKitchen.getIceBox().orderFood();
+        theSmartKitchen.getBrewMaster().brewCoffee();
+         */
+
+
+        theSmartKitchen.setKitchenState(false, false, true);
+        theSmartKitchen.doKitchenWork();
     }
 }
