@@ -55,5 +55,5 @@ Then reload your .bash_profile file from the commad line with this:
 
 #### Voy por aquí ####
 
-106. Encapsulation Challenge
+107. Polymorphism, Part 1
 
