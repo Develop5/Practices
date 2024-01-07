@@ -13,5 +13,14 @@ public class Main {
         // And even though it runs the watchMovie from the super class, because of "super"
         // this is applied to the variable, that at this time has already an Adventure object assigned
 
+        // Because which method is being called is determined in runtime, not compile time.
+
+        Movie theMovie3 = new Comedy("What Did Your Uncle do?");
+        theMovie3.watchMovie();
+
+        Movie theMovie4 = new ScienceFiction("The Infinite");
+        theMovie4.watchMovie();
+
+
     }
 }
