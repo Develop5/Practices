@@ -21,6 +21,7 @@ public class Main {
         Movie theMovie4 = new ScienceFiction("The Infinite");
         theMovie4.watchMovie();
 
-
+        Movie theMovie5 = Movie.getMovie("Adventure", "Star Wars2");
+        theMovie5.watchMovie();
     }
 }
