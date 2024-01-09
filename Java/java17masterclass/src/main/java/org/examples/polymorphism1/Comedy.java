@@ -14,4 +14,8 @@ public class Comedy extends Movie{
                 "Something funny happens",
                 "Happy Ending");
     }
+    public void watchComedy(){
+        System.out.println("Watching a Comedy");
+    }
+
 }

@@ -16,10 +16,6 @@ The only thing you need to do to start with JShell is to type the command at the
 ```
 jshell
 ```
-[JShell PDF in this computer](C:\Users\lourd\Documents\FromLenovo\DescargasAEstudiar_Nuevo\Java\java-shell-user-guide.pdf)
-
-[JShell documentation online](https://docs.oracle.com/en/java/javase/11/jshell/java-shell-user-guide.pdf)
-
 [JShell tutorial](https://examples.javacodegeeks.com/java-development/core-java/java-9-jshell-tutorial/)
 
 #### Some JShell commands ####

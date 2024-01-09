@@ -16,4 +16,8 @@ public class ScienceFiction extends Movie{
                 "Planets Blows Up",
                 "But there is a Happy Ending");
     }
+
+    public void watchScienceFiction(){
+        System.out.println("Watching a Science Fiction Thriller");
+    }
 }
