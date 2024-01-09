@@ -18,4 +18,15 @@ public class Movie {
         System.out.println("\n------------------------");
         System.out.println(title + " is a " + instanceType + " film");
     }
+
+    public static Movie getMovie(String type, String title) {
+        // We are using the Factory pattern
+        return switch (type.toUpperCase().charAt(0)) {
+            case 'A' -> new Adventure(title);
+            case 'C' -> new Comedy(title);
+            case 'S' -> new ScienceFiction(title);
+
+            default -> new Movie(title);
+        };
+    }
 }

@@ -1,5 +1,7 @@
 package main.java.org.examples.polymorphism1;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -21,6 +23,26 @@ public class Main {
         Movie theMovie4 = new ScienceFiction("The Infinite");
         theMovie4.watchMovie();
 
+        //Movie theMovie5 = Movie.getMovie("Adventure", "Star Wars2");
+        //theMovie5.watchMovie();
+
+        Scanner s = new Scanner(System.in);
+        while(true) {
+            System.out.println("Enter Type (A for Adventure, C for Comedy ," +
+                    "S for Science Fiction, or Q to quit): ");
+            String type = s.nextLine();
+            if ("qQ".contains(type)) {
+                break;
+            }
+            System.out.println("Enter Movie title: ");
+            String title = s.nextLine();
+            Movie movie = Movie.getMovie(type, title);
+            // In runtime it the variable was an instance of the subclass
+            // we get a object back from the factory method
+            // and then we call the method from the subclass
+            movie.watchMovie();
+
+        }
 
     }
 }
