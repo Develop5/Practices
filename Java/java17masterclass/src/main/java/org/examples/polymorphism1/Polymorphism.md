@@ -15,4 +15,27 @@ var is a special contextual keyword in Java, that lets our code take advantage o
 
 By using var as the type, we'are telling Java to figure out the compile-time for us.
 
+Local Variable Type inference was introduced in Java 10 to reduce boilerplate code and help with readability
+
+---
+### Tricks on Run Time and Compile Time ###
+
+In many cases, the compile time is the declared type to the left of the assignment operator.
+
+What is returned on the right side of the assignement operator, from whatever expression or method is executed,
+sometimes can only be determined at runtime, when the code is executed conditionally, 
+through the statements in the code.
+
+You can assign a runtime instance to a different compile time type only if certain rules are followed.
+
+#### Why are runtime types different than compile times types? ####
+
+Because of polymorphism
+
+Polymorphism lets us write code once, in a more generic fashion, like the code we started this lecture with.
+
+We saw that using a single compile time type of Movie, actually supported four different runtime types.
+
+Each type was able to execute behavior unique to the class.
+
 

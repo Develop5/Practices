@@ -38,6 +38,14 @@ public class NextMain {
 
         var airplane = Movie.getMovie("C", "Airplane");
         airplane.watchMovie();
+        // The Movie class was declared as th return type of the static method getMovie
+        // Then Java can infer that the type of this variable airplane
+        // should be a Movie. And this works.
 
+        // Another example using type inference
+        var plane = new Comedy("Airplane");
+        plane.watchComedy();
+        // Easy job for the compiler.
+        // We just assigned a new instance of Comedy to the variable plane.
     }
 }
