@@ -36,6 +36,8 @@ public class NextMain {
         Comedy comedyMovie = (Comedy) comedy;       // This does work
         comedyMovie.watchComedy();
 
+        var airplane = Movie.getMovie("C", "Airplane");
+        airplane.watchMovie();
 
     }
 }

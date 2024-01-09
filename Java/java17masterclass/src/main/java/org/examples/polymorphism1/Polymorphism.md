@@ -7,3 +7,12 @@ Polymorphism enables you to write generic code, based on the base class, or a pa
 This code, in the main method, is extendable, meaning it doesn't have to change, as new subclasses become available.
 
 This code can handle any instances that are a Movie, or a subclass of movie, that are returned from the factory method even though it does not exist yeat.
+
+---
+### What is var? ###
+
+var is a special contextual keyword in Java, that lets our code take advantage of Local Variable Type inference.
+
+By using var as the type, we'are telling Java to figure out the compile-time for us.
+
+
