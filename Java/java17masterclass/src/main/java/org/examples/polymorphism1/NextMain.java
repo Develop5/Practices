@@ -13,7 +13,7 @@ public class NextMain {
         // for example, a Comedy, and assign it to the Adventure variable.
         // We need to cast:
 
-        Adventure jaws = (Adventure) Movie.getMovie("A", "Jaws");
+        Adventure jaws = (Adventure) Movie.getMovie("C", "Jaws");
         jaws.watchMovie();
 
 
