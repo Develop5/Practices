@@ -55,7 +55,6 @@ Then reload your .bash_profile file from the commad line with this:
 
 #### Voy por aquí ####
 
-108. Polymorphism, Part 2        9:40
-         I need to understand better this conditional with "contains"
+109. Casting with classes, and using Object and var references
 
 
