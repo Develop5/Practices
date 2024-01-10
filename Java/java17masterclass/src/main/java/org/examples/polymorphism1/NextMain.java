@@ -49,10 +49,17 @@ public class NextMain {
         // We just assigned a new instance of Comedy to the variable plane.
 
         // Test the runtime type class
-        Object unknownObject = Movie.getMovie("C", "Airplane");
+
+        // 🧨 Issue: this movie is not printed
+        Object unknownObject = Movie.getMovie("C", "Airplane Strange");
         if (unknownObject.getClass().getSimpleName() == "Comedy") {
             Comedy c = (Comedy) unknownObject;
             c.watchComedy();
+        } else if (unknownObject instanceof Adventure) {
+            ((Adventure) unknownObject).watchMovie();       // Local variable not needed
+        } else if (unknownObject instanceof ScienceFiction syfy) {
+            // Above, pattern matching support, from JDK16 up
+            syfy.watchScienceFiction();
         }
 
     }
