@@ -49,6 +49,8 @@ public class NextMain {
         // We just assigned a new instance of Comedy to the variable plane.
 
         // Test the runtime type class
+
+        // 🧨 Issue: this movie is not printed
         Object unknownObject = Movie.getMovie("C", "Airplane Strange");
         if (unknownObject.getClass().getSimpleName() == "Comedy") {
             Comedy c = (Comedy) unknownObject;
