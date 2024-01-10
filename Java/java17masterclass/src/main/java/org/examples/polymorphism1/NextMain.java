@@ -47,5 +47,13 @@ public class NextMain {
         plane.watchComedy();
         // Easy job for the compiler.
         // We just assigned a new instance of Comedy to the variable plane.
+
+        // Test the runtime type class
+        Object unknownObject = Movie.getMovie("C", "Airplane");
+        if (unknownObject.getClass().getSimpleName() == "Comedy") {
+            Comedy c = (Comedy) unknownObject;
+            c.watchComedy();
+        }
+
     }
 }
