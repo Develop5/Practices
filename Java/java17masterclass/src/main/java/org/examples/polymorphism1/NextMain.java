@@ -52,7 +52,7 @@ public class NextMain {
 
         // 🧨 Issue: this movie is not printed
         // Try to print this out first. I changed the title on purpose
-        Object unknownObject = Movie.getMovie("A", "Star Wars");
+        Object unknownObject = Movie.getMovie("S", "Galaxy");
         if (unknownObject.getClass().getSimpleName() == "Comedy") {
             Comedy c = (Comedy) unknownObject;
             c.watchComedy();
