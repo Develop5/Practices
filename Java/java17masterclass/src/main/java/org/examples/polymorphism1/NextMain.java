@@ -50,8 +50,7 @@ public class NextMain {
 
         // Test the runtime type class
 
-        // 🧨 Issue: this movie is not printed
-        // Try to print this out first. I changed the title on purpose
+        // No issues. None of the watch... methods prints the title
         Object unknownObject = Movie.getMovie("S", "Galaxy");
         if (unknownObject.getClass().getSimpleName() == "Comedy") {
             Comedy c = (Comedy) unknownObject;

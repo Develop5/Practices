@@ -51,6 +51,4 @@ Then reload your .bash_profile file from the commad line with this:
 
 #### Voy por aquí ####
 
-110. Testing the runtime type using the instanceof operator
-      
-
+Coding Exercise 40: Polymorphism
