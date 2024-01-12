@@ -1,7 +1,7 @@
 package main.java.org.examples.polymorphismExercise;
 
-public class Mitsubishi extends Car{
-    public Mitsubishi(int cylinders, String name) {
+public class Holden extends Car{
+    public Holden(int cylinders, String name) {
         super(cylinders, name);
     }
 }
