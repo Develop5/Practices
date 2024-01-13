@@ -13,16 +13,16 @@ public class Car {
         wheels = 4;
     }
 
-    public void startEngine() {
-        System.out.println("the "+ getClass().getSimpleName() + "'s engine is starting");
+    public String startEngine() {
+        return "The "+ getClass().getSimpleName() + "'s engine is starting";
     }
 
-    public void accelerate() {
-        System.out.println("the "+ getClass().getSimpleName() + " is accelerating");
+    public String accelerate() {
+        return "The " +  getClass().getSimpleName() + " is accelerating";
     }
 
-    public void brake() {
-        System.out.println("the "+ getClass().getSimpleName() + " is braking");
+    public String brake() {
+        return "The " + getClass().getSimpleName() + " is braking";
     }
 
     public int getCylinders() {
