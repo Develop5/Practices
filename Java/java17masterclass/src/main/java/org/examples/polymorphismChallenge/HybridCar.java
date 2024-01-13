@@ -26,6 +26,5 @@ public class HybridCar extends Car{
         System.out.printf("Hybrid -> usage exceeds the average: %.2f %n", avmKmPerLiter);
     }
 
-
 }
 
