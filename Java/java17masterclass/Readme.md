@@ -51,4 +51,4 @@ Then reload your .bash_profile file from the commad line with this:
 
 #### Voy por aquí ####
 
-Coding Exercise 40: Polymorphism
+112. Polymorphism Challenge Exercise, Part 2

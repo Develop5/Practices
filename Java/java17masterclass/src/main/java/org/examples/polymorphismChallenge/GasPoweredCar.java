@@ -1,7 +1,7 @@
 package main.java.org.examples.polymorphismChallenge;
 public class GasPoweredCar extends Car{
-    public double avmKmPerLiter;
-    public int cylinders = 6;
+    private double avmKmPerLiter;
+    private int cylinders = 6;
 
     public GasPoweredCar(String description) {
         super(description);
@@ -22,5 +22,7 @@ public class GasPoweredCar extends Car{
     protected void runEngine() {
         System.out.printf("Gas -> usage exceeds the average: %.2f %n", avmKmPerLiter);
     }
+
+
 }
 
