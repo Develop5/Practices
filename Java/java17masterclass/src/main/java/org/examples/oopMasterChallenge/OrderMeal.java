@@ -18,7 +18,15 @@ public class OrderMeal {
         this.typeOfSideItem = typeOfSideItem;
     }
 
+    public String getTypeOfBurger() {
+        return typeOfBurger;
+    }
 
+    public String getTypeOfDrink() {
+        return typeOfDrink;
+    }
 
-
+    public String getTypeOfSideItem() {
+        return typeOfSideItem;
+    }
 }
