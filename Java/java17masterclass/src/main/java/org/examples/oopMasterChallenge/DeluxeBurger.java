@@ -5,9 +5,5 @@ public class DeluxeBurger extends Burger{
         super("Deluxe Burger", 12.90);
     }
 
-    @Override
-    public void addToppings(int numberExtraToppings) {
-        super.addToppings(numberExtraToppings);
-        price = 7.90;
-    }
+
 }
