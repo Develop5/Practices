@@ -16,6 +16,8 @@ public class Main {
         //burger.printItem();
 
         MealOrder regularMeal = new MealOrder();
+        regularMeal.addBurgerToppings("BACON", "CHEESE", "MAYO");
+        regularMeal.setDrinkSize("LARGE");
         regularMeal.printItemizedList();
 
 
