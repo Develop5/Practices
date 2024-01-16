@@ -1,35 +1,25 @@
 package org.example.factory;
 
 import com.google.gson.JsonObject;
+import org.json.simple.JSONObject;
 
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
-
     public static void main(String[] args) {
-        try {
-            // create a reader
-            Reader reader = Files.newBufferedReader(Paths.get("book.json"));
+        System.out.println("------- Resultado -------------");
+        System.out.println(EXPECTED_MAP_DISCARD.get("director"));
 
-            // read JSON from a file
-            JsonObject jsonObject = (JsonObject) Jsoner.deserialize(reader);
-
-            // create a Dozer mapper
-            Mapper mapper = DozerBeanMapperBuilder.buildDefault();
-
-            // convert JsonObject to Book
-            Book book = mapper.map(jsonObject, Book.class);
-
-            // print the book
-            System.out.println(book);
-
-            // close the reader
-            reader.close();
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
     }
+    private static final Map<String, String> EXPECTED_MAP_DISCARD = Stream.of(new String[][]{
+            {"title", "The Lord of the Rings: The Return of the King"},
+            {"director", "Peter Jackson"},
+            {"actor", "Sean Astin"}
+    }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
+
 }
