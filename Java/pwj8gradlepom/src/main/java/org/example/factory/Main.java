@@ -1,11 +1,9 @@
 package org.example.factory;
 
-import com.google.gson.JsonObject;
-import org.json.simple.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -21,5 +19,14 @@ public class Main {
             {"director", "Peter Jackson"},
             {"actor", "Sean Astin"}
     }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
+
+    public void getJson() {
+        try (Reader reader = new InputStreamReader(this.getClass()
+                .getResourceAsStream("/foo.json"))) {
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
