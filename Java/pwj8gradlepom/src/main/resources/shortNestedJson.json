@@ -1,0 +1,9 @@
+{
+  "name": "Json",
+  "detail": {
+    "first_name": "Json",
+    "last_name": "Scott",
+    "age": "23"
+  },
+  "status": "success"
+}

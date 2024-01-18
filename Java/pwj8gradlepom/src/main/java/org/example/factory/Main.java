@@ -2,6 +2,7 @@ package org.example.factory;
 
 
 import com.google.gson.Gson;
+import com.google.gson.JsonParser;
 
 import java.io.*;
 import java.util.HashMap;
@@ -18,6 +19,12 @@ public class Main {
         System.out.println(" He dicho que aquí´-----------");
         System.out.println(myMethodName().toString());
 
+        // This works but it is not clear to me that I need the result through a class
+        Reader reader = new InputStreamReader(Main.class.getClass().getResourceAsStream("/foo.json"));
+        System.out.println("The JSON object: " + JsonParser.parseReader(reader).toString());
+        MyResults result = new Gson().fromJson(reader, MyResults.class);
+        System.out.println(result.getBar());  // prints "bat"
+
     }
     private static final Map<String, String> EXPECTED_MAP_DISCARD = Stream.of(new String[][]{
             // Method to read from a JSON defined right here
@@ -30,11 +37,10 @@ public class Main {
     {
         String path = "C:\\Users\\lourd\\Documents\\Lenovo_D\\Lourdes\\practicando\\Practices\\Java\\pwj8gradlepom\\src\\main\\resources\\foo.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
-
         Gson gson = new Gson();
         HashMap<String, String> json = gson.fromJson(bufferedReader, HashMap.class);
-
         return json;
     }
+
 
 }
