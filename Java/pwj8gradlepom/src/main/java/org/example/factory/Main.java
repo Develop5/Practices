@@ -1,14 +1,17 @@
 package org.example.factory;
 
-
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSerializer;
 
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+
 
 public class Main {
 
@@ -20,10 +23,14 @@ public class Main {
         System.out.println(myMethodName().toString());
 
         // This works but it is not clear to me that I need the result through a class
-        Reader reader = new InputStreamReader(Main.class.getClass().getResourceAsStream("/foo.json"));
-        System.out.println("The JSON object: " + JsonParser.parseReader(reader).toString());
-        MyResults result = new Gson().fromJson(reader, MyResults.class);
-        System.out.println(result.getBar());  // prints "bat"
+        Reader reader = new InputStreamReader(Main.class.getClass().getResourceAsStream("/shortNestedJson.json"));
+        System.out.println("Readout outcome: " + reader);
+
+        JsonObject json = (JsonObject) JsonSerializer.toJSON(data);
+        JsonObject RecordLocator = (JsonObject) json.get("obj");
+
+        //MyResults result = new Gson().fromJson(reader, MyResults.class);
+        //System.out.println(result.getBar());  // prints "bat"
 
     }
     private static final Map<String, String> EXPECTED_MAP_DISCARD = Stream.of(new String[][]{
@@ -35,7 +42,7 @@ public class Main {
 
     public static HashMap<String, String> myMethodName() throws FileNotFoundException
     {
-        String path = "C:\\Users\\lourd\\Documents\\Lenovo_D\\Lourdes\\practicando\\Practices\\Java\\pwj8gradlepom\\src\\main\\resources\\foo.json";
+        String path = "C:\\Users\\lourd\\Documents\\Lenovo_D\\Lourdes\\practicando\\Practices\\Java\\pwj8gradlepom\\src\\main\\resources\\shortNestedJson.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         Gson gson = new Gson();
         HashMap<String, String> json = gson.fromJson(bufferedReader, HashMap.class);
