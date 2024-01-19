@@ -34,8 +34,9 @@ public class Main {
         System.out.println("First name is: " + firstName);
         String status = (String) js.get("status");
         System.out.println("Status is: " + status);
-        //Object detail = (String) js.get("detail");
-        //System.out.println("Detail is: " + detail.toString());
+        JSONObject detail = (JSONObject) js.get("detail");
+        String another = (String) detail.get("first_name");
+        System.out.println("Detail is: " + another);
 
     }
     private static final Map<String, String> EXPECTED_MAP_DISCARD = Stream.of(new String[][]{
