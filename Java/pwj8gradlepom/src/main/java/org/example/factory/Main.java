@@ -1,9 +1,9 @@
 package org.example.factory;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonSerializer;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.*;
 import java.util.HashMap;
@@ -11,26 +11,31 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
-
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println("------- Resultado -------------");
+    public static <ObjectMapper> void main(String[] args) throws IOException {
+        System.out.println("\n------- Parsing JSON from a constant ------------------------");
         System.out.println(EXPECTED_MAP_DISCARD.get("director"));
 
-        System.out.println(" He dicho que aquí´-----------");
+        System.out.println("\n---------- Reading JSON from file, fixed address -----------");
         System.out.println(myMethodName().toString());
 
-        // This works but it is not clear to me that I need the result through a class
-        Reader reader = new InputStreamReader(Main.class.getClass().getResourceAsStream("/shortNestedJson.json"));
-        System.out.println("Readout outcome: " + reader);
-
-        JsonObject json = (JsonObject) JsonSerializer.toJSON(data);
-        JsonObject RecordLocator = (JsonObject) json.get("obj");
-
-        //MyResults result = new Gson().fromJson(reader, MyResults.class);
-        //System.out.println(result.getBar());  // prints "bat"
+        System.out.println("\n---------- Reading file from resource folcer ---------------");
+        File file2 = new File(Main.class.getClassLoader().getResource("shortNestedJson.json").getFile());
+        Object ob = null;
+        try {
+            ob = new JSONParser().parse(new FileReader(file2));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        // typecasting ob to JSONObject
+        JSONObject js = (JSONObject) ob;
+        String firstName = (String) js.get("name");
+        System.out.println("First name is: " + firstName);
+        String status = (String) js.get("status");
+        System.out.println("Status is: " + status);
+        //Object detail = (String) js.get("detail");
+        //System.out.println("Detail is: " + detail.toString());
 
     }
     private static final Map<String, String> EXPECTED_MAP_DISCARD = Stream.of(new String[][]{

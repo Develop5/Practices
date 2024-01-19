@@ -1,7 +1,7 @@
 {
-  "name": "Json",
+  "name": "Jack",
   "detail": {
-    "first_name": "Json",
+    "first_name": "NameDetail",
     "last_name": "Scott",
     "age": "23"
   },
