@@ -29,7 +29,7 @@ public class PlaywrightFactory {
 
         browserContext = browser.newContext();
         page = browserContext.newPage();
-        page.navigate("google.com");
+        page.navigate("https://www.zalando.es/mujer-home/");
         return page;
     }
 }
