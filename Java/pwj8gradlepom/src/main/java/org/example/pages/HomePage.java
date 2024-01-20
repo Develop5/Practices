@@ -30,6 +30,12 @@ public class HomePage {
         return page.title();
     }
 
+    /*
+    Example of locator containing a text:
+    'a:has-text("Grégoire")'
+    locator('href:has-text("Vicente")'
+     */
+
 
     public String doSearch(String productName) {
         page.fill(search, productName);
