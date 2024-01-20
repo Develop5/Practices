@@ -1,41 +1,31 @@
 package org.example.factory;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+
+import static org.example.factory.JsonResultsFromFiles.*;
 
 public class Main {
 
     public static <ObjectMapper> void main(String[] args) throws IOException {
 
+        System.out.println("\n------- Parsing JSON from a constant in a class ------------");
+        System.out.println(EXPECTED_MAP_DISCARD.get("actor"));
 
-
+        System.out.println("\n---------- Reading complete JSON from fixed path -----------");
+        System.out.println(myMethodName());
 
         System.out.println("\n---------- Reading file from resource folder ---------------");
-        File file2 = new File(Main.class.getClassLoader().getResource("shortNestedJson.json").getFile());
-        Object ob = null;
-        try {
-            ob = new JSONParser().parse(new FileReader(file2));
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-        // typecasting ob to JSONObject
-        JSONObject js = (JSONObject) ob;
-        String firstName = (String) js.get("name");
-        System.out.println("First name is: " + firstName);
-        String status = (String) js.get("status");
-        System.out.println("Status is: " + status);
-        JSONObject detail = (JSONObject) js.get("detail");
-        String another = (String) detail.get("first_name");
-        System.out.println("Detail is: " + another);
+        File fileInResourcesFolder = new File(Main.class.getClassLoader().getResource("shortNestedJson.json").getFile());
+        String fieldName = "name";
+        System.out.println(getFieldFromJsonInResources(fileInResourcesFolder, fieldName));
+        String status = "status";
+        System.out.println(getFieldFromJsonInResources(fileInResourcesFolder, status));
+        String topLevel = "detail";
+        String lowerLevel = "last_name";
+        System.out.println(get2ndLevelFieldFromJsonInResources(fileInResourcesFolder, topLevel, lowerLevel));
+
 
     }
-
-
-
 
 }
