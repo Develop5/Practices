@@ -12,6 +12,31 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class JsonRetrieveFromFiles {
+
+    private static Object ob = null;
+
+    public static void allJSONMethods() throws FileNotFoundException {
+
+        System.out.println("\n------- Parsing JSON from a constant in a class ------------");
+        System.out.println(EXPECTED_MAP_DISCARD.get("actor"));
+
+        System.out.println("\n---------- Reading complete JSON from fixed path -----------");
+        System.out.println(myMethodName());
+
+        System.out.println("\n---------- Reading file from resource folder ---------------");
+        File fileInResourcesFolder = new File(Main.class.getClassLoader().getResource("shortNestedJson.json").getFile());
+        String fieldName = "name";
+        System.out.println(getFieldFromJsonInResources(fileInResourcesFolder, fieldName));
+        String status = "status";
+        System.out.println(getFieldFromJsonInResources(fileInResourcesFolder, status));
+        String topLevel = "detail";
+        String lowerLevel = "last_name";
+        System.out.println(get2ndLevelFieldFromJsonInResources(fileInResourcesFolder,
+                topLevel,
+                lowerLevel));
+
+    }
+
     public static Map<String, String> EXPECTED_MAP_DISCARD = Stream.of(new String[][]{
             // A constant is retrieved with the value of the field required in the JSON constant
             {"title", "The Lord of the Rings: The Return of the King"},
@@ -30,7 +55,6 @@ public class JsonRetrieveFromFiles {
 
     public static String getFieldFromJsonInResources(File filename, String fieldName) {
         // Read json file in Resources folder and retrieve value from given key
-        Object ob = null;
         try {
             try {
                 ob = new JSONParser().parse(new FileReader(filename));
