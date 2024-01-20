@@ -11,15 +11,41 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class JsonResultsFromFiles {
+public class JsonRetrieveFromFiles {
+
+    private static Object ob = null;
+
+    public static void allJSONMethods() throws FileNotFoundException {
+
+        System.out.println("\n------- Parsing JSON from a constant in a class ------------");
+        System.out.println(EXPECTED_MAP_DISCARD.get("actor"));
+
+        System.out.println("\n---------- Reading complete JSON from fixed path -----------");
+        System.out.println(myMethodName());
+
+        System.out.println("\n---------- Reading file from resource folder ---------------");
+        File fileInResourcesFolder = new File(Main.class.getClassLoader().getResource("shortNestedJson.json").getFile());
+        String fieldName = "name";
+        System.out.println(getFieldFromJsonInResources(fileInResourcesFolder, fieldName));
+        String status = "status";
+        System.out.println(getFieldFromJsonInResources(fileInResourcesFolder, status));
+        String topLevel = "detail";
+        String lowerLevel = "last_name";
+        System.out.println(get2ndLevelFieldFromJsonInResources(fileInResourcesFolder,
+                topLevel,
+                lowerLevel));
+
+    }
+
     public static Map<String, String> EXPECTED_MAP_DISCARD = Stream.of(new String[][]{
-            // A constant is retrieved with the value of the field required
+            // A constant is retrieved with the value of the field required in the JSON constant
             {"title", "The Lord of the Rings: The Return of the King"},
             {"director", "Peter Jackson"},
             {"actor", "Sean Astin"}
     }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
 
     public static HashMap<String, String> myMethodName() throws FileNotFoundException {
+        // Read json file in fixed folder and retrieve the json object
         String path = "C:\\Users\\lourd\\Documents\\Lenovo_D\\Lourdes\\practicando\\Practices\\Java\\pwj8gradlepom\\src\\main\\resources\\shortNestedJson.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         Gson gson = new Gson();
@@ -28,7 +54,7 @@ public class JsonResultsFromFiles {
     }
 
     public static String getFieldFromJsonInResources(File filename, String fieldName) {
-        Object ob = null;
+        // Read json file in Resources folder and retrieve value from given key
         try {
             try {
                 ob = new JSONParser().parse(new FileReader(filename));
@@ -42,22 +68,12 @@ public class JsonResultsFromFiles {
         // typecasting ob to JSONObject
         JSONObject js = (JSONObject) ob;
         return (String) js.get(fieldName);
-        /*
-        System.out.println("First name is: " + firstName);
-        String status = (String) js.get("status");
-        System.out.println("Status is: " + status);
-        JSONObject detail = (JSONObject) js.get("detail");
-        String another = (String) detail.get("first_name");
-        System.out.println("Detail is: " + another);
-
-         */
-
     }
 
     public static String get2ndLevelFieldFromJsonInResources(File filename,
                                                              String topLevelField,
                                                              String lowerLevelField) {
-        Object ob = null;
+        // Read json file in Resources folder and retrieve value from given nested key. 2 levels
         try {
             try {
                 ob = new JSONParser().parse(new FileReader(filename));
