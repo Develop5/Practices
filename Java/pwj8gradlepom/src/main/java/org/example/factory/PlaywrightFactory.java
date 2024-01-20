@@ -8,7 +8,7 @@ public class PlaywrightFactory {
     BrowserContext browserContext;
     Page page;
 
-    public void initBrowser (String browserName) {
+    public Page initBrowser (String browserName) {
         System.out.println("Browser name is: " + browserName);
         playwright = Playwright.create();
 
@@ -29,6 +29,7 @@ public class PlaywrightFactory {
 
         browserContext = browser.newContext();
         page = browserContext.newPage();
-        //page.navigate("")
+        page.navigate("google.com");
+        return page;
     }
 }
