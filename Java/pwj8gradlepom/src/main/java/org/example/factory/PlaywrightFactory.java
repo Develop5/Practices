@@ -8,7 +8,7 @@ public class PlaywrightFactory {
     BrowserContext browserContext;
     Page page;
 
-    public Page initBrowser (String browserName) {
+    public Page initBrowser(String browserName) {
         System.out.println("Browser name is: " + browserName);
         playwright = Playwright.create();
 
