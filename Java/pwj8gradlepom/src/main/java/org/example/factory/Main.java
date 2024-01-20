@@ -3,7 +3,7 @@ package org.example.factory;
 import java.io.File;
 import java.io.IOException;
 
-import static org.example.factory.JsonResultsFromFiles.*;
+import static org.example.factory.JsonRetrieveFromFiles.*;
 
 public class Main {
 
