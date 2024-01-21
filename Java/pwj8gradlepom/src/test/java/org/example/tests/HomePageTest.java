@@ -3,14 +3,11 @@ package org.example.tests;
 import org.example.base.BaseTest;
 import org.example.constants.AppConstants;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class HomePageTest extends BaseTest {
@@ -19,7 +16,7 @@ public class HomePageTest extends BaseTest {
     @ValueSource(ints = {1, 3, 5, -3, 15, Integer.MAX_VALUE}) // six numbers
     void isOdd_ShouldReturnTrueForOddNumbers(int number) {
         System.out.println("--------------- Estoy aquí --------------  " + number);
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
     @ParameterizedTest
@@ -29,14 +26,15 @@ public class HomePageTest extends BaseTest {
             "'lemon, lime', 0xF1"
     })
     void testWithCsvSource(String fruit, int rank) {
-        assertNotNull(fruit);
+        Assert.assertNotNull(fruit);
         assertNotEquals(0, rank);
     }
 
     @Test
     public void homePageTitleTest() {
         String actualHomePageTitle = homePage.getHomePageTitle().substring(0,20);
-        Assert.assertEquals(AppConstants.LOGIN_PAGE_TITLE.substring(0,20), actualHomePageTitle);
+        Assert.assertEquals(AppConstants.LOGIN_PAGE_TITLE.substring(0,20)
+                , actualHomePageTitle);             // Substrint avoiding special characters
     }
 
     @Test
@@ -45,7 +43,6 @@ public class HomePageTest extends BaseTest {
         Assert.assertEquals(actualHomePageURL, propertiesBase.getProperty("url"));
     }
 
-    @Ignore
     @Test
     public void searchTest() {
         String searchFor = "Zapatos";
