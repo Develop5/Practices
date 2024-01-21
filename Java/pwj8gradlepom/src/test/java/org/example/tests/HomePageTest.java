@@ -1,11 +1,7 @@
 package org.example.tests;
 
-import com.microsoft.playwright.Page;
-import org.example.factory.PlaywrightFactory;
-import org.example.pages.HomePage;
-import org.junit.After;
+import org.example.base.BaseTest;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -15,24 +11,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class HomePageTest {
-
-    PlaywrightFactory playwrightFactory;
-    Page page;
-    HomePage homePage;
-
-    @Before
-    public  void setup() {
-        playwrightFactory = new PlaywrightFactory();
-        page = playwrightFactory.initBrowser("chromium");
-        homePage = new HomePage(page);
-    }
-
-
-    @After
-    public  void tearDown() {
-        page.context().browser().close();
-    }
+public class HomePageTest extends BaseTest {
 
     @ParameterizedTest(name = "{index} - {0} is a palindrome")
     @ValueSource(ints = {1, 3, 5, -3, 15, Integer.MAX_VALUE}) // six numbers
@@ -58,7 +37,6 @@ public class HomePageTest {
         String expectedHomePageTitle = "Ropa y zapatos de mujer | La mejor selección en Zalando".substring(0,20);
         Assert.assertEquals(expectedHomePageTitle, actualHomePageTitle);
     }
-
 
     @Test
     public void homePageURLTest() {
