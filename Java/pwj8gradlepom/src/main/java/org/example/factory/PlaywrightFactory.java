@@ -17,7 +17,7 @@ public class PlaywrightFactory {
     public Page initBrowser(Properties properties) {
 
         String browserName = properties.getProperty("browser").trim();
-        System.out.println("Browser name is: " + browserName);
+        System.out.println("The browser is: " + browserName);
         playwright = Playwright.create();
 
         switch (browserName.toLowerCase()) {
@@ -33,6 +33,8 @@ public class PlaywrightFactory {
             case "chrome":
                 browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + browserName.toLowerCase());
         }
 
         browserContext = browser.newContext();

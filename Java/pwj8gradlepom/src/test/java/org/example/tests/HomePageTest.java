@@ -1,6 +1,7 @@
 package org.example.tests;
 
 import org.example.base.BaseTest;
+import org.example.constants.AppConstants;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -34,14 +35,13 @@ public class HomePageTest extends BaseTest {
     @Test
     public void homePageTitleTest() {
         String actualHomePageTitle = homePage.getHomePageTitle().substring(0,20);
-        String expectedHomePageTitle = "Ropa y zapatos de mujer | La mejor selección en Zalando".substring(0,20);
-        Assert.assertEquals(expectedHomePageTitle, actualHomePageTitle);
+        Assert.assertEquals(AppConstants.LOGIN_PAGE_TITLE.substring(0,20), actualHomePageTitle);
     }
 
     @Test
     public void homePageURLTest() {
         String actualHomePageURL = homePage.getHomePageURL();
-        Assert.assertEquals(actualHomePageURL, "https://www.zalando.es/mujer-home/");
+        Assert.assertEquals(actualHomePageURL, propertiesBase.getProperty("url"));
     }
 
 

@@ -11,7 +11,7 @@ import java.util.Properties;
 public class BaseTest {
     PlaywrightFactory playwrightFactory;
     Page page;
-    Properties propertiesBase;
+    protected Properties propertiesBase;
 
     protected HomePage homePage;
 
@@ -26,7 +26,7 @@ public class BaseTest {
 
 
     @After
-    public  void tearDown() {
+    public void tearDown() {
         page.context().browser().close();
     }
 
