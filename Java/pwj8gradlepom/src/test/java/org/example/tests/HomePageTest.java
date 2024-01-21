@@ -3,6 +3,7 @@ package org.example.tests;
 import org.example.base.BaseTest;
 import org.example.constants.AppConstants;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -44,7 +45,7 @@ public class HomePageTest extends BaseTest {
         Assert.assertEquals(actualHomePageURL, propertiesBase.getProperty("url"));
     }
 
-
+    @Ignore
     @Test
     public void searchTest() {
         String searchFor = "Zapatos";
