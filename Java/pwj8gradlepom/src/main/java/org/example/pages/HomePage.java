@@ -4,7 +4,7 @@ import com.microsoft.playwright.Page;
 
 public class HomePage {
 
-    private final Page page;
+    private Page page;
 
     // 1. String locators, as we are in Playwright
     private final String search = "//input[@id='header-search-input']";
@@ -12,16 +12,16 @@ public class HomePage {
 
     private final String searchIcon = "//input[contains('Busca aq')]";
     private final String searchPageHeader = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Zapatos']";
+    private final String menPageLink ="//span[contains(text(),'Hombre')]";
+
 
     // 2. Page constructor
-
-
     public HomePage(Page page) {
         this.page = page;
     }
 
-    // 3. Page actions/methods
 
+    // 3. Page actions/methods
     public String getHomePageURL() {
         return page.url();
     }
@@ -43,5 +43,10 @@ public class HomePage {
         page.locator(search).press("Enter");
         String searchHeader = page.textContent(searchPageHeader);
         return searchHeader;
+    }
+
+    public MenPage navigateToMenPage() {
+        page.click(menPageLink);
+        return new MenPage(page);
     }
 }
