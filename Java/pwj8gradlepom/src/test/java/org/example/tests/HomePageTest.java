@@ -7,6 +7,13 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class HomePageTest {
 
@@ -21,6 +28,30 @@ public class HomePageTest {
         homePage = new HomePage(page);
     }
 
+
+    @After
+    public  void tearDown() {
+        page.context().browser().close();
+    }
+
+    @ParameterizedTest(name = "{index} - {0} is a palindrome")
+    @ValueSource(ints = {1, 3, 5, -3, 15, Integer.MAX_VALUE}) // six numbers
+    void isOdd_ShouldReturnTrueForOddNumbers(int number) {
+        System.out.println("--------------- Estoy aquí --------------  " + number);
+        assertTrue(true);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "apple,         1",
+            "banana,        2",
+            "'lemon, lime', 0xF1"
+    })
+    void testWithCsvSource(String fruit, int rank) {
+        assertNotNull(fruit);
+        assertNotEquals(0, rank);
+    }
+
     @Test
     public void homePageTitleTest() {
         String actualHomePageTitle = homePage.getHomePageTitle().substring(0,20);
@@ -28,11 +59,13 @@ public class HomePageTest {
         Assert.assertEquals(expectedHomePageTitle, actualHomePageTitle);
     }
 
+
     @Test
     public void homePageURLTest() {
         String actualHomePageURL = homePage.getHomePageURL();
         Assert.assertEquals(actualHomePageURL, "https://www.zalando.es/mujer-home/");
     }
+
 
     @Test
     public void searchTest() {
@@ -42,8 +75,5 @@ public class HomePageTest {
     }
 
 
-    @After
-    public  void tearDown() {
-        page.context().browser().close();
-    }
+
 }
