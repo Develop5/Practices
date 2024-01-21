@@ -15,7 +15,7 @@ public class HomePageTest {
     HomePage homePage;
 
     @Before
-    public void setup() {
+    public  void setup() {
         playwrightFactory = new PlaywrightFactory();
         page = playwrightFactory.initBrowser("chromium");
         homePage = new HomePage(page);
@@ -27,7 +27,6 @@ public class HomePageTest {
         String expectedHomePageTitle = "Ropa y zapatos de mujer | La mejor selección en Zalando".substring(0,20);
         Assert.assertEquals(expectedHomePageTitle, actualHomePageTitle);
     }
-
 
     @Test
     public void homePageURLTest() {
@@ -42,8 +41,9 @@ public class HomePageTest {
         Assert.assertEquals(actualSearchHeader, searchFor);
     }
 
+
     @After
-    public void tearDown() {
+    public  void tearDown() {
         page.context().browser().close();
     }
 }
