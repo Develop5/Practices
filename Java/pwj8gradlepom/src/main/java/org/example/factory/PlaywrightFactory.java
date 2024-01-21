@@ -31,6 +31,7 @@ public class PlaywrightFactory {
                 browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
                 break;
             case "chrome":
+            case "edge":
                 browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
                 break;
             default:
