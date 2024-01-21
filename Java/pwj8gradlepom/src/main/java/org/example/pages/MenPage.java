@@ -18,14 +18,15 @@ public class MenPage {
         this.page = page;
     }
 
-
     // 3. Page actions/methods
     public boolean isLogoVisible(){
         page.locator(logo).highlight();
-        //return page.isVisible(logo);
-        return true;
+        return page.isVisible(logo);
     }
 
+    public String getMenPageURL() {
+        return page.url();
+    }
 
 
 }

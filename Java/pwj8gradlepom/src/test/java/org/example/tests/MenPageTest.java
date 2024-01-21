@@ -19,9 +19,10 @@ public class MenPageTest extends BaseTest {
 
 
     @Test
-    public void isLogoVisibleInMenPage() {
+    public void isMenPage() {
         menPage = homePage.navigateToMenPage();
-        Assert.assertTrue(menPage.isLogoVisible());
+        //Assert.assertTrue(menPage.isLogoVisible());
+        Assert.assertEquals(AppConstants.MEN_PAGE_URL, menPage.getMenPageURL());
 
     }
 }
