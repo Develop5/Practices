@@ -15,6 +15,10 @@ dependencies {
     implementation "com.microsoft.playwright:playwright:1.40.0"
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 
+    // Future: Add Extents Report
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.1.1'
+
+
 }
 
 test {

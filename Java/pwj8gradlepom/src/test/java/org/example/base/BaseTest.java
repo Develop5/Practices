@@ -8,12 +8,15 @@ import org.junit.Before;
 
 import java.util.Properties;
 
+
 public class BaseTest {
+
     PlaywrightFactory playwrightFactory;
     Page page;
     protected Properties propertiesBase;
 
     protected HomePage homePage;
+
 
     @Before
     public  void setup() {
@@ -21,6 +24,8 @@ public class BaseTest {
         propertiesBase = playwrightFactory.init_prop();
         page = playwrightFactory.initBrowser(propertiesBase);
         homePage = new HomePage(page);
+
+
     }
 
 
