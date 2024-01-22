@@ -48,6 +48,4 @@ public class HomePageTest extends BaseTest {
         Assert.assertEquals(actualSearchHeader, searchFor);
     }
 
-
-
 }
