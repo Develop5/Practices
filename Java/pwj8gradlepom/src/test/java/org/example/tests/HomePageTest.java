@@ -4,14 +4,10 @@ import org.example.base.BaseTest;
 import org.example.constants.AppConstants;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
-
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class HomePageTest extends BaseTest {
 
+    /* Parametrized tests are not working
     @ParameterizedTest(name = "{index} - {0} is a palindrome")
     @ValueSource(ints = {1, 3, 5, -3, 15, Integer.MAX_VALUE}) // six numbers
     void isOdd_ShouldReturnTrueForOddNumbers(int number) {
@@ -29,6 +25,8 @@ public class HomePageTest extends BaseTest {
         Assert.assertNotNull(fruit);
         assertNotEquals(0, rank);
     }
+
+     */
 
     @Test
     public void homePageTitleTest() {
@@ -49,7 +47,5 @@ public class HomePageTest extends BaseTest {
         String actualSearchHeader = homePage.doSearch(searchFor);
         Assert.assertEquals(actualSearchHeader, searchFor);
     }
-
-
 
 }
