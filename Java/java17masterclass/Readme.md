@@ -52,3 +52,4 @@ Then reload your .bash_profile file from the commad line with this:
 #### Voy por aquí ####
 
 115. OOP Master Challenge Exercise, The Bonus
+Need to check the project structure, as java files are not executable right now.
