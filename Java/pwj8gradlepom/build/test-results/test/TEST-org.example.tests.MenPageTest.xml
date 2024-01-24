@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.tests.MenPageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-21T16:47:03" hostname="LAPTOP-84FJEUOV" time="7.13">
+  <properties/>
+  <testcase name="menPageNavigationTest" classname="org.example.tests.MenPageTest" time="4.516"/>
+  <testcase name="isMenPage" classname="org.example.tests.MenPageTest" time="2.614"/>
+  <system-out><![CDATA[The browser is: edge
+---> Men page title is : Ropa y zapatos de hombre | Catálogo de moda online en Zalando
+The browser is: edge
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

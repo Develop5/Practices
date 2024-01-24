@@ -1,0 +1,9 @@
+{
+  "name": "Jack",
+  "detail": {
+    "first_name": "NameDetail",
+    "last_name": "Scott",
+    "age": "23"
+  },
+  "status": "success"
+}
