@@ -59,4 +59,6 @@ Need to check the project structure, as java files are not executable right now.
 Please, check the project pwj8gradlepom. It looks like empty.
 After recovering, investigate this reference, to solve JUnit with Page Object Model
 
+**Note**: Remember to create the corresponding branch and switch to it.
+
 [@BeforeAll in JUnit returns null](https://stackoverflow.com/questions/63452807/using-beforeall-to-instantiate-an-object-in-junit-returns-null)
