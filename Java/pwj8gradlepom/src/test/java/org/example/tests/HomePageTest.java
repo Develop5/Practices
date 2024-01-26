@@ -11,7 +11,6 @@ public class HomePageTest extends BaseTest {
     @ParameterizedTest(name = "{index} - {0} is a palindrome")
     @ValueSource(ints = {1, 3, 5, -3, 15, Integer.MAX_VALUE}) // six numbers
     void isOdd_ShouldReturnTrueForOddNumbers(int number) {
-        System.out.println("--------------- Estoy aquí --------------  " + number);
         Assert.assertTrue(true);
     }
 
