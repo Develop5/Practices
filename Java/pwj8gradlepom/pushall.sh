@@ -1,7 +1,7 @@
 #! /bin/bash
 #
 git checkout main
-git merge pwj8pomgradle
+git merge pwj8gradlepom
 git push
 git checkout pwj8pomgradle
 alias showurl='git remote get-url origin'
