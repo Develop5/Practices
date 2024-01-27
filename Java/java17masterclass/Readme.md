@@ -3,7 +3,6 @@
 Reviewing the course with the same name
 https://www.udemy.com/share/101Wdq3@OliW-dXtu66pyzllIOE0_PGS-U1fhWVdsPd8zwBZxX0ZslMDeMRhSGUGLINlrl8=/
 
-**IMPORTANT:** At some point, download the slides in the course
 
 ### Introduction to JShell ###
 
@@ -54,11 +53,9 @@ Then reload your .bash_profile file from the commad line with this:
 115. OOP Master Challenge Exercise, The Bonus
 Need to check the project structure, as java files are not executable right now.
 
-##
-**URGENT** 🆘 
-Please, check the project pwj8gradlepom. It looks like empty.
-After recovering, investigate this reference, to solve JUnit with Page Object Model
+## Other useful readings ##
 
-**Note**: Remember to create the corresponding branch and switch to it.
+[Baeldung tutorials](https://github.com/eugenp/tutorials/tree/master)
 
+### Move the following to any testing project ###
 [@BeforeAll in JUnit returns null](https://stackoverflow.com/questions/63452807/using-beforeall-to-instantiate-an-object-in-junit-returns-null)
