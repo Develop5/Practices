@@ -21,7 +21,6 @@ public class AbstractPlaywrightIT {
         browser = browserType.launch(
                 new BrowserType.LaunchOptions().setHeadless(false));
 
-
         BrowserContext context = browser.newContext(
                 new Browser.NewContextOptions().setViewportSize(800, 600));      // Lourdes -> Omit this
         page = context.newPage();
@@ -31,9 +30,7 @@ public class AbstractPlaywrightIT {
 
     @AfterAll
     static void tearDownClass() throws Exception {
-
         page.context().close();
-
         playwright.close();
     }
 
