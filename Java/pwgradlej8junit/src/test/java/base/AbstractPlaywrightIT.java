@@ -21,8 +21,10 @@ public class AbstractPlaywrightIT {
         browser = browserType.launch(
                 new BrowserType.LaunchOptions().setHeadless(false));
 
+        //BrowserContext context = browser.newContext(
+        //        new Browser.NewContextOptions().setViewportSize(800, 600));      // Remove
         BrowserContext context = browser.newContext(
-                new Browser.NewContextOptions().setViewportSize(800, 600));      // Lourdes -> Omit this
+                new Browser.NewContextOptions());      // Remove
         page = context.newPage();
         page.navigate("https://www.zalando.es/mujer-home/");
 
