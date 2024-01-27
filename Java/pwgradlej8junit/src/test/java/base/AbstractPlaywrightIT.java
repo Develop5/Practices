@@ -20,17 +20,13 @@ public class AbstractPlaywrightIT {
         BrowserType browserType = playwright.chromium();
         browser = browserType.launch(
                 new BrowserType.LaunchOptions().setHeadless(false));
-
-        //BrowserContext context = browser.newContext(
-        //        new Browser.NewContextOptions().setViewportSize(800, 600));      // Remove
         BrowserContext context = browser.newContext();
         page = context.newPage();
         page.navigate("https://www.zalando.es/mujer-home/");
-
     }
 
     @AfterAll
-    static void tearDownClass() throws Exception {
+    protected static void tearDownClass() throws Exception {
         page.context().close();
         playwright.close();
     }
