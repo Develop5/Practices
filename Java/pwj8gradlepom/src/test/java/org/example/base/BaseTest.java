@@ -6,18 +6,19 @@ import org.example.pages.HomePage;
 import org.example.pages.MenPage;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.TestInstance;
 
 import java.util.Properties;
 
-
+@TestInstance(TestInstance.Lifecycle.PER_METHOD)//
 public class BaseTest {
 
     PlaywrightFactory playwrightFactory;
-    static Page page;
+    Page page;
     protected Properties propertiesBase;
 
-    protected HomePage homePage;
-    protected MenPage menPage;
+    protected static HomePage homePage;
+    protected static MenPage menPage;
 
 
     @Before
@@ -27,10 +28,7 @@ public class BaseTest {
         page = playwrightFactory.initBrowser(propertiesBase);
         homePage = new HomePage(page);
         menPage = new MenPage(page);
-
-
     }
-
 
 
     @After

@@ -6,7 +6,7 @@ public class MenPage {
     private Page page;
 
     // 1. String locators, as we are in Playwright
-    private final String logo = "(//*[name()='svg'][@class='b69iQl _5Yd-hZ'])[1]";
+    private final String logo = ".b69iQl._5Yd-hZ";
 
     public String getMenPageTitle() {
         return page.title();
