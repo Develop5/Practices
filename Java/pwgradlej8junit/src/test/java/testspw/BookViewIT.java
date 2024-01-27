@@ -12,7 +12,7 @@ public class BookViewIT extends AbstractPlaywrightIT {
 
     @BeforeEach
     public void setUp() {
-        super.setUp();
+        super.setUpClass();
         //bookView = getLoginPage().logIn("user", "password");
     }
 }

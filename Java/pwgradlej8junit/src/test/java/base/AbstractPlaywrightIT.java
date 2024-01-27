@@ -12,34 +12,44 @@ public class AbstractPlaywrightIT {
 
     private static Playwright playwright;
     private static Browser browser;
-    private Page page;
+    private static Page page;
 
     @BeforeAll
-    static void setUpClass() {
+    protected static void setUpClass() {
         playwright = Playwright.create();
         BrowserType browserType = playwright.chromium();
         browser = browserType.launch(
                 new BrowserType.LaunchOptions().setHeadless(false));
-    }
-
-    @AfterAll
-    static void tearDownClass() throws Exception {
-        playwright.close();
-    }
 
 
-    @BeforeEach
-    public void setUp() {
         BrowserContext context = browser.newContext(
                 new Browser.NewContextOptions().setViewportSize(800, 600));      // Lourdes -> Omit this
         page = context.newPage();
         page.navigate("https://www.zalando.es/mujer-home/");
+
     }
 
-    @AfterEach
-    void tearDown() {
+    @AfterAll
+    static void tearDownClass() throws Exception {
+
         page.context().close();
+
+        playwright.close();
     }
+
+
+    //@BeforeEach
+    //public void setUp() {
+    //    BrowserContext context = browser.newContext(
+    //            new Browser.NewContextOptions().setViewportSize(800, 600));      // Lourdes -> Omit this
+    //    page = context.newPage();
+    //    page.navigate("https://www.zalando.es/mujer-home/");
+    //}
+
+    //@AfterEach
+    //void tearDown() {
+    //    page.context().close();
+    //}
 
     protected Page getPage() {
         return page;

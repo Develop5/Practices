@@ -15,4 +15,16 @@ public class LoginIT extends AbstractPlaywrightIT {
         Assertions.assertTrue(true);
         //Assertions.assertTrue(getPage().isVisible("#books-view"));
     }
+
+    @Test
+    void testPrint1(){
+        System.out.println("-----> Printing first case:  " + getClass().getSimpleName());
+    }
+
+    @Test
+    void testPrint2(){
+        System.out.println("-----> Printing second case:   " + getClass().getSimpleName());
+    }
+
+
 }
