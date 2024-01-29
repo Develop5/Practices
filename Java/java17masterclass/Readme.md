@@ -48,10 +48,6 @@ Then reload your .bash_profile file from the commad line with this:
 **Can be Skipped**: From Section 30 to 44 this is all old content
 ##
 
-#### Voy por aquí ####
-
-115. OOP Master Challenge Exercise, The Bonus
-Need to check the project structure, as java files are not executable right now.
 
 ## Other useful readings ##
 
@@ -59,3 +55,16 @@ Need to check the project structure, as java files are not executable right now.
 
 ### Move the following to any testing project ###
 [@BeforeAll in JUnit returns null](https://stackoverflow.com/questions/63452807/using-beforeall-to-instantiate-an-object-in-junit-returns-null)
+
+
+#### Voy por aquí ####
+
+115. OOP Master Challenge Exercise, The Bonus
+     Need to check the project structure, as java files are not executable right now.
+
+
+[See if it is gradle](https://stackoverflow.com/questions/14093024/trying-gradle-build-task-build-not-found-in-root-project)
+
+No idea if it works, but when I create a new project, everything works, as normal.
+So, there must be something that was changed in the configuration of he current one.
+Probably in Intellij, though.
