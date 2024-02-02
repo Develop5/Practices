@@ -8,6 +8,7 @@ plugins {
     id 'java'
 }
 
+//group = 'main.java'
 //group = 'org.examples.oopMasterChallenge'
 version = '1.0-SNAPSHOT'
 
