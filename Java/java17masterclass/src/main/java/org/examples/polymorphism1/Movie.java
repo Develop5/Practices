@@ -1,4 +1,4 @@
-package main.java.org.examples.polymorphism1;
+package org.examples.polymorphism1;
 
 public class Movie {
     private String title;

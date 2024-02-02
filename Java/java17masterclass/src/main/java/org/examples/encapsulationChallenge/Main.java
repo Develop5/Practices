@@ -1,4 +1,4 @@
-package main.java.org.examples.encapsulationChallenge;
+package org.examples.encapsulationChallenge;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main.java.org.examples.inheritance2;
+package org.examples.inheritance2;
 
 public class Fish extends Animal2{
     private int gills;

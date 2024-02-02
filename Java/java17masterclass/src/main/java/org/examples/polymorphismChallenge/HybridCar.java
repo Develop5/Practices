@@ -1,4 +1,4 @@
-package main.java.org.examples.polymorphismChallenge;
+package org.examples.polymorphismChallenge;
 public class HybridCar extends Car{
     private double avmKmPerLiter;
     private int cylinders = 6;

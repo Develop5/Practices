@@ -1,4 +1,4 @@
-package main.java.org.examples.thepojo;
+package org.examples.thepojo;
 
 public class Student {
 

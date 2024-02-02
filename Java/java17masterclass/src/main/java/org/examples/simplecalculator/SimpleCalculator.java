@@ -1,4 +1,4 @@
-package simplecalculator;
+package org.examples.simplecalculator;
 
 public class SimpleCalculator {
     // write code here

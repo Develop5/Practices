@@ -1,4 +1,4 @@
-package main.java.org.examples.exerciseCircleAndCylinder;
+package org.examples.exerciseCircleAndCylinder;
 
 public class Cylinder extends Circle{
     private double height;

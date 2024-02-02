@@ -1,6 +1,6 @@
-package main.java.org.examples.recordtype;
+package org.examples.recordtype;
 
-import main.java.org.examples.thepojo.Student;
+import org.examples.thepojo.Student;
 
 public class Main {
     public static void main(String[] args) {

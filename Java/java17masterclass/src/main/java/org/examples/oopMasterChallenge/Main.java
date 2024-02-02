@@ -30,10 +30,6 @@ public class Main {
         deluxeMeal.setDrinkSize("SMALL");
         deluxeMeal.printItemizedList();
 
-
     }
-
-
-
 
 }

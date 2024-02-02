@@ -1,4 +1,4 @@
-package main.java.org.examples.exercisepoint;
+package org.examples.exercisepoint;
 
 public class Main {
     public static void main(String[] args) {

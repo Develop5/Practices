@@ -1,4 +1,4 @@
-package main.java.org.examples.inheritance2;
+package org.examples.inheritance2;
 
 public class Dog2 extends Animal2{
     private String earShape;

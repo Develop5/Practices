@@ -1,4 +1,4 @@
-package main.java.org.examples.compositionchallenge;
+package org.examples.compositionchallenge;
 
 public class DishWasher {
     private boolean hasWorkToDo;

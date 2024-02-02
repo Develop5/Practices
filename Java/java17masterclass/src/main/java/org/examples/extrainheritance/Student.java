@@ -1,4 +1,4 @@
-package main.java.org.examples.extrainheritance;
+package org.examples.extrainheritance;
 
 public class Student extends GeneralPerson{
     private String university;

@@ -1,7 +1,7 @@
-package main.java.org.examples.exerciseEncapsulation;
+package org.examples.exerciseEncapsulation;
 
 public class Printer {
-    // Note: This whole is the code from the course, and it fails on their platform!! 😁🫢
+    // Note: This whole is the code from the course, and it fails on their platform!!
     private int tonerLevel;
     private int pagesPrinted;
     private boolean duplex;

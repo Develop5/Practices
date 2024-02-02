@@ -1,8 +1,8 @@
-package main.java.org.examples.person;
+package org.examples.person;
 
 public class Main {
     public static void main(String[] args) {
-        person.Person myperson = new person.Person();
+        Person myperson = new Person();
 
         myperson.setFirstName("Roberto");
         myperson.setLastName("Fernández");

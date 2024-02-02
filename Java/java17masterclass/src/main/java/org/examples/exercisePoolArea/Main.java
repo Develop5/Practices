@@ -1,4 +1,4 @@
-package main.java.org.examples.exercisePoolArea;
+package org.examples.exercisePoolArea;
 
 public class Main {
     public static void main(String[] args) {

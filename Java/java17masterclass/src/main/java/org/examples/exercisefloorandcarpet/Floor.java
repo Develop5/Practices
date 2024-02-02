@@ -1,4 +1,4 @@
-package main.java.org.examples.exercisefloorandcarpet;
+package org.examples.exercisefloorandcarpet;
 
 public class Floor {
     private double width;

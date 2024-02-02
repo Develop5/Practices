@@ -1,4 +1,4 @@
-package main.java.org.examples.inheritancechallenge1;
+package org.examples.inheritancechallenge1;
 
 public class Employee extends Worker{
 

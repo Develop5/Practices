@@ -1,4 +1,4 @@
-package main.java.org.examples.polymorphismChallenge;
+package org.examples.polymorphismChallenge;
 public class ElectricCar extends Car{
     private double avmKmPerCharge;
     private int batterySize;

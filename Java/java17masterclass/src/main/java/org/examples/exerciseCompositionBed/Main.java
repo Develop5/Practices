@@ -1,4 +1,4 @@
-package main.java.org.examples.exerciseCompositionBed;
+package org.examples.exerciseCompositionBed;
 
 public class Main {
     public static void main(String[] args) {

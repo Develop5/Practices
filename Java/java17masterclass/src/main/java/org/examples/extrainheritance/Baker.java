@@ -1,4 +1,4 @@
-package main.java.org.examples.extrainheritance;
+package org.examples.extrainheritance;
 
 public class Baker extends GeneralPerson{
     private double salary;

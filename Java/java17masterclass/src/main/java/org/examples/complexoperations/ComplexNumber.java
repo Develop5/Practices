@@ -1,4 +1,4 @@
-package main.java.org.examples.complexoperations;
+package org.examples.complexoperations;
 
 public class ComplexNumber {
     private double real;
