@@ -1,4 +1,4 @@
-package main.java.org.examples.oopMasterChallenge;
+package org.examples.oopMasterChallenge;
 
 import main.java.org.examples.polymorphism1.Adventure;
 import main.java.org.examples.polymorphism1.Comedy;
