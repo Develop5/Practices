@@ -1,4 +1,4 @@
-package main.java.org.examples.polymorphism1;
+package org.examples.polymorphism1;
 
 public class Comedy extends Movie{
     public Comedy(String title) {

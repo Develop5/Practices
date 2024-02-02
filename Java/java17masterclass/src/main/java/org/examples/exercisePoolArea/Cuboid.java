@@ -1,4 +1,4 @@
-package main.java.org.examples.exercisePoolArea;
+package org.examples.exercisePoolArea;
 
 public class Cuboid extends Rectangle{
     // write code here

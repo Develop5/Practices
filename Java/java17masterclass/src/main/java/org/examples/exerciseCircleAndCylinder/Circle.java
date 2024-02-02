@@ -1,4 +1,4 @@
-package main.java.org.examples.exerciseCircleAndCylinder;
+package org.examples.exerciseCircleAndCylinder;
 
 public class Circle {
     // write code here

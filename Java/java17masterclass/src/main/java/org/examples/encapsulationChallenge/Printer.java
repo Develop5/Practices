@@ -1,4 +1,4 @@
-package main.java.org.examples.encapsulationChallenge;
+package org.examples.encapsulationChallenge;
 
 public class Printer {
     private int tonerLevel;

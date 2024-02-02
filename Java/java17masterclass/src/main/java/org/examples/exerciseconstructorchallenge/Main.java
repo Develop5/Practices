@@ -1,4 +1,4 @@
-package main.java.org.examples.exerciseconstructorchallenge;
+package org.examples.exerciseconstructorchallenge;
 
 public class Main {
     public static void main(String[] args) {

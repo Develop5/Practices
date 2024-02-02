@@ -1,4 +1,4 @@
-package main.java.org.examples.exercisepoint;
+package org.examples.exercisepoint;
 
 
 import java.lang.Math;

@@ -1,4 +1,4 @@
-package main.java.org.examples.inheritancechallenge1;
+package org.examples.inheritancechallenge1;
 
 public class Main {
     public static void main(String[] args) {

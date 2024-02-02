@@ -1,4 +1,4 @@
-package main.java.org.examples.polymorphism1;
+package org.examples.polymorphism1;
 
 public class ScienceFiction extends Movie{
     public ScienceFiction(String title) {

@@ -1,4 +1,4 @@
-package main.java.org.examples.constructorchaining;
+package org.examples.constructorchaining;
 
 public class ChainingAccount {
 

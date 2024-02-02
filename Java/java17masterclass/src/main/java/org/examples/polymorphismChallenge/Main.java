@@ -1,4 +1,4 @@
-package main.java.org.examples.polymorphismChallenge;
+package org.examples.polymorphismChallenge;
 
 public class Main {
     public static void main(String[] args) {

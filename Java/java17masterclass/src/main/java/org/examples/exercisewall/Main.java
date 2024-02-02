@@ -1,4 +1,4 @@
-package main.java.org.examples.exercisewall;
+package org.examples.exercisewall;
 
 public class Main {
     public static void main(String[] args) {

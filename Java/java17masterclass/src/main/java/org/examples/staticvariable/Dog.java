@@ -1,4 +1,4 @@
-package main.java.org.examples.staticvariable;
+package org.examples.staticvariable;
 
 public class Dog {
 

@@ -1,4 +1,4 @@
-package constructors1;
+package org.examples.constructors1;
 
 public class SimpleConstructor {
 

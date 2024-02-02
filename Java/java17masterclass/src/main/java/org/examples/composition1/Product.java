@@ -1,4 +1,4 @@
-package main.java.org.examples.composition1;
+package org.examples.composition1;
 
 public class Product {
     private String model;

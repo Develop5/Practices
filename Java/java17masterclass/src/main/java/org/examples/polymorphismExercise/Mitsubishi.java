@@ -1,4 +1,4 @@
-package main.java.org.examples.polymorphismExercise;
+package org.examples.polymorphismExercise;
 
 public class Mitsubishi extends Car{
     public Mitsubishi(int cylinders, String name) {

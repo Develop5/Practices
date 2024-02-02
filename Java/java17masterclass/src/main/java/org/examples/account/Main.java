@@ -1,4 +1,4 @@
-package main.java.org.examples.account;
+package org.examples.account;
 
 public class Main {
     public static void main(String[] args) {

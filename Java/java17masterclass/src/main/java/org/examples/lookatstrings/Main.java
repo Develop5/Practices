@@ -1,4 +1,4 @@
-package main.java.org.examples.lookatstrings;
+package org.examples.lookatstrings;
 
 public class Main {
     public static void main(String[] args) {

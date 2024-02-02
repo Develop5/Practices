@@ -1,4 +1,4 @@
-package person;
+package org.examples.person;
 
 public class Person {
     // write code here

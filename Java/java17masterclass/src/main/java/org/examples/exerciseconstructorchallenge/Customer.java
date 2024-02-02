@@ -1,4 +1,4 @@
-package main.java.org.examples.exerciseconstructorchallenge;
+package org.examples.exerciseconstructorchallenge;
 
 public class Customer {
     private String name;

@@ -1,4 +1,4 @@
-package main.java.org.examples.oopMasterChallenge;
+package org.examples.oopMasterChallenge;
 
 public class DeluxeBurger extends Burger{
 

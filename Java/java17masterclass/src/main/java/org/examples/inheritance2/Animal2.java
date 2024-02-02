@@ -1,4 +1,4 @@
-package main.java.org.examples.inheritance2;
+package org.examples.inheritance2;
 
 public class Animal2 {
     protected String type;                  // "protected" creates a conditional encapsulation
