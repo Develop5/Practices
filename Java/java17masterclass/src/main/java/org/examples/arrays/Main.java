@@ -51,10 +51,6 @@ public class Main {
         myObjectArray[3] = Arrays.toString(myIntArray);
         System.out.println(Arrays.toString(myObjectArray));
 
-
-
-
-
         System.out.println("\n-----------------------------------\n");
 
 
