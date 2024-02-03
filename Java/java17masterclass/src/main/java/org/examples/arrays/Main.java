@@ -1,5 +1,7 @@
 package org.examples.arrays;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -29,6 +31,23 @@ public class Main {
         for(int elemenInArray : myIntArray){
             System.out.printf("element =  %d%n", elemenInArray);
         }
+
+        System.out.println("\nPrinting the whole myIntArray array: hash code");
+        System.out.println(myIntArray);
+        System.out.println("\nPrinting the whole myIntArray array by using java.util.Arrays");
+        System.out.println(Arrays.toString(myIntArray));
+        Object objectVariable = myIntArray;
+        if(objectVariable instanceof int[]) {
+            System.out.println("Oh, I've realized that myIntArray is an array of integers");
+        }
+
+        System.out.println("\n Creating an array of objects");
+        Object[] myObjectArray = new Object[3];
+        myObjectArray[0] = "3";
+        myObjectArray[1] = new StringBuilder("This is a new world");
+        myObjectArray[2] = 3.45;
+        System.out.println(Arrays.toString(myObjectArray));
+
 
 
 
