@@ -42,10 +42,12 @@ public class Main {
         }
 
         System.out.println("\n Creating an array of objects");
-        Object[] myObjectArray = new Object[3];
+        // Not an elegant name to do this, though. Just as a demo
+        Object[] myObjectArray = new Object[4];
         myObjectArray[0] = "3";
         myObjectArray[1] = new StringBuilder("This is a new world");
         myObjectArray[2] = 3.45;
+        myObjectArray[3] = myIntArray;
         System.out.println(Arrays.toString(myObjectArray));
 
 
