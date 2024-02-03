@@ -53,18 +53,14 @@ Then reload your .bash_profile file from the commad line with this:
 
 [Baeldung tutorials](https://github.com/eugenp/tutorials/tree/master)
 
-### Move the following to any testing project ###
-[@BeforeAll in JUnit returns null](https://stackoverflow.com/questions/63452807/using-beforeall-to-instantiate-an-object-in-junit-returns-null)
+## Some notes ##
+FQCN: Full Qualified Class Name
 
+    Consist of the package name and the class name
+    Example: com.example.Main
 
 #### Voy por aquí ####
 
-115. OOP Master Challenge Exercise, The Bonus
-     Need to check the project structure, as java files are not executable right now.
+116. Organizing Java Classes, Packages and Import Statements
 
 
-[See if it is gradle](https://stackoverflow.com/questions/14093024/trying-gradle-build-task-build-not-found-in-root-project)
-
-No idea if it works, but when I create a new project, everything works, as normal.
-So, there must be something that was changed in the configuration of he current one.
-Probably in Intellij, though.
