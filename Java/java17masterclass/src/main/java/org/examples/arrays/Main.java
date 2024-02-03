@@ -1,5 +1,6 @@
 package org.examples.arrays;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -47,7 +48,7 @@ public class Main {
         myObjectArray[0] = "3";
         myObjectArray[1] = new StringBuilder("This is a new world");
         myObjectArray[2] = 3.45;
-        myObjectArray[3] = myIntArray;
+        myObjectArray[3] = Arrays.toString(myIntArray);
         System.out.println(Arrays.toString(myObjectArray));
 
 
