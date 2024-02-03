@@ -74,6 +74,6 @@ Then reload your .bash_profile file from the commad line with this:
 #### Voy por aquí ####
 
 Section 9: Arrays
-128. Two-Dimensional Arrays
+129. Multi-dimensional Arrays
 
 
