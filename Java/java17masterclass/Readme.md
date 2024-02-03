@@ -66,6 +66,6 @@ FQCN: Full Qualified Class Name
 #### Voy por aquí ####
 
 Section 9: Arrays
-120. Using java.util.Arrays (sort, fill, copyOf )
+121. Finding a Match, Using a Binary Search and testing equality of arrays
 
 

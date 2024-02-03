@@ -1,5 +1,6 @@
 package org.examples.arrays;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -40,6 +41,22 @@ public class Main2 {
         // Last elements will be filled in up with the null number which is zero
         System.out.println("Smaller array: " + Arrays.toString(largerArray));
 
+        System.out.println("\nArray of Strings.-");
+        String[] sArray = {"Able", "Jane", "Mark", "Ralph", "David"};
+        Arrays.sort(sArray);
+        System.out.println("Array of Strings: " + Arrays.toString(sArray));
+        if (Arrays.binarySearch(sArray,"Mark") >= 0) {
+            System.out.println("Mark found in the array");
+        }
+
+        System.out.println("\nEquality on numerical arrays.-");
+        int[] s1 = {1, 2, 3, 4, 5};
+        int[] s2 = {1, 2, 3, 4, 5, 0};             // The order or elements in the array is important
+        if (Arrays.equals(s1, s2)) {
+            System.out.println("Arrays are equal");
+        } else {
+            System.out.println("Arrays are NOT equal");
+        }
     }
 
     private static int[] getRandomArray(int len) {
