@@ -1,5 +1,8 @@
 # All folder practices here #
 
+## Notes about testing ##
+[How Google and Facebook test](https://www.youtube.com/watch?v=atcLRoK75ng)
+
 ### Resources ###
 [Drive with resources for testers](https://drive.google.com/drive/folders/1pBUYDXa2tcW_1UfI_SXdnMPQ797AHNZB)
 
