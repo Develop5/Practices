@@ -54,18 +54,26 @@ Then reload your .bash_profile file from the commad line with this:
 [Baeldung tutorials](https://github.com/eugenp/tutorials/tree/master)
 
 ## Some notes ##
-FQCN: Full Qualified Class Name
+* FQCN: Full Qualified Class Name
 
-    Consist of the package name and the class name
-    Example: com.example.Main
+      Consist of the package name and the class name
+      Example: com.example.Main
 
-[Arrays class in Java with all methods](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+* [Arrays class in Java with all methods](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
 
 
+* These statements are quite similar, but different:
 
+      public static void main(String... args)
+
+      public static void main(String[] args)
+  The difference is minor within the method body, but significant to the code that calls the method.
+
+
+##
 #### Voy por aquí ####
 
 Section 9: Arrays
-124. References Types vs Value Types
+125. Variable Arguments (Varargs)
 
 
