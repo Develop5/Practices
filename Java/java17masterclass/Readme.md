@@ -70,10 +70,14 @@ Then reload your .bash_profile file from the commad line with this:
   The difference is minor within the method body, but significant to the code that calls the method.
 
 
+* [List interface](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)
+
+
+
 ##
 #### Voy por aquí ####
 
-Section 9: Arrays
-129. Multi-dimensional Arrays
+Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
+131. List and ArrayList Part 1
 
 
