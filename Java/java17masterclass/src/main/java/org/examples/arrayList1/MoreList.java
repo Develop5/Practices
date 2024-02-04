@@ -7,7 +7,9 @@ public class MoreList {
     public static void main(String[] args) {
         System.out.println("_".repeat(50));
 
+        // Array initializer in the declaration statement. Known as 'anonymous version'
         String[] items = {"apples", "bananas", "milk", "eggs"};
+
         List<String> list = List.of(items);     //I had to add the import statement manually
         System.out.println(list);
         System.out.println(list.getClass().getSimpleName());
@@ -84,7 +86,15 @@ public class MoreList {
 
         System.out.println("\nJava17. Using var to pass an array.-");
         var groceryArray = groceries.toArray(new String[groceries.size()]);
+        // This is an array. Then, it is not resizable
         System.out.println("var ---> groceryArray: \t" + Arrays.toString(groceryArray));
+
+        System.out.println("_".repeat(50));
+
+        System.out.println("_".repeat(50));
+        System.out.println("\nDifferent topic: List .-");
+        List<String> newList = Arrays.asList("Sunday", "Monday", "Tuesday");
+        System.out.println("newlist: \t" + newList);
 
         System.out.println("_".repeat(50));
 
