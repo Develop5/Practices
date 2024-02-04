@@ -57,6 +57,14 @@ public class MoreList {
         groceries.removeAll(List.of("apples", "eggs"));
         System.out.println("'apples' and 'eggs' removed : \t" + groceries);
 
+        System.out.printf("\nDeleting all but excepted .-");
+        groceries.retainAll(List.of("apples", "milk", "mustard", "cheese"));
+        //'apples' will be ignored as it was removed in the block above
+        System.out.println("Remaining list: \t" + groceries);
+
+        System.out.println("\nCleaning up the whole list .-");
+        groceries.clear();
+        System.out.println("is empty: \t" + groceries.isEmpty());
 
         System.out.println("_".repeat(50));
 
