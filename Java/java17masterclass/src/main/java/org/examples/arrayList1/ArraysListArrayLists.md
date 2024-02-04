@@ -16,3 +16,7 @@
   * See .toString() and .deepToString()
 
 * ArrayList **don't support primitive** types
+
+* Both can be created from a list of elements or from an array of elements. Both are static methods on factory types.
+
+* Arrays.asList returns a special instance of a list that is not resizable, but is mutable.
