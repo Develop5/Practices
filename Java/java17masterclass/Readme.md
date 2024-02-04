@@ -82,3 +82,8 @@ Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
 [How To Use Cherry-Pick Git Via CMD/Intellij Tool 2023](https://www.bing.com/videos/riverview/relatedvideo?q=intellij%20tutorial%20cherry-pick&mid=20A2049D273AA51223A920A2049D273AA51223A9&ajaxhist=0)
 
 [ IntelliJ for Cherry Picking](https://www.bing.com/videos/riverview/relatedvideo?&q=intellij+tutorial+cherry-pick&&mid=55C5579BEF377FE9AFCD55C5579BEF377FE9AFCD&&FORM=VRDGAR)
+
+[IntelliJ IDEA: Resolving Merge Conflicts in Git](https://www.bing.com/videos/riverview/relatedvideo?q=intellij%20tutorial%20resolving%20conflicts&mid=1CC30B875C22BFBF0B501CC30B875C22BFBF0B50&ajaxhist=0)
+
+
+
