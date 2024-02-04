@@ -70,15 +70,10 @@ Then reload your .bash_profile file from the commad line with this:
   The difference is minor within the method body, but significant to the code that calls the method.
 
 
-* [List interface](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)
-
-* Elements from array are got by using the index in [], but from ArrayList we must use getters
-
-
 ##
 #### Voy por aquí ####
 
 Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
-133. ArrayList Part 3
+134. Arrays vs. ArrayLists
 
 
