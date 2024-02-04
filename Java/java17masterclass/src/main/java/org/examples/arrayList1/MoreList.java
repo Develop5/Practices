@@ -82,7 +82,9 @@ public class MoreList {
         groceries.sort(Comparator.reverseOrder());
         System.out.println("After sorting in reverse order: \t" + groceries);
 
-
+        System.out.println("\nJava17. Using var to pass an array.-");
+        var groceryArray = groceries.toArray(new String[groceries.size()]);
+        System.out.println("var ---> groceryArray: \t" + Arrays.toString(groceryArray));
 
         System.out.println("_".repeat(50));
 
