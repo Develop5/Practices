@@ -43,6 +43,20 @@ public class MoreList {
         System.out.println("first yogurt: " + groceries.indexOf("yogurt"));
         System.out.println("last yogurt: " + groceries.lastIndexOf("yogurt"));
 
+        System.out.println("\nRemove by index and by value .-");
+        System.out.println("Initial list: \t" + groceries);
+        groceries.remove(1);                // Removes the second element
+        System.out.println("Second element removed: \t" + groceries);
+        groceries.remove("yogurt");             // Only the first one
+        System.out.println("Yogurt removed (1st found): \t" + groceries);
+        // All 'yogurt' strings can be removed by using the following:
+        //groceries.removeAll(List.of("yogurt"));
+        //System.out.println("All yogurts removed: \t" + groceries);
+
+        System.out.println("\nA group of elements can be removed at once .-");
+        groceries.removeAll(List.of("apples", "eggs"));
+        System.out.println("'apples' and 'eggs' removed : \t" + groceries);
+
 
         System.out.println("_".repeat(50));
 
