@@ -1,5 +1,6 @@
 package org.examples.arrayList1;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 public class MoreList {
     public static void main(String[] args) {
@@ -65,6 +66,14 @@ public class MoreList {
         System.out.println("\nCleaning up the whole list .-");
         groceries.clear();
         System.out.println("is empty: \t" + groceries.isEmpty());
+
+        System.out.println("\nAdding a list .-");
+        groceries.addAll(List.of("apples", "milk", "mustard"));
+        System.out.println("After adding a list: \t" + groceries);
+
+        System.out.println("\nAdding an ArrayList .-");
+        groceries.addAll(Arrays.asList("eggs", "pickles", "mustard", "ham"));
+        System.out.println("After adding an ArrayList: \t" + groceries);
 
         System.out.println("_".repeat(50));
 
