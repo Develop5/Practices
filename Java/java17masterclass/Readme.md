@@ -54,14 +54,30 @@ Then reload your .bash_profile file from the commad line with this:
 [Baeldung tutorials](https://github.com/eugenp/tutorials/tree/master)
 
 ## Some notes ##
-FQCN: Full Qualified Class Name
+* FQCN: Full Qualified Class Name
 
-    Consist of the package name and the class name
-    Example: com.example.Main
+      Consist of the package name and the class name
+      Example: com.example.Main
 
+* [Arrays class in Java with all methods](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+
+
+* These statements are quite similar, but different:
+
+      public static void main(String... args)
+
+      public static void main(String[] args)
+  The difference is minor within the method body, but significant to the code that calls the method.
+
+
+* [List interface](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)
+
+
+
+##
 #### Voy por aquí ####
 
-Section 9: Arrays
-119. Arrays Part 2
+Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
+131. List and ArrayList Part 1
 
 
