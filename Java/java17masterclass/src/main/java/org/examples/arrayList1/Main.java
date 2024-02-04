@@ -60,10 +60,13 @@ public class Main {
         groceryList.add(new GroceryItem("oranges", "PRODUCE", 5));
         System.out.println(groceryList);
 
-        System.out.println("\nAdding another member, but at the beginning of the list .-");
+        System.out.println("\nAdding a member at the beginning of the list. Shifting the rest .-");
         groceryList.add(0, new GroceryItem("apples", "PRODUCE", 6));
         System.out.println(groceryList);
 
+        System.out.println("\nReplacing second element in the list .-");
+        groceryList.add(1, new GroceryItem("lemons", "PROVIDER", 3));
+        System.out.println(groceryList);
 
         System.out.println("_".repeat(50));
 
