@@ -7,11 +7,6 @@ record GroceryItem(String name, String type, int count) {
     public GroceryItem(String name) {
         this(name, "DAIRY", 1);
     }
-
-    @Override
-    public String toString() {
-        return String.format("%d %s in %s", count, name.toUpperCase(), type);
-    }
 }
 public class Main {
     public static void main(String[] args) {
@@ -54,19 +49,6 @@ public class Main {
 
         // The top checking will not allow this inconsistency in the list
         //groceryList.add("Yogurt");
-
-        System.out.println("\nAdding 'apple' as the first element to the groceryList .-");
-        groceryList.add(new GroceryItem("milk"));
-        groceryList.add(new GroceryItem("oranges", "PRODUCE", 5));
-        System.out.println(groceryList);
-
-        System.out.println("\nAdding a member at the beginning of the list. Shifting the rest .-");
-        groceryList.add(0, new GroceryItem("apples", "PRODUCE", 6));
-        System.out.println(groceryList);
-
-        System.out.println("\nReplacing second element in the list .-");
-        groceryList.add(1, new GroceryItem("lemons", "PROVIDER", 3));
-        System.out.println(groceryList);
 
         System.out.println("_".repeat(50));
 
