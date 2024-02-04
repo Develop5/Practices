@@ -32,12 +32,7 @@ public class MoreList {
         groceries.addAll(nextList);
         System.out.println(groceries);
 
-
-
-
         System.out.println("_".repeat(50));
-
-
 
     }
 }
