@@ -33,11 +33,13 @@ public class Main {
         groceryArray[2] = new GroceryItem("oranges", "PRODUCE", 6);
         System.out.println(Arrays.toString(groceryArray));
 
+        /*This uses an unchecked or unsafe operation ArrayList without specifying type
         System.out.println("\nArray list .-");
         ArrayList objectList = new ArrayList();
         objectList.add(new GroceryItem("butter"));
         objectList.add("Yogurt");           // Adding just a string. Not an expected item
         System.out.println(objectList);
+         */
 
         System.out.println("\nSpecifying what kind of list you want .-");
         //ArrayList<GroceryItem> groceryList = new ArrayList<GroceryItem>();
