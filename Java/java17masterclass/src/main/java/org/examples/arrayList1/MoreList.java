@@ -1,6 +1,7 @@
 package org.examples.arrayList1;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 public class MoreList {
     public static void main(String[] args) {
@@ -74,6 +75,14 @@ public class MoreList {
         System.out.println("\nAdding an ArrayList .-");
         groceries.addAll(Arrays.asList("eggs", "pickles", "mustard", "ham"));
         System.out.println("After adding an ArrayList: \t" + groceries);
+
+        System.out.println("\nSorting out the ArrayList .-");
+        groceries.sort(Comparator.naturalOrder());
+        System.out.println("After sorting naturally: \t" + groceries);
+        groceries.sort(Comparator.reverseOrder());
+        System.out.println("After sorting in reverse order: \t" + groceries);
+
+
 
         System.out.println("_".repeat(50));
 
