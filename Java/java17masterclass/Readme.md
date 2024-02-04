@@ -77,3 +77,8 @@ Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
 135. ArrayList Challenge Part 1
 
 
+### First, have a look at this ###
+
+[How To Use Cherry-Pick Git Via CMD/Intellij Tool 2023](https://www.bing.com/videos/riverview/relatedvideo?q=intellij%20tutorial%20cherry-pick&mid=20A2049D273AA51223A920A2049D273AA51223A9&ajaxhist=0)
+
+[ IntelliJ for Cherry Picking](https://www.bing.com/videos/riverview/relatedvideo?&q=intellij+tutorial+cherry-pick&&mid=55C5579BEF377FE9AFCD55C5579BEF377FE9AFCD&&FORM=VRDGAR)
