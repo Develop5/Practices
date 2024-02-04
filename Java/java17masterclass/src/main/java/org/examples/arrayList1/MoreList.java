@@ -32,6 +32,18 @@ public class MoreList {
         groceries.addAll(nextList);
         System.out.println(groceries);
 
+        System.out.println("\nGetting elements from ArrayList .-");
+        System.out.println("Third element is: " + groceries.get(2));
+        if (groceries.contains("mustard")) {
+            System.out.println("Mustard is in the grocery list");
+        }
+
+        System.out.println("\nAdding a second 'yogurt' to the list .-");
+        groceries.add("yogurt");            // Now we have 2 members with the same value
+        System.out.println("first yogurt: " + groceries.indexOf("yogurt"));
+        System.out.println("last yogurt: " + groceries.lastIndexOf("yogurt"));
+
+
         System.out.println("_".repeat(50));
 
     }
