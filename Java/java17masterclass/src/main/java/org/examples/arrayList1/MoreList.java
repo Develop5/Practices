@@ -25,6 +25,15 @@ public class MoreList {
         groceries.add("yogurt");
         System.out.println(groceries);
 
+        System.out.println("\nAdding an ArrayList of strings to groceries .-");
+        ArrayList<String> nextList = new ArrayList<>(
+                List.of("pickles", "mustard", "cheese")
+        );
+        groceries.addAll(nextList);
+        System.out.println(groceries);
+
+
+
 
         System.out.println("_".repeat(50));
 
