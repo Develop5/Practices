@@ -1,5 +1,7 @@
 ### The record type ###
 
+As of Java 14 we can use records.
+
 The record is a special class that contains data, that's not meant to be altered.
 In other words, it seeks to achieve immutability, for the data and its members.
 It contains only the most fundamental methods, such as constructors and accessors.
