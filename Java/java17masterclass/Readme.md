@@ -66,7 +66,13 @@ Then reload your .bash_profile file from the commad line with this:
 
       public static void main(String... args)
       public static void main(String[] args)
+  
   The difference is minor within the method body, but significant to the code that calls the method.
+  
+  **Varargs** can be used when we are unsure about the number of arguments to be passed in a method
+  
+  It creates an array of parameters of unspecified length and such a parameter can be treated as an array in runtime.
+
 
 * Arrays and Arrays List of reference types
 
