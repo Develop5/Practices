@@ -68,12 +68,54 @@ Then reload your .bash_profile file from the commad line with this:
       public static void main(String[] args)
   The difference is minor within the method body, but significant to the code that calls the method.
 
+* Arrays and Arrays List of reference types
+
+  **Reference types**: anything that is not a primitive type, like a String or any other object.
+
+  When this is an array, the array elements aren't the values
+  but the addresses of the reference object or String.
+  
+  There is a level of indirection.
+
+  ArrayLists are really implemented with arrays, under the covers.
+
+  Objects aren't contiguously stored in memory, but addresses are.
+
+
+* **Big O Notation**
+
+  It's a way to express how well the operation performs, when applied to more and more elements.
+  
+  It will help us understand how cheap or expensive an operation performs, when applied to **more and more elements**.
+
+      O(1) - constant time - operation's cost (time) should be constant regardless of number o elements.
+      O(n) - linear time - operation's cost (time) will increase linearly with the number of elements n.
+      O(1)* - constant amortized time - somewhere between O(1) and O(n), but closer to O(1) as efficiencies are gained.
+
+* **Linked list**
+  
+  This architecture is known as doubly linked list.
+  
+  It is a chain of elements where each one is linked to the previous and to the next element.
+  
+  The beginning is called the **head** and the end is called the **tail**.
+  
+  It can be considered a queue, a double ended queue because we can traverse both backwards and forwards
+
+* **ArrayList vs Linked List**
+
+  | ArrayList                                                                                             | Linked List                                                                                                                                                                                                  |
+  |-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | A better choice for a List, especially if the list is used predominantly for storing and reading data | Use it if you are adding and processing or manipulating a large amount of elements and the maximum elements is not known, or might be great. Or if your number of elements might be exceed Integer.MAX_VALUE |
+
+
+
 
 ##
 #### Voy por aquí ####
 
 Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
-135. ArrayList Challenge Part 1
+136. Arrays, ArrayList & LinkedList - (Memory and Big O Notation)
 
 
 ### But, have a look at this once you have time ###
