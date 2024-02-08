@@ -114,6 +114,11 @@ Then reload your .bash_profile file from the commad line with this:
   |-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | A better choice for a List, especially if the list is used predominantly for storing and reading data | Use it if you are adding and processing or manipulating a large amount of elements and the maximum elements is not known, or might be great. Or if your number of elements might be exceed Integer.MAX_VALUE |
 
+* **Varargs**
+
+    [Arbitrary Number of Arguments](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
+
+* 
 
 
 
