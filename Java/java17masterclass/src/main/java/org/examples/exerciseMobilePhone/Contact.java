@@ -13,9 +13,6 @@ public class Contact {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
     public String getName() {
         return name;

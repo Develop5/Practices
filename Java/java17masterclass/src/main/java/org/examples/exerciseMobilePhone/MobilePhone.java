@@ -3,8 +3,8 @@ package org.examples.exerciseMobilePhone;
 import java.util.ArrayList;
 
 public class MobilePhone {
-        String myNumber;
-        ArrayList<Contact> myContacts;                         // Array of individual contacts
+        private String myNumber;
+        private ArrayList<Contact> myContacts;                         // Array of individual contacts
 
 
         public MobilePhone(String myNumber) {
@@ -14,15 +14,16 @@ public class MobilePhone {
 
 
         public boolean addNewContact(Contact contact) {
-                if (myContacts.contains(contact)) { return false; } else {
+                if (findContact(contact) > -1) {
                         myContacts.add(contact);
                         return true;
+                } else {
+                        return false;
                 }
         }
 
         public boolean updateContact(Contact oldContact, Contact newContact ) {
-
-                if (!(myContacts.contains(oldContact))) {
+                if (findContact(oldContact) == -1) {
                         return false;
                 } else {
                         myContacts.set(myContacts.indexOf(oldContact), newContact);
@@ -31,7 +32,7 @@ public class MobilePhone {
         }
 
         public boolean removeContact(Contact contact) {
-                if (myContacts.indexOf(contact) >= 0) {
+                if (findContact(contact) > -1) {
                         myContacts.remove(myContacts.indexOf(contact));
                         return true;
                 } else {
@@ -39,35 +40,30 @@ public class MobilePhone {
                 }
         }
 
-        public int findContact(Contact contact) {
+        private int findContact(Contact contact) {
                 return myContacts.indexOf(contact);
         }
 
-        public int findContact(String number) {
+        private int findContact(String name) {
                 int contactIndex = -1;
                 for (Contact contact : myContacts) {
-                        if (contact.getPhoneNumber() == number) {
+                        if (contact.getPhoneNumber() == name) {
                                 contactIndex = myContacts.indexOf(contact);
                         }
                 }
                 return contactIndex;
         }
 
-
         public Contact queryContact(String name) {
-                Contact contactFound = null;
-                for (Contact element : myContacts) {
-                        if (element.getName() == name) {
-                                return element;
-                        }
+                int indexQueryContact = findContact(name);
+                if (indexQueryContact > -1 ) {
+                        return myContacts.get(indexQueryContact);
                 }
-                return contactFound;
+                return null;
         }
 
-
-
         public void printContacts() {
-                System.out.println("Contact list");
+                System.out.println("Contact List:");
                 for (Contact oneContact : myContacts) {
                         System.out.println(oneContact.getName() + " -> " + oneContact.getPhoneNumber());
                 }
