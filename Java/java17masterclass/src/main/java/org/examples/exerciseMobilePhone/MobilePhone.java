@@ -4,37 +4,74 @@ import java.util.ArrayList;
 
 public class MobilePhone {
         String myNumber;
-        ArrayList<Contacts> myContacts;
+        ArrayList<Contact> myContacts;                         // Array of individual contacts
 
 
         public MobilePhone(String myNumber) {
                 this.myNumber = myNumber;
-                ArrayList<Contacts> myContacts = new ArrayList<>();
-
+                ArrayList<Contact> myContacts = new ArrayList<>();
         }
 
 
-
-        public boolean addNewContact(Contacts contact) {
-                // It is missing here whether the contact will be added
-                // Issue: I am not receiving an element type Contact but a whole ArrayList
-                return myContacts.contains(contact);
+        public boolean addNewContact(Contact contact) {
+                if (myContacts.contains(contact)) { return false; } else {
+                        myContacts.add(contact);
+                        return true;
+                }
         }
 
-        /*
-                -  updateContact(), has two parameters of type Contact (the old contact that will be updated with the new contact) and returns a boolean.
-                Returns true if the contact exists and was updated successfully, or false if the contact doesn't exists.
-         */
-
-        public boolean updateContact(Contacts oldContact, Contacts newContact ) {
-                // Issue: I am not receiving an element type Contact but a whole ArrayList
+        public boolean updateContact(Contact oldContact, Contact newContact ) {
 
                 if (!(myContacts.contains(oldContact))) {
                         return false;
                 } else {
-                        // My code here
+                        myContacts.set(myContacts.indexOf(oldContact), newContact);
                         return true;
                 }
         }
+
+        public boolean removeContact(Contact contact) {
+                if (myContacts.indexOf(contact) >= 0) {
+                        myContacts.remove(myContacts.indexOf(contact));
+                        return true;
+                } else {
+                        return false;
+                }
+        }
+
+        public int findContact(Contact contact) {
+                return myContacts.indexOf(contact);
+        }
+
+        public int findContact(String number) {
+                int contactIndex = -1;
+                for (Contact contact : myContacts) {
+                        if (contact.getPhoneNumber() == number) {
+                                contactIndex = myContacts.indexOf(contact);
+                        }
+                }
+                return contactIndex;
+        }
+
+
+        public Contact queryContact(String name) {
+                Contact contactFound = null;
+                for (Contact element : myContacts) {
+                        if (element.getName() == name) {
+                                return element;
+                        }
+                }
+                return contactFound;
+        }
+
+
+
+        public void printContacts() {
+                System.out.println("Contact list");
+                for (Contact oneContact : myContacts) {
+                        System.out.println(oneContact.getName() + " -> " + oneContact.getPhoneNumber());
+                }
+        }
+
 
 }
