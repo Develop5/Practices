@@ -30,9 +30,11 @@ public class Main {
 
         //printItinerary3(placesToVisit);
 
-        testIterator(placesToVisit);
+        //testIterator(placesToVisit);
 
-        System.out.println("_".repeat(50));
+        testListIterator(placesToVisit);
+
+        System.out.println("\n" + "_".repeat(50));
 
 
 
@@ -142,6 +144,38 @@ public class Main {
             }
         }
         System.out.println(list);
+    }
+
+    public static void testListIterator(LinkedList<String> list) {
+        var iterator = list.listIterator();
+        while (iterator.hasNext()) {
+            // System.out.println(iterator.next());
+            if (iterator.next().equals("Brisbane")) {
+                //iterator.remove();                          // Produces the same result as iterator
+                iterator.add("Lake Wivenhoe");      // Adds this elements immediately following Brisbane
+            }
+        }
+
+        //while (iterator.hasNext()) {
+        //    // This never executes because after running the first loop, the hasNext is false
+        //    System.out.println(iterator.next());
+        //}
+        //System.out.println(list);
+
+        while (iterator.hasPrevious()) {
+            System.out.println(iterator.previous());
+        }
+        // At the end of this loop, we are at the beginning of the list
+
+        System.out.println(".".repeat(30));
+        var iterator2 = list.listIterator(3);       // The cursor can be placed wherever you want
+        System.out.println(iterator2.next());           // Only "Darwin" is printed here
+        System.out.println(".".repeat(30));
+
+        System.out.println("_".repeat(30));
+        var iterator3 = list.listIterator(3);       // The cursor can be placed wherever you want
+        System.out.println(iterator3.previous());           // Only "Darwin" is printed here
+        System.out.println("_".repeat(30));
     }
 
 }
