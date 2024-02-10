@@ -22,10 +22,13 @@ public class Main {
         addMoreElements(placesToVisit);
         System.out.println(placesToVisit);
 
-        removeElement(placesToVisit);
-        System.out.println(placesToVisit);
+        //removeElement(placesToVisit);
+        //System.out.println(placesToVisit);
+
+        gettingElement(placesToVisit);
 
         System.out.println("_".repeat(50));
+
 
 
     }
@@ -76,4 +79,9 @@ public class Main {
         String p4 = list.pop();             // Removes last element from the queue
         System.out.println(p4 + " was removed from the queue");
     }
-}
+
+    public static void gettingElement(LinkedList<String> list) {
+        System.out.println("Retrieved Element: " + list.get(4));
+    }
+
+    }
