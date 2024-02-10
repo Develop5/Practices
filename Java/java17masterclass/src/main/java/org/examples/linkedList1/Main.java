@@ -155,6 +155,11 @@ public class Main {
                 iterator.add("Lake Wivenhoe");      // Adds this elements immediately following Brisbane
             }
         }
+
+        while (iterator.hasNext()) {
+            // This doesn't execute because after running the first loop, the hasNext is false
+            System.out.println(iterator.next());
+        }
         System.out.println(list);
     }
 
