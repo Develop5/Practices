@@ -25,7 +25,9 @@ public class Main {
         //removeElement(placesToVisit);
         //System.out.println(placesToVisit);
 
-        gettingElement(placesToVisit);
+        //gettingElement(placesToVisit);
+
+        printItinerary(placesToVisit);
 
         System.out.println("_".repeat(50));
 
@@ -94,7 +96,13 @@ public class Main {
         System.out.println("Element from peek() = " + list.peek());
         System.out.println("Element from peekFirst() = " + list.peekFirst());
         System.out.println("Element from peekLast() = " + list.peekLast());
+    }
+
+    public static void printItinerary(LinkedList<String> list) {
+        System.out.println("Trip starts at: " + list.getFirst());
+        System.out.println("Trip ends at: " + list.getLast());
 
     }
 
-    }
+
+}
