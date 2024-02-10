@@ -30,7 +30,9 @@ public class Main {
 
         //printItinerary3(placesToVisit);
 
-        testIterator(placesToVisit);
+        //testIterator(placesToVisit);
+
+        testListIterator(placesToVisit);
 
         System.out.println("_".repeat(50));
 
@@ -139,6 +141,18 @@ public class Main {
             // System.out.println(iterator.next());
             if (iterator.next().equals("Brisbane")) {
                 iterator.remove();
+            }
+        }
+        System.out.println(list);
+    }
+
+    public static void testListIterator(LinkedList<String> list) {
+        var iterator = list.listIterator();
+        while (iterator.hasNext()) {
+            // System.out.println(iterator.next());
+            if (iterator.next().equals("Brisbane")) {
+                //iterator.remove();                          // Produces the same result as iterator
+                iterator.add("Lake Wivenhoe");      // Adds this elements immediately following Brisbane
             }
         }
         System.out.println(list);
