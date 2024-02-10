@@ -34,7 +34,7 @@ public class Main {
 
         testListIterator(placesToVisit);
 
-        System.out.println("_".repeat(50));
+        System.out.println("\n" + "_".repeat(50));
 
 
 
@@ -165,6 +165,19 @@ public class Main {
         while (iterator.hasPrevious()) {
             System.out.println(iterator.previous());
         }
+        // At the end of this loop, we are at the beginning of the list
+
+        System.out.println(".".repeat(30));
+        var iterator2 = list.listIterator(3);       // The cursor can be placed wherever you want
+        System.out.println(iterator2.next());           // Only "Darwin" is printed here
+        System.out.println(".".repeat(30));
+
+        System.out.println("_".repeat(30));
+        var iterator3 = list.listIterator(3);       // The cursor can be placed wherever you want
+        System.out.println(iterator3.previous());           // Only "Darwin" is printed here
+        System.out.println("_".repeat(30));
+
+
     }
 
 }
