@@ -1,6 +1,7 @@
 package org.examples.linkedList1;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,7 +28,7 @@ public class Main {
 
         //gettingElement(placesToVisit);
 
-        printItinerary2(placesToVisit);
+        printItinerary3(placesToVisit);
 
         System.out.println("_".repeat(50));
 
@@ -110,9 +111,25 @@ public class Main {
         System.out.println("Trip starts at: " + list.getFirst());
         String previousTown = list.getFirst();
         for (String town: list) {
+            // But the first town is repeated
             System.out.println("--> From " + previousTown + " to " + town);
             previousTown = town;
         }
+        System.out.println("Trip ends at " + list.getLast());
+    }
+
+    public static void printItinerary3(LinkedList<String> list) {
+        System.out.println("Trip starts at: " + list.getFirst());
+        String previousTown = list.getFirst();
+
+        ListIterator<String> iterator = list.listIterator(1);
+        // Passing the index of the first element we want to process, eliminates the first repetition
+        while (iterator.hasNext()) {
+            String town = iterator.next();
+            System.out.println("From " + previousTown + " to " + town);
+            previousTown = town;
+        }
+
         System.out.println("Trip ends at " + list.getLast());
     }
 
