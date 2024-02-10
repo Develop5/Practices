@@ -28,7 +28,9 @@ public class Main {
 
         //gettingElement(placesToVisit);
 
-        printItinerary3(placesToVisit);
+        //printItinerary3(placesToVisit);
+
+        testIterator(placesToVisit);
 
         System.out.println("_".repeat(50));
 
@@ -48,8 +50,6 @@ public class Main {
 
         // Stack methods
         list.push("Alice Springs");
-
-
     }
 
     public static void removeElement(LinkedList<String> list) {
@@ -129,9 +129,19 @@ public class Main {
             System.out.println("From " + previousTown + " to " + town);
             previousTown = town;
         }
-
         System.out.println("Trip ends at " + list.getLast());
     }
 
+
+    public static void testIterator(LinkedList<String> list) {
+        var iterator = list.iterator();
+        while (iterator.hasNext()) {
+            // System.out.println(iterator.next());
+            if (iterator.next().equals("Brisbane")) {
+                iterator.remove();
+            }
+        }
+        System.out.println(list);
+    }
 
 }
