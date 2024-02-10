@@ -100,7 +100,10 @@ public class Main {
 
     public static void printItinerary(LinkedList<String> list) {
         System.out.println("Trip starts at: " + list.getFirst());
-        System.out.println("Trip ends at: " + list.getLast());
+        for (int i = 1; i < list.size() -1 ; i++) {
+            System.out.println("--> From " + list.get(i-1) + " to " + list.get(i));
+        }
+        System.out.println("Trip ends at " + list.getLast());
 
     }
 
