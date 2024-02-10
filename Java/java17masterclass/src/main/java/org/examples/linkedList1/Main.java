@@ -81,7 +81,20 @@ public class Main {
     }
 
     public static void gettingElement(LinkedList<String> list) {
-        System.out.println("Retrieved Element: " + list.get(4));
+        System.out.println("Retrieved element: " + list.get(4));
+        System.out.println("First element: " + list.getFirst());
+        System.out.println("Last element: " + list.getLast());
+        System.out.println("Darwin is at a position: " + list.indexOf("Darwin"));
+        System.out.println("Melbourne is at a position: " + list.lastIndexOf("Melbourne"));
+
+        // Queue retrieval method
+        System.out.println("Element from element() = " + list.element());   //Queue = FIFO
+
+        // Stack retrieval methods
+        System.out.println("Element from peek() = " + list.peek());
+        System.out.println("Element from peekFirst() = " + list.peekFirst());
+        System.out.println("Element from peekLast() = " + list.peekLast());
+
     }
 
     }
