@@ -156,11 +156,15 @@ public class Main {
             }
         }
 
-        while (iterator.hasNext()) {
-            // This doesn't execute because after running the first loop, the hasNext is false
-            System.out.println(iterator.next());
+        //while (iterator.hasNext()) {
+        //    // This never executes because after running the first loop, the hasNext is false
+        //    System.out.println(iterator.next());
+        //}
+        //System.out.println(list);
+
+        while (iterator.hasPrevious()) {
+            System.out.println(iterator.previous());
         }
-        System.out.println(list);
     }
 
 }
