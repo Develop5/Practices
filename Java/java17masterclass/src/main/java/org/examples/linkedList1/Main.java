@@ -176,8 +176,6 @@ public class Main {
         var iterator3 = list.listIterator(3);       // The cursor can be placed wherever you want
         System.out.println(iterator3.previous());           // Only "Darwin" is printed here
         System.out.println("_".repeat(30));
-
-
     }
 
 }

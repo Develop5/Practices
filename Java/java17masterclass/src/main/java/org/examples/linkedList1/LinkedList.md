@@ -13,3 +13,7 @@ A double ended queue allows access to both the start and the end of the queue.
 Iterator is only forwards and only supports **remove** method.
 A ListIterator can be used to go both forwards and backwards.
 And in addition to the **remove** method, it also supports the **add** and **set** methods. 
+
+### Iterator's cursor ###
+Important: The iterator's cursor positions are **always between** the elements.
+Never pointint at the element themselves. That's why they are referenced by using ...**next**...
