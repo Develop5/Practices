@@ -27,7 +27,7 @@ public class Main {
 
         //gettingElement(placesToVisit);
 
-        printItinerary(placesToVisit);
+        printItinerary2(placesToVisit);
 
         System.out.println("_".repeat(50));
 
@@ -104,7 +104,16 @@ public class Main {
             System.out.println("--> From " + list.get(i-1) + " to " + list.get(i));
         }
         System.out.println("Trip ends at " + list.getLast());
+    }
 
+    public static void printItinerary2(LinkedList<String> list) {
+        System.out.println("Trip starts at: " + list.getFirst());
+        String previousTown = list.getFirst();
+        for (String town: list) {
+            System.out.println("--> From " + previousTown + " to " + town);
+            previousTown = town;
+        }
+        System.out.println("Trip ends at " + list.getLast());
     }
 
 
