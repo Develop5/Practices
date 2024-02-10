@@ -1,5 +1,6 @@
 package org.examples.exerciseMobilePhone;
 
+
 import java.util.ArrayList;
 
 public class MobilePhone {
@@ -10,8 +11,15 @@ public class MobilePhone {
         public MobilePhone(String myNumber) {
                 this.myNumber = myNumber;
                 ArrayList<Contact> myContacts = new ArrayList<>();
-        }
+                myContacts.add(new Contact("Bob", "31415926"));
+                myContacts.add(new Contact("Alice ", "16180339"));
+                myContacts.add(new Contact("Tom ", "11235813"));
+                myContacts.add(new Contact("Jane ", "23571113"));
+                System.out.println("Size of Array List: " + myContacts.size());
+                System.out.println("ArrayList: " + myContacts.toString());
+                printContacts();
 
+        }
 
         public boolean addNewContact(Contact contact) {
                 if (findContact(contact) > -1) {
@@ -33,7 +41,7 @@ public class MobilePhone {
 
         public boolean removeContact(Contact contact) {
                 if (findContact(contact) > -1) {
-                        myContacts.remove(myContacts.indexOf(contact));
+                        myContacts.remove(contact);
                         return true;
                 } else {
                         return false;
@@ -47,7 +55,7 @@ public class MobilePhone {
         private int findContact(String name) {
                 int contactIndex = -1;
                 for (Contact contact : myContacts) {
-                        if (contact.getPhoneNumber() == name) {
+                        if (contact.getPhoneNumber().equals(name)) {
                                 contactIndex = myContacts.indexOf(contact);
                         }
                 }
@@ -68,6 +76,5 @@ public class MobilePhone {
                         System.out.println(oneContact.getName() + " -> " + oneContact.getPhoneNumber());
                 }
         }
-
 
 }
