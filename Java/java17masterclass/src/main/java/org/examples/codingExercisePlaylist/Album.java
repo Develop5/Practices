@@ -60,14 +60,12 @@ public class Album {
             return false;
         } else {
             // The song was not found. Needs to be added
-            Song songtoAdd =
-            playlist.addLast(new Song(findSong(titleOfSong));
+            //Song songtoAdd =
+            //playlist.addLast(new Song(findSong(titleOfSong));
 
         }
 
         return true;   // Update this
     }
-
-
 
 }
