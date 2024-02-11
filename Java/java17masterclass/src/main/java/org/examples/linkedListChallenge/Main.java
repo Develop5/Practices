@@ -1,7 +1,6 @@
 package org.examples.linkedListChallenge;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,15 +18,28 @@ public class Main {
         System.out.println(nameOfCity);
         System.out.println(distanceToSidney);
 
-        var cityIterator = nameOfCity.listIterator();
-        var distanceIterator = distanceToSidney.listIterator();
-
+        System.out.println(distanceOrder(distanceToSidney, nameOfCity));
         System.out.println("\n" + "-".repeat(50));
-
     }
 
-    public static ArrayList distanceOrder(LinkedList<String> distanceList) {
-        ArrayList<Integer> mydistance = new ArrayList<>();
-        return mydistance;
+    public static LinkedList<String> distanceOrder(LinkedList<Integer> distanceList,
+                                     LinkedList<String> cities) {
+        LinkedList<String> finalListOfCities = new LinkedList<>();
+        LinkedList<Integer> sortedOut = (LinkedList<Integer>) distanceList.clone();
+        sortedOut.sort(Comparator.naturalOrder());
+
+        ListIterator<Integer> iteratedSorted = sortedOut.listIterator();
+        while (iteratedSorted.hasNext()) {
+            var value = iteratedSorted.next();      // Each number value, sorted out
+
+            // Find the index of this value in the old arrange of integers:
+            int indexOldDistance = distanceList.indexOf(value);
+
+            // Take that index to refer the city:
+            String city = cities.get(indexOldDistance);
+            finalListOfCities.addLast(city);
+        }
+        return finalListOfCities;
+
     }
 }
