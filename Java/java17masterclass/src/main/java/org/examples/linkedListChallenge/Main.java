@@ -2,44 +2,68 @@ package org.examples.linkedListChallenge;
 
 import java.util.*;
 
+record Place(String name, int distance) {       // Using record, the LinkedList can handle 2 params
+    @Override
+    public String toString() {
+        return String.format("%s (%d)", name, distance);
+    }
+}
 public class Main {
     public static void main(String[] args) {
-        System.out.println("_".repeat(50) + "\n");
-        LinkedList<String> nameOfCity = new LinkedList<>();
-        LinkedList<Integer> distanceToSidney = new LinkedList<>();
-        nameOfCity.add("Adelaide"); distanceToSidney.add(1374);
-        nameOfCity.add("Alice Sprins"); distanceToSidney.add(2771);
-        nameOfCity.add("Brisbane"); distanceToSidney.add(917);
-        nameOfCity.add("Darwin"); distanceToSidney.add(3972);
-        nameOfCity.add("Melbourne"); distanceToSidney.add(877);
-        nameOfCity.add("Perth"); distanceToSidney.add(3923);
 
-        System.out.println("\n" + "-".repeat(50));
-        System.out.println(nameOfCity);
-        System.out.println(distanceToSidney);
+        LinkedList<Place> placesToVisit = new LinkedList<>();
 
-        System.out.println(distanceOrder(distanceToSidney, nameOfCity));
-        System.out.println("\n" + "-".repeat(50));
+        Place adelaide = new Place("Adelaide", 1374);
+        System.out.println("\n" + "_".repeat(50));
+        addPlace(placesToVisit, adelaide);
+        addPlace(placesToVisit, new Place("adelaide", 1374));
+        addPlace(placesToVisit, new Place("Brisbane", 917));
+        addPlace(placesToVisit, new Place("Perth", 3923));
+        addPlace(placesToVisit, new Place("Perth", 39));    // Duplicated after similar
+        addPlace(placesToVisit, new Place("Alice Springs", 2771));
+        addPlace(placesToVisit, new Place("Darwin", 3972));
+        addPlace(placesToVisit, new Place("Melbourne", 877));
+        addPlace(placesToVisit, new Place("Brisbane", 917));    // Duplicated way from similar
+
+        placesToVisit.addFirst(new Place("Sydney", 0));
+
+        System.out.println("-".repeat(50) + "\nFinal list: \n" + placesToVisit + "\n" + "-".repeat(50));
+
     }
 
-    public static LinkedList<String> distanceOrder(LinkedList<Integer> distanceList,
-                                     LinkedList<String> cities) {
-        LinkedList<String> finalListOfCities = new LinkedList<>();
-        LinkedList<Integer> sortedOut = (LinkedList<Integer>) distanceList.clone();
-        sortedOut.sort(Comparator.naturalOrder());
+    private static void addPlace(LinkedList<Place> list, Place place) {
+        // Receives the whole list of places and an individual place to add
+        // Not needed, as it is again compares in the block below
+        //if (list.contains(place)) {
+        //    System.out.println("Found duplicate: " + place);        // If the place exists, it returns here
+        //    return;
+        //}
 
-        ListIterator<Integer> iteratedSorted = sortedOut.listIterator();
-        while (iteratedSorted.hasNext()) {
-            var value = iteratedSorted.next();      // Each number value, sorted out
-
-            // Find the index of this value in the old arrange of integers:
-            int indexOldDistance = distanceList.indexOf(value);
-
-            // Take that index to refer the city:
-            String city = cities.get(indexOldDistance);
-            finalListOfCities.addLast(city);
+        // "list" is the whole list of places
+        for (Place p : list) {              // The place is new
+            if (p.name().equalsIgnoreCase(place.name())) {
+                // Comparing tne new name with each name existing in LinkedList
+                // If the name exists, it returns right here by doing nothing
+                System.out.println("Found duplicate: " + place);
+                return;
+            }
         }
-        return finalListOfCities;
 
+        int matchedIndex = 0;           // Points to the first element in the list
+        // "list" is the whole list
+        // "listPlace" represents each element in the list
+        for (var listPlace : list) {
+            // This traverses the whole list of distances
+            if (place.distance() < listPlace.distance()) {
+                // if the new place's distance is shorter than the current distance,
+                // the new places is inserted in the current position.
+                // The rest is shifted to the right and the method of adding ends
+                list.add(matchedIndex, place);
+                return;
+            }
+            matchedIndex++;         // Points to the next element in the list
+        }
+        list.add(place);            // If the distance was not shorter, the element is added at the end
     }
+
 }
