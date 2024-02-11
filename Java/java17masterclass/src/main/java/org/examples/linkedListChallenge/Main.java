@@ -29,6 +29,61 @@ public class Main {
 
         System.out.println("-".repeat(50) + "\nFinal list: \n" + placesToVisit + "\n" + "-".repeat(50));
 
+        var iterator = placesToVisit.listIterator();
+        Scanner scanner = new Scanner(System.in);
+
+        boolean quitloop = false;
+        boolean forward = true;
+
+        printMenu();
+        while (!quitloop) {
+            if (!iterator.hasPrevious()) {
+                System.out.println("Originating : " + iterator.next());
+            }
+            if (!iterator.hasNext()) {
+                System.out.println("Final : " + iterator.previous());
+            }
+
+            System.out.print("Enter value: ");      // "print" does not skip line
+            String menuItem = scanner.nextLine().toUpperCase().substring(0,1);
+            switch (menuItem) {
+                case "F":
+                    System.out.println("The user wants to go forward");
+                    if (!forward) {
+                        forward = true;
+                        if (iterator.hasNext()) {
+                            iterator.next();
+                        }
+                    }
+
+                    if (iterator.hasNext()) {
+                        System.out.println("Final : " + iterator.next());
+                    }
+                    break;
+                case "B":
+                    System.out.println("The user wants to go backwards");
+                    if (forward) {
+                        forward = false;
+                        if (iterator.hasPrevious()) {
+                            iterator.previous();
+                        }
+                    }
+                    if (iterator.hasPrevious()) {
+                        System.out.println("Originating : " + iterator.previous());
+                    }
+                    break;
+                case "M":
+                    printMenu();
+                    break;
+                case "L":
+                    System.out.println(placesToVisit);
+                    break;
+                default:
+                    quitloop = true;
+                    break;
+
+            }
+        }
     }
 
     private static void addPlace(LinkedList<Place> list, Place place) {
@@ -64,6 +119,17 @@ public class Main {
             matchedIndex++;         // Points to the next element in the list
         }
         list.add(place);            // If the distance was not shorter, the element is added at the end
+    }
+
+    public static void printMenu(){
+        System.out.println("""
+                Available actions (select word or letter):
+                    (F)orward
+                    (B)ackwards
+                    (L)ist Places
+                    (M)enu
+                    (Q)uit""");
+        // The three quote marks immediately after, avoid a blank line to be added after the menu
     }
 
 }

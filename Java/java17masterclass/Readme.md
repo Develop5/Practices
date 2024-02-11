@@ -118,8 +118,8 @@ Then reload your .bash_profile file from the commad line with this:
 
     [Arbitrary Number of Arguments](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
 
-* 
-
+* **Is Java pure OOP?** 
+  Java is not pure OOP because it allows primitive type data, among other reasons.
 
 
 ##
@@ -127,7 +127,7 @@ Then reload your .bash_profile file from the commad line with this:
 
 Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
 
-140. LinkedList Challenge
+142. Introduction to Autoboxing and Unboxing
 
 ### But, have a look at this once you have time ###
 
