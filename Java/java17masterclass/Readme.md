@@ -125,9 +125,11 @@ Then reload your .bash_profile file from the commad line with this:
 ##
 #### Voy por aquí ####
 
+(Skipped: codingExercisePlayList)
+
 Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
 
-142. Introduction to Autoboxing and Unboxing
+144. Autoboxing & Unboxing Challenge
 
 ### But, have a look at this once you have time ###
 
