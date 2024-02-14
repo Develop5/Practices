@@ -26,23 +26,41 @@ public class Bank {
             customers.add(customer);
             System.out.println("New customer added: " + customer);
         }
-        // Checks if newCostumer is in the bank
-        //      if true, does nothing
-        //      if false, adds it to the list
+
     }
 
-    public void addTransaction(Customer customer, Double newTransaction) {
-        // The customer can add a transaction
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "bankName='" + bankName + '\'' +
+                ", customers=" + customers +
+                '}';
     }
 
-    public void printStatement(Customer customer) {
-        // Prints customer name and transaction amounts
-        // Uses unboxing
+    public void addTransaction(String name, double transactionAmount) {
+        Customer customer = getCustomer(name);
+        if (customer != null) {
+            customer.transactions().add(transactionAmount);
+        }
     }
 
-    public boolean findCustomerInBank(Customer customer) {
+    public void printStatement(String customerName) {
+        Customer customer = getCustomer(customerName);
+        if (customer == null) {
+            return;
+        }
+        System.out.println("_".repeat(30));
+        System.out.println("Customer name : " + customerName);
+        System.out.println("Transactions : ");
+        for (double d: customer.transactions()) {
+            System.out.printf("$%10.2f (%s)%n", d, d < 0 ? "debit" : "credit");
+        }
+    }
+
+    public void findCustomerInBank(String customerName) {
+
+
         // Retrieves true if the customer is already in the bank
-        return false;
     }
 
 }
