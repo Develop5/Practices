@@ -4,26 +4,63 @@ import java.util.ArrayList;
 
 public class Bank {
     String bankName;
-    ArrayList<String> customers;
+    ArrayList<Customer> customers = new ArrayList<>(5000);
 
-    public void addNewCustomer(Customer newCostumer) {
-        // Checks if newCostumer is in the bank
-        //      if true, does nothing
-        //      if false, adds it to the list
+    public Bank(String bankName) {
+        this.bankName = bankName;
     }
 
-    public void addTransaction(Customer customer, Double newTransaction) {
-        // The customer can add a transaction
+    public Customer getCustomer(String customerName) {
+        for (var customer : customers) {
+            if (customer.name().equalsIgnoreCase(customerName)) {
+                return customer;
+            }
+        }
+        System.out.printf("Customer (%s) wasn't found %n", customerName);
+        return null;
     }
 
-    public void printStatement(Customer customer) {
-        // Prints customer name and transaction amounts
-        // Uses unboxing
+    public void addNewCustomer(String customerName, double initialDeposit) {
+        if (getCustomer(customerName) == null) {
+            Customer customer = new Customer(customerName, initialDeposit);
+            customers.add(customer);
+            System.out.println("New customer added: " + customer);
+        }
+
     }
 
-    public boolean findCustomerInBank(Customer customer) {
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "bankName='" + bankName + '\'' +
+                ", customers=" + customers +
+                '}';
+    }
+
+    public void addTransaction(String name, double transactionAmount) {
+        Customer customer = getCustomer(name);
+        if (customer != null) {
+            customer.transactions().add(transactionAmount);
+        }
+    }
+
+    public void printStatement(String customerName) {
+        Customer customer = getCustomer(customerName);
+        if (customer == null) {
+            return;
+        }
+        System.out.println("_".repeat(30));
+        System.out.println("Customer name : " + customerName);
+        System.out.println("Transactions : ");
+        for (double d: customer.transactions()) {
+            System.out.printf("$%10.2f (%s)%n", d, d < 0 ? "debit" : "credit");
+        }
+    }
+
+    public void findCustomerInBank(String customerName) {
+
+
         // Retrieves true if the customer is already in the bank
-        return false;
     }
 
 }
