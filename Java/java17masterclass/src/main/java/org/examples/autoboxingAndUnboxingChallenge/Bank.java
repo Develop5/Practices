@@ -4,9 +4,28 @@ import java.util.ArrayList;
 
 public class Bank {
     String bankName;
-    ArrayList<String> customers;
+    ArrayList<Customer> customers = new ArrayList<>(5000);
 
-    public void addNewCustomer(Customer newCostumer) {
+    public Bank(String bankName) {
+        this.bankName = bankName;
+    }
+
+    public Customer getCustomer(String customerName) {
+        for (var customer : customers) {
+            if (customer.name().equalsIgnoreCase(customerName)) {
+                return customer;
+            }
+        }
+        System.out.printf("Customer (%s) wasn't found %n", customerName);
+        return null;
+    }
+
+    public void addNewCustomer(String customerName, double initialDeposit) {
+        if (getCustomer(customerName) == null) {
+            Customer customer = new Customer(customerName, initialDeposit);
+            customers.add(customer);
+            System.out.println("New customer added: " + customer);
+        }
         // Checks if newCostumer is in the bank
         //      if true, does nothing
         //      if false, adds it to the list
