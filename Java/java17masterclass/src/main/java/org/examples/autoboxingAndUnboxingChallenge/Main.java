@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("\n" + "_".repeat(50));
 
-        Customer bob = new Customer("Bob 5", 1000.0);
+        Customer bob = new Customer("Bob S", 1000.0);
         System.out.println(bob);
 
         Bank bank = new Bank("Chase");
@@ -23,6 +23,9 @@ public class Main {
         bank.addTransaction("Jane A", -10.25);
         bank.addTransaction("jane A", -75.1);
         bank.printStatement("Jane a");
+
+        bank.addTransaction("Bob S", 100.0);
+        bank.printStatement("Bob S");
 
         System.out.println("\n" + "_".repeat(50));
 
