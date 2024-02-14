@@ -24,6 +24,7 @@ public class Main {
         bank.addTransaction("jane A", -75.1);
         bank.printStatement("Jane a");
 
+        bank.addNewCustomer("Bob s", 25);
         bank.addTransaction("Bob S", 100.0);
         bank.printStatement("Bob S");
 
