@@ -128,10 +128,14 @@ Then reload your .bash_profile file from the commad line with this:
 (Skipped: codingExercisePlayList)
 
 Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
+146. Introduction to the enum type
 
-145. Autoboxing & Unboxing Challenge
-
+ 
 ### But, have a look at this once you have time ###
+
+
+Coding Exercise 45: Playlist
+Coding Exercise 46: Banking
 
 [How To Use Cherry-Pick Git Via CMD/Intellij Tool 2023](https://www.bing.com/videos/riverview/relatedvideo?q=intellij%20tutorial%20cherry-pick&mid=20A2049D273AA51223A920A2049D273AA51223A9&ajaxhist=0)
 
