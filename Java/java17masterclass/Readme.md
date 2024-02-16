@@ -121,6 +121,11 @@ Then reload your .bash_profile file from the commad line with this:
 * **Is Java pure OOP?** 
   Java is not pure OOP because it allows primitive type data, among other reasons.
 
+* **Enum**
+  A special data type that contains predefined constants.
+  It's described as a **class**, but the  keyword _enum_ replaces the keyword _class_.
+
+
 
 ##
 #### Voy por aquí ####
