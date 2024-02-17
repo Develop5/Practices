@@ -40,6 +40,13 @@ Then reload your .bash_profile file from the commad line with this:
 
 2. [Markdown table syntax](https://www.tablesgenerator.com/markdown_tables#:~:text=As%20the%20official%20Markdown%20documentation%20states%2C%20Markdown%20does,which%20provide%20additional%20syntax%20for%20creating%20simple%20tables.)
 3. [Extended Markdown syntax](https://www.markdownguide.org/extended-syntax/#tables)
+4. In order to see variable types in the editor: 
+```
+    Turn on option at:
+    Preferences > Editor > Inlay Hints > Types > Java > Implicit types.
+```
+
+    
 ##
 #### Needs to read ####
 6.71 Exception Handling, and Introduction to Scanner
@@ -124,6 +131,7 @@ Then reload your .bash_profile file from the commad line with this:
 * **Enum**
   A special data type that contains predefined constants.
   It's described as a **class**, but the  keyword _enum_ replaces the keyword _class_.
+  It's a list of constant labels, in a specified order.
 
 
 
@@ -133,7 +141,7 @@ Then reload your .bash_profile file from the commad line with this:
 (Skipped: codingExercisePlayList)
 
 Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
-146. Introduction to the enum type
+147. The enum type continued, with the switch statement
 
  
 ### But, have a look at this once you have time ###
