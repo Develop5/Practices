@@ -8,8 +8,18 @@ public class Main {
 
         DayOfTheWeek weekDay = DayOfTheWeek.TUES;
         System.out.println(weekDay);
-        System.out.printf("Name is %s, Ordinal value = %d%n",
-                weekDay.name(), weekDay.ordinal());
+
+        for (int i = 0; i < 20; i++) {
+            weekDay = getRandomDay();
+            System.out.printf("Name is %s, Ordinal value = %d%n",
+                    weekDay.name(), weekDay.ordinal());
+
+            if (weekDay == DayOfTheWeek.FRI) {
+                System.out.println("Found a Friday!!");
+            }
+        }
+
+        System.out.println(getRandomDay());
 
         System.out.println("_".repeat(50));
     }
@@ -18,7 +28,5 @@ public class Main {
         int randomInteger = new Random().nextInt(7);
         var allDays = DayOfTheWeek.values();
         return allDays[randomInteger];
-
-
     }
 }
