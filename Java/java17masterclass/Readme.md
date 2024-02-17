@@ -140,7 +140,7 @@ Then reload your .bash_profile file from the commad line with this:
 (Skipped: codingExercisePlayList)
 
 Section 10: List, ArrayList, LinkedList, Iterator, Autoboxing
-146. Introduction to the enum type
+147. The enum type continued, with the switch statement
 
  
 ### But, have a look at this once you have time ###
