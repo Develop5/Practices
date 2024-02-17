@@ -29,4 +29,17 @@ public class Main {
         var allDays = DayOfTheWeek.values();
         return allDays[randomInteger];
     }
+
+    public static void switchDayOfWeek(DayOfTheWeek weekDay) {
+        // Want to print the order or the day, from 1 to 7
+        int weekDayInteger = weekDay.ordinal() + 1;
+
+        switch(weekDay) {
+            case WED -> System.out.println("Wednesday is day : " + weekDayInteger);
+            case SAT -> System.out.println("Saturday is day : " + weekDayInteger);
+            default -> System.out.println(weekDay.name().charAt(0) +
+                    weekDay.name().substring(1).toLowerCase() +
+                    "day is Day " + weekDayInteger);
+        }
+    }
 }

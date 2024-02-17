@@ -131,6 +131,7 @@ Then reload your .bash_profile file from the commad line with this:
 * **Enum**
   A special data type that contains predefined constants.
   It's described as a **class**, but the  keyword _enum_ replaces the keyword _class_.
+  It's a list of constant labels, in a specified order.
 
 
 
