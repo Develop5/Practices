@@ -11,15 +11,22 @@ public class Main {
 
         for (int i = 0; i < 20; i++) {
             weekDay = getRandomDay();
-            System.out.printf("Name is %s, Ordinal value = %d%n",
-                    weekDay.name(), weekDay.ordinal());
 
-            if (weekDay == DayOfTheWeek.FRI) {
-                System.out.println("Found a Friday!!");
-            }
+//            System.out.printf("Name is %s, Ordinal value = %d%n",
+//                    weekDay.name(), weekDay.ordinal());
+//            if (weekDay == DayOfTheWeek.FRI) {
+//                System.out.println("Found a Friday!!");
+//            }
+
+            switchDayOfWeek(weekDay);
         }
 
-        System.out.println(getRandomDay());
+        System.out.println(".".repeat(50));
+
+        for (Topping topping : Topping.values()) {
+            System.out.println(topping.name() + " : " + topping.getPrice());
+        }
+
 
         System.out.println("_".repeat(50));
     }
