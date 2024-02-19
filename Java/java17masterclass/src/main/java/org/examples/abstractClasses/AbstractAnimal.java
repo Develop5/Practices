@@ -12,5 +12,10 @@ public abstract class AbstractAnimal {
     }
 
     public abstract void move(String speed);
+
+    // The following cannot be done, as subclasses would not be able to use it,
+    // which is the goal in abstraction:
+    // private abstract void move(String speed);
+
     public abstract void makeNoise();
 }
