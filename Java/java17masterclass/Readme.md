@@ -142,17 +142,43 @@ Then reload your .bash_profile file from the commad line with this:
   is usually an abstract concept, whether it's an abstract class or not.
 
 * **Abstract methods**
-  An abstract method has a signature, a return type, but not a body.
+  An abstract method has a signature, a return type, but not a body. 
+  Not even curly braces. It just ends with semi-colon.
   Therefore, the method is **unimplemented**.
   An abstract method is like a contract, which promises that all subtypes will provide the promised functionality,
   with the agreed upon name and arguments.
+  An abstract method can _only_ be declared in an _abstract class_ or _interface_.
+```
+  abstract class Animal {
+    public abstract void move()
+  }
+  // the subtype will implement this method with this signature
+```
 
 * **Concrete methods**
   Has a method body, usually with at least one statement.
   When a concrete method override an abstract one, we say it is **implementing** it.
 
 * **Final method**
-  A final method cannot be overriden by subclasses.
+  A final method cannot be overridden by subclasses.
+
+* **Abstract class**
+  An abstract class is a class that is incomplete.
+  It cannot be instantiable
+  The **abstract** modifier declares it.
+  It can still have a constructor, which will be called by subclasses during their construction.
+  An abstract class always participates in **inheritance**.
+  A class that extends an abstract class, can also be abstracted itself.
+  ```
+  abstract class Mammal extends Animal()
+  // Mammal is abstract
+  // Animal is also abstract
+  ```
+
+
+
+
+* 
 
 
 
@@ -165,7 +191,7 @@ Then reload your .bash_profile file from the commad line with this:
 (Skipped: codingExercisePlayList)
 
 Section 11: Abstraction in Java
-149. Abstraction & Generalization (with overview of abstract and other modifiers)
+150. Abstract Classes Part 1
 
 
 
