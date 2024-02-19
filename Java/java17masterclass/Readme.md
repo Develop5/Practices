@@ -191,7 +191,7 @@ Then reload your .bash_profile file from the commad line with this:
 (Skipped: codingExercisePlayList)
 
 Section 11: Abstraction in Java
-150. Abstract Classes Part 1
+151. Abstract Classes Part 2
 
 
 
