@@ -133,6 +133,30 @@ Then reload your .bash_profile file from the commad line with this:
   It's described as a **class**, but the  keyword _enum_ replaces the keyword _class_.
   It's a list of constant labels, in a specified order.
 
+* **Abstraction and Generalization**
+  When we model **real world things** in software. 
+  I you can't draw the thing in s piece of paper, it is probably abstract.
+  **Abstraction** simplifies the view of a set of items' trait and behavior, 
+  so we can talk about them as a group, as well as generalize their functionality.
+  Java allows us to create a class hierarchy, there the top of the hierarchy, the base class,
+  is usually an abstract concept, whether it's an abstract class or not.
+
+* **Abstract methods**
+  An abstract method has a signature, a return type, but not a body.
+  Therefore, the method is **unimplemented**.
+  An abstract method is like a contract, which promises that all subtypes will provide the promised functionality,
+  with the agreed upon name and arguments.
+
+* **Concrete methods**
+  Has a method body, usually with at least one statement.
+  When a concrete method override an abstract one, we say it is **implementing** it.
+
+* **Final method**
+  A final method cannot be overriden by subclasses.
+
+
+
+
 
 
 ##
