@@ -1,13 +1,17 @@
 package org.examples.abstractClasses;
 
 public class DogFromAbstract extends AbstractAnimal{
-
     public DogFromAbstract(String typeAbstractAnimal, String size, double weight) {
         super(typeAbstractAnimal, size, weight);
     }
 
     @Override
     public void move(String speed) {
+        if(speed.equals("slow")) {
+            System.out.println(typeAbstractAnimal + " walking");
+        } else {
+            System.out.println(typeAbstractAnimal + " running");
+        }
 
     }
 
@@ -15,9 +19,9 @@ public class DogFromAbstract extends AbstractAnimal{
     public void makeNoise() {
 
         if (typeAbstractAnimal == "Wolf"){
-            System.out.println("Howling! ");
+            System.out.print("Howling! ");
         } else {
-            System.out.println("Woolf! ");
+            System.out.print("Woolf! ");
         }
 
     }
