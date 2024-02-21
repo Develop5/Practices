@@ -17,12 +17,18 @@ public class DogFromAbstract extends AbstractAnimal{
 
     @Override
     public void makeNoise() {
-
         if (typeAbstractAnimal == "Wolf"){
             System.out.print("Howling! ");
         } else {
             System.out.print("Woolf! ");
         }
-
     }
+
+    // The following does not compile once the parent method is final
+    //@Override
+    //public String getExplicitType(){
+    //
+    //}
+
+
 }

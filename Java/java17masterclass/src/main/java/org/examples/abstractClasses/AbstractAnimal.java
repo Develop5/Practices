@@ -19,7 +19,10 @@ public abstract class AbstractAnimal {
 
     public abstract void makeNoise();
 
-    public String getExplicitType() {
+    public final String getExplicitType() {
+        // Once it is declared final, the method cannot be overridden
+        // Then, abstract classes can contain abstract and concrete method
+        // and concrete methods can be designed so that the subclass cannot change them
         return getClass().getSimpleName() + " (" + typeAbstractAnimal + ")  ";
     }
 }
