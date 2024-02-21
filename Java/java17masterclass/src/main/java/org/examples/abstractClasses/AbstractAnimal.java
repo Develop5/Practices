@@ -18,4 +18,8 @@ public abstract class AbstractAnimal {
     // private abstract void move(String speed);
 
     public abstract void makeNoise();
+
+    public String getExplicitType() {
+        return getClass().getSimpleName() + " (" + typeAbstractAnimal + ")  ";
+    }
 }

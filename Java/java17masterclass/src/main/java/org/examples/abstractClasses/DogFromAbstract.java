@@ -8,9 +8,9 @@ public class DogFromAbstract extends AbstractAnimal{
     @Override
     public void move(String speed) {
         if(speed.equals("slow")) {
-            System.out.println(typeAbstractAnimal + " walking");
+            System.out.println(getExplicitType() + " walking");
         } else {
-            System.out.println(typeAbstractAnimal + " running");
+            System.out.println(getExplicitType() + " running");
         }
 
     }
