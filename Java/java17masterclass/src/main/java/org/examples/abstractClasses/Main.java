@@ -34,6 +34,9 @@ public class Main {
 
         for (AbstractAnimal animal : animals) {
             doAnimalStuff(animal);
+            if (animal instanceof AbstractMammal currentMammal) {
+                currentMammal.shedHair();
+            }
         }
 
         printDashes();
