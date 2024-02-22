@@ -1,4 +1,11 @@
 
+**Abstract classes**
+An abstract class in your hierarchy forces designers to think about, 
+and create unique and targeted implementations, for the abstract method.
+
+An abstract class cannot be instantiated, 
+so it is an advantage to use them to design a framework for implementation.
+
 **Abstract Class extends another abstract class**
 
 - It can implement all of the parent's abstract methods
