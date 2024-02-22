@@ -30,6 +30,8 @@ public class Main {
         animals.add(new FishFromAbstract("Barracuda", "big", 75));
         animals.add(new DogFromAbstract("Pug", "small", 20));
 
+        animals.add(new Horse("Clydesdale", "large", 1000));
+
         for (AbstractAnimal animal : animals) {
             doAnimalStuff(animal);
         }
