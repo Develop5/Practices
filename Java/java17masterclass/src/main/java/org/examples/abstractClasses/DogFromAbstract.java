@@ -17,6 +17,7 @@ public class DogFromAbstract extends AbstractMammal{
 
     @Override
     public void shedHair() {
+        System.out.println(getExplicitType() + " shed hair all the time");
 
     }
 
