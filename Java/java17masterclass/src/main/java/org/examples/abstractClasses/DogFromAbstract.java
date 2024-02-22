@@ -1,6 +1,6 @@
 package org.examples.abstractClasses;
 
-public class DogFromAbstract extends AbstractAnimal{
+public class DogFromAbstract extends AbstractMammal{
     public DogFromAbstract(String typeAbstractAnimal, String size, double weight) {
         super(typeAbstractAnimal, size, weight);
     }
@@ -12,6 +12,11 @@ public class DogFromAbstract extends AbstractAnimal{
         } else {
             System.out.println(getExplicitType() + " running");
         }
+
+    }
+
+    @Override
+    public void shedHair() {
 
     }
 
