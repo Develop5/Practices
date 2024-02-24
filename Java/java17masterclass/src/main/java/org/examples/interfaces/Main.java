@@ -58,6 +58,7 @@ public class Main {
         List<FlightEnabled> betterFliers = new LinkedList<>();
         // Declare type is a list of declared elements and not an ArrayList
         // this is a interface type
+        // Refactoring can be done much more easily
         betterFliers.add(bird);
 
         // Until here, it is not clear that the second declaration is better than the first

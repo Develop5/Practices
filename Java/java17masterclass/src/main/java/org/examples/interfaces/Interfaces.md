@@ -35,3 +35,9 @@ Therefore, **implements** is an invalid word in an interface declaration.
 
 #### _Note_:
 Using interface types as a reference type is considered a best practice.
+
+#### _Note_:
+Method parameters, method return types, local variable references and class veriables should
+try to use interface types as reference variable types, when possible.
+This makes the code more extensible in the future.
+
