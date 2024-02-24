@@ -1,5 +1,8 @@
 package org.examples.interfaces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.examples.Utilities.printDashes;
 import static org.examples.Utilities.printRepeated;
 
@@ -45,6 +48,28 @@ public class Main {
         System.out.printf("The truck traveled %.2f km or %.2f miles%n",
                 kmsTraveled, milesTraveled);
 
+
+        printRepeated("+", 20);
+        ArrayList<FlightEnabled> fliers = new ArrayList<>();
+        // Declare type (left) is the same as the instance type (right)
+        fliers.add(bird);
+
+        List<FlightEnabled> betterFliers = new ArrayList<>();
+        // Declare type is a list of declared elements and not an ArrayList
+        // this is a interface type
+        betterFliers.add(bird);
+
+        // Until here, it is not clear that the second declaration is better than the first
+        // We will add now some methods to prove that.
+
+        triggerFliers(fliers);
+        flyFliers(fliers);
+        landFliers(fliers);
+
+        triggerFliers(betterFliers);
+        flyFliers(betterFliers);
+        landFliers(betterFliers);
+
         printDashes();
 
     }
@@ -56,6 +81,25 @@ public class Main {
             tracked.track();
         }
         flier.land();
-
     }
+
+    public static void triggerFliers(ArrayList<FlightEnabled> fliers) {
+        for (var flier : fliers) {
+            flier.takeoff();
+        }
+    }
+
+    public static void flyFliers(ArrayList<FlightEnabled> fliers) {
+        for (var flier : fliers) {
+            flier.fly();
+        }
+    }
+
+    public static void landFliers(ArrayList<FlightEnabled> fliers) {
+        for (var flier : fliers) {
+            flier.land();
+        }
+    }
+
+
 }
