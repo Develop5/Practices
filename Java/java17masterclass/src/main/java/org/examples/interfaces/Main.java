@@ -30,8 +30,18 @@ public class Main {
 
          */
         inFlight(flier);
+
         printRepeated(".", 20);
         inFlight(new Jet());
+
+        printRepeated(".", 20);
+        Trackable truck = new Truck();
+        truck.track();
+
+        double kmsTraveled = 100;
+        double milesTraveled = kmsTraveled * FlightEnable.KM_TO_MILES;
+        System.out.printf("The truck traveled %.2f km or %.2f miles%n",
+                kmsTraveled, milesTraveled);
 
         printDashes();
 
