@@ -1,6 +1,7 @@
 package org.examples.interfaces;
 
 import static org.examples.Utilities.printDashes;
+import static org.examples.Utilities.printRepeated;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,7 +30,7 @@ public class Main {
 
          */
         inFlight(flier);
-
+        printRepeated(".", 20);
         inFlight(new Jet());
 
         printDashes();
