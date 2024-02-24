@@ -32,3 +32,6 @@ Interfaces can be extended each from another by using the keyword **extends**
 An interface can use the **extends** keyword with multiple interfaces
 An interface cannot implement another interface, but extend it.
 Therefore, **implements** is an invalid word in an interface declaration.
+
+#### _Note_:
+Using interface types as a reference type is considered a best practice.
