@@ -39,7 +39,7 @@ public class Store {
         printOrderItems(order1);
 
         System.out.println("\nOrder 2");
-        var order2 = new ArrayList<OrderItem>();
+        ArrayList<OrderItem> order2 = new ArrayList<>();
         addAnItemToOrder(order2, 3, 5);
         addAnItemToOrder(order2, 0, 1);
         addAnItemToOrder(order2, 2, 1);
@@ -51,7 +51,7 @@ public class Store {
 
 
     public static void listProducts(){
-        for (var item : storeProducts) {
+        for (ProductForSale item : storeProducts) {
             item.showDetails();
             System.out.println("-".repeat(30));
         }
@@ -65,13 +65,11 @@ public class Store {
 
     public static void printOrderItems(ArrayList<OrderItem> order) {
         double salesTotal = 0;
-        for (var item : order) {
+        for (OrderItem item : order) {
             item.product().printPricedLine(item.quantity());
             salesTotal += item.product().getSalesPrice(item.quantity());
         }
         System.out.printf("Sales total = $%6.2f %n", salesTotal);
     }
-
-
 
 }
