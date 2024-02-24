@@ -21,10 +21,14 @@ whether the method is concrete or abstract.
 Only a concrete _method_ can have _private_ access.
 
 #### _Note_:
-
 Any field declared on an interface are _not_ really instance fields
 They are implicitly _public_, _static_ and _final_, which means they are really constants
 
 #### _Note_:
-
 An interfaces **never** gets instantiated.
+
+#### _Note_:
+Interfaces can be extended each from another by using the keyword **extends**
+An interface can use the **extends** keyword with multiple interfaces
+An interface cannot implement another interface, but extend it.
+Therefore, **implements** is an invalid word in an interface declaration.

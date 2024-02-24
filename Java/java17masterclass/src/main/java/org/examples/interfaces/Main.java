@@ -10,10 +10,10 @@ public class Main {
 
         Bird bird = new Bird();
         AbstractAnimal3 animal = bird;
-        FlightEnable flier = bird;
+        FlightEnabled flier = bird;
         Trackable tracked = bird;
-        // bird is not an instance of FlightEnable, but of Bird,
-        // which implements in turn FlightEnable behavior
+        // bird is not an instance of FlightEnabled, but of Bird,
+        // which implements in turn FlightEnabled behavior
 
         animal.move();
 
@@ -41,7 +41,7 @@ public class Main {
         truck.track();
 
         double kmsTraveled = 100;
-        double milesTraveled = kmsTraveled * FlightEnable.KM_TO_MILES;
+        double milesTraveled = kmsTraveled * FlightEnabled.KM_TO_MILES;
         System.out.printf("The truck traveled %.2f km or %.2f miles%n",
                 kmsTraveled, milesTraveled);
 
@@ -49,7 +49,7 @@ public class Main {
 
     }
 
-    private static void inFlight(FlightEnable flier) {
+    private static void inFlight(FlightEnabled flier) {
         flier.takeoff();
         flier.fly();
         if (flier instanceof Trackable tracked) {           // instance of works the same with interfaces

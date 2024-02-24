@@ -1,6 +1,6 @@
 package org.examples.interfaces;
 
-public class Jet implements FlightEnable, Trackable{
+public class Jet implements FlightEnabled, Trackable{
     // Methods are copied from Bird.
     // This class can same behaviour as a bird but it is not an animal
     // Therefore, it does not extends the animal class
