@@ -1,6 +1,6 @@
 package org.examples.abstractClassChallenge;
 
-public abstract class ProductForSale extends Store{
+public abstract class ProductForSale {
 
     // protected, because the subclasses will need to access and modify them
     protected String type;
@@ -13,19 +13,14 @@ public abstract class ProductForSale extends Store{
         this.description = description;
     }
 
-    @Override
     public double getSalesPrice(int quantity) {
         return (quantity * price);
     }
 
-    @Override
     public void printPricedLine(int quantity) {
-        System.out.printf("Product: %s Description: %s Price: %6.2f " +
-                this.type + this.description + getSalesPrice(quantity));
 
         System.out.printf("%2d qty at $%8.2f each, %-15s %-35s %n",
                 quantity, price, type, description);
-
     }
 
     public abstract void showDetails();
