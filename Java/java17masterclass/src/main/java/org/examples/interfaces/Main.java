@@ -1,6 +1,11 @@
 package org.examples.interfaces;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 import static org.examples.Utilities.printDashes;
+import static org.examples.Utilities.printRepeated;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,8 +14,10 @@ public class Main {
 
         Bird bird = new Bird();
         AbstractAnimal3 animal = bird;
-        FlightEnable flier = bird;
+        FlightEnabled flier = bird;
         Trackable tracked = bird;
+        // bird is not an instance of FlightEnabled, but of Bird,
+        // which implements in turn FlightEnabled behavior
 
         animal.move();
 
@@ -30,19 +37,71 @@ public class Main {
          */
         inFlight(flier);
 
+        printRepeated(".", 20);
         inFlight(new Jet());
+
+        printRepeated(".", 20);
+        Trackable truck = new Truck();
+        truck.track();
+
+        double kmsTraveled = 100;
+        double milesTraveled = kmsTraveled * FlightEnabled.KM_TO_MILES;
+        System.out.printf("The truck traveled %.2f km or %.2f miles%n",
+                kmsTraveled, milesTraveled);
+
+
+        printRepeated("+", 20);
+        LinkedList<FlightEnabled> fliers = new LinkedList<>();
+        // Declare type (left) is the same as the instance type (right)
+        fliers.add(bird);
+
+        List<FlightEnabled> betterFliers = new LinkedList<>();
+        // Declare type is a list of declared elements and not an ArrayList
+        // this is a interface type
+        // Refactoring can be done much more easily
+        betterFliers.add(bird);
+
+        // Until here, it is not clear that the second declaration is better than the first
+        // We will add now some methods to prove that.
+
+        triggerFliers(fliers);
+        flyFliers(fliers);
+        landFliers(fliers);
+
+        triggerFliers(betterFliers);
+        flyFliers(betterFliers);
+        landFliers(betterFliers);
 
         printDashes();
 
     }
 
-    private static void inFlight(FlightEnable flier) {
+    private static void inFlight(FlightEnabled flier) {
         flier.takeoff();
         flier.fly();
         if (flier instanceof Trackable tracked) {           // instance of works the same with interfaces
             tracked.track();
         }
         flier.land();
-
     }
+
+    public static void triggerFliers(List<FlightEnabled> fliers) {
+        for (var flier : fliers) {
+            flier.takeoff();
+        }
+    }
+
+    public static void flyFliers(List<FlightEnabled> fliers) {
+        for (var flier : fliers) {
+            flier.fly();
+        }
+    }
+
+    public static void landFliers(List<FlightEnabled> fliers) {
+        for (var flier : fliers) {
+            flier.land();
+        }
+    }
+
+
 }

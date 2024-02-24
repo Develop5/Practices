@@ -1,6 +1,7 @@
 package org.examples.interfaces;
 
-public class Bird extends AbstractAnimal3 implements FlightEnable, Trackable{
+public class Bird extends AbstractAnimal3 implements FlightEnabled, Trackable{
+
     @Override
     public void move() {
         System.out.println("Flags wings");
