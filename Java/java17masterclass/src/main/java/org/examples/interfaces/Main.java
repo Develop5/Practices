@@ -1,6 +1,7 @@
 package org.examples.interfaces;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.examples.Utilities.printDashes;
@@ -50,7 +51,7 @@ public class Main {
 
 
         printRepeated("+", 20);
-        ArrayList<FlightEnabled> fliers = new ArrayList<>();
+        LinkedList<FlightEnabled> fliers = new LinkedList<>();
         // Declare type (left) is the same as the instance type (right)
         fliers.add(bird);
 
