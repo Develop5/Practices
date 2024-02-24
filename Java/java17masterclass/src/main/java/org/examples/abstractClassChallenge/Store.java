@@ -2,15 +2,9 @@ package org.examples.abstractClassChallenge;
 
 import java.util.ArrayList;
 
-
-
 import static org.examples.Utilities.printDashes;
 
-record OrderItem(int quantity, ArrayList<ProductForSale> itemsToSale){
-
-
-
-}
+record OrderItem(int quantity, ProductForSale product){}
 public abstract class Store {
 
     // Any imaginable product for sale
@@ -33,6 +27,12 @@ public abstract class Store {
 
         listProducts();
 
+        System.out.println("\nOrder 1");
+        ArrayList<OrderItem> order1 = new ArrayList<>();            // Decoration in the statement
+        //addAnItemToOrder(order1, 1, 2);
+        addAnItemToOrder(order1, 0, 1);
+        printOrderItems(order1);
+
         printDashes();
 
     }
@@ -44,14 +44,17 @@ public abstract class Store {
             item.showDetails();
         }
     }
-    public static void addAnItemToOrder(ProductForSale item) {
-
+    public static void addAnItemToOrder(ArrayList<OrderItem> order, int orderIndex, int qty) {
+        //order.add(new OrderItem(qty, storeProducts.get(orderIndex)));
     };
-    public static void printOrderItems(ArrayList<String> allItems) {
-        for (String item : allItems) {
-            System.out.println(item);
+
+    public static void printOrderItems(ArrayList<OrderItem> order) {
+        double salesTotal = 0;
+        for (var item : order) {
+            item.product().printPricedLine(item.quantity());
+            salesTotal += item.product().getSalesPrice(item.quantity());
         }
-    printDashes();
+        System.out.printf("Sales total = $%6.2f %n", salesTotal);
     }
 
 
