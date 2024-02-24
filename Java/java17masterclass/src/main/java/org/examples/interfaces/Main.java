@@ -12,7 +12,8 @@ public class Main {
         AbstractAnimal3 animal = bird;
         FlightEnable flier = bird;
         Trackable tracked = bird;
-        // bird is not an instance of FlightEnable, but of Bird, which implements in turn FlightEnable
+        // bird is not an instance of FlightEnable, but of Bird,
+        // which implements in turn FlightEnable behavior
 
         animal.move();
 
