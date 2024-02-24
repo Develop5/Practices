@@ -9,7 +9,7 @@ public class Projector extends ProductForSale{
 
     @Override
     public void showDetails() {
-        System.out.println("This " + type + "is a high resolution projector");
+        System.out.println("This " + type + " is a high resolution projector");
         System.out.printf("The price of the device is %6.2f %n", price);
         System.out.println(description);
 
