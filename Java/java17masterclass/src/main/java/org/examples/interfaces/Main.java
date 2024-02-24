@@ -55,7 +55,7 @@ public class Main {
         // Declare type (left) is the same as the instance type (right)
         fliers.add(bird);
 
-        List<FlightEnabled> betterFliers = new ArrayList<>();
+        List<FlightEnabled> betterFliers = new LinkedList<>();
         // Declare type is a list of declared elements and not an ArrayList
         // this is a interface type
         betterFliers.add(bird);
