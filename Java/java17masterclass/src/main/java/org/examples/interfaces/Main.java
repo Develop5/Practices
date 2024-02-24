@@ -83,19 +83,19 @@ public class Main {
         flier.land();
     }
 
-    public static void triggerFliers(ArrayList<FlightEnabled> fliers) {
+    public static void triggerFliers(List<FlightEnabled> fliers) {
         for (var flier : fliers) {
             flier.takeoff();
         }
     }
 
-    public static void flyFliers(ArrayList<FlightEnabled> fliers) {
+    public static void flyFliers(List<FlightEnabled> fliers) {
         for (var flier : fliers) {
             flier.fly();
         }
     }
 
-    public static void landFliers(ArrayList<FlightEnabled> fliers) {
+    public static void landFliers(List<FlightEnabled> fliers) {
         for (var flier : fliers) {
             flier.land();
         }
