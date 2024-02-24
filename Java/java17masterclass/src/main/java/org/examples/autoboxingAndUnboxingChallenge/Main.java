@@ -7,8 +7,9 @@ record Customer(String name, ArrayList<Double> transactions){
         this(name.toUpperCase(), new ArrayList<Double>(500));
         transactions.add(initialDeposit);
     }
-
 }
+
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("\n" + "_".repeat(50));
