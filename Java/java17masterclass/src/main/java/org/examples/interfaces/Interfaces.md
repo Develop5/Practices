@@ -44,3 +44,7 @@ This makes the code more extensible in the future.
 #### Interface extension method
 (as of JDK8)
 Identified by the modifier _default_, so it's more commonly known as a default method.
+
+
+#### _Note_:
+Another enhancement in JDK8 was the support for public static methods in interfaces
