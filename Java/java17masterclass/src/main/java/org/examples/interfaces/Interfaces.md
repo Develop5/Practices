@@ -41,3 +41,6 @@ Method parameters, method return types, local variable references and class veri
 try to use interface types as reference variable types, when possible.
 This makes the code more extensible in the future.
 
+#### Interface extension method
+(as of JDK8)
+Identified by the modifier _default_, so it's more commonly known as a default method.

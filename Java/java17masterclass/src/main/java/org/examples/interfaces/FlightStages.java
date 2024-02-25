@@ -1,10 +1,10 @@
 package org.examples.interfaces;
 
-public enum FlightStages implements Trackable { GRouNDED, LAUNCH, CRUISE, DATACOLLECTION;
+public enum FlightStages implements Trackable { GROUNDED, LAUNCH, CRUISE, DATACOLLECTION;
 
     @Override
     public void track() {
-        if (this != GRouNDED) {
+        if (this != GROUNDED) {
             System.out.println("Monitoring " + this);
         }
     }
