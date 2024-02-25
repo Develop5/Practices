@@ -36,6 +36,7 @@ public class Jet implements FlightEnabled, Trackable{
         // We need to write some code
 
         System.out.println(getClass().getSimpleName() + " transitioning");
-        return FlightStages.CRUISE;
+        //return FlightStages.CRUISE;
+        return FlightEnabled.super.transition(stage);       // qualifies super as the interface type
     }
 }
