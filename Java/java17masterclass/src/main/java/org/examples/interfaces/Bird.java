@@ -14,7 +14,7 @@ public class Bird extends AbstractAnimal3 implements FlightEnabled, Trackable{
 
     @Override
     public void land() {
-        System.out.println(getClass().getSimpleName() + " is lsnding");
+        System.out.println(getClass().getSimpleName() + " is landing");
     }
 
     @Override

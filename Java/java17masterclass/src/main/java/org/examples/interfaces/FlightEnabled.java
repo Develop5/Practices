@@ -10,4 +10,20 @@ public interface FlightEnabled {
     void land();                           // redundant abstract modifier
 
     void fly();                                     // PREFERRED declaration
+
+    // A new method is needed for FlightEnabled ojbect, call transition,
+    // which eases the stages to be setup
+    //FlightStages transition(FlightStages stage);    // Bird, DragonFly, Jet have to change
+    default FlightStages transition(FlightStages stage) {       // Not affecting subclasses
+        //System.out.println("Transition not implemented on " +
+        //        getClass().getName());
+        //return null;
+
+        FlightStages nextStage = stage.getNextStage();
+        System.out.println("Transitioning from " + stage + " to " + nextStage);
+        return nextStage;
+
+    }
+
+
 }
