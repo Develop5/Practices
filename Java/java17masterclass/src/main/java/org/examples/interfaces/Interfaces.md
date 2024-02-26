@@ -45,6 +45,11 @@ This makes the code more extensible in the future.
 (as of JDK8)
 Identified by the modifier _default_, so it's more commonly known as a default method.
 
+Static methods don't need to specify a public modifier, because it is implicit.
+
+When you call a public static method on an interface, you must use the interface name as a qualifier.
+
+
 
 #### _Note_:
 Another enhancement in JDK8 was the support for public static methods in interfaces
