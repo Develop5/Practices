@@ -8,8 +8,9 @@ public class Test {
         printRepeated("*", 20);
 
         inFlight(new Jet());
+        OrbitEarth.log("Testing" + new Satellite());
 
-        printRepeated("+", 20);
+        printRepeated("*", 20);
 
     }
 

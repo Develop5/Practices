@@ -50,6 +50,16 @@ Static methods don't need to specify a public modifier, because it is implicit.
 When you call a public static method on an interface, you must use the interface name as a qualifier.
 
 
+#### as for JDK9
+JDK9 provided us private methods, both static and non-static
+
+A private **static** method can be access by either a public static method, a default method,
+or a private non-static method
+
+A private **non-static** method is used to support default methods and other private methods.
+
+
+
 
 #### _Note_:
 Another enhancement in JDK8 was the support for public static methods in interfaces
