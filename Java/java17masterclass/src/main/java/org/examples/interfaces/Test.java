@@ -8,7 +8,10 @@ public class Test {
         printRepeated("*", 20);
 
         inFlight(new Jet());
-        OrbitEarth.log("Testing" + new Satellite());
+        //OrbitEarth.log("Testing" + new Satellite());
+
+        orbit(new Satellite());
+        // Does not produce any output because nothing is printed out from the Satellite methods.
 
         printRepeated("*", 20);
 
@@ -23,4 +26,13 @@ public class Test {
         }
         flier.land();
     }
+
+    private static void orbit (OrbitEarth flier) {
+        // We use now the interface we have just changed
+        // Then, Satellite is the only interface that implements OrbitEarth
+        flier.takeoff();
+        flier.fly();
+        flier.land();
+    }
+
 }
