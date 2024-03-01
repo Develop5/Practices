@@ -192,6 +192,8 @@ Then reload your .bash_profile file from the commad line with this:
 
 Section 11: Abstraction in Java
 160. Interface vs Abstract Class
+      This minute:  2:33
+
 
 ## All slides ##
 Locally:
