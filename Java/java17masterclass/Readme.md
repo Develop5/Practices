@@ -193,10 +193,16 @@ Then reload your .bash_profile file from the commad line with this:
 Section 11: Abstraction in Java
 160. Interface vs Abstract Class
 
+## All slides ##
+Locally:
+practicando\Notes\java17masterclass_coursenotes\Slides
+
+And in this private repository:
+https://github.com/Develop5/Notes.git
+
 
  
 ### But, have a look at this once you have time ###
-
 
 Coding Exercise 45: Playlist
 Coding Exercise 46: Banking
