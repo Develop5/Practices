@@ -191,7 +191,7 @@ Then reload your .bash_profile file from the commad line with this:
 (Skipped: codingExercisePlayList)
 
 Section 11: Abstraction in Java
-161. Interface Challenge Part 1
+162. Interface Challenge Part 2
 
 
 ## All slides ##
