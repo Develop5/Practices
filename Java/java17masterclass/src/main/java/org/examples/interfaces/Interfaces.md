@@ -49,6 +49,9 @@ Static methods don't need to specify a public modifier, because it is implicit.
 
 When you call a public static method on an interface, you must use the interface name as a qualifier.
 
+Since Java 8 interfaces can now contain default methods, which means methods with implementation.
+The keyword **default** is used mostly for backwards compatibility.
+
 
 #### as for JDK9
 JDK9 provided us private methods, both static and non-static
