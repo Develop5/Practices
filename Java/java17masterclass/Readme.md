@@ -191,8 +191,7 @@ Then reload your .bash_profile file from the commad line with this:
 (Skipped: codingExercisePlayList)
 
 Section 11: Abstraction in Java
-160. Interface vs Abstract Class
-      This minute:  2:33
+161. Interface Challenge Part 1
 
 
 ## All slides ##
