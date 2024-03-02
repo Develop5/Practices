@@ -208,6 +208,7 @@ https://github.com/Develop5/Notes.git
 
 Coding Exercise 45: Playlist
 Coding Exercise 46: Banking
+StartCoding Exercise 47: Abstract Class
 
 [How To Use Cherry-Pick Git Via CMD/Intellij Tool 2023](https://www.bing.com/videos/riverview/relatedvideo?q=intellij%20tutorial%20cherry-pick&mid=20A2049D273AA51223A920A2049D273AA51223A9&ajaxhist=0)
 
