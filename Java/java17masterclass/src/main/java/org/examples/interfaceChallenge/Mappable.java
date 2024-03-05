@@ -9,7 +9,7 @@ enum Color {
 }
 
 enum LineMarker {
-    DASH, DOTTED, SOLID
+    DASHED, DOTTED, SOLID
 }
 
 enum PointMarker {
