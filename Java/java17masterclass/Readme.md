@@ -178,9 +178,6 @@ Then reload your .bash_profile file from the commad line with this:
 
 ##
 #### Voy por aquí ####
-
-
-
 Section 11: Abstraction in Java
 Coding Exercise 48: Interface
 
@@ -196,11 +193,14 @@ https://github.com/Develop5/Notes.git
  
 ### But, have a look at this once you have time ###
 
-Coding Exercise 45: Playlist
-Coding Exercise 46: Banking
-Coding Exercise 47: Abstract Class
-Coding Exercise 45: Playlist
-Coding Exercise 48: Interface
+(Check if all exercises have at least the problem definition in the corresponding folder)
+* Coding Exercise 45: Playlist
+* Coding Exercise 46: Banking
+* Coding Exercise 47: Abstract Class
+* Coding Exercise 45: Playlist
+* Coding Exercise 48: Interface
+
+
 
 [How To Use Cherry-Pick Git Via CMD/Intellij Tool 2023](https://www.bing.com/videos/riverview/relatedvideo?q=intellij%20tutorial%20cherry-pick&mid=20A2049D273AA51223A920A2049D273AA51223A9&ajaxhist=0)
 
