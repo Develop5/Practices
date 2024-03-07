@@ -176,12 +176,6 @@ Then reload your .bash_profile file from the commad line with this:
   ```
 
 
-##
-#### Voy por aquí ####
-Section 11: Abstraction in Java
-Coding Exercise 48: Interface
-
-
 ## All slides ##
 Locally:
 practicando\Notes\java17masterclass_coursenotes\Slides
@@ -209,4 +203,8 @@ https://github.com/Develop5/Notes.git
 [IntelliJ IDEA: Resolving Merge Conflicts in Git](https://www.bing.com/videos/riverview/relatedvideo?q=intellij%20tutorial%20resolving%20conflicts&mid=1CC30B875C22BFBF0B501CC30B875C22BFBF0B50&ajaxhist=0)
 
 
-
+##
+#### Voy por aquí ####
+Section 12: Generics
+164. Generics Part 1
+     Minute 4:47
