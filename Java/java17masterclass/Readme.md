@@ -178,8 +178,8 @@ Then reload your .bash_profile file from the commad line with this:
 
 ##
 #### Voy por aquí ####
-Section 11: Abstraction in Java
-Coding Exercise 48: Interface
+Section 12: Generics
+163. Introduction to Generics
 
 
 ## All slides ##
