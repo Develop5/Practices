@@ -6,7 +6,7 @@ interface Player{}
 // Created here because the record can implement interfaces but can't extend any classes
 
 
-record BaseballPlayer(String name, String position){}
+record BaseballPlayer(String name, String position) implements Player{}
 public class Main {
     public static void main(String[] args) {
 
