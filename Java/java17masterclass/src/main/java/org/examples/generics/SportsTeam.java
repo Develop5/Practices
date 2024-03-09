@@ -6,7 +6,7 @@ import java.util.List;
 public class SportsTeam {
     String teamName;
 
-    private List<BaseballPlayer> teamMembers = new ArrayList<>();
+    private List<Player> teamMembers = new ArrayList<>();
     // This is a best practice: to use interface type for the reference variable
 
     private int totalWins = 0;
@@ -17,7 +17,7 @@ public class SportsTeam {
         this.teamName = teamName;
     }
 
-    public void addTeamMember(BaseballPlayer player) {
+    public void addTeamMember(Player player) {
         if (!teamMembers.contains(player)) {
             teamMembers.add(player);
         }

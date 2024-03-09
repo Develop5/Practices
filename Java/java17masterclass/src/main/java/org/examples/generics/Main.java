@@ -7,6 +7,7 @@ interface Player{}
 
 
 record BaseballPlayer(String name, String position) implements Player{}
+record FootballPlaye(String name, String position) implements Player{}
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +27,12 @@ public class Main {
         phillies.addTeamMember(harper);
         phillies.addTeamMember(marsh);
         phillies.listTeamMembers();
+
+
+        SportsTeam afc = new SportsTeam("Adelaide Crows");
+        var tex = new FootballPlaye("Tex Walker", "Center half forward");
+        afc.addTeamMember(tex);
+        afc.listTeamMembers();
 
         printDashes();
     }
