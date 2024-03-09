@@ -7,7 +7,7 @@ interface Player{}
 
 
 record BaseballPlayer(String name, String position) implements Player{}
-record FootballPlaye(String name, String position) implements Player{}
+record FootballPlayer(String name, String position) implements Player{}
 
 public class Main {
     public static void main(String[] args) {
@@ -22,8 +22,8 @@ public class Main {
         scoreResults(phillies2, 3, astros2, 5);
 
 
-        Team phillies = new Team("Philadelphia Phillies");
-        Team astros = new Team("Houston Astros");
+        Team<BaseballPlayer> phillies = new Team<> ("Philadelphia Phillies");
+        Team<BaseballPlayer> astros = new Team<> ("Houston Astros");
         scoreResults(phillies, 3, astros, 5);
 
         var harper = new BaseballPlayer("B Harper", "Right Fielder");
@@ -33,14 +33,16 @@ public class Main {
         phillies.addTeamMember(marsh);
         phillies.listTeamMembers();
 
-        SportsTeam afc = new SportsTeam("Adelaide Crows");
-        var tex = new FootballPlaye("Tex Walker", "Center half forward");
+        SportsTeam afc1 = new SportsTeam("Adelaide Crows");
+        Team<FootballPlayer> afc = new Team<> ("Adelaide Crows");
+        var tex = new FootballPlayer("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);
         afc.listTeamMembers();
 
         // This is not complete so far. I can introduce a baseball player into a football team:
         var guthrie = new BaseballPlayer("D Guthrie", "Center Field");
         afc.addTeamMember(guthrie);
+        // Now we have a compile error when adding baseball player to a football team. This is good.
         afc.listTeamMembers();
 
 
