@@ -28,11 +28,16 @@ public class Main {
         phillies.addTeamMember(marsh);
         phillies.listTeamMembers();
 
-
         SportsTeam afc = new SportsTeam("Adelaide Crows");
         var tex = new FootballPlaye("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);
         afc.listTeamMembers();
+
+        // This is not complete so far. I can introduce a baseball player into a football team:
+        var guthrie = new BaseballPlayer("D Guthrie", "Center Field");
+        afc.addTeamMember(guthrie);
+        afc.listTeamMembers();
+
 
         printDashes();
     }
