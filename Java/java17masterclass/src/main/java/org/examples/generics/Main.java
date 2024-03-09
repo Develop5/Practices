@@ -31,6 +31,9 @@ public class Main {
 
         phillies.addTeamMember(harper);
         phillies.addTeamMember(marsh);
+        var guthrie = new BaseballPlayer("D Guthrie", "Center Field");
+        phillies.addTeamMember(guthrie);
+        // Now we have a compile error when adding baseball player to a football team. This is good.
         phillies.listTeamMembers();
 
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
@@ -39,10 +42,8 @@ public class Main {
         afc.addTeamMember(tex);
         afc.listTeamMembers();
 
-        // This is not complete so far. I can introduce a baseball player into a football team:
-        var guthrie = new BaseballPlayer("D Guthrie", "Center Field");
-        afc.addTeamMember(guthrie);
-        // Now we have a compile error when adding baseball player to a football team. This is good.
+
+
         afc.listTeamMembers();
 
 
