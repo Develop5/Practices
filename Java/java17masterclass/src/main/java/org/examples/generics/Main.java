@@ -1,7 +1,10 @@
 package org.examples.generics;
 
 import static org.examples.Utilities.printDashes;
-import static org.examples.Utilities.printRepeated;
+
+interface Player{}
+// Created here because the record can implement interfaces but can't extend any classes
+
 
 record BaseballPlayer(String name, String position){}
 public class Main {
