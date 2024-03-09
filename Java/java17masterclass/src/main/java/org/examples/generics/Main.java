@@ -26,6 +26,6 @@ public class Main {
                              BaseballTeam team2, int team2_score) {
         String message = team1.setScore(team1_score, team2_score);
         team2.setScore(team2_score, team1_score);
-        System.out.printf("%s %s %n", team1, message, team2);
+        System.out.printf("%s %s %s %n", team1, message, team2);
     }
 }
