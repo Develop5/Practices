@@ -7,12 +7,17 @@ interface Player{}
 
 
 record BaseballPlayer(String name, String position) implements Player{}
+
 public class Main {
     public static void main(String[] args) {
-
         printDashes();
-        BaseballTeam phillies = new BaseballTeam("Philadelphia Phillies");
-        BaseballTeam astros = new BaseballTeam("Houston Astros");
+
+        BaseballTeam phillies1 = new BaseballTeam("Philadelphia Phillies");
+        BaseballTeam astros1 = new BaseballTeam("Houston Astros");
+        scoreResults(phillies1, 3, astros1, 5);
+
+        SportsTeam phillies = new SportsTeam("Philadelphia Phillies");
+        SportsTeam astros = new SportsTeam("Houston Astros");
         scoreResults(phillies, 3, astros, 5);
 
         var harper = new BaseballPlayer("B Harper", "Right Fielder");
@@ -27,6 +32,13 @@ public class Main {
 
     public static void scoreResults(BaseballTeam team1, int team1_score,
                              BaseballTeam team2, int team2_score) {
+        String message = team1.setScore(team1_score, team2_score);
+        team2.setScore(team2_score, team1_score);
+        System.out.printf("%s %s %s %n", team1, message, team2);
+    }
+
+    public static void scoreResults(SportsTeam team1, int team1_score,
+                                    SportsTeam team2, int team2_score) {
         String message = team1.setScore(team1_score, team2_score);
         team2.setScore(team2_score, team1_score);
         System.out.printf("%s %s %s %n", team1, message, team2);
