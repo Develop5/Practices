@@ -62,6 +62,9 @@ public class Main {
 
     public static void scoreResults(Team team1, int team1_score,
                                     Team team2, int team2_score) {
+        // Intellij is calling our attention on the reference Team above,
+        //because we are making a raw use here
+
         String message = team1.setScore(team1_score, team2_score);
         team2.setScore(team2_score, team1_score);
         System.out.printf("%s %s %s %n", team1, message, team2);
