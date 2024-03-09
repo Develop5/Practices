@@ -33,7 +33,6 @@ public class Main {
         phillies.addTeamMember(marsh);
         var guthrie = new BaseballPlayer("D Guthrie", "Center Field");
         phillies.addTeamMember(guthrie);
-        // Now we have a compile error when adding baseball player to a football team. This is good.
         phillies.listTeamMembers();
 
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
