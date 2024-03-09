@@ -39,14 +39,9 @@ public class Main {
         Team<FootballPlayer> afc = new Team<> ("Adelaide Crows");
         var tex = new FootballPlayer("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);
+        var rory = new FootballPlayer("Rory Laird", "Midfield");
+        afc.addTeamMember(rory);
         afc.listTeamMembers();
-
-
-
-        afc.listTeamMembers();
-
-
-
 
         printDashes();
     }
