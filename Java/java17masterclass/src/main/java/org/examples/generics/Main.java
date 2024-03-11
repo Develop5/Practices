@@ -1,6 +1,7 @@
 package org.examples.generics;
 
 import static org.examples.Utilities.printDashes;
+import static org.examples.Utilities.printRepeated;
 
 interface Player{
     String name();
@@ -23,6 +24,7 @@ public class Main {
         // Info on affiliation can be anything that meets the record Affiliation
         var philly = new Affiliation("city", "Philadelphia, PA", "US");
 
+
         BaseballTeam phillies1 = new BaseballTeam("Philadelphia Phillies");
         BaseballTeam astros1 = new BaseballTeam("Houston Astros");
         scoreResults(phillies1, 3, astros1, 5);
@@ -44,6 +46,7 @@ public class Main {
         phillies.addTeamMember(marsh);
         var guthrie = new BaseballPlayer("D Guthrie", "Center Field");
         phillies.addTeamMember(guthrie);
+
         phillies.listTeamMembers();
 
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
