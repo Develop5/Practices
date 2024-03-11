@@ -34,3 +34,7 @@ doesn't have the same meaning as 'extends'  when it's used in class declaration.
 
 This means that the parameterized type T has to be a Player or a subtype of Player.
 Player could be a class or an interface. The syntax would be the same.
+
+#### Why specify an upper bound? ###
+Permits access to the bounded type's functionality.
+Limits the kind of type parameters. The type used must be "equal to, or a subtype of..."
