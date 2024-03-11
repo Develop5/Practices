@@ -2,12 +2,18 @@ package org.examples.generics;
 
 import static org.examples.Utilities.printDashes;
 
-interface Player{}
+interface Player{
+    String name();
+    // A method without a body is implicitly public and static on an interface.
+}
 // Created here because the record can implement interfaces but can't extend any classes
 
 
 record BaseballPlayer(String name, String position) implements Player{}
 record FootballPlayer(String name, String position) implements Player{}
+// Both methods have an implicit name accessor method already
+//then they have the 'name()' method (declared in the interface above) implemented on them
+record VolleyballPlayer(String name, String position) implements Player{}
 
 public class Main {
     public static void main(String[] args) {
@@ -43,14 +49,17 @@ public class Main {
         afc.addTeamMember(rory);
         afc.listTeamMembers();
 
-        Team<String> adelaide = new Team<>("Adelaide Storm");
-        adelaide.addTeamMember("N Roberts");
+        Team<VolleyballPlayer> adelaide = new Team<>("Adelaide Storm");
+        adelaide.addTeamMember(new VolleyballPlayer("N Roberts", "Setter"));
         adelaide.listTeamMembers();
 
-        var canberra = new Team<String>("Canberra Heat");
-        canberra.addTeamMember("B Black");
+        var canberra = new Team<VolleyballPlayer>("Canberra Heat");
+        canberra.addTeamMember(new VolleyballPlayer("B Black", "Opposite"));
         canberra.listTeamMembers();
         scoreResults(canberra, 0, adelaide, 1);
+
+        //Team<Integer> melbourneVB = new Team<>("Melbourne Vipers");
+
 
 
         printDashes();

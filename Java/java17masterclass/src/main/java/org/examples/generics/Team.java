@@ -3,7 +3,13 @@ package org.examples.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team<T> {
+public class Team<T extends Player> {
+
+    // <T extends Player> is the new topic here
+    // We don't want Team to be used by any class under the sun.
+    // Instead, we want it to work only for things that implement the Player interface
+    // and that's why "extends Player"
+    // This needs some changes, though.
     String teamName;
 
     private List<T> teamMembers = new ArrayList<>();
@@ -26,6 +32,10 @@ public class Team<T> {
     public void listTeamMembers() {
         System.out.println(teamName + " Roster:");
         System.out.println(teamMembers);
+
+        for (T t : teamMembers) {
+            System.out.println(t.name());
+        }
     }
 
     public int ranking(){
