@@ -19,6 +19,10 @@ public class Main {
     public static void main(String[] args) {
         printDashes();
 
+        // I need to create a affiliation for the phillies
+        // Info on affiliation can be anything that meets the record Affiliation
+        var philly = new Affiliation("city", "Philadelphia, PA", "US");
+
         BaseballTeam phillies1 = new BaseballTeam("Philadelphia Phillies");
         BaseballTeam astros1 = new BaseballTeam("Houston Astros");
         scoreResults(phillies1, 3, astros1, 5);
@@ -27,9 +31,10 @@ public class Main {
         SportsTeam astros2 = new SportsTeam("Houston Astros");
         scoreResults(phillies2, 3, astros2, 5);
 
+        // I will include the created affiliation to the phillies team
+        Team<BaseballPlayer, Affiliation> phillies = new Team<>("Philadelphia Phillies", philly);
 
-        Team<BaseballPlayer> phillies = new Team<> ("Philadelphia Phillies");
-        Team<BaseballPlayer> astros = new Team<> ("Houston Astros");
+        Team<BaseballPlayer, Affiliation> astros = new Team<> ("Houston Astros");
         scoreResults(phillies, 3, astros, 5);
 
         var harper = new BaseballPlayer("B Harper", "Right Fielder");
@@ -42,18 +47,18 @@ public class Main {
         phillies.listTeamMembers();
 
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
-        Team<FootballPlayer> afc = new Team<> ("Adelaide Crows");
+        Team<FootballPlayer, Affiliation> afc = new Team<> ("Adelaide Crows");
         var tex = new FootballPlayer("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);
         var rory = new FootballPlayer("Rory Laird", "Midfield");
         afc.addTeamMember(rory);
         afc.listTeamMembers();
 
-        Team<VolleyballPlayer> adelaide = new Team<>("Adelaide Storm");
+        Team<VolleyballPlayer, Affiliation> adelaide = new Team<>("Adelaide Storm");
         adelaide.addTeamMember(new VolleyballPlayer("N Roberts", "Setter"));
         adelaide.listTeamMembers();
 
-        var canberra = new Team<VolleyballPlayer>("Canberra Heat");
+        var canberra = new Team<VolleyballPlayer, Affiliation>("Canberra Heat");
         canberra.addTeamMember(new VolleyballPlayer("B Black", "Opposite"));
         canberra.listTeamMembers();
         scoreResults(canberra, 0, adelaide, 1);
