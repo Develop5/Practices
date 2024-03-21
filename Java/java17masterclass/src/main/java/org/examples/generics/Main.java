@@ -50,7 +50,10 @@ public class Main {
         phillies.listTeamMembers();
 
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
-        Team<FootballPlayer, Affiliation> afc = new Team<> ("Adelaide Crows");
+
+        // Let's change Affiliation by String
+        Team<FootballPlayer, String> afc = new Team<> ("Adelaide Crows",
+                "City of Adelaide, South Australia, AU");
         var tex = new FootballPlayer("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);
         var rory = new FootballPlayer("Rory Laird", "Midfield");
