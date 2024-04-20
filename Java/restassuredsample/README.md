@@ -11,6 +11,14 @@ From this folder:
 ~/Documents/Lenovo_D/Lourdes/practicando/Practices/Java/restassuredsample
 ```
 
+### Notes ###
+
+[Ignoring SSL](https://stackoverflow.com/questions/36352033/how-to-make-https-get-call-with-certificate-in-rest-assured-java)
+  Basicallly, this disables the SSL checking
+
+  
+[Generating SSL keys](https://hatchjs.com/rest-assured-ssl-config-example/)
+
 ### Pending tasks ###
 - [x] Part 3 Reports with log4j2
 - [ ] Start with playlist for Rest Assured
