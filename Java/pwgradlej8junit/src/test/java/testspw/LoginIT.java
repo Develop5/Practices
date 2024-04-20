@@ -1,3 +1,5 @@
+package testspw;
+
 import base.AbstractPlaywrightIT;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
