@@ -11,6 +11,26 @@ From this folder:
 ~/Documents/Lenovo_D/Lourdes/practicando/Practices/Java/restassuredsample
 ```
 
+### Notes ###
+
+[Ignoring SSL](https://stackoverflow.com/questions/36352033/how-to-make-https-get-call-with-certificate-in-rest-assured-java)
+  &nbsp;
+  Basicallly, this disables the SSL checking
+###
+  
+[Generating SSL keys](https://hatchjs.com/rest-assured-ssl-config-example/)
+###
+
+[POISED with examples](https://medium.com/@julianomoreno/step-by-step-guide-to-boost-your-tests-a-detailed-introduction-to-the-poseid-testing-heuristic-c736f0c9579c)
+###
+
+[Testing API with Portswigger](https://portswigger.net/web-security/api-testing)
+###
+
+[OWASP API Security Project](https://owasp.org/www-project-api-security/)
+###
+
+
 ### Pending tasks ###
 - [x] Part 3 Reports with log4j2
 - [ ] Start with playlist for Rest Assured
