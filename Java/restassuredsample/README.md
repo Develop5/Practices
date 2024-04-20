@@ -15,9 +15,13 @@ From this folder:
 
 [Ignoring SSL](https://stackoverflow.com/questions/36352033/how-to-make-https-get-call-with-certificate-in-rest-assured-java)
   Basicallly, this disables the SSL checking
-
+##
   
 [Generating SSL keys](https://hatchjs.com/rest-assured-ssl-config-example/)
+##
+
+[POISED with examples](https://medium.com/@julianomoreno/step-by-step-guide-to-boost-your-tests-a-detailed-introduction-to-the-poseid-testing-heuristic-c736f0c9579c)
+##
 
 ### Pending tasks ###
 - [x] Part 3 Reports with log4j2
