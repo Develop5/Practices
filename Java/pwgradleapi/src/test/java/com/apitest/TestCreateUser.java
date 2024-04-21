@@ -39,7 +39,7 @@ public class TestCreateUser {
 
         Map<String, Object> data = new HashMap<>();
         String randomGeneratedName = new SimpleDateFormat("ddMMyyyy_HHmmss").format(Calendar.getInstance().getTime());
-        data.put("name", randomGeneratedName);
+        data.put("name", getClass().getSimpleName());
         data.put("email", randomGeneratedName + "@terra.es");
         data.put("gender", "female");
         data.put("status", "active");
@@ -83,8 +83,6 @@ public class TestCreateUser {
         Assertions.assertEquals(getResponse.status(), 200);
         Assertions.assertTrue(getResponse.ok());
         Assertions.assertTrue(getResponse.text().contains(randomGeneratedName));
-
-
 
     }
 
