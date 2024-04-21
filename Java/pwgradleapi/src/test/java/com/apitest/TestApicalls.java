@@ -38,6 +38,10 @@ public class TestApicalls {
         Map<String, String> headersmap = apiResponse.headers();
         System.out.println("Headers :");
         headersmap.forEach((k, v) -> System.out.printf("%40s : %-50s %n", k, v));
+        System.out.printf("%-30s %-50s %n", "total number of headers:", headersmap.size() );
+
+        Assertions.assertEquals(headersmap.get("server"), "cloudflare");
+        Assertions.assertEquals(headersmap.get("content-type"), "application/json; charset=utf-8");
 
 
 
