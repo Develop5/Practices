@@ -65,9 +65,7 @@ public class TestCreateUser {
         // Validating. Search the same user by id
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode postJsonrsponse = objectMapper.readTree(postResponse.body());
-
         String id = postJsonrsponse.get("id").asText();
-
 
         APIResponse getResponse = requestContext.get("https://gorest.co.in/public/v2/users/" + id,
                 RequestOptions.create()
@@ -83,6 +81,9 @@ public class TestCreateUser {
         Assertions.assertEquals(getResponse.status(), 200);
         Assertions.assertTrue(getResponse.ok());
         Assertions.assertTrue(getResponse.text().contains(randomGeneratedName));
+
+        JsonNode getJsonrsponse = new ObjectMapper().readTree(getResponse.body());
+        System.out.println(getJsonrsponse.toPrettyString());
 
     }
 
