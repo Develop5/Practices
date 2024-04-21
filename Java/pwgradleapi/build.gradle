@@ -10,8 +10,11 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'com.microsoft.playwright', name: 'playwright', version: '1.43.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.16.2'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
 }
 
 test {
