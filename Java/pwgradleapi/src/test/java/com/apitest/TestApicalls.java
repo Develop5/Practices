@@ -34,9 +34,10 @@ public class TestApicalls {
                         .setQueryParam("id", 12)
         );
 
-        System.out.printf("%-20s %-50s %n", "api url", apiResponse.url() );
-        System.out.printf("%-20s %-50s %n", "response status", apiResponse.status() );
-        System.out.printf("%-20s %-50s %n", "response text", apiResponse.text() );
+        System.out.printf("%-30s %-50s %n", "api url:", apiResponse.url() );
+        System.out.printf("%-30s %-50s %n", "response status:", apiResponse.status() );
+        System.out.printf("%-30s %-50s %n", "response status text:", apiResponse.statusText() );
+        System.out.printf("%-30s %-50s %n", "response text:", apiResponse.text() );
 
         Assertions.assertEquals(apiResponse.status(), 200);
         Assertions.assertTrue(apiResponse.ok());
@@ -47,17 +48,18 @@ public class TestApicalls {
     public void getAllPosts() {
         APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts");
 
-        System.out.printf("%-20s %-50s %n", "api url", apiResponse.url() );
-        System.out.printf("%-20s %-50s %n", "response status", apiResponse.status() );
+        System.out.printf("%-30s %-50s %n", "api url:", apiResponse.url() );
+        System.out.printf("%-30s %-50s %n", "response status:", apiResponse.status() );
+        System.out.printf("%-30s %-50s %n", "response status text:", apiResponse.statusText() );
 
         // Temporary commented, to avoid long responses
-        //System.out.printf("%-20s %-50s %n", "response text", apiResponse.text() );
+        //System.out.printf("%-30s %-50s %n", "response text:", apiResponse.text() );
 
         Assertions.assertEquals(apiResponse.status(), 200);
         Assertions.assertTrue(apiResponse.ok());
 
         Map<String, String> headersMap = apiResponse.headers();
-        System.out.printf("%-20s %-50s %n", "api response headers", headersMap );
+        System.out.printf("%-30s %-50s %n", "api response headers:", headersMap );
 
         System.out.println(headersMap);
 
@@ -65,6 +67,7 @@ public class TestApicalls {
                 "application/json; charset=utf-8");
         Assertions.assertEquals(headersMap.get("transfer-encoding"),
                 "chunked");
+
     }
 
 
@@ -72,9 +75,10 @@ public class TestApicalls {
     public void getUserWithId1(){
         APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts/1");
 
-        System.out.printf("%-20s %-50s %n", "api url", apiResponse.url() );
-        System.out.printf("%-20s %-50s %n", "response status", apiResponse.status() );
-        System.out.printf("%-20s %-50s %n", "response text", apiResponse.text() );
+        System.out.printf("%-30s %-50s %n", "api url:", apiResponse.url() );
+        System.out.printf("%-30s %-50s %n", "response status:", apiResponse.status() );
+        System.out.printf("%-30s %-50s %n", "response status text:", apiResponse.statusText() );
+        System.out.printf("%-30s %-50s %n", "response text:", apiResponse.text() );
 
         Assertions.assertEquals(apiResponse.status(), 200);
         Assertions.assertTrue(apiResponse.ok());
