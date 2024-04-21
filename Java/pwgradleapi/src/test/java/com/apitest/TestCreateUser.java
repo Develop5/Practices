@@ -10,8 +10,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+
 
 public class TestCreateUser {
 
@@ -19,10 +22,6 @@ public class TestCreateUser {
     static APIRequest request;
     static APIRequestContext requestContext;
 
-    public String getRandomStringNumvwe1To50(){
-        Integer random = (int)(Math.random() * 50 + 1);
-        return random.toString();
-    }
 
     @BeforeAll
     public static void setup(){
@@ -35,15 +34,14 @@ public class TestCreateUser {
     @Test
     public void createUser(){
 
-        Map<String, Object> data = new HashMap<String, Object>();
-        String randomName = getRandomStringNumvwe1To50();
+        Map<String, Object> data = new HashMap<>();
+        String randomName = new SimpleDateFormat("ddMMyyyy_HHmmss").format(Calendar.getInstance().getTime());
         data.put("name", randomName);
         data.put("email", randomName + "@terra.es");
         data.put("gender", "female");
         data.put("status", "active");
 
         System.out.printf("%-30s %-50s %n", "generated name:", randomName );
-
 
         APIResponse apiResponse = requestContext.post("https://gorest.co.in/public/v2/users",
                 RequestOptions.create()
@@ -55,6 +53,7 @@ public class TestCreateUser {
         System.out.printf("%-30s %-50s %n", "api url:", apiResponse.url() );
         System.out.printf("%-30s %-50s %n", "response status:", apiResponse.status() );
         System.out.printf("%-30s %-50s %n", "response status text:", apiResponse.statusText() );
+        System.out.printf("%-30s %-50s %n", "response text:", apiResponse.text() );
 
         Assertions.assertEquals(201, apiResponse.status());
         Assertions.assertTrue(apiResponse.ok());
