@@ -1,5 +1,7 @@
 package com.apitest;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.APIResponse;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -32,32 +35,56 @@ public class TestCreateUser {
 
 
     @Test
-    public void createUser(){
+    public void createUser() throws IOException {
 
         Map<String, Object> data = new HashMap<>();
-        String randomName = new SimpleDateFormat("ddMMyyyy_HHmmss").format(Calendar.getInstance().getTime());
-        data.put("name", randomName);
-        data.put("email", randomName + "@terra.es");
+        String randomGeneratedName = new SimpleDateFormat("ddMMyyyy_HHmmss").format(Calendar.getInstance().getTime());
+        data.put("name", randomGeneratedName);
+        data.put("email", randomGeneratedName + "@terra.es");
         data.put("gender", "female");
         data.put("status", "active");
 
-        System.out.printf("%-30s %-50s %n", "generated name:", randomName );
+        System.out.printf("%-30s %-50s %n", "generated name:", randomGeneratedName );
 
-        APIResponse apiResponse = requestContext.post("https://gorest.co.in/public/v2/users",
+        APIResponse postResponse = requestContext.post("https://gorest.co.in/public/v2/users",
                 RequestOptions.create()
                         .setHeader("Content-type", "application/json")
                         .setHeader("Authorization", "Bearer 935b47ee8d353a86849cf99104a8971757366654c3f8419b71f0afe1ab682564")
                         .setData(data)
         );
 
-        System.out.printf("%-30s %-50s %n", "api url:", apiResponse.url() );
-        System.out.printf("%-30s %-50s %n", "response status:", apiResponse.status() );
-        System.out.printf("%-30s %-50s %n", "response status text:", apiResponse.statusText() );
-        System.out.printf("%-30s %-50s %n", "response text:", apiResponse.text() );
+        System.out.printf("%-30s %-50s %n", "api url:", postResponse.url() );
+        System.out.printf("%-30s %-50s %n", "response status:", postResponse.status() );
+        System.out.printf("%-30s %-50s %n", "response status text:", postResponse.statusText() );
+        System.out.printf("%-30s %-50s %n", "response text:", postResponse.text() );
 
-        Assertions.assertEquals(201, apiResponse.status());
-        Assertions.assertTrue(apiResponse.ok());
-        Assertions.assertEquals("Created", apiResponse.statusText());
+        Assertions.assertEquals(201, postResponse.status());
+        Assertions.assertTrue(postResponse.ok());
+        Assertions.assertEquals("Created", postResponse.statusText());
+
+        // Validating. Search the same user by id
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode postJsonrsponse = objectMapper.readTree(postResponse.body());
+
+        String id = postJsonrsponse.get("id").asText();
+
+
+        APIResponse getResponse = requestContext.get("https://gorest.co.in/public/v2/users/" + id,
+                RequestOptions.create()
+                        .setHeader("Authorization", "Bearer 935b47ee8d353a86849cf99104a8971757366654c3f8419b71f0afe1ab682564")
+        );
+
+        System.out.println("\n---------  Validating POST action with a GET  -----------");
+        System.out.printf("%-30s %-50s %n", "api url:", getResponse.url() );
+        System.out.printf("%-30s %-50s %n", "response status:", getResponse.status() );
+        System.out.printf("%-30s %-50s %n", "response status text:", getResponse.statusText() );
+        System.out.printf("%-30s %-50s %n", "response text:", getResponse.text() );
+
+        Assertions.assertEquals(getResponse.status(), 200);
+        Assertions.assertTrue(getResponse.ok());
+        Assertions.assertTrue(getResponse.text().contains(randomGeneratedName));
+
+
 
     }
 
