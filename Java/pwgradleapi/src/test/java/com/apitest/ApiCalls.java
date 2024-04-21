@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.*;
 import java.util.Map;
-import java.util.Properties;
 
 
 public class ApiCalls {
@@ -25,9 +23,14 @@ public class ApiCalls {
         requestContext = request.newContext();
     }
 
+
     @Test
     public void getAllPosts() {
         APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts");
+
+        System.out.println("\n----  api url  ---------");
+        System.out.println(apiResponse.url());
+
         System.out.println("Response status: " + apiResponse.status());
         Assertions.assertEquals(apiResponse.status(), 200);
         Assertions.assertTrue(apiResponse.ok());
@@ -43,16 +46,31 @@ public class ApiCalls {
         System.out.println("\n----  response text  ---------");
         System.out.println(apiResponse.text());
 
-        System.out.println("\n----  api url  ---------");
-        System.out.println(apiResponse.url());
-
         System.out.println("\n----  api response headers  ---------");
         Map<String, String> headersMap = apiResponse.headers();
         System.out.println(headersMap);
+
         Assertions.assertEquals(headersMap.get("content-type"),
                 "application/json; charset=utf-8");
         Assertions.assertEquals(headersMap.get("transfer-encoding"),
                 "chunked");
+    }
+
+
+    @Test
+    public void getUserWithId1(){
+        APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts/1");
+
+        System.out.println("\n----  api url  ---------");
+        System.out.println(apiResponse.url());
+
+        System.out.println("Response status: " + apiResponse.status());
+        Assertions.assertEquals(apiResponse.status(), 200);
+        Assertions.assertTrue(apiResponse.ok());
+
+        System.out.println("\n----  response text  ---------");
+        System.out.println(apiResponse.text());
 
     }
+
 }
