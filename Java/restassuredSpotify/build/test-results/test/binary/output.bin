@@ -1,0 +1,29 @@
+t2024-04-01 12:08:01,122 [Test worker] INFO  api.test.UserTests - *****  Getting info about the current user  **** 
+
+:+++++++++ Lourdes Command: https://api.spotify.com/v1/me
+è+++++++++ Lourdes Header: BQAFJhQHuePGc2rvy_LLDM2lUTENfcuVDafqwuy3uO0hpNSfVDMXw8Kqijm2GlHBpQ28oxGTLiDu4ZSCYJEqnokeY1xUSurqy82WSVY8hEYuXxmv62A
+
+HTTP/1.1 401 Unauthorized
+/content-type: application/json; charset=utf-8
+#cache-control: private, max-age=0
+!x-robots-tag: noindex, nofollow
+ access-control-allow-origin: *
+∂access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+Faccess-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+(access-control-allow-credentials: true
+ access-control-max-age: 604800
+content-encoding: gzip
+-strict-transport-security: max-age=31536000
+!x-content-type-options: nosniff
+%date: Mon, 01 Apr 2024 10:08:05 GMT
+server: envoy
+#Via: HTTP/2 edgeproxy, 1.1 google
+9Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 401,
+#        "message": "Unauthorized."
+    }
+}
