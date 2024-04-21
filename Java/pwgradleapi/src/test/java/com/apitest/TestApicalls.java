@@ -26,6 +26,24 @@ public class TestApicalls {
     }
 
 
+
+    @Test
+    public void getHeadersFromGetPosts(){
+        APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts");
+
+        System.out.printf("%-30s %-50s %n", "api url:", apiResponse.url() );
+        System.out.printf("%-30s %-50s %n", "response status:", apiResponse.status() );
+        System.out.printf("%-30s %-50s %n", "response status text:", apiResponse.statusText() );
+
+        Map<String, String> headersmap = apiResponse.headers();
+        System.out.println("Headers :");
+        headersmap.forEach((k, v) -> System.out.printf("%40s : %-50s %n", k, v));
+
+
+
+    }
+
+
     @Test
     public void getSpecificPostByParameter() {
         APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/comments",
