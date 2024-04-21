@@ -43,8 +43,6 @@ public class TestApicalls {
         Assertions.assertEquals(headersmap.get("server"), "cloudflare");
         Assertions.assertEquals(headersmap.get("content-type"), "application/json; charset=utf-8");
 
-
-
     }
 
 
