@@ -4,6 +4,8 @@ import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.options.RequestOptions;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -25,29 +27,38 @@ public class TestApicalls {
 
 
     @Test
-    public void getAllPosts() {
-        APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts");
+    public void getSpecificPostByParameter() {
+        APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/comments",
+                RequestOptions.create()
+                        .setQueryParam("postId", 3)
+                        .setQueryParam("id", 12)
+        );
 
-        System.out.println("\n----  api url  ---------");
-        System.out.println(apiResponse.url());
+        System.out.printf("%-20s %-50s %n", "api url", apiResponse.url() );
+        System.out.printf("%-20s %-50s %n", "response status", apiResponse.status() );
+        System.out.printf("%-20s %-50s %n", "response text", apiResponse.text() );
 
-        System.out.println("Response status: " + apiResponse.status());
         Assertions.assertEquals(apiResponse.status(), 200);
         Assertions.assertTrue(apiResponse.ok());
 
-        /*
-        ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonresponse = objectMapper.readTree(apiResponse.body());
-        System.out.println(" ----------- api response  ---------");
-        System.out.println(jsonresponse.toPrettyString());
-         */
+    }
 
-        // I prefer this format
-        System.out.println("\n----  response text  ---------");
-        System.out.println(apiResponse.text());
+    @Test
+    public void getAllPosts() {
+        APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts");
 
-        System.out.println("\n----  api response headers  ---------");
+        System.out.printf("%-20s %-50s %n", "api url", apiResponse.url() );
+        System.out.printf("%-20s %-50s %n", "response status", apiResponse.status() );
+
+        // Temporary commented, to avoid long responses
+        //System.out.printf("%-20s %-50s %n", "response text", apiResponse.text() );
+
+        Assertions.assertEquals(apiResponse.status(), 200);
+        Assertions.assertTrue(apiResponse.ok());
+
         Map<String, String> headersMap = apiResponse.headers();
+        System.out.printf("%-20s %-50s %n", "api response headers", headersMap );
+
         System.out.println(headersMap);
 
         Assertions.assertEquals(headersMap.get("content-type"),
@@ -61,16 +72,19 @@ public class TestApicalls {
     public void getUserWithId1(){
         APIResponse apiResponse = requestContext.get("https://jsonplaceholder.typicode.com/posts/1");
 
-        System.out.println("\n----  api url  ---------");
-        System.out.println(apiResponse.url());
+        System.out.printf("%-20s %-50s %n", "api url", apiResponse.url() );
+        System.out.printf("%-20s %-50s %n", "response status", apiResponse.status() );
+        System.out.printf("%-20s %-50s %n", "response text", apiResponse.text() );
 
-        System.out.println("Response status: " + apiResponse.status());
         Assertions.assertEquals(apiResponse.status(), 200);
         Assertions.assertTrue(apiResponse.ok());
 
-        System.out.println("\n----  response text  ---------");
-        System.out.println(apiResponse.text());
+    }
 
+    @AfterAll
+    public static void tearDown() {
+        requestContext.dispose();
+        playwright.close();
     }
 
 }
