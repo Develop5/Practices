@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Map;
 
 
-public class ApicallsTest {
+public class TestApicalls {
     static Playwright playwright;
     static APIRequest request;
     static APIRequestContext requestContext;
