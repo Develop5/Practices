@@ -12,21 +12,21 @@ public class HomePageTest extends BaseTest {
 	@Test
 	public void homePageTitleTest() {
 		String actualTitle = homePage.getHomePageTitle();
-		assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
+		assertEquals(AppConstants.HOME_PAGE_TITLE, actualTitle);
 	}
 
 	@Test
 	public void homePageURLTest() {
 		String actualURL = homePage.getHomePageURL();
-		assertEquals(actualURL, prop.getProperty("url"));
+		assertEquals(prop.getProperty("url"), actualURL);
 	}
 
 	@TestFactory
 	public Object[][] getProductData() {
 		return new Object[][] {
-				{ "Macbook" }, 
-				{ "iMac" }, 
-				{ "Samsung" }
+				{ "Mujer" },
+				{ "Hombre" },
+				{ "Niño" }
 		};
 	}
 

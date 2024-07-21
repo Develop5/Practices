@@ -22,12 +22,7 @@ public class BaseTest {
 	@BeforeAll
 	public static void setup() {
 		pf = new PlaywrightFactory();
-
-		prop = pf.init_prop();
-
-		//if (browserName != null) {
-		//	prop.setProperty("browser", browserName);
-		//}
+		prop = pf.read_properties();
 
 		page = pf.initBrowser(prop);
 		homePage = new HomePage(page);
