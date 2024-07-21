@@ -9,6 +9,7 @@ import org.example.qa.zalando.pages.LoginPage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
+
 public class BaseTest {
 
 	static PlaywrightFactory pf;
@@ -21,6 +22,7 @@ public class BaseTest {
 
 	@BeforeAll
 	public static void setup() {
+
 		pf = new PlaywrightFactory();
 		prop = pf.read_properties();
 

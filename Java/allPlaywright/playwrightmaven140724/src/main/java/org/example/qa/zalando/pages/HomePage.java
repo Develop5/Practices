@@ -1,6 +1,9 @@
 package org.example.qa.zalando.pages;
 
 import com.microsoft.playwright.Page;
+
+import static org.example.qa.zalando.factory.PlaywrightFactory.logger;
+
 public class HomePage {
 
     Page page;
@@ -24,7 +27,7 @@ public class HomePage {
 
     public String getHomePageURL(){
         String url =  page.url();
-        System.out.println("page url : " + url);
+        logger.trace("page url : " + url);
         return page.url();
     }
 

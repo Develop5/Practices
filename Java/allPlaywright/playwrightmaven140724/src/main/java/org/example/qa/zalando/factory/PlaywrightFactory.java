@@ -14,8 +14,12 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class PlaywrightFactory {
+    public static final Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
+
     Playwright playwright;
     Browser browser;
     BrowserContext browserContext;
@@ -46,7 +50,7 @@ public class PlaywrightFactory {
     public Page initBrowser(Properties prop) {
 
         String browserName = prop.getProperty("browser").trim();
-        System.out.println("browser name is : " + browserName);
+        logger.trace("browser name is : " + browserName);
 
         tlPlaywright.set(Playwright.create());
 
@@ -70,7 +74,7 @@ public class PlaywrightFactory {
                 break;
 
             default:
-                System.out.println("please pass the right browser name......");
+                logger.trace("please pass the right browser name......");
                 break;
         }
 
@@ -97,8 +101,7 @@ public class PlaywrightFactory {
             System.out.println("Unable to open input file");
             e.printStackTrace();
         }
-        System.out.println("--------- LBP -> Properties : " + prop.toString());
-
+        logger.trace("Properties : " + prop);
         return prop;
 
     }
