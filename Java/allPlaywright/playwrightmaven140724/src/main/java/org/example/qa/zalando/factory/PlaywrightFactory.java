@@ -78,8 +78,14 @@ public class PlaywrightFactory {
                 break;
         }
 
+        // -----> LBP Mirar aquí si es donde hay que limpiar las cookies
         tlBrowserContext.set(getBrowser().newContext());
+
+        tlBrowserContext.get().clearCookies();      // Aquí quizás
+
         tlPage.set(getBrowserContext().newPage());
+
+
         getPage().navigate(prop.getProperty("url").trim());
         return getPage();
 
