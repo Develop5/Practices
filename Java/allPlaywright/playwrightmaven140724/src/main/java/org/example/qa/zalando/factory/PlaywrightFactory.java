@@ -84,7 +84,7 @@ public class PlaywrightFactory {
     /**
      * this method is used to initialize the properties from config file
      */
-    public Properties init_prop() {
+    public Properties read_properties() {
 
         try {
             FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
