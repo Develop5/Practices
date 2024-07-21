@@ -50,7 +50,7 @@ public class PlaywrightFactory {
     public Page initBrowser(Properties prop) {
 
         String browserName = prop.getProperty("browser").trim();
-        logger.trace("browser name is : " + browserName);
+        logger.info("browser name is : " + browserName);
 
         tlPlaywright.set(Playwright.create());
 
@@ -74,7 +74,7 @@ public class PlaywrightFactory {
                 break;
 
             default:
-                logger.trace("please pass the right browser name......");
+                logger.error("please pass the right browser name......");
                 break;
         }
 
@@ -107,54 +107,53 @@ public class PlaywrightFactory {
             System.out.println("Unable to open input file");
             e.printStackTrace();
         }
-        logger.trace("Properties : " + prop);
+        logger.info("Properties : " + prop);
         return prop;
 
     }
 
-    /*
-    The following can also be tried
 
-     Using Properties Class
-    You can directly load properties using the Properties class in Java:
-
-Java
-
-import java.io.InputStream;
-import java.util.Properties;
-
-public class PropertiesLoader {
-    public Properties loadProperties(String fileName) {
-        Properties properties = new Properties();
-        try (InputStream input = getClass().getClassLoader().getResourceAsStream(fileName)) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find " + fileName);
-                return null;
-            }
-            properties.load(input);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return properties;
-    }
-}
-     */
-
-
-    /**
-     * take screenshot
-     *
-     */
 
     public static String takeScreenshot() {
-        String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
+        String path = System
+                .getProperty("user.dir")
+                + "/screenshot/"
+                + System.currentTimeMillis()
+                + ".png";
         //getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
-
         byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
-
         return base64Path;
 
     }
+
+
+    public static String takeScreenshot(String prefix) {
+        String path = System
+                .getProperty("user.dir")
+                + "/screenshot/"
+                + prefix
+                + System.currentTimeMillis()
+                + ".png";
+        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+        String base64Path = Base64.getEncoder().encodeToString(buffer);
+        return base64Path;
+
+    }
+
+
+    public static String takeScreenshotLocator() {
+        String path = System
+                .getProperty("user.dir")
+                + "/screenshot/"
+                + "locator"
+                + System.currentTimeMillis()
+                + ".png";
+        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(false));
+        String base64Path = Base64.getEncoder().encodeToString(buffer);
+        return base64Path;
+
+    }
+
 
 }

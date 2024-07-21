@@ -4,8 +4,7 @@ import org.example.qa.zalando.base.BaseTest;
 import org.example.qa.zalando.constants.AppConstants;
 import org.junit.jupiter.api.*;
 
-import static org.example.qa.zalando.factory.PlaywrightFactory.logger;
-import static org.example.qa.zalando.factory.PlaywrightFactory.takeScreenshot;
+import static org.example.qa.zalando.factory.PlaywrightFactory.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -22,7 +21,6 @@ public class HomePageTest extends BaseTest {
 		logger.warn("homePageURLTest : " + actualURL);
 	}
 
-
 	@Test
 	@Order(2)
 	public void homePageTitleTest() {
@@ -33,20 +31,30 @@ public class HomePageTest extends BaseTest {
 	}
 
 	@Test
-	public void navigateToMujerGroup() {
-		logger.info("Navigating to Mujer page.");
+	public void navigateToMujerGroupTest() {
+		logger.info("navigateToMujerGroupTest");
 		homePage.clickGroup("Mujer");
 	}
 	@Test
-	public void navigateToHombreGroup() {
-		logger.info("Navigating to Hombre page.");
+	public void navigateToHombreGroupTest() {
+		logger.info("navigateToHombreGroupTest");
 		homePage.clickGroup("Hombre");
 	}
 	@Test
-	public void navigateToNinnosGroup() {
-		logger.info("Navigating to Ninnos page.");
+	public void navigateToNinnosGroupTest() {
+		logger.info("navigateToNinnosGroupTest");
 		homePage.clickGroup("Ninnos");
 	}
+
+	@Test
+	public void hightlightHomeTitleTest(){
+		homePage.hightlightTitle();
+		takeScreenshot("highlighting");
+		takeScreenshotLocator();
+		logger.info("hightlightHomeTitleTest and 2 screenshots");
+
+	}
+
 
 	/*
 	@TestFactory

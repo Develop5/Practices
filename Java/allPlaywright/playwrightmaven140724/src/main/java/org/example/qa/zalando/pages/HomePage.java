@@ -9,9 +9,9 @@ public class HomePage {
     Page page;
 
     // 1. String locators - OR
-    private String Hombre_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Hombre']";
 
-    //private String Mujer_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Mujer']";
+    private String title = "//a[@class='dangerousLogoWidthBelowMobile']//*[name()='svg']";
+    private String Hombre_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Hombre']";
 
     private String Mujer_Button = "//span[contains(text(),'Mujer')]";
 
@@ -49,8 +49,17 @@ public class HomePage {
 
     public String getHomePageURL(){
         String url =  page.url();
-        logger.trace("page url : " + url);
         return page.url();
     }
+
+    public void hightlightTitle() {
+        page.locator(title).highlight();
+    }
+
+    public void pauseHomePage(){
+        page.pause();
+    }
+
+
 
 }
