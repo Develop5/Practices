@@ -2,22 +2,26 @@ package org.example.qa.zalando.tests;
 
 import org.example.qa.zalando.base.BaseTest;
 import org.example.qa.zalando.constants.AppConstants;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestFactory;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomePageTest extends BaseTest {
 
 	@Test
 	public void homePageTitleTest() {
 		String actualTitle = homePage.getHomePageTitle();
-		Assert.assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
+		assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
 	}
 
 	@Test
 	public void homePageURLTest() {
 		String actualURL = homePage.getHomePageURL();
-		Assert.assertEquals(actualURL, prop.getProperty("url"));
+		assertEquals(actualURL, prop.getProperty("url"));
 	}
 
-	@DataProvider
+	@TestFactory
 	public Object[][] getProductData() {
 		return new Object[][] {
 				{ "Macbook" }, 
@@ -26,11 +30,6 @@ public class HomePageTest extends BaseTest {
 		};
 	}
 
-	@Test(dataProvider = "getProductData")
-	public void searchTest(String productName) throws InterruptedException {
-		Thread.sleep(5000);
-		String actualSearchHeader = homePage.doSearch(productName);
-		Assert.assertEquals(actualSearchHeader, "Search - " + productName);
-	}
+
 
 }

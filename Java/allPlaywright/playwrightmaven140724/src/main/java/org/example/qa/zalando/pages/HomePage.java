@@ -22,11 +22,10 @@ public class HomePage {
         return page.title();
     }
 
-    public String getHomePageUrl(){
+    public String getHomePageURL(){
+        String url =  page.url();
+        System.out.println("page url : " + url);
         return page.url();
     }
-
-
-
 
 }

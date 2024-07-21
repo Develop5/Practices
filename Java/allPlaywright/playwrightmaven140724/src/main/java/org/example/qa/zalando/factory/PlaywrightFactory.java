@@ -16,7 +16,6 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
 public class PlaywrightFactory {
-
     Playwright playwright;
     Browser browser;
     BrowserContext browserContext;
@@ -88,18 +87,50 @@ public class PlaywrightFactory {
     public Properties init_prop() {
 
         try {
-            FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
+            FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
             prop = new Properties();
-            prop.load(ip);
+            prop.load(initialProperties);
         } catch (FileNotFoundException e) {
+            System.out.println("Sorry, unable to find file");
             e.printStackTrace();
         } catch (IOException e) {
+            System.out.println("Unable to open input file");
             e.printStackTrace();
         }
+        System.out.println("--------- LBP -> Properties : " + prop.toString());
 
         return prop;
 
     }
+
+    /*
+    The following can also be tried
+
+     Using Properties Class
+    You can directly load properties using the Properties class in Java:
+
+Java
+
+import java.io.InputStream;
+import java.util.Properties;
+
+public class PropertiesLoader {
+    public Properties loadProperties(String fileName) {
+        Properties properties = new Properties();
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream(fileName)) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find " + fileName);
+                return null;
+            }
+            properties.load(input);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return properties;
+    }
+}
+     */
+
 
     /**
      * take screenshot
@@ -116,7 +147,5 @@ public class PlaywrightFactory {
         return base64Path;
 
     }
-
-
 
 }
