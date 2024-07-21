@@ -56,6 +56,8 @@ public class ExtentReportListener {
         return extentReports;
     }
 
+
+    /*
     @Override
     public synchronized void onStart(ITestContext context) {
         System.out.println("Test Suite started!");
@@ -82,10 +84,10 @@ public class ExtentReportListener {
                 result.getMethod().getDescription());
 
         extentTest.assignCategory(result.getTestContext().getSuite().getName());
-        /*
-         * methodName = StringUtils.capitalize(StringUtils.join(StringUtils.
-         * splitByCharacterTypeCamelCase(methodName), StringUtils.SPACE));
-         */
+
+         //methodName = StringUtils.capitalize(StringUtils.join(StringUtils.
+         //splitByCharacterTypeCamelCase(methodName), StringUtils.SPACE));
+
         extentTest.assignCategory(className);
         test.set(extentTest);
         test.get().getModel().setStartTime(getTime(result.getStartMillis()));
@@ -113,6 +115,8 @@ public class ExtentReportListener {
     public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result) {
         System.out.println(("onTestFailedButWithinSuccessPercentage for " + result.getMethod().getMethodName()));
     }
+
+    */
 
     private Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();
