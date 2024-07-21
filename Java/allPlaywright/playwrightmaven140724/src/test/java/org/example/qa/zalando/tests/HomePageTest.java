@@ -6,11 +6,11 @@ import org.junit.jupiter.api.*;
 
 import static org.example.qa.zalando.factory.PlaywrightFactory.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class HomePageTest extends BaseTest {
-
 
 	@Test
 	@Order(1)
@@ -49,11 +49,30 @@ public class HomePageTest extends BaseTest {
 	@Test
 	public void hightlightHomeTitleTest(){
 		homePage.hightlightTitle();
-		takeScreenshot("highlighting");
 		takeScreenshotLocator();
-		logger.info("hightlightHomeTitleTest and 2 screenshots");
+		logger.info("hightlightHomeTitleTest and screenshot");
 
 	}
+
+	@Test
+	public void highlightSearchBar(){
+		homePage.highlightElement("Search Bar");
+		takeScreenshotLocator();
+		logger.info("highlightSearchBar and screenshot");
+	}
+
+	@Test
+	public void enterTextSearchBarTest(){
+		homePage.enterTextInBar("Search Bar", "Bolsos");
+		logger.info("enterTextSearchBar with 'Bolsos' and screenshot");
+		assertTrue(homePage.elementVisibility("Category"));
+		takeScreenshotLocator();
+	}
+
+
+
+
+
 
 
 	/*

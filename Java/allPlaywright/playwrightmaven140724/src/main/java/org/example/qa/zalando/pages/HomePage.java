@@ -17,6 +17,13 @@ public class HomePage {
 
     private String Ninnos_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Niños']";
 
+    private String search_bar = "id='header-search-input'";
+
+    private String locator_searchbar_placeholder = "Busca aquí";
+
+    private String selected_category = ".sDq_FX.qQ75Zg.FxZV-M.HlZ_Tf.CzGCn5";
+
+
 
     // 2. Page constructor
     public HomePage(Page page){
@@ -54,6 +61,34 @@ public class HomePage {
 
     public void hightlightTitle() {
         page.locator(title).highlight();
+    }
+
+    public void highlightElement(String locator){
+        if (locator.equalsIgnoreCase("search bar")) {
+            page.getByPlaceholder(locator_searchbar_placeholder).highlight();
+            logger.info("Search bar highlighted...");
+        } else if (locator.equalsIgnoreCase("Category")) {
+            page.locator(selected_category).highlight();
+            logger.info("Search bar highlighted...");
+        } else {logger.info("Search bar not found...");}
+    }
+
+    public void enterTextInBar(String barLocator, String inputText){
+        if(barLocator.equalsIgnoreCase("Search Bar") ) {
+            page.getByPlaceholder(locator_searchbar_placeholder).click();
+            page.getByPlaceholder(locator_searchbar_placeholder).fill(inputText);
+            page.keyboard().press("Enter");
+            logger.info("Search bar filled up");
+        }
+        else logger.info("Nothing written...");
+    }
+
+    public boolean elementVisibility(String locator){
+        if(locator.equalsIgnoreCase("Category")){
+            highlightElement("Category");
+            return (page.locator(selected_category).isVisible());
+        }
+        else return false;
     }
 
     public void pauseHomePage(){
