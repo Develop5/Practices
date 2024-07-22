@@ -1,8 +1,10 @@
 package org.example.qa.zalando.pages;
 
+import com.microsoft.playwright.Keyboard;
 import com.microsoft.playwright.Page;
 
 import static org.example.qa.zalando.factory.PlaywrightFactory.logger;
+import static org.example.qa.zalando.factory.PlaywrightFactory.takeScreenshotLocator;
 
 public class HomePage {
 
@@ -20,6 +22,8 @@ public class HomePage {
     private String search_bar = "id='header-search-input'";
 
     private String locator_searchbar_placeholder = "Busca aquí";
+
+    private String locator_searchbar = "#header-search-input";
 
     private String selected_category = ".sDq_FX.qQ75Zg.FxZV-M.HlZ_Tf.CzGCn5";
 
@@ -61,25 +65,58 @@ public class HomePage {
         return page.url();
     }
 
-    public void hightlightTitle() {
-        page.locator(title).highlight();
-    }
 
     public void highlightElement(String locator){
-        if (locator.equalsIgnoreCase("search bar")) {
-            page.getByPlaceholder(locator_searchbar_placeholder).highlight();
-            logger.info("Search bar highlighted...");
-        } else if (locator.equalsIgnoreCase("Category")) {
-            page.locator(selected_category).highlight();
-            logger.info("Search bar highlighted...");
-        } else {logger.info("Search bar not found...");}
+
+        switch (locator.toLowerCase()) {
+            case "search bar":
+                page.getByPlaceholder(locator_searchbar_placeholder).highlight();
+                logger.info("Search bar highlighted...");
+                break;
+
+            case "category":
+                page.locator(selected_category).highlight();
+                logger.info("Category highlighted...");
+                break;
+
+            case "title":
+                page.locator(title).highlight();
+                logger.info("Title highlighted...");
+                break;
+
+            default:
+                logger.error("Locator not identified. No actions to be done......");
+                break;
+        }
     }
 
     public void enterTextInBar(String barLocator, String inputText){
         if(barLocator.equalsIgnoreCase("Search Bar") ) {
-            page.getByPlaceholder(locator_searchbar_placeholder).click();
-            page.getByPlaceholder(locator_searchbar_placeholder).fill(inputText);
+            //page.getByPlaceholder(locator_searchbar_placeholder).click();
+            page.locator(locator_searchbar).click();
+
+            //page.getByPlaceholder(locator_searchbar_placeholder).fill(inputText);
+            page.locator(locator_searchbar).type(inputText);
+
+            logger.info("enterTextInBar -> URL: " + page.url());
+
+            //page.getByPlaceholder(locator_searchbar_placeholder).highlight();
+            page.locator(locator_searchbar).highlight();
+
+
+            Keyboard.PressOptions pressOptions = new Keyboard.PressOptions();
+            pressOptions.setDelay(2000);
+            //page.keyboard().press("Enter", pressOptions);
+
+
             page.keyboard().press("Enter");
+            page.keyboard().press("Enter");
+            page.keyboard().press("Enter");
+            page.waitForLoadState();
+
+            takeScreenshotLocator();
+
+
             logger.info("Search bar filled up");
         }
         else logger.info("Nothing written...");

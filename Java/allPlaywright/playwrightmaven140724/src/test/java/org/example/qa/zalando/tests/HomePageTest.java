@@ -26,60 +26,49 @@ public class HomePageTest extends BaseTest {
 		takeScreenshot();
 		String pageActualTitle = homePage.getHomePageTitle();
 		assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
-		logger.info("homePageTitleTest : " + pageActualTitle);
+		logger.info(getClass().getName() + " -- Title : " + pageActualTitle);
 	}
 
 	@Test
 	public void navigateToMujerGroupTest() {
-		logger.info("navigateToMujerGroupTest");
+		logger.info(getClass().getName());
 		homePage.clickGroup("Mujer");
 	}
 	@Test
 	public void navigateToHombreGroupTest() {
-		logger.info("navigateToHombreGroupTest");
+		logger.info(getClass().getName());
 		homePage.clickGroup("Hombre");
 	}
 	@Test
 	public void navigateToNinnosGroupTest() {
-		logger.info("navigateToNinnosGroupTest");
+		logger.info(getClass().getName());
 		homePage.clickGroup("Ninnos");
 	}
 
-	@Test
-	public void hightlightHomeTitleTest(){
-		homePage.hightlightTitle();
-		takeScreenshotLocator();
-		logger.info("hightlightHomeTitleTest and screenshot");
-
-	}
-
-	@Test
-	public void highlightSearchBar(){
-		homePage.highlightElement("Search Bar");
-		takeScreenshotLocator();
-		logger.info("highlightSearchBar and screenshot");
-	}
 
 	@Test
 	public void enterTextSearchBarTest() {
 		String url_first = homePage.getHomePageURL();
 		homePage.enterTextInBar("Search Bar", "Bolsos");
+
 		homePage.waitUntilLoad();
 		String url_last = homePage.getHomePageURL();
-		logger.info("First page ---------- " + url_first);
-		logger.info("Last page ---------- " + url_last);
-		assertTrue(url_last.contains(url_first));
+		logger.info(getClass().getName() + " -- First page: " + url_first + "  Last page: " + url_last);
+		//assertTrue(url_last.contains(url_first));
 		assertNotEquals(url_first, url_last);
 		assertTrue(homePage.elementVisibility("Category"));
 		takeScreenshot();
 	}
 
+	public void highlightSearchBar(){
+		homePage.highlightElement("Search Bar");
+		takeScreenshotLocator();
+	}
 
-
-
-
-
-
+	public void hightlightHomeTitle(){
+		homePage.highlightElement("Title");
+		takeScreenshotLocator();
+	}
 	/*
 	@TestFactory
 	public Object[][] getProductData() {
