@@ -23,6 +23,8 @@ public class HomePage {
 
     private String selected_category = ".sDq_FX.qQ75Zg.FxZV-M.HlZ_Tf.CzGCn5";
 
+    private String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
+
 
 
     // 2. Page constructor
@@ -94,6 +96,12 @@ public class HomePage {
     public void pauseHomePage(){
         page.pause();
     }
+
+    public void waitUntilLoad(){
+        page.locator(selected_category).waitFor();
+        page.locator(selected_category).isVisible();
+    }
+
 
 
 

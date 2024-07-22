@@ -5,8 +5,7 @@ import org.example.qa.zalando.constants.AppConstants;
 import org.junit.jupiter.api.*;
 
 import static org.example.qa.zalando.factory.PlaywrightFactory.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -62,11 +61,17 @@ public class HomePageTest extends BaseTest {
 	}
 
 	@Test
-	public void enterTextSearchBarTest(){
+	public void enterTextSearchBarTest() {
+		String url_first = homePage.getHomePageURL();
 		homePage.enterTextInBar("Search Bar", "Bolsos");
-		logger.info("enterTextSearchBar with 'Bolsos' and screenshot");
+		homePage.waitUntilLoad();
+		String url_last = homePage.getHomePageURL();
+		logger.info("First page ---------- " + url_first);
+		logger.info("Last page ---------- " + url_last);
+		assertTrue(url_last.contains(url_first));
+		assertNotEquals(url_first, url_last);
 		assertTrue(homePage.elementVisibility("Category"));
-		takeScreenshotLocator();
+		takeScreenshot();
 	}
 
 
