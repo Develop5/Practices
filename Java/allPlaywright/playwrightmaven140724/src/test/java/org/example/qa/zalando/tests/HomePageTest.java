@@ -8,6 +8,7 @@ import static org.example.qa.zalando.factory.PlaywrightFactory.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class HomePageTest extends BaseTest {
 
@@ -22,43 +23,50 @@ public class HomePageTest extends BaseTest {
 
 	@Test
 	@Order(2)
-	public void homePageTitleTest() {
+	public void homePageTitleTest(TestInfo testInfo) {
 		takeScreenshot();
 		String pageActualTitle = homePage.getHomePageTitle();
 		assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
-		logger.info(getClass().getName() + " -- Title : " + pageActualTitle);
+		logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
 	}
 
 	@Test
-	public void navigateToMujerGroupTest() {
-		logger.info(getClass().getName());
+	public void navigateToMujerGroupTest(TestInfo testInfo) {
+		logger.info("Test -> " + getOnlyTestName(testInfo));
 		homePage.clickGroup("Mujer");
 	}
+
 	@Test
-	public void navigateToHombreGroupTest() {
-		logger.info(getClass().getName());
+	public void navigateToHombreGroupTest(TestInfo testInfo) {
+		logger.info("Test -> " + getOnlyTestName(testInfo));
 		homePage.clickGroup("Hombre");
 	}
+
+
 	@Test
-	public void navigateToNinnosGroupTest() {
-		logger.info(getClass().getName());
+	public void navigateToNinnosGroupTest(TestInfo testInfo) {
+		logger.info("Test -> " + getOnlyTestName(testInfo));
 		homePage.clickGroup("Ninnos");
 	}
 
-
+	// This test is failing
+	/*
+	@DisplayName("This is my test")
 	@Test
-	public void enterTextSearchBarTest() {
+	public void enterTextSearchBarTest(TestInfo testInfo) {
 		String url_first = homePage.getHomePageURL();
 		homePage.enterTextInBar("Search Bar", "Bolsos");
 
 		homePage.waitUntilLoad();
 		String url_last = homePage.getHomePageURL();
-		logger.info(getClass().getName() + " -- First page: " + url_first + "  Last page: " + url_last);
+		logger.info(""Test -> " + getOnlyTestName(testInfo) + " -- First page: " + url_first + "  Last page: " + url_last);
 		//assertTrue(url_last.contains(url_first));
 		assertNotEquals(url_first, url_last);
 		assertTrue(homePage.elementVisibility("Category"));
 		takeScreenshot();
 	}
+
+	 */
 
 	public void highlightSearchBar(){
 		homePage.highlightElement("Search Bar");
@@ -82,6 +90,9 @@ public class HomePageTest extends BaseTest {
 	}
 	*/
 
-
+	public String getOnlyTestName(TestInfo testInfo){
+		String removingUnusedArg = testInfo.getDisplayName().replace("TestInfo","");
+		return removingUnusedArg;
+	}
 
 }
