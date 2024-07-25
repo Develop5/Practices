@@ -24,7 +24,6 @@ public class HomePageTest extends BaseTest {
 	@Test
 	@Order(2)
 	public void homePageTitleTest(TestInfo testInfo) {
-		takeScreenshot();
 		String pageActualTitle = homePage.getHomePageTitle();
 		assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
 		logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
@@ -49,24 +48,23 @@ public class HomePageTest extends BaseTest {
 		homePage.clickGroup("Ninnos");
 	}
 
-	// This test is failing
-	/*
-	@DisplayName("This is my test")
+	@DisplayName("Here I print what I want: enterTextSearchBarTest")
 	@Test
-	public void enterTextSearchBarTest(TestInfo testInfo) {
+	public void enterTextSearchBarTest() {
+		String textToEnter = "Bolsos";
 		String url_first = homePage.getHomePageURL();
-		homePage.enterTextInBar("Search Bar", "Bolsos");
-
-		homePage.waitUntilLoad();
+		homePage.enterTextInBar("Search Bar", textToEnter);
 		String url_last = homePage.getHomePageURL();
-		logger.info(""Test -> " + getOnlyTestName(testInfo) + " -- First page: " + url_first + "  Last page: " + url_last);
-		//assertTrue(url_last.contains(url_first));
+		logger.info(" -- First page: " + url_first + "  Last page: " + url_last);
 		assertNotEquals(url_first, url_last);
+		logger.info("URL actual: " + homePage.getHomePageURL());
+		homePage.highlightElement("Category");
 		assertTrue(homePage.elementVisibility("Category"));
+		assertTrue(homePage.containText("Category", textToEnter));
 		takeScreenshot();
+
 	}
 
-	 */
 
 	public void highlightSearchBar(){
 		homePage.highlightElement("Search Bar");

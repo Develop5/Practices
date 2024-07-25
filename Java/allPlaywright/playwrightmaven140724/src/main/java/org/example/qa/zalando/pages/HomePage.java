@@ -25,7 +25,7 @@ public class HomePage {
 
     private String locator_searchbar = "#header-search-input";
 
-    private String selected_category = ".sDq_FX.qQ75Zg.FxZV-M.HlZ_Tf.CzGCn5";
+    private String selected_category = ".FxZV-M.HlZ_Tf.CzGCn5";
 
     private String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
 
@@ -66,9 +66,9 @@ public class HomePage {
     }
 
 
-    public void highlightElement(String locator){
+    public void highlightElement(String elementName){
 
-        switch (locator.toLowerCase()) {
+        switch (elementName.toLowerCase()) {
             case "search bar":
                 page.getByPlaceholder(locator_searchbar_placeholder).highlight();
                 logger.info("Search bar highlighted...");
@@ -91,43 +91,38 @@ public class HomePage {
     }
 
     public void enterTextInBar(String barLocator, String inputText){
+        String auxiliar_ClassName = "Class: " + getClass().getName() + ": ";
         if(barLocator.equalsIgnoreCase("Search Bar") ) {
-            //page.getByPlaceholder(locator_searchbar_placeholder).click();
             page.locator(locator_searchbar).click();
-
-            //page.getByPlaceholder(locator_searchbar_placeholder).fill(inputText);
             page.locator(locator_searchbar).type(inputText);
-
             logger.info("enterTextInBar -> URL: " + page.url());
-
-            //page.getByPlaceholder(locator_searchbar_placeholder).highlight();
             page.locator(locator_searchbar).highlight();
-
-
             Keyboard.PressOptions pressOptions = new Keyboard.PressOptions();
-            pressOptions.setDelay(2000);
-            //page.keyboard().press("Enter", pressOptions);
-
-
-            page.keyboard().press("Enter");
-            page.keyboard().press("Enter");
+            pressOptions.setDelay(1000);
             page.keyboard().press("Enter");
             page.waitForLoadState();
-
-            takeScreenshotLocator();
-
-
-            logger.info("Search bar filled up");
+            logger.info(auxiliar_ClassName + "Search bar filled up");
         }
-        else logger.info("Nothing written...");
+        else logger.info(auxiliar_ClassName + " Nothing written...");
     }
 
-    public boolean elementVisibility(String locator){
-        if(locator.equalsIgnoreCase("Category")){
+    public boolean elementVisibility(String elementName){
+        if(elementName.equalsIgnoreCase("Category")){
             highlightElement("Category");
+            page.locator(selected_category).waitFor();
             return (page.locator(selected_category).isVisible());
         }
         else return false;
+    }
+
+    public boolean containText(String elementName, String textToBecontained){
+        if (elementName.equals("Category")) {
+            logger.info("Class: " + getClass().getName() + " : " + textToBecontained);
+            String temp = page.locator(selected_category).innerText();
+            return (temp.contains(textToBecontained));
+        }
+        else return false;
+
     }
 
     public void pauseHomePage(){
