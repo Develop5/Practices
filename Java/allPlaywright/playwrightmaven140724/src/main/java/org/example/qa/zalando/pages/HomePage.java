@@ -4,7 +4,6 @@ import com.microsoft.playwright.Keyboard;
 import com.microsoft.playwright.Page;
 
 import static org.example.qa.zalando.factory.PlaywrightFactory.logger;
-import static org.example.qa.zalando.factory.PlaywrightFactory.takeScreenshotLocator;
 
 public class HomePage {
 
@@ -29,6 +28,18 @@ public class HomePage {
 
     private String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
 
+    public String[][] getAllLocators(){
+        String[][] allLocators = {
+                {"title",this.title},
+                {"Hombre_Button", this.Hombre_Button},
+                {"Mujer_Button", this.Mujer_Button},
+                {"Ninnos_Button", this.Ninnos_Button},
+                {"search_bar", this.search_bar},
+                {"locator_searchbar", this.locator_searchbar},
+                {"selected_category", this.selected_category},
+                {"images_category", this.images_category}};
+        return allLocators;
+    }
 
 
     // 2. Page constructor
@@ -42,28 +53,21 @@ public class HomePage {
         return page.title();
     }
 
-    public void clickGroup(String whichGroup){
-        switch (whichGroup.toLowerCase()) {
-            case "mujer":
-                page.click(Mujer_Button);
-                break;
-            case "hombre":
-                page.click(Hombre_Button);
-                break;
-            case "ninnos":
-                page.click(Ninnos_Button);
-                break;
-
-            default:
-                logger.error("A non-existing group has been entered. No actions to be done......");
-                break;
-        }
+    public void clickGroupMujer(){
+        page.click(Mujer_Button);
+    }
+    public void clickGroupHombre(){
+        page.click(Hombre_Button);
+    }
+    public void clickGroupNinnos(){
+        page.click(Ninnos_Button);
     }
 
     public String getHomePageURL(){
         String url =  page.url();
         return page.url();
     }
+
 
 
     public void highlightElement(String elementName){
@@ -129,10 +133,7 @@ public class HomePage {
         page.pause();
     }
 
-    public void waitUntilLoad(){
-        page.locator(selected_category).waitFor();
-        page.locator(selected_category).isVisible();
-    }
+
 
 
 

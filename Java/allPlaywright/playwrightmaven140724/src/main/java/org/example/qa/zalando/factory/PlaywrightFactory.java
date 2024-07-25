@@ -84,7 +84,6 @@ public class PlaywrightFactory {
 
         tlPage.set(getBrowserContext().newPage());
 
-
         getPage().navigate(prop.getProperty("url").trim());
         return getPage();
 

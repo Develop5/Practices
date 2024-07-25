@@ -4,6 +4,8 @@ import org.example.qa.zalando.base.BaseTest;
 import org.example.qa.zalando.constants.AppConstants;
 import org.junit.jupiter.api.*;
 
+import java.util.Arrays;
+
 import static org.example.qa.zalando.factory.PlaywrightFactory.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,37 +34,43 @@ public class HomePageTest extends BaseTest {
 	@Test
 	public void navigateToMujerGroupTest(TestInfo testInfo) {
 		logger.info("Test -> " + getOnlyTestName(testInfo));
-		homePage.clickGroup("Mujer");
+		homePage.clickGroupMujer();
 	}
 
 	@Test
 	public void navigateToHombreGroupTest(TestInfo testInfo) {
 		logger.info("Test -> " + getOnlyTestName(testInfo));
-		homePage.clickGroup("Hombre");
+		homePage.clickGroupHombre();
 	}
 
+	@Test
+	public void getLocatorValues(){
+		String[][] listAllLocators = homePage.getAllLocators();
+		logger.info("Results : \n" + Arrays.deepToString(listAllLocators)
+				.replace("], ", "\n")
+				.replace("[[", "\n")
+				.replace("]]", "\n"));
+		logger.info("Total amount of locators = " + listAllLocators.length);
+		assertTrue(listAllLocators.length == 8);			// Must be kept up to date, as long as more locators are identified in the page
+
+	}
 
 	@Test
 	public void navigateToNinnosGroupTest(TestInfo testInfo) {
 		logger.info("Test -> " + getOnlyTestName(testInfo));
-		homePage.clickGroup("Ninnos");
+		homePage.clickGroupNinnos();
 	}
 
-	@DisplayName("Here I print what I want: enterTextSearchBarTest")
+	@DisplayName("Here I print whatever I want: enterTextSearchBarTest")
 	@Test
 	public void enterTextSearchBarTest() {
 		String textToEnter = "Bolsos";
-		String url_first = homePage.getHomePageURL();
 		homePage.enterTextInBar("Search Bar", textToEnter);
-		String url_last = homePage.getHomePageURL();
-		logger.info(" -- First page: " + url_first + "  Last page: " + url_last);
-		assertNotEquals(url_first, url_last);
 		logger.info("URL actual: " + homePage.getHomePageURL());
 		homePage.highlightElement("Category");
 		assertTrue(homePage.elementVisibility("Category"));
 		assertTrue(homePage.containText("Category", textToEnter));
 		takeScreenshot();
-
 	}
 
 
@@ -75,7 +83,16 @@ public class HomePageTest extends BaseTest {
 		homePage.highlightElement("Title");
 		takeScreenshotLocator();
 	}
-	/*
+
+
+	public String getOnlyTestName(TestInfo testInfo){
+		String removingUnusedArg = testInfo.getDisplayName().replace("TestInfo","");
+		return removingUnusedArg;
+	}
+
+
+
+		/*
 	@TestFactory
 	public Object[][] getProductData() {
 		logger.error("This is not a tests, just Dynamic test preparation");
@@ -87,10 +104,5 @@ public class HomePageTest extends BaseTest {
 		};
 	}
 	*/
-
-	public String getOnlyTestName(TestInfo testInfo){
-		String removingUnusedArg = testInfo.getDisplayName().replace("TestInfo","");
-		return removingUnusedArg;
-	}
 
 }

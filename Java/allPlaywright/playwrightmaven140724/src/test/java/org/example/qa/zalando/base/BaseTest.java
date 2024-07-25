@@ -28,6 +28,7 @@ public class BaseTest {
 
 		page = pf.initBrowser(prop);
 		homePage = new HomePage(page);
+
 	}
 
 	@AfterAll
