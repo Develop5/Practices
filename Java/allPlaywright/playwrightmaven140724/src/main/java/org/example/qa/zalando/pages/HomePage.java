@@ -1,6 +1,5 @@
 package org.example.qa.zalando.pages;
 
-import com.microsoft.playwright.Keyboard;
 import com.microsoft.playwright.Page;
 
 import static org.example.qa.zalando.factory.PlaywrightFactory.logger;
@@ -52,7 +51,19 @@ public class HomePage {
         page.click(Ninnos_Button);
     }
 
-    public String getHomePageURL(){
+    public void goToPage(String newUrl){
+        logger.info("Navigating to another url...");
+        logger.info("Initial url: " + page.url());
+        page.navigate(newUrl);
+        page.waitForLoadState();
+        logger.info("Final url: " + page.url());
+    }
+
+    public String getCurrentUrl(){
+        return page.url();
+    }
+
+    public String getHomePageCurrentURL(){
         String url =  page.url();
         return page.url();
     }
@@ -96,14 +107,14 @@ public class HomePage {
 
     public void enterTextSearchBar(String textToInput) {
         enterTextInBar(locator_searchbar, textToInput);
-        page.locator(selected_category).waitFor();      // As switching page, needs to wait
+        page.locator(selected_category).waitFor();      // Needs to wait until new page is ready
         highlightElement(selected_category);
     }
 
     public void highlightElement(String locator){
+        logger.info("locator highlighted...");
         page.locator(locator).highlight();
-        logger.info("... highlighted...");
-
+        page.locator(locator).focus();
     }
 
 }

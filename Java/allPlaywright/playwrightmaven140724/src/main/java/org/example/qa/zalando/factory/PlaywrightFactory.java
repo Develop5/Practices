@@ -107,10 +107,7 @@ public class PlaywrightFactory {
         }
         logger.info("Properties : " + prop);
         return prop;
-
     }
-
-
 
     public static String takeScreenshot() {
         String path = System
@@ -133,7 +130,7 @@ public class PlaywrightFactory {
                 + prefix
                 + System.currentTimeMillis()
                 + ".png";
-        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(false));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
         return base64Path;
 
