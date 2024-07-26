@@ -43,17 +43,6 @@ public class HomePageTest extends BaseTest {
 		homePage.clickGroupHombre();
 	}
 
-	@Test
-	public void getLocatorValues(){
-		String[][] listAllLocators = homePage.getAllLocators();
-		logger.info("Results : \n" + Arrays.deepToString(listAllLocators)
-				.replace("], ", "\n")
-				.replace("[[", "\n")
-				.replace("]]", "\n"));
-		logger.info("Total amount of locators = " + listAllLocators.length);
-		assertTrue(listAllLocators.length == 8);			// Must be kept up to date, as long as more locators are identified in the page
-
-	}
 
 	@Test
 	public void navigateToNinnosGroupTest(TestInfo testInfo) {
@@ -64,12 +53,16 @@ public class HomePageTest extends BaseTest {
 	@DisplayName("Here I print whatever I want: enterTextSearchBarTest")
 	@Test
 	public void enterTextSearchBarTest() {
+		// This works isolated but not in a cycle
+
+
 		String textToEnter = "Bolsos";
-		homePage.enterTextInBar("Search Bar", textToEnter);
-		logger.info("URL actual: " + homePage.getHomePageURL());
-		homePage.highlightElement("Category");
-		assertTrue(homePage.elementVisibility("Category"));
-		assertTrue(homePage.containText("Category", textToEnter));
+		logger.info("Entering the text : " + textToEnter);
+		logger.info("First URL: " + homePage.getHomePageURL());
+		homePage.enterTextSearchBar(textToEnter);
+		logger.info("New URL: " + homePage.getHomePageURL());
+		assertTrue(homePage.categoryVisible());
+		assertTrue(homePage.categoryContainsText(textToEnter));
 		takeScreenshot();
 	}
 

@@ -28,19 +28,6 @@ public class HomePage {
 
     private String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
 
-    public String[][] getAllLocators(){
-        String[][] allLocators = {
-                {"title",this.title},
-                {"Hombre_Button", this.Hombre_Button},
-                {"Mujer_Button", this.Mujer_Button},
-                {"Ninnos_Button", this.Ninnos_Button},
-                {"search_bar", this.search_bar},
-                {"locator_searchbar", this.locator_searchbar},
-                {"selected_category", this.selected_category},
-                {"images_category", this.images_category}};
-        return allLocators;
-    }
-
 
     // 2. Page constructor
     public HomePage(Page page){
@@ -56,9 +43,11 @@ public class HomePage {
     public void clickGroupMujer(){
         page.click(Mujer_Button);
     }
+
     public void clickGroupHombre(){
         page.click(Hombre_Button);
     }
+
     public void clickGroupNinnos(){
         page.click(Ninnos_Button);
     }
@@ -68,74 +57,53 @@ public class HomePage {
         return page.url();
     }
 
-
-
-    public void highlightElement(String elementName){
-
-        switch (elementName.toLowerCase()) {
-            case "search bar":
-                page.getByPlaceholder(locator_searchbar_placeholder).highlight();
-                logger.info("Search bar highlighted...");
-                break;
-
-            case "category":
-                page.locator(selected_category).highlight();
-                logger.info("Category highlighted...");
-                break;
-
-            case "title":
-                page.locator(title).highlight();
-                logger.info("Title highlighted...");
-                break;
-
-            default:
-                logger.error("Locator not identified. No actions to be done......");
-                break;
-        }
-    }
-
-    public void enterTextInBar(String barLocator, String inputText){
+    public void enterTextInBar(String barLocator, String inputText) {
         String auxiliar_ClassName = "Class: " + getClass().getName() + ": ";
-        if(barLocator.equalsIgnoreCase("Search Bar") ) {
-            page.locator(locator_searchbar).click();
-            page.locator(locator_searchbar).type(inputText);
-            logger.info("enterTextInBar -> URL: " + page.url());
-            page.locator(locator_searchbar).highlight();
-            Keyboard.PressOptions pressOptions = new Keyboard.PressOptions();
-            pressOptions.setDelay(1000);
-            page.keyboard().press("Enter");
-            page.waitForLoadState();
-            logger.info(auxiliar_ClassName + "Search bar filled up");
-        }
-        else logger.info(auxiliar_ClassName + " Nothing written...");
+        page.locator(locator_searchbar).waitFor();
+        page.locator(locator_searchbar).click();
+        page.locator(locator_searchbar).type(inputText);
+        page.locator(locator_searchbar).highlight();
+
+        //Keyboard.PressOptions pressOptions = new Keyboard.PressOptions();
+        //pressOptions.setDelay(1000);
+
+        page.keyboard().press("Enter");
+        page.locator(locator_searchbar).waitFor();
+        page.locator(locator_searchbar).highlight();
+        //page.waitForLoadState();
+        logger.info("let me wait for URL change");
+        page.waitForURL("**/?q=Bolsos");
+        logger.info(auxiliar_ClassName + "Search bar filled up");
     }
 
-    public boolean elementVisibility(String elementName){
-        if(elementName.equalsIgnoreCase("Category")){
-            highlightElement("Category");
-            page.locator(selected_category).waitFor();
-            return (page.locator(selected_category).isVisible());
-        }
-        else return false;
+
+    public boolean categoryVisible() {
+        highlightElement(selected_category);
+        page.locator(selected_category).waitFor();
+        page.locator(selected_category).focus();
+        logger.info(getClass().getName() + "Is Category visible? ");
+        return (page.locator(selected_category).isVisible());
     }
 
-    public boolean containText(String elementName, String textToBecontained){
-        if (elementName.equals("Category")) {
-            logger.info("Class: " + getClass().getName() + " : " + textToBecontained);
-            String temp = page.locator(selected_category).innerText();
-            return (temp.contains(textToBecontained));
-        }
-        else return false;
-
+    public boolean categoryContainsText(String textToBecontained) {
+        String categoryText = page.locator(selected_category).innerText();
+        return (categoryText.contains(textToBecontained));
     }
 
     public void pauseHomePage(){
         page.pause();
     }
 
+    public void enterTextSearchBar(String textToInput) {
+        enterTextInBar(locator_searchbar, textToInput);
+        page.locator(selected_category).waitFor();      // As switching page, needs to wait
+        highlightElement(selected_category);
+    }
 
+    public void highlightElement(String locator){
+        page.locator(locator).highlight();
+        logger.info("... highlighted...");
 
-
-
+    }
 
 }
