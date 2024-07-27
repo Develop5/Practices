@@ -1,4 +1,4 @@
-### Branch playwrightbdd260724 ###
+## Branch playwrightbdd260724 ##
 
 
 Playwright Java project using BDD.
@@ -13,8 +13,16 @@ The junit-bom is JUnit's Bill Of Materials (BOM). When including this BOM, it wi
 Referencing a bom file under <dependencyManagement><dependencies> only manages versions to be compatible. You still need to declare all needed dependencies under <dependencies> but without <version>. Thats how Maven bom references work. IntelliJ can handle them that way too.
 
 You can find more information about the BOM concept as part of:
-
 [Using Maven's BOM](https://reflectoring.io/maven-bom/)
+
+
+### Page Object Model with Cucumber ###
+
+How to share Test Context between the Cucumber Steps?
+
+R/ [Share data between steps in Cucumber using Scenario Context](https://www.toolsqa.com/selenium-cucumber-framework/share-data-between-steps-in-cucumber-using-scenario-context/)
+
+
 
 
 ##
