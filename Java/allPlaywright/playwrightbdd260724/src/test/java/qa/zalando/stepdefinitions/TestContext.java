@@ -18,6 +18,45 @@ public class TestContext {
                 .setSlowMo(100));
     }
 
+    /*
+
+
+        switch (browserName.toLowerCase()) {
+            case "chromium":
+                tlBrowser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)));
+                break;
+            case "firefox":
+                tlBrowser.set(getPlaywright().firefox().launch(new BrowserType.LaunchOptions().setHeadless(false)));
+                break;
+            case "safari":
+                tlBrowser.set(getPlaywright().webkit().launch(new BrowserType.LaunchOptions().setHeadless(false)));
+                break;
+            case "chrome":
+                tlBrowser.set(
+                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false)));
+                break;
+            case "edge":
+                tlBrowser.set(
+                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("msedge").setHeadless(false)));
+                break;
+
+            default:
+                logger.error("please pass the right browser name......");
+                break;
+        }
+
+
+
+
+     */
+
+
+
+
+
+
+
+
     public Browser getBrowser(){
         return browser;
     }
