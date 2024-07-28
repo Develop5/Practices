@@ -23,7 +23,8 @@ How to share Test Context between the Cucumber Steps?
 R/ [Share data between steps in Cucumber using Scenario Context](https://www.toolsqa.com/selenium-cucumber-framework/share-data-between-steps-in-cucumber-using-scenario-context/)
 
 
-
+Just in case the that one does not work, have a look at this:
+[Getting @BeforeAll and @AfterAll behaviour with Cucumber JVM and JUnit](https://metamorphant.de/blog/posts/2020-03-10-beforeall-afterall-cucumber-jvm-junit/)
 
 ##
 In order to read files in "resources" folder, take into account this:
