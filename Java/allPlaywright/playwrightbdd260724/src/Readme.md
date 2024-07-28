@@ -1,7 +1,14 @@
 ## Branch playwrightbdd260724 ##
 
+### Current step ###
+Make it similar to:
+[playwright-cucumber-jvm](https://github.com/drl-repo/playwright-cucumber-jvm/tree/main)
+Folder copy in: Java/allPlaywright/playwrightbdd260724/Borrar
+**_DELETE this folder after use_**
 
-Playwright Java project using BDD.
+
+
+### Playwright Java project using BDD.###
 
 Minimum configuration.
 No TestRunner is needed.
