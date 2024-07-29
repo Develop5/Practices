@@ -7,7 +7,8 @@ import io.cucumber.java.en.Given;
 import qa.zalando.base.BaseTest;
 
 
-public class HomePageDefinitions extends BaseTest {
+public class HomePageDefinitions  {
+// maybe extends BaseTest
 
     private Browser browser;
     private BrowserContext context;
