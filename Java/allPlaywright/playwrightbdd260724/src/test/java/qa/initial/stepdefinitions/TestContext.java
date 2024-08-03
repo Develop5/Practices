@@ -3,9 +3,7 @@ package qa.zalando.stepdefinitions;
 import com.microsoft.playwright.*;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import qa.zalando.factory.PlaywrightFactory;
+
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,7 +12,6 @@ import java.util.Properties;
 
 public class TestContext{
 
-	public static final Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
 	protected static Properties prop;
 	protected static Playwright playwright;
    protected static Browser browser;
@@ -24,15 +21,21 @@ public class TestContext{
 	@BeforeAll
 	public static void BeforeAll(){
 		playwright = Playwright.create();
-		String browserName = prop.getProperty("browser").trim();
-		//browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-		browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+		browser = selectBrowser().launch(new BrowserType.LaunchOptions()
     	.setHeadless(false)
     	.setSlowMo(100));
 	}
 
-	public Properties read_properties() {
+	public static BrowserType selectBrowser(){
+		switch (read_properties().getProperty("browser").trim()) {
+            case "firefox": return playwright.firefox();
+            case "webkit": return playwright.webkit();
+            default: return playwright.chromium();
+		}
+	}
 
+
+	public static Properties read_properties() {
 		try {
 			FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
 			prop = new Properties();
@@ -44,7 +47,7 @@ public class TestContext{
 			System.out.println("Unable to open input file");
 			e.printStackTrace();
 		}
-		logger.info("Properties : " + prop);
+		System.out.println("Properties : " + prop.toString());
 		return prop;
 	}
 

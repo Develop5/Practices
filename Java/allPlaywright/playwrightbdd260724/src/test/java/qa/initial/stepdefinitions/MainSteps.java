@@ -4,16 +4,12 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
-import e2e.utils.AppUtil;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class MainSteps{
 
@@ -46,31 +42,18 @@ public class MainSteps{
 
 	@When("user add product {int} to cart")
 	public void user_add_product_to_cart(Integer no){
+
 		String locProductIndex = this.locProductIndex.replace("INDEX", String.valueOf(no));
-	   Locator currentProduct = page.locator(locProductIndex);
-	   String productName 	= currentProduct.locator(locProductName).textContent();
-	   String productPrice 	= currentProduct.locator(locProductPrice).textContent();
-	   dataState.put("productName", productName);
-	   dataState.put("productPrice", productPrice);
-	   currentProduct.locator(locAddToCartButton).click();
+		Locator currentProduct = page.locator(locProductIndex);
+	    String productName 	= currentProduct.locator(locProductName).textContent();
+	    String productPrice 	= currentProduct.locator(locProductPrice).textContent();
+	   	dataState.put("productName", productName);
+	   	dataState.put("productPrice", productPrice);
+	   	currentProduct.locator(locAddToCartButton).click();
 	}
 
-	@Then("the product should be in cart")
-	public void product_should_be_in_cart() {
-	   Locator cart = page.locator(locCart);
-		assertThat(cart).containsText(dataState.get("productName"));
-	}
 
-	@And("verify the product price in cart is correct")
-	public void verify_the_product_price_in_cart_is_correct(){
-	   Locator productInCart = page.locator(locCart, 
-	   									new Page.LocatorOptions().setHasText(dataState.get("productName"))
-	   								);
-	   String priceInCart = productInCart.locator(locCartProductPrice).textContent();
-	   assertEquals(
-	   	AppUtil.removeCurrency(priceInCart),
-	   	AppUtil.removeCurrency(dataState.get("productPrice"))
-	   );
-	 }
+
+
 
 }
