@@ -14,6 +14,7 @@ public class TestContext{
 	
 	@BeforeAll
 	public static void BeforeAll(){
+		System.out.println("--------->  Before All -----------------");
 		playwright = Playwright.create();
 		browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
     	.setHeadless(false)
@@ -33,10 +34,14 @@ public class TestContext{
 	public static void AfterAll(){
 		//sleep for 5 seconds for viewing result (headed mode)
 		try {
+			System.out.println("---------> After TEST ---------");
+
       	Thread.sleep(5000);
 	   } catch(InterruptedException ex) {
 	   	System.out.println(ex.getMessage());
 	   }
 	}
+
+
 
 }
