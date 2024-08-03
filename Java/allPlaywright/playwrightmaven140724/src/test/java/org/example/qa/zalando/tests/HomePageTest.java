@@ -80,12 +80,14 @@ public class HomePageTest extends BaseTest {
 	}
 
 	public String getOnlyTestName(TestInfo testInfo){
+		// Check if needed
 		String removingUnusedArg = testInfo.getDisplayName().replace("TestInfo","");
 		return removingUnusedArg;
 	}
 
 		/*
 	@TestFactory
+	// To be considered later.
 	public Object[][] getProductData() {
 		logger.error("This is not a tests, just Dynamic test preparation");
 
