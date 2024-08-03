@@ -62,6 +62,7 @@ public class HomePageTest extends BaseTest {
 		logger.info("Entering the text : " + textToEnter);
 		logger.info("First URL: " + homePage.getHomePageCurrentURL());
 		homePage.enterTextSearchBar(textToEnter);
+		takeScreenshotLocator();
 		logger.info("New URL: " + homePage.getHomePageCurrentURL());
 		assertTrue(homePage.categoryVisible());
 		assertTrue(homePage.categoryContainsText(textToEnter));
