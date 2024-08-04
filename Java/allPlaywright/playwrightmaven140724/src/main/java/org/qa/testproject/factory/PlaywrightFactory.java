@@ -105,20 +105,6 @@ public class PlaywrightFactory {
         return prop;
     }
 
-    public ExtentReports read_report_properties() {
-        try {
-            FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/extent.properties");
-            extentReports = new ExtentReports();
-            // ------------> LBP ------- Here, I need to load extent properties from file
-
-        } catch (FileNotFoundException e) {
-            logger.error("Unable to find extent.properties file");
-        } catch (IOException e) {
-            logger.error("IOException when looking for extent.properties file");
-        }
-        logger.info("Properties : " + extentReports);
-        return extentReports;
-    }
 
     public static String getScreenshotPath() {
         String formattedPath = String.format("%s/screenshot/%d.png",
