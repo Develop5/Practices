@@ -17,7 +17,9 @@ In this project, the PlaywrightFactory class is in charge of configuring the con
    <br/><br/>
 
 
+2) ExtentReports
 
+<br/><br/>
 **Tips.-**
 
 - For comments in XML file:

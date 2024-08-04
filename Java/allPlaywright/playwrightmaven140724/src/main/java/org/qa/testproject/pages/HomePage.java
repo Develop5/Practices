@@ -52,11 +52,11 @@ public class HomePage {
     }
 
     public void goToPage(String newUrl) {
-        logger.info("Navigating to another url...");
-        logger.info("Initial url: " + page.url());
+        logger.info("----> Navigating to another url...");
+        logger.info("----> Initial url: " + page.url());
         page.navigate(newUrl);
         page.waitForLoadState();
-        logger.info("Final url: " + page.url());
+        logger.info("----> Final url: " + page.url());
     }
 
     public String getCurrentUrl() {
@@ -69,7 +69,6 @@ public class HomePage {
     }
 
     public void enterTextInBar(String barLocator, String inputText) {
-        String auxiliar_ClassName = "Class: " + getClass().getName() + ": ";
         page.locator(locator_searchbar).waitFor();
         page.locator(locator_searchbar).click();
         page.locator(locator_searchbar).type(inputText);
@@ -77,9 +76,8 @@ public class HomePage {
         page.keyboard().press("Enter");
         page.locator(locator_searchbar).waitFor();
         page.locator(locator_searchbar).highlight();
-        logger.info("let me wait for URL change");
-        page.waitForURL("**/?q=Bolsos");
-        logger.info(auxiliar_ClassName + "Search bar filled up");
+          page.waitForURL("**/?q=Bolsos");
+        logger.info("----> Search bar filled up");
     }
 
 
@@ -87,7 +85,6 @@ public class HomePage {
         highlightElement(selected_category);
         page.locator(selected_category).waitFor();
         page.locator(selected_category).focus();
-        logger.info(getClass().getName() + "Is Category visible? ");
         return (page.locator(selected_category).isVisible());
     }
 
@@ -115,6 +112,7 @@ public class HomePage {
         page.locator(search_bar).focus();
         page.locator(search_bar).highlight();
     }
+
 
     public void highlightCategory() {
         page.locator(selected_category).focus();

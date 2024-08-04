@@ -28,44 +28,44 @@ public class HomePageTest extends BaseTest {
     @Test
     @Order(2)
     public void homePageTitleTest(TestInfo testInfo) {
+        logTestName(testInfo);
         String pageActualTitle = homePage.getHomePageTitle();
         homePage.highlightHomeTitle();
         PlaywrightFactory.takeScreenshot("locator");
         Assertions.assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
-        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
     }
 
     @Test
     public void navigateToMujerGroupTest(TestInfo testInfo) {
-        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
+        logTestName(testInfo);
         homePage.clickGroupMujer();
     }
 
     @Test
     public void navigateToHombreGroupTest(TestInfo testInfo) {
-        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
+        logTestName(testInfo);
         homePage.clickGroupHombre();
     }
 
 
     @Test
     public void navigateToNinnosGroupTest(TestInfo testInfo) {
-        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
+        logTestName(testInfo);
         homePage.clickGroupNinnos();
     }
 
     @DisplayName("Here I print whatever I want: lookingForBolsosFromHome")
     @Test
-    public void lookingForBolsosFromHome() {
+    public void lookingForBolsosFromHome(TestInfo testInfo) {
+        logTestName(testInfo);
         navigatingToHomePage();
-        PlaywrightFactory.logger.info("lookingForBolsosFromHome. URL: " + homePage.getCurrentUrl());
         String textToEnter = "Bolsos";
         PlaywrightFactory.logger.info("Entering the text : " + textToEnter);
         PlaywrightFactory.logger.info("First URL: " + homePage.getHomePageCurrentURL());
         homePage.enterTextSearchBar(textToEnter);
         homePage.highlightCategory();
         PlaywrightFactory.takeScreenshot("locator");
-        PlaywrightFactory.logger.info("New URL: " + homePage.getHomePageCurrentURL());
+        PlaywrightFactory.logger.info("----> New URL: " + homePage.getHomePageCurrentURL());
         assertTrue(homePage.categoryVisible());
         assertTrue(homePage.categoryContainsText(textToEnter));
         PlaywrightFactory.takeScreenshot();
@@ -73,9 +73,13 @@ public class HomePageTest extends BaseTest {
 
 
     public String getOnlyTestName(TestInfo testInfo) {
-        // Check if needed
         return testInfo.getDisplayName().replace("TestInfo", "");
     }
+    public void logTestName(TestInfo testInfo) {
+        PlaywrightFactory.logger.info("Test  --> " + testInfo.getDisplayName().replace("TestInfo", ""));
+    }
+
+
 
 		/*
 	@TestFactory
