@@ -1,10 +1,10 @@
-package org.example.qa.zalando.tests;
+package org.qa.testproject.tests;
 
-import org.example.qa.zalando.base.BaseTest;
-import org.example.qa.zalando.constants.AppConstants;
+import org.qa.testproject.base.BaseTest;
+import org.qa.testproject.constants.AppConstants;
 import org.junit.jupiter.api.*;
+import org.qa.testproject.factory.PlaywrightFactory;
 
-import static org.example.qa.zalando.factory.PlaywrightFactory.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -18,7 +18,7 @@ public class HomePageTest extends BaseTest {
 		navigatingToHomePage();
 		String currentURL = homePage.getHomePageCurrentURL();
 		assertEquals(prop.getProperty("url"), currentURL);
-		logger.warn("homePageURLTest , current url: " + currentURL);
+		PlaywrightFactory.logger.warn("homePageURLTest , current url: " + currentURL);
 	}
 
 	public void navigatingToHomePage(){
@@ -30,26 +30,26 @@ public class HomePageTest extends BaseTest {
 	@Order(2)
 	public void homePageTitleTest(TestInfo testInfo) {
 		String pageActualTitle = homePage.getHomePageTitle();
-		assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
-		logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
+		Assertions.assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
+		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
 	}
 
 	@Test
 	public void navigateToMujerGroupTest(TestInfo testInfo) {
-		logger.info("Test -> " + getOnlyTestName(testInfo));
+		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
 		homePage.clickGroupMujer();
 	}
 
 	@Test
 	public void navigateToHombreGroupTest(TestInfo testInfo) {
-		logger.info("Test -> " + getOnlyTestName(testInfo));
+		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
 		homePage.clickGroupHombre();
 	}
 
 
 	@Test
 	public void navigateToNinnosGroupTest(TestInfo testInfo) {
-		logger.info("Test -> " + getOnlyTestName(testInfo));
+		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
 		homePage.clickGroupNinnos();
 	}
 
@@ -57,26 +57,26 @@ public class HomePageTest extends BaseTest {
 	@Test
 	public void lookingForBolsosFromHome() {
 		navigatingToHomePage();
-		logger.info("lookingForBolsosFromHome. URL: " + homePage.getCurrentUrl());
+		PlaywrightFactory.logger.info("lookingForBolsosFromHome. URL: " + homePage.getCurrentUrl());
         String textToEnter = "Bolsos";
-		logger.info("Entering the text : " + textToEnter);
-		logger.info("First URL: " + homePage.getHomePageCurrentURL());
+		PlaywrightFactory.logger.info("Entering the text : " + textToEnter);
+		PlaywrightFactory.logger.info("First URL: " + homePage.getHomePageCurrentURL());
 		homePage.enterTextSearchBar(textToEnter);
-		takeScreenshotLocator();
-		logger.info("New URL: " + homePage.getHomePageCurrentURL());
+		PlaywrightFactory.takeScreenshotLocator();
+		PlaywrightFactory.logger.info("New URL: " + homePage.getHomePageCurrentURL());
 		assertTrue(homePage.categoryVisible());
 		assertTrue(homePage.categoryContainsText(textToEnter));
-		takeScreenshot();
+		PlaywrightFactory.takeScreenshot();
 	}
 
 	public void highlightSearchBar(){
 		homePage.highlightElement("Search Bar");
-		takeScreenshotLocator();
+		PlaywrightFactory.takeScreenshotLocator();
 	}
 
 	public void hightlightHomeTitle(){
 		homePage.highlightElement("Title");
-		takeScreenshotLocator();
+		PlaywrightFactory.takeScreenshotLocator();
 	}
 
 	public String getOnlyTestName(TestInfo testInfo){

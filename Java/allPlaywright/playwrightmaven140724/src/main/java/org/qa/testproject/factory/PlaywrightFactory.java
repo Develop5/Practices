@@ -1,4 +1,4 @@
-package org.example.qa.zalando.factory;
+package org.qa.testproject.factory;
 
 
 import java.io.FileInputStream;

@@ -1,4 +1,4 @@
-package org.example.qa.zalando.listeners;
+package org.qa.testproject.listeners;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,18 +8,10 @@ import java.util.Calendar;
 import java.util.Date;
 
 
-/*
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
-*/
-
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import static org.example.qa.zalando.factory.PlaywrightFactory.takeScreenshot;
+import static org.qa.testproject.factory.PlaywrightFactory.takeScreenshot;
 public class ExtentReportListener {
 
     private static final String OUTPUT_FOLDER = "./build/";

@@ -1,11 +1,11 @@
-package org.example.qa.zalando.base;
+package org.qa.testproject.base;
 
 import java.util.Properties;
 
 import com.microsoft.playwright.Page;
-import org.example.qa.zalando.factory.PlaywrightFactory;
-import org.example.qa.zalando.pages.HomePage;
-import org.example.qa.zalando.pages.LoginPage;
+import org.qa.testproject.factory.PlaywrightFactory;
+import org.qa.testproject.pages.HomePage;
+import org.qa.testproject.pages.LoginPage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 

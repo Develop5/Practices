@@ -1,4 +1,4 @@
-package org.example.qa.zalando.pages;
+package org.qa.testproject.pages;
 
 import com.microsoft.playwright.Page;
 

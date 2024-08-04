@@ -1,4 +1,4 @@
-package org.example.qa.zalando.constants;
+package org.qa.testproject.constants;
 
 public class AppConstants {
 
