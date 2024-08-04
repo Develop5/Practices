@@ -140,7 +140,8 @@ public class PlaywrightFactory {
     }
 
     public static String takeScreenshot() {
-        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath())).setFullPage(true));
+        byte[] buffer = getPage()
+                .screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath())).setFullPage(true));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
         return base64Path;
 
@@ -148,37 +149,11 @@ public class PlaywrightFactory {
 
 
     public static String takeScreenshot(String prefix) {
-        /*
-        String path = System
-                .getProperty("user.dir")
-                + "/screenshot/"
-                + prefix
-                + System.currentTimeMillis()
-                + ".png";
-
-         */
-
         byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath(prefix))).setFullPage(false));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
         return base64Path;
 
     }
-
-
-    public static String takeScreenshotLocator() {
-        String path = System
-                .getProperty("user.dir")
-                + "/screenshot/"
-                + "locator"
-                + System.currentTimeMillis()
-                + ".png";
-        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(false));
-        String base64Path = Base64.getEncoder().encodeToString(buffer);
-        return base64Path;
-
-    }
-
-
 
 
 }

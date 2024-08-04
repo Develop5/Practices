@@ -62,7 +62,7 @@ public class HomePageTest extends BaseTest {
 		PlaywrightFactory.logger.info("Entering the text : " + textToEnter);
 		PlaywrightFactory.logger.info("First URL: " + homePage.getHomePageCurrentURL());
 		homePage.enterTextSearchBar(textToEnter);
-		PlaywrightFactory.takeScreenshotLocator();
+		PlaywrightFactory.takeScreenshot("locator");
 		PlaywrightFactory.logger.info("New URL: " + homePage.getHomePageCurrentURL());
 		assertTrue(homePage.categoryVisible());
 		assertTrue(homePage.categoryContainsText(textToEnter));
@@ -71,12 +71,12 @@ public class HomePageTest extends BaseTest {
 
 	public void highlightSearchBar(){
 		homePage.highlightElement("Search Bar");
-		PlaywrightFactory.takeScreenshotLocator();
+		PlaywrightFactory.takeScreenshot("locator");
 	}
 
 	public void hightlightHomeTitle(){
 		homePage.highlightElement("Title");
-		PlaywrightFactory.takeScreenshotLocator();
+		PlaywrightFactory.takeScreenshot("locator");
 	}
 
 	public String getOnlyTestName(TestInfo testInfo){
