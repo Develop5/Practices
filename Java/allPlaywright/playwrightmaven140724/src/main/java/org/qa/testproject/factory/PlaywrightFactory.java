@@ -97,11 +97,9 @@ public class PlaywrightFactory {
             prop = new Properties();
             prop.load(initialProperties);
         } catch (FileNotFoundException e) {
-            System.out.println("Sorry, unable to find file");
-            e.printStackTrace();
+            logger.error("config.properties file not found");
         } catch (IOException e) {
-            System.out.println("Unable to open input file");
-            e.printStackTrace();
+            logger.error("IOException when reading config.properties file");
         }
         logger.info("Extent report properties : " + extentReports);
         return prop;
@@ -114,11 +112,9 @@ public class PlaywrightFactory {
             // ------------> LBP ------- Here, I need to load extent properties from file
 
         } catch (FileNotFoundException e) {
-            System.out.println("Sorry, unable to find file");
-            e.printStackTrace();
+            logger.error("Unable to find extent.properties file");
         } catch (IOException e) {
-            System.out.println("Unable to open input file");
-            e.printStackTrace();
+            logger.error("IOException when looking for extent.properties file");
         }
         logger.info("Properties : " + extentReports);
         return extentReports;
