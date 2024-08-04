@@ -10,48 +10,48 @@ public class HomePage {
 
     // 1. String locators - OR
 
-    private String title = "//a[@class='dangerousLogoWidthBelowMobile']//*[name()='svg']";
-    private String Hombre_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Hombre']";
+    private final String title = "//a[@class='dangerousLogoWidthBelowMobile']//*[name()='svg']";
+    private final String Hombre_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Hombre']";
 
-    private String Mujer_Button = "//span[contains(text(),'Mujer')]";
+    private final String Mujer_Button = "//span[contains(text(),'Mujer')]";
 
-    private String Ninnos_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Niños']";
+    private final String Ninnos_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Niños']";
 
-    private String search_bar = "id='header-search-input'";
+    private final String search_bar = "id='header-search-input'";
 
-    private String locator_searchbar_placeholder = "Busca aquí";
+    private final String locator_searchbar_placeholder = "Busca aquí";
 
-    private String locator_searchbar = "#header-search-input";
+    private final String locator_searchbar = "#header-search-input";
 
-    private String selected_category = ".FxZV-M.HlZ_Tf.CzGCn5";
+    private final String selected_category = ".FxZV-M.HlZ_Tf.CzGCn5";
 
-    private String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
+    private final String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
 
 
     // 2. Page constructor
-    public HomePage(Page page){
+    public HomePage(Page page) {
         this.page = page;
     }
 
 
     // 3. Page actions/methods
-    public String getHomePageTitle(){
+    public String getHomePageTitle() {
         return page.title();
     }
 
-    public void clickGroupMujer(){
+    public void clickGroupMujer() {
         page.click(Mujer_Button);
     }
 
-    public void clickGroupHombre(){
+    public void clickGroupHombre() {
         page.click(Hombre_Button);
     }
 
-    public void clickGroupNinnos(){
+    public void clickGroupNinnos() {
         page.click(Ninnos_Button);
     }
 
-    public void goToPage(String newUrl){
+    public void goToPage(String newUrl) {
         logger.info("Navigating to another url...");
         logger.info("Initial url: " + page.url());
         page.navigate(newUrl);
@@ -59,12 +59,12 @@ public class HomePage {
         logger.info("Final url: " + page.url());
     }
 
-    public String getCurrentUrl(){
+    public String getCurrentUrl() {
         return page.url();
     }
 
-    public String getHomePageCurrentURL(){
-        String url =  page.url();
+    public String getHomePageCurrentURL() {
+        String url = page.url();
         return page.url();
     }
 
@@ -74,14 +74,9 @@ public class HomePage {
         page.locator(locator_searchbar).click();
         page.locator(locator_searchbar).type(inputText);
         page.locator(locator_searchbar).highlight();
-
-        //Keyboard.PressOptions pressOptions = new Keyboard.PressOptions();
-        //pressOptions.setDelay(1000);
-
         page.keyboard().press("Enter");
         page.locator(locator_searchbar).waitFor();
         page.locator(locator_searchbar).highlight();
-        //page.waitForLoadState();
         logger.info("let me wait for URL change");
         page.waitForURL("**/?q=Bolsos");
         logger.info(auxiliar_ClassName + "Search bar filled up");
@@ -101,7 +96,7 @@ public class HomePage {
         return (categoryText.contains(textToBecontained));
     }
 
-    public void pauseHomePage(){
+    public void pauseHomePage() {
         page.pause();
     }
 
@@ -111,10 +106,25 @@ public class HomePage {
         highlightElement(selected_category);
     }
 
-    public void highlightElement(String locator){
-        logger.info("locator highlighted...");
+    public void highlightElement(String locator) {
         page.locator(locator).highlight();
         page.locator(locator).focus();
     }
+
+    public void highlightSearchBar() {
+        page.locator(search_bar).focus();
+        page.locator(search_bar).highlight();
+    }
+
+    public void highlightCategory() {
+        page.locator(selected_category).focus();
+        page.locator(selected_category).highlight();
+    }
+
+    public void highlightHomeTitle() {
+        page.locator(title).focus();
+        page.locator(title).highlight();
+    }
+
 
 }

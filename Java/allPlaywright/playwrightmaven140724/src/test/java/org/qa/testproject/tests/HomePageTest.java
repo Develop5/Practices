@@ -8,82 +8,74 @@ import org.qa.testproject.factory.PlaywrightFactory;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class HomePageTest extends BaseTest {
 
-	@Test
-	@Order(1)
-	public void checkHomePageURLTest() {
-		navigatingToHomePage();
-		String currentURL = homePage.getHomePageCurrentURL();
-		assertEquals(prop.getProperty("url"), currentURL);
-		PlaywrightFactory.logger.warn("homePageURLTest , current url: " + currentURL);
-	}
+    @Test
+    @Order(1)
+    public void checkHomePageURLTest() {
+        navigatingToHomePage();
+        String currentURL = homePage.getHomePageCurrentURL();
+        assertEquals(prop.getProperty("url"), currentURL);
+        PlaywrightFactory.logger.warn("homePageURLTest , current url: " + currentURL);
+    }
 
-	public void navigatingToHomePage(){
-		String urlToNavigateTo = prop.getProperty("url");
-		homePage.goToPage(urlToNavigateTo);
-	}
+    public void navigatingToHomePage() {
+        String urlToNavigateTo = prop.getProperty("url");
+        homePage.goToPage(urlToNavigateTo);
+    }
 
-	@Test
-	@Order(2)
-	public void homePageTitleTest(TestInfo testInfo) {
-		String pageActualTitle = homePage.getHomePageTitle();
-		Assertions.assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
-		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
-	}
+    @Test
+    @Order(2)
+    public void homePageTitleTest(TestInfo testInfo) {
+        String pageActualTitle = homePage.getHomePageTitle();
+        homePage.highlightHomeTitle();
+        PlaywrightFactory.takeScreenshot("locator");
+        Assertions.assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
+        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
+    }
 
-	@Test
-	public void navigateToMujerGroupTest(TestInfo testInfo) {
-		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
-		homePage.clickGroupMujer();
-	}
+    @Test
+    public void navigateToMujerGroupTest(TestInfo testInfo) {
+        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
+        homePage.clickGroupMujer();
+    }
 
-	@Test
-	public void navigateToHombreGroupTest(TestInfo testInfo) {
-		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
-		homePage.clickGroupHombre();
-	}
+    @Test
+    public void navigateToHombreGroupTest(TestInfo testInfo) {
+        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
+        homePage.clickGroupHombre();
+    }
 
 
-	@Test
-	public void navigateToNinnosGroupTest(TestInfo testInfo) {
-		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
-		homePage.clickGroupNinnos();
-	}
+    @Test
+    public void navigateToNinnosGroupTest(TestInfo testInfo) {
+        PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo));
+        homePage.clickGroupNinnos();
+    }
 
-	@DisplayName("Here I print whatever I want: lookingForBolsosFromHome")
-	@Test
-	public void lookingForBolsosFromHome() {
-		navigatingToHomePage();
-		PlaywrightFactory.logger.info("lookingForBolsosFromHome. URL: " + homePage.getCurrentUrl());
+    @DisplayName("Here I print whatever I want: lookingForBolsosFromHome")
+    @Test
+    public void lookingForBolsosFromHome() {
+        navigatingToHomePage();
+        PlaywrightFactory.logger.info("lookingForBolsosFromHome. URL: " + homePage.getCurrentUrl());
         String textToEnter = "Bolsos";
-		PlaywrightFactory.logger.info("Entering the text : " + textToEnter);
-		PlaywrightFactory.logger.info("First URL: " + homePage.getHomePageCurrentURL());
-		homePage.enterTextSearchBar(textToEnter);
-		PlaywrightFactory.takeScreenshot("locator");
-		PlaywrightFactory.logger.info("New URL: " + homePage.getHomePageCurrentURL());
-		assertTrue(homePage.categoryVisible());
-		assertTrue(homePage.categoryContainsText(textToEnter));
-		PlaywrightFactory.takeScreenshot();
-	}
+        PlaywrightFactory.logger.info("Entering the text : " + textToEnter);
+        PlaywrightFactory.logger.info("First URL: " + homePage.getHomePageCurrentURL());
+        homePage.enterTextSearchBar(textToEnter);
+        homePage.highlightCategory();
+        PlaywrightFactory.takeScreenshot("locator");
+        PlaywrightFactory.logger.info("New URL: " + homePage.getHomePageCurrentURL());
+        assertTrue(homePage.categoryVisible());
+        assertTrue(homePage.categoryContainsText(textToEnter));
+        PlaywrightFactory.takeScreenshot();
+    }
 
-	public void highlightSearchBar(){
-		homePage.highlightElement("Search Bar");
-		PlaywrightFactory.takeScreenshot("locator");
-	}
 
-	public void hightlightHomeTitle(){
-		homePage.highlightElement("Title");
-		PlaywrightFactory.takeScreenshot("locator");
-	}
-
-	public String getOnlyTestName(TestInfo testInfo){
-		// Check if needed
-		String removingUnusedArg = testInfo.getDisplayName().replace("TestInfo","");
-		return removingUnusedArg;
-	}
+    public String getOnlyTestName(TestInfo testInfo) {
+        // Check if needed
+        return testInfo.getDisplayName().replace("TestInfo", "");
+    }
 
 		/*
 	@TestFactory

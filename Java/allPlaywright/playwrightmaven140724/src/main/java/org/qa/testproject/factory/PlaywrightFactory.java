@@ -97,11 +97,9 @@ public class PlaywrightFactory {
             prop = new Properties();
             prop.load(initialProperties);
         } catch (FileNotFoundException e) {
-            System.out.println("Sorry, unable to find file");
-            e.printStackTrace();
+            logger.error("config.properties file not found");
         } catch (IOException e) {
-            System.out.println("Unable to open input file");
-            e.printStackTrace();
+            logger.error("IOException when reading config.properties file");
         }
         logger.info("Extent report properties : " + extentReports);
         return prop;
@@ -114,44 +112,42 @@ public class PlaywrightFactory {
             // ------------> LBP ------- Here, I need to load extent properties from file
 
         } catch (FileNotFoundException e) {
-            System.out.println("Sorry, unable to find file");
-            e.printStackTrace();
+            logger.error("Unable to find extent.properties file");
         } catch (IOException e) {
-            System.out.println("Unable to open input file");
-            e.printStackTrace();
+            logger.error("IOException when looking for extent.properties file");
         }
         logger.info("Properties : " + extentReports);
         return extentReports;
     }
 
-    public static String getScreenshotPath(){
-        String screenshotOutputPath = (String.format("%s/screenshot/%d.png",
+    public static String getScreenshotPath() {
+        String formattedPath = String.format("%s/screenshot/%d.png",
                 System.getProperty("user.dir"),
-                System.currentTimeMillis()));
-        return screenshotOutputPath ;
+                System.currentTimeMillis());
+        return formattedPath;
     }
 
-    public static String getScreenshotPath(String prefix){
+    public static String getScreenshotPath(String prefix) {
         String screenshotOutputPath = (String.format("%s/screenshot/%s%d.png",
                 System.getProperty("user.dir"),
                 prefix,
                 System.currentTimeMillis()));
-        return screenshotOutputPath ;
+        return screenshotOutputPath;
     }
 
     public static String takeScreenshot() {
+        // full page captured
         byte[] buffer = getPage()
                 .screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath())).setFullPage(true));
-        String base64Path = Base64.getEncoder().encodeToString(buffer);
-        return base64Path;
+        return Base64.getEncoder().encodeToString(buffer);
 
     }
 
 
     public static String takeScreenshot(String prefix) {
+        // Not full page captured
         byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath(prefix))).setFullPage(false));
-        String base64Path = Base64.getEncoder().encodeToString(buffer);
-        return base64Path;
+        return Base64.getEncoder().encodeToString(buffer);
 
     }
 

@@ -14,36 +14,36 @@ import org.junit.jupiter.api.BeforeAll;
 
 public class BaseTest {
 
-	static PlaywrightFactory pf;
+    static PlaywrightFactory pf;
 
-	//static ExtentReports extentReports;
-	static Page page;
-	protected static Properties prop;
+    //static ExtentReports extentReports;
+    static Page page;
+    protected static Properties prop;
 
-	protected static Report report;
+    protected static Report report;
 
-	protected static HomePage homePage;
-	protected LoginPage loginPage;
-
-
-	@BeforeAll
-	public static void setup() {
-
-		pf = new PlaywrightFactory();
-		prop = pf.read_properties();
-
-		//extentReports = new ExtentReports()
-		//report = pf.readReportProperties();
+    protected static HomePage homePage;
+    protected LoginPage loginPage;
 
 
-		page = pf.initBrowser(prop);
-		homePage = new HomePage(page);
+    @BeforeAll
+    public static void setup() {
 
-	}
+        pf = new PlaywrightFactory();
+        prop = pf.read_properties();
 
-	@AfterAll
-	public static void tearDown() {
-		page.context().browser().close();
-	}
+        //extentReports = new ExtentReports()
+        //report = pf.readReportProperties();
+
+
+        page = pf.initBrowser(prop);
+        homePage = new HomePage(page);
+
+    }
+
+    @AfterAll
+    public static void tearDown() {
+        page.context().browser().close();
+    }
 
 }
