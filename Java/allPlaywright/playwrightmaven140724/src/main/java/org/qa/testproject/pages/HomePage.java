@@ -59,9 +59,6 @@ public class HomePage {
         logger.info("----> Final url: " + page.url());
     }
 
-    public String getCurrentUrl() {
-        return page.url();
-    }
 
     public String getHomePageCurrentURL() {
         String url = page.url();
@@ -76,7 +73,7 @@ public class HomePage {
         page.keyboard().press("Enter");
         page.locator(locator_searchbar).waitFor();
         page.locator(locator_searchbar).highlight();
-          page.waitForURL("**/?q=Bolsos");
+        page.waitForURL("**/?q=Bolsos");
         logger.info("----> Search bar filled up");
     }
 

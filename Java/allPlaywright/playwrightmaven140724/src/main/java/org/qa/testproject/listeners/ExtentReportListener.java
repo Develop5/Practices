@@ -37,14 +37,17 @@ public class ExtentReportListener {
 
         extentReports = new ExtentReports();
         ExtentSparkReporter reporter = new ExtentSparkReporter(OUTPUT_FOLDER + FILE_NAME);
-        reporter.config().setReportName("Open Cart Automation Test Results");
+        reporter.config().setReportName("QA Test report results");
         extentReports.attachReporter(reporter);
-        extentReports.setSystemInfo("System", "MAC");
-        extentReports.setSystemInfo("Author", "Naveen AutomationLabs");
+        extentReports.setSystemInfo("System", "Windows");
+        extentReports.setSystemInfo("Author", "LBP");
+        /* The following can also be stated for the report
         extentReports.setSystemInfo("Build#", "1.1");
         extentReports.setSystemInfo("Team", "OMS");
         extentReports.setSystemInfo("Customer Name", "NAL");
-        //extentReports.setSystemInfo("ENV NAME", System.getProperty("env"));
+
+         */
+        extentReports.setSystemInfo("ENV NAME", System.getProperty("env"));
         return extentReports;
     }
 

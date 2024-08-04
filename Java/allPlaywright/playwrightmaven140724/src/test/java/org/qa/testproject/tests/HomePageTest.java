@@ -33,6 +33,8 @@ public class HomePageTest extends BaseTest {
         homePage.highlightHomeTitle();
         PlaywrightFactory.takeScreenshot("locator");
         Assertions.assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
+        System.out.println(" -------> Datos del test: " + testInfo.toString());
+
     }
 
     @Test
