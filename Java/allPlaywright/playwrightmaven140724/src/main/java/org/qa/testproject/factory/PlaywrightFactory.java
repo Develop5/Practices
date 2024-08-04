@@ -20,10 +20,13 @@ import org.apache.logging.log4j.Logger;
 public class PlaywrightFactory {
     public static final Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
 
+    /*
     Playwright playwright;
     Browser browser;
     BrowserContext browserContext;
     Page page;
+
+     */
     Properties prop;
 
     private static ThreadLocal<Browser> tlBrowser = new ThreadLocal<>();
