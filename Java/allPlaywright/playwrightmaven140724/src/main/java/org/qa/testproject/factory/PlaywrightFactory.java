@@ -140,6 +140,7 @@ public class PlaywrightFactory {
     }
 
     public static String takeScreenshot() {
+        // full page captured
         byte[] buffer = getPage()
                 .screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath())).setFullPage(true));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
@@ -149,6 +150,7 @@ public class PlaywrightFactory {
 
 
     public static String takeScreenshot(String prefix) {
+        // Not full page captured
         byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath(prefix))).setFullPage(false));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
         return base64Path;

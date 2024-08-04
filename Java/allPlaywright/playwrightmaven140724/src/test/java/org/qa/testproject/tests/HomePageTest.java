@@ -30,6 +30,8 @@ public class HomePageTest extends BaseTest {
 	@Order(2)
 	public void homePageTitleTest(TestInfo testInfo) {
 		String pageActualTitle = homePage.getHomePageTitle();
+		homePage.highlightHomeTitle();
+		PlaywrightFactory.takeScreenshot("locator");
 		Assertions.assertEquals(AppConstants.HOME_PAGE_TITLE, pageActualTitle);
 		PlaywrightFactory.logger.info("Test -> " + getOnlyTestName(testInfo) + " -- Title : " + pageActualTitle);
 	}
@@ -71,11 +73,6 @@ public class HomePageTest extends BaseTest {
 	}
 
 
-
-	public void hightlightHomeTitle(){
-		homePage.highlightElement("Title");
-		PlaywrightFactory.takeScreenshot("locator");
-	}
 
 	public String getOnlyTestName(TestInfo testInfo){
 		// Check if needed

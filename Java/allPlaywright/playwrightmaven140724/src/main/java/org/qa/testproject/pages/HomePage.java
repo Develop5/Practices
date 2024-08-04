@@ -74,14 +74,9 @@ public class HomePage {
         page.locator(locator_searchbar).click();
         page.locator(locator_searchbar).type(inputText);
         page.locator(locator_searchbar).highlight();
-
-        //Keyboard.PressOptions pressOptions = new Keyboard.PressOptions();
-        //pressOptions.setDelay(1000);
-
         page.keyboard().press("Enter");
         page.locator(locator_searchbar).waitFor();
         page.locator(locator_searchbar).highlight();
-        //page.waitForLoadState();
         logger.info("let me wait for URL change");
         page.waitForURL("**/?q=Bolsos");
         logger.info(auxiliar_ClassName + "Search bar filled up");
@@ -124,6 +119,10 @@ public class HomePage {
     public void highlightCategory(){
         page.locator(selected_category).focus();
         page.locator(selected_category).highlight();
+    }
+    public void highlightHomeTitle(){
+        page.locator(title).focus();
+        page.locator(title).highlight();
     }
 
 
