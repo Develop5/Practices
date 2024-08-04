@@ -18,6 +18,17 @@ In this project, the PlaywrightFactory class is in charge of configuring the con
 
 
 2) ExtentReports
+    
+    Try these:
+    - https://stackoverflow.com/questions/57980469/is-there-an-equivalent-class-like-itestresultusing-testng-that-is-available-wi
+    - https://stackoverflow.com/questions/55667320/how-to-use-itestresult-for-extend-reports-in-junit-maven-in-after
+    - https://www.swtestacademy.com/junit-listeners/
+    - https://www.lambdatest.com/blog/extent-reports-in-selenium/
+    - https://www.tothenew.com/blog/how-to-use-extentreport-in-a-framework-2/
+    - https://howtodoinjava.com/junit5/junit-html-report/
+    - https://stackoverflow.com/questions/65139350/how-to-combine-extentreports-for-multiple-junit5-test-classes-into-one-html-file
+    - https://www.youtube.com/watch?v=Yuw4k3ppdMA
+    - 
 
 <br/><br/>
 **Tips.-**
