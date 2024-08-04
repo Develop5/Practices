@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Properties;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
@@ -20,19 +21,14 @@ import org.apache.logging.log4j.Logger;
 public class PlaywrightFactory {
     public static final Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
 
-    /*
-    Playwright playwright;
-    Browser browser;
-    BrowserContext browserContext;
-    Page page;
-
-     */
     Properties prop;
+    ExtentReports extentReports;
 
     private static ThreadLocal<Browser> tlBrowser = new ThreadLocal<>();
     private static ThreadLocal<BrowserContext> tlBrowserContext = new ThreadLocal<>();
     private static ThreadLocal<Page> tlPage = new ThreadLocal<>();
     private static ThreadLocal<Playwright> tlPlaywright = new ThreadLocal<>();
+
 
     public static Playwright getPlaywright() {
         return tlPlaywright.get();
@@ -96,7 +92,6 @@ public class PlaywrightFactory {
      * this method is used to initialize the properties from config file
      */
     public Properties read_properties() {
-
         try {
             FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
             prop = new Properties();
@@ -108,18 +103,44 @@ public class PlaywrightFactory {
             System.out.println("Unable to open input file");
             e.printStackTrace();
         }
-        logger.info("Properties : " + prop);
+        logger.info("Extent report properties : " + extentReports);
         return prop;
     }
 
+    public ExtentReports read_report_properties() {
+        try {
+            FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/extent.properties");
+            extentReports = new ExtentReports();
+            // ------------> LBP ------- Here, I need to load extent properties from file
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Sorry, unable to find file");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("Unable to open input file");
+            e.printStackTrace();
+        }
+        logger.info("Properties : " + extentReports);
+        return extentReports;
+    }
+
+    public static String getScreenshotPath(){
+        String screenshotOutputPath = (String.format("%s/screenshot/%d.png",
+                System.getProperty("user.dir"),
+                System.currentTimeMillis()));
+        return screenshotOutputPath ;
+    }
+
+    public static String getScreenshotPath(String prefix){
+        String screenshotOutputPath = (String.format("%s/screenshot/%s%d.png",
+                System.getProperty("user.dir"),
+                prefix,
+                System.currentTimeMillis()));
+        return screenshotOutputPath ;
+    }
+
     public static String takeScreenshot() {
-        String path = System
-                .getProperty("user.dir")
-                + "/screenshot/"
-                + System.currentTimeMillis()
-                + ".png";
-        //getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
-        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath())).setFullPage(true));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
         return base64Path;
 
@@ -127,13 +148,17 @@ public class PlaywrightFactory {
 
 
     public static String takeScreenshot(String prefix) {
+        /*
         String path = System
                 .getProperty("user.dir")
                 + "/screenshot/"
                 + prefix
                 + System.currentTimeMillis()
                 + ".png";
-        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(false));
+
+         */
+
+        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(getScreenshotPath(prefix))).setFullPage(false));
         String base64Path = Base64.getEncoder().encodeToString(buffer);
         return base64Path;
 
@@ -152,6 +177,8 @@ public class PlaywrightFactory {
         return base64Path;
 
     }
+
+
 
 
 }
