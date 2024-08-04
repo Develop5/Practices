@@ -1,8 +1,8 @@
-package org.example.qa.zalando.pages;
+package org.qa.testproject.pages;
 
 import com.microsoft.playwright.Page;
 
-import static org.example.qa.zalando.factory.PlaywrightFactory.logger;
+import static org.qa.testproject.factory.PlaywrightFactory.logger;
 
 public class HomePage {
 
