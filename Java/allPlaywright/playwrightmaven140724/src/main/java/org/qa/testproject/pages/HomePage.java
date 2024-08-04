@@ -10,22 +10,22 @@ public class HomePage {
 
     // 1. String locators - OR
 
-    private String title = "//a[@class='dangerousLogoWidthBelowMobile']//*[name()='svg']";
-    private String Hombre_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Hombre']";
+    private final String title = "//a[@class='dangerousLogoWidthBelowMobile']//*[name()='svg']";
+    private final String Hombre_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Hombre']";
 
-    private String Mujer_Button = "//span[contains(text(),'Mujer')]";
+    private final String Mujer_Button = "//span[contains(text(),'Mujer')]";
 
-    private String Ninnos_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Niños']";
+    private final String Ninnos_Button = "//span[@class='sDq_FX _2kjxJ6 dgII7d HlZ_Tf'][normalize-space()='Niños']";
 
-    private String search_bar = "id='header-search-input'";
+    private final String search_bar = "id='header-search-input'";
 
-    private String locator_searchbar_placeholder = "Busca aquí";
+    private final String locator_searchbar_placeholder = "Busca aquí";
 
-    private String locator_searchbar = "#header-search-input";
+    private final String locator_searchbar = "#header-search-input";
 
-    private String selected_category = ".FxZV-M.HlZ_Tf.CzGCn5";
+    private final String selected_category = ".FxZV-M.HlZ_Tf.CzGCn5";
 
-    private String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
+    private final String images_category = ".L5YdXz._0xLoFW._7ckuOK.mROyo1";
 
 
     // 2. Page constructor

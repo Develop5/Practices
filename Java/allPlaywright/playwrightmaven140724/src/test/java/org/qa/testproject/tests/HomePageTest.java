@@ -74,8 +74,7 @@ public class HomePageTest extends BaseTest {
 
     public String getOnlyTestName(TestInfo testInfo) {
         // Check if needed
-        String removingUnusedArg = testInfo.getDisplayName().replace("TestInfo", "");
-        return removingUnusedArg;
+        return testInfo.getDisplayName().replace("TestInfo", "");
     }
 
 		/*
