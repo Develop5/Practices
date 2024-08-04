@@ -112,9 +112,20 @@ public class HomePage {
     }
 
     public void highlightElement(String locator){
-        logger.info("locator highlighted...");
         page.locator(locator).highlight();
         page.locator(locator).focus();
     }
+
+    public void highlightSearchBar(){
+        page.locator(search_bar).focus();
+        page.locator(search_bar).highlight();
+    }
+
+    public void highlightCategory(){
+        page.locator(selected_category).focus();
+        page.locator(selected_category).highlight();
+    }
+
+
 
 }
