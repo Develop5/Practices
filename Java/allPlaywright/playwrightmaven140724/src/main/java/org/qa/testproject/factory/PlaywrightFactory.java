@@ -124,19 +124,19 @@ public class PlaywrightFactory {
         return extentReports;
     }
 
-    public static String getScreenshotPath(){
+    public static String getScreenshotPath() {
         String screenshotOutputPath = (String.format("%s/screenshot/%d.png",
                 System.getProperty("user.dir"),
                 System.currentTimeMillis()));
-        return screenshotOutputPath ;
+        return screenshotOutputPath;
     }
 
-    public static String getScreenshotPath(String prefix){
+    public static String getScreenshotPath(String prefix) {
         String screenshotOutputPath = (String.format("%s/screenshot/%s%d.png",
                 System.getProperty("user.dir"),
                 prefix,
                 System.currentTimeMillis()));
-        return screenshotOutputPath ;
+        return screenshotOutputPath;
     }
 
     public static String takeScreenshot() {

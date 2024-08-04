@@ -29,29 +29,29 @@ public class HomePage {
 
 
     // 2. Page constructor
-    public HomePage(Page page){
+    public HomePage(Page page) {
         this.page = page;
     }
 
 
     // 3. Page actions/methods
-    public String getHomePageTitle(){
+    public String getHomePageTitle() {
         return page.title();
     }
 
-    public void clickGroupMujer(){
+    public void clickGroupMujer() {
         page.click(Mujer_Button);
     }
 
-    public void clickGroupHombre(){
+    public void clickGroupHombre() {
         page.click(Hombre_Button);
     }
 
-    public void clickGroupNinnos(){
+    public void clickGroupNinnos() {
         page.click(Ninnos_Button);
     }
 
-    public void goToPage(String newUrl){
+    public void goToPage(String newUrl) {
         logger.info("Navigating to another url...");
         logger.info("Initial url: " + page.url());
         page.navigate(newUrl);
@@ -59,12 +59,12 @@ public class HomePage {
         logger.info("Final url: " + page.url());
     }
 
-    public String getCurrentUrl(){
+    public String getCurrentUrl() {
         return page.url();
     }
 
-    public String getHomePageCurrentURL(){
-        String url =  page.url();
+    public String getHomePageCurrentURL() {
+        String url = page.url();
         return page.url();
     }
 
@@ -96,7 +96,7 @@ public class HomePage {
         return (categoryText.contains(textToBecontained));
     }
 
-    public void pauseHomePage(){
+    public void pauseHomePage() {
         page.pause();
     }
 
@@ -106,25 +106,25 @@ public class HomePage {
         highlightElement(selected_category);
     }
 
-    public void highlightElement(String locator){
+    public void highlightElement(String locator) {
         page.locator(locator).highlight();
         page.locator(locator).focus();
     }
 
-    public void highlightSearchBar(){
+    public void highlightSearchBar() {
         page.locator(search_bar).focus();
         page.locator(search_bar).highlight();
     }
 
-    public void highlightCategory(){
+    public void highlightCategory() {
         page.locator(selected_category).focus();
         page.locator(selected_category).highlight();
     }
-    public void highlightHomeTitle(){
+
+    public void highlightHomeTitle() {
         page.locator(title).focus();
         page.locator(title).highlight();
     }
-
 
 
 }
