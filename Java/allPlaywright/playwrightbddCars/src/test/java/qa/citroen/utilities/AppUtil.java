@@ -1,4 +1,4 @@
-package e2e.utils;
+package qa.citroen.utilities;
 
 
 public class AppUtil{

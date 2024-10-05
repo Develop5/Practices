@@ -1,4 +1,4 @@
-package qa.zalando.factory;
+package qa.citroen.factory;
 
 
 import com.microsoft.playwright.Browser;
@@ -92,6 +92,7 @@ public class PlaywrightFactory {
      * this method is used to initialize the properties from config file
      */
     public Properties read_properties() {
+        System.out.println("------ Estoy en properties -------------");
 
         try {
             FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");

@@ -39,6 +39,14 @@ Just in case the last one does not work for sharing context, have a look at this
 In order to read files in "resources" folder, take into account this:
 [How to read a file from a Maven dependency project?](https://stackoverflow.com/questions/28711606/how-to-read-a-file-from-a-maven-dependency-project)
 
+## Notes ##
+1) How to comment lines in xml
+  <!--
+  <dependencies>
+  </dependencies>
+  -->
+
+
 Playwright version downgraded to 1.26.0
 
 **Next steps:**
