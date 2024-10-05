@@ -39,7 +39,6 @@ public class MainSteps {
 
 	@Given("the user is in the page {string}")
 	public void the_user_is_in_the_page(String theArgument) {
-		//throw new io.cucumber.java.PendingException();
 		System.out.println("Nothing here --------  " + theArgument);
 	}
 
