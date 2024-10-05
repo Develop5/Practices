@@ -24,13 +24,17 @@ public class MainSteps {
 	String locC4XTitle = ".Heading-module_heading__2pnHW.Shame_heading__SZfn8.font-bold.font-heading-m";
 
 
-
+	/*
 	public MainSteps(MainContext testContext, Page page) {
 		this.browser = testContext.getBrowser();
 		this.page = testContext.newPage();
 		System.out.println("LBP -----> browser: " + this.browser);
 		System.out.println("LBP -----> page: " + this.page);
 	}
+
+	 */
+
+
 
 	public MainSteps() {
 	}
@@ -45,7 +49,7 @@ public class MainSteps {
 	@Given("user at homepage")
 	public void user_at_homepage() {
 		//throw new io.cucumber.java.PendingException();
-		System.out.println(" User at homepage feature");
+		System.out.println("LBP ----->  User at homepage step in second.feature");
 	}
 
 	@When("title of page is {string}")
