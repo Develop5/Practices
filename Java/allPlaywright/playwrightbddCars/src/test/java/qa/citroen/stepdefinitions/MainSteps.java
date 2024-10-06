@@ -6,6 +6,7 @@ import io.cucumber.java.en.*;
 import com.microsoft.playwright.*;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static qa.citroen.constants.AppConstants.HOME_PAGE_TITLE;
 import static qa.citroen.factory.MainContext.page;
 
 import org.apache.logging.log4j.LogManager;
@@ -30,8 +31,7 @@ public class MainSteps {
 
 
 	// New locators
-	String locC4XTitle = ".Heading-module_heading__2pnHW.Shame_heading__SZfn8.font-bold.font-heading-m";
-
+	String locC4XTitle = "//h1[@class='Heading-module_heading__2pnHW Shame_heading__AsKn2 font-bold font-heading-m']";
 	public MainSteps() {
 	}
 
@@ -43,17 +43,13 @@ public class MainSteps {
 
 	@Given("user at homepage")
 	public void user_at_homepage() {
-		loggerSteps.info("------> second.feature");
-		loggerSteps.info("Checking URL " );
 		String baseUrl = PlaywrightFactory.read_properties().getProperty("url");
-		loggerSteps.info("------ Base URL:    " + baseUrl);
-		loggerSteps.info("------ Current URL: " + page.url());
 		assertEquals(page.url(), baseUrl);
 	}
 
-	@When("title of page is {string}")
-	public void title_of_page_is(String pageTitle) {
-		assertEquals(locC4XTitle, pageTitle);
+	@When("title of page is the initial one")
+	public void title_of_page_is_the_initial_one() {
+		assertEquals(page.locator(locC4XTitle).textContent(), HOME_PAGE_TITLE);
 
 	}
 

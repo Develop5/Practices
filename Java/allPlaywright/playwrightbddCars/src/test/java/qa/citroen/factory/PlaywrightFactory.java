@@ -44,18 +44,13 @@ public class PlaywrightFactory {
     }
 
     public static Page getPage() {
-        logger.info("--------> PlaywrighFactory page: " + tlPage.get());
         return tlPage.get();
     }
 
     public Page initBrowser(Properties prop) {
 
         String browserName = prop.getProperty("browser").trim();
-        logger.info("browser name is : " + browserName);
-
         Boolean headlessMode = Boolean.parseBoolean(prop.getProperty("headless").trim());
-        logger.info("headless Mode is : " + headlessMode);
-
         tlPlaywright.set(Playwright.create());
 
         switch (browserName.toLowerCase()) {
@@ -98,8 +93,6 @@ public class PlaywrightFactory {
      * this method is used to initialize the properties from config file
      */
     public static Properties read_properties() {
-        logger.info("Reading properties ...");
-
         try {
             FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
             prop = new Properties();
@@ -111,7 +104,7 @@ public class PlaywrightFactory {
             System.out.println("Unable to open input file");
             e.printStackTrace();
         }
-        logger.info("Properties : " + prop);
+        //logger.info("Properties : " + prop);
         return prop;
     }
 
