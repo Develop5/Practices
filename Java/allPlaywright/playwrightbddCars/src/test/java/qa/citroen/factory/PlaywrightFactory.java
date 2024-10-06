@@ -17,7 +17,6 @@ import java.util.Base64;
 import java.util.Properties;
 
 
-
 public class PlaywrightFactory {
     public static Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
 
@@ -50,28 +49,32 @@ public class PlaywrightFactory {
 
     public Page initBrowser(Properties prop) {
 
+
         String browserName = prop.getProperty("browser").trim();
         logger.info("browser name is : " + browserName);
+
+        Boolean headlessMode = Boolean.parseBoolean(prop.getProperty("headless").trim());
+        logger.info("headless Mode is : " + headlessMode);
 
         tlPlaywright.set(Playwright.create());
 
         switch (browserName.toLowerCase()) {
             case "chromium":
-                tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setHeadless(false)));
+                tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setHeadless(headlessMode)));
                 break;
             case "firefox":
-                tlBrowser.set(getPlaywright().firefox().launch(new LaunchOptions().setHeadless(false)));
+                tlBrowser.set(getPlaywright().firefox().launch(new LaunchOptions().setHeadless(headlessMode)));
                 break;
             case "safari":
-                tlBrowser.set(getPlaywright().webkit().launch(new LaunchOptions().setHeadless(false)));
+                tlBrowser.set(getPlaywright().webkit().launch(new LaunchOptions().setHeadless(headlessMode)));
                 break;
             case "chrome":
                 tlBrowser.set(
-                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false)));
+                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(headlessMode)));
                 break;
             case "edge":
                 tlBrowser.set(
-                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("msedge").setHeadless(false)));
+                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("msedge").setHeadless(headlessMode)));
                 break;
 
             default:
@@ -94,7 +97,7 @@ public class PlaywrightFactory {
      * this method is used to initialize the properties from config file
      */
     public Properties read_properties() {
-        System.out.println("------ Estoy en properties -------------");
+        logger.info("Reading properties ...");
 
         try {
             FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");

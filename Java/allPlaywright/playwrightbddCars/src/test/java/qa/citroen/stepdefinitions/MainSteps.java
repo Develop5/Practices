@@ -6,11 +6,17 @@ import io.cucumber.java.en.*;
 import com.microsoft.playwright.*;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import qa.citroen.factory.PlaywrightFactory;
 import qa.citroen.utilities.AppUtil;
 import qa.citroen.factory.MainContext;
 
 
 public class MainSteps {
+
+	public static Logger loggerSteps = LogManager.getLogger(MainSteps.class.getName());
 
 	private Browser browser;
 	private BrowserContext context;
@@ -48,7 +54,7 @@ public class MainSteps {
 
 	@Given("I do not want to use this feature")
 	public void i_do_not_want_to_use_this_feature() {
-		System.out.println("LBP ------> nueva.feature");
+		loggerSteps.info("------> nueva.feature");
 	}
 
 }
