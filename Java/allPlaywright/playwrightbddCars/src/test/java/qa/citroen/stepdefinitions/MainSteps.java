@@ -1,12 +1,16 @@
 package qa.citroen.stepdefinitions;
 
 
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import qa.citroen.factory.PlaywrightFactory;
+
+import java.util.regex.Pattern;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static qa.citroen.constants.AppConstants.HOME_PAGE_TITLE;
@@ -47,7 +51,10 @@ public class MainSteps{
 
 	@When("the user clicks {string} button")
 	public void the_user_clicks_button(String buttonName) {
-		page.locator(locAcceotCookies).click();
+
+
+		// First time in page
+		page.locator(locSolicitarOfertas).highlight();
 		page.locator(locSolicitarOfertas).click();
 	}
 
@@ -85,12 +92,36 @@ public class MainSteps{
 		//page.locator(locFormAccept).highlight();
 		// Ellaborate this locator
 		page.getByLabel("Acepto el aviso de protección de datos").click();
-
 	}
 
 	@Then("the user wants to wait until check")
 	public void the_user_wants_to_wait_until_check() throws InterruptedException {
-		Thread.sleep(2000);
+		//Thread.sleep(1000);
+		page.pause();
+	}
+
+	@Then("the user reloads the page and clicks above")
+	public void the_user_reloads_the_page_and_clicks_above() {
+		page.reload();
+		page.evaluate("document.body.style.zoom=0.7");
+
+		// next time in page
+		page.locator(".PrimaryButton-module_text__RjBV0").nth(0).highlight();
+		page.locator(".PrimaryButton-module_text__RjBV0").nth(0).click();
+
+	}
+
+
+	@Then("the user just reloads the page")
+	public void the_user_reloads_the_page() {
+		page.reload();
+		page.evaluate("document.body.style.zoom=0.7");
+	}
+
+
+	@Given("the first time cookies are accepted")
+	public void the_first_time_cookies_are_accepted() {
+			page.locator(locAcceptCookies).dispatchEvent("click");
 	}
 
 }
