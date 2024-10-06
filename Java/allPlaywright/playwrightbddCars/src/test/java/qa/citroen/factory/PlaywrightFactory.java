@@ -16,8 +16,10 @@ import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Properties;
 
+
+
 public class PlaywrightFactory {
-    public static final Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
+    public static Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
 
     Playwright playwright;
     Browser browser;
