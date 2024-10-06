@@ -44,6 +44,7 @@ public class MainContext {
         } catch(InterruptedException ex) {
             System.out.println(ex.getMessage());
         }
+        context.close();
     }
 
 

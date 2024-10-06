@@ -46,6 +46,9 @@ In order to read files in "resources" folder, take into account this:
   </dependencies>
   -->
 
+2) How to zoom out in Playwright
+   page.evaluate("document.body.style.zoom=0.7");
+
 
 Playwright version downgraded to 1.26.0
 
