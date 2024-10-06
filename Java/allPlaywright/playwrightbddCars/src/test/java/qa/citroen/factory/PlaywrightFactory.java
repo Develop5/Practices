@@ -24,7 +24,7 @@ public class PlaywrightFactory {
     Browser browser;
     BrowserContext browserContext;
     Page page;
-    Properties prop;
+    static Properties prop;
 
     private static ThreadLocal<Browser> tlBrowser = new ThreadLocal<>();
     private static ThreadLocal<BrowserContext> tlBrowserContext = new ThreadLocal<>();
@@ -44,11 +44,11 @@ public class PlaywrightFactory {
     }
 
     public static Page getPage() {
+        logger.info("--------> PlaywrighFactory page: " + tlPage.get());
         return tlPage.get();
     }
 
     public Page initBrowser(Properties prop) {
-
 
         String browserName = prop.getProperty("browser").trim();
         logger.info("browser name is : " + browserName);
@@ -89,6 +89,7 @@ public class PlaywrightFactory {
         tlPage.set(getBrowserContext().newPage());
 
         getPage().navigate(prop.getProperty("url").trim());
+        //return page;
         return getPage();
 
     }
@@ -96,7 +97,7 @@ public class PlaywrightFactory {
     /**
      * this method is used to initialize the properties from config file
      */
-    public Properties read_properties() {
+    public static Properties read_properties() {
         logger.info("Reading properties ...");
 
         try {

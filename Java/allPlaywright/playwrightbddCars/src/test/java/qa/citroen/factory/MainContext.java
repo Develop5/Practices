@@ -24,6 +24,7 @@ public class MainContext {
         PlaywrightFactory pf = new PlaywrightFactory();
         Properties prop = pf.read_properties();
         page = pf.initBrowser(prop);
+        loggerContext.info("En BeforeAll ---------> page: " + page);
 
         playwright = Playwright.create();
         BrowserType browserType = playwright.chromium();
@@ -31,8 +32,6 @@ public class MainContext {
                 .setHeadless(false)
                 .setSlowMo(100));
         context = browser.newContext();
-
-
     }
 
 

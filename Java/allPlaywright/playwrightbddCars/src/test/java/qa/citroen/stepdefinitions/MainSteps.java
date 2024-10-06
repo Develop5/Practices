@@ -6,6 +6,7 @@ import io.cucumber.java.en.*;
 import com.microsoft.playwright.*;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static qa.citroen.factory.MainContext.page;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,12 +19,14 @@ public class MainSteps {
 
 	public static Logger loggerSteps = LogManager.getLogger(MainSteps.class.getName());
 
+	/*
 	private Browser browser;
 	private BrowserContext context;
 	private Page page;
-	private Map<String, String> dataState = new HashMap<>();
 
-	String url = "https://www.coches.com/coches-nuevos/Citroen-C4+X/";
+	 */
+
+	//String url = "https://www.coches.com/coches-nuevos/Citroen-C4+X/";
 
 
 	// New locators
@@ -40,9 +43,12 @@ public class MainSteps {
 
 	@Given("user at homepage")
 	public void user_at_homepage() {
-		//throw new io.cucumber.java.PendingException();
-
-		System.out.println("LBP ----->  User at homepage step in second.feature");
+		loggerSteps.info("------> second.feature");
+		loggerSteps.info("Checking URL " );
+		String baseUrl = PlaywrightFactory.read_properties().getProperty("url");
+		loggerSteps.info("------ Base URL:    " + baseUrl);
+		loggerSteps.info("------ Current URL: " + page.url());
+		assertEquals(page.url(), baseUrl);
 	}
 
 	@When("title of page is {string}")
