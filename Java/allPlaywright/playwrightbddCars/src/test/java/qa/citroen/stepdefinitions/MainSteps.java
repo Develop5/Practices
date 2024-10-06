@@ -76,6 +76,7 @@ public class MainSteps{
 	}
 	@Then("the user checks No Financiar")
 	public void the_user_checks_no_financiar() {
+		page.evaluate("document.body.style.zoom=0.7");
 		page.locator(locFormNoCredit).click();
 	}
 	@Then("the user checks Acepto")

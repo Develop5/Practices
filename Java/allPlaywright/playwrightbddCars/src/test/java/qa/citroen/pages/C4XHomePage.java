@@ -10,7 +10,7 @@ public class C4XHomePage {
     public static String locFormEmail = "//input[@id='email']";
     public static String locFormZip = "//input[@id='postalCode']";
     public static String locFormPhone = "//input[@id='phone']";
-    public static String locFormNoCredit = "//input[@value='0']";
+    public static String locFormNoCredit = ".Radio-module_input__7R8ZN [value=\"0\"]";
     public static String locFormAccept = "//input[@name='acceptTerms']";
     public static String locFormFinalRequestOffer = "//span[contains(text(),'Solicitar ofertas')]";
 

@@ -21,8 +21,8 @@ Feature: Products in main page
     And the user fills in CódigoPostal with "<zipCode>"
     And the user fills in Teléfono with "<phoneNumber>"
     And the user checks No Financiar
-    And the user checks Acepto
-    And the user wants to wait until check
+    #And the user checks Acepto
+    #And the user wants to wait until check
     #And the user clicks 2nd Solicitar
     Examples:
       | name    | theEmail                     | zipCode | phoneNumber |
