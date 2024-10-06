@@ -16,6 +16,7 @@ import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Properties;
 
+import static qa.citroen.constants.AppConstants.CONFIG_FILE_PATH;
 
 
 public class PlaywrightFactory {
@@ -25,7 +26,7 @@ public class PlaywrightFactory {
     Browser browser;
     BrowserContext browserContext;
     Page page;
-    Properties prop;
+    static Properties prop;
 
     private static ThreadLocal<Browser> tlBrowser = new ThreadLocal<>();
     private static ThreadLocal<BrowserContext> tlBrowserContext = new ThreadLocal<>();
@@ -51,27 +52,26 @@ public class PlaywrightFactory {
     public Page initBrowser(Properties prop) {
 
         String browserName = prop.getProperty("browser").trim();
-        logger.info("browser name is : " + browserName);
-
+        Boolean headlessMode = Boolean.parseBoolean(prop.getProperty("headless").trim());
         tlPlaywright.set(Playwright.create());
 
         switch (browserName.toLowerCase()) {
             case "chromium":
-                tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setHeadless(false)));
+                tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setHeadless(headlessMode)));
                 break;
             case "firefox":
-                tlBrowser.set(getPlaywright().firefox().launch(new LaunchOptions().setHeadless(false)));
+                tlBrowser.set(getPlaywright().firefox().launch(new LaunchOptions().setHeadless(headlessMode)));
                 break;
             case "safari":
-                tlBrowser.set(getPlaywright().webkit().launch(new LaunchOptions().setHeadless(false)));
+                tlBrowser.set(getPlaywright().webkit().launch(new LaunchOptions().setHeadless(headlessMode)));
                 break;
             case "chrome":
                 tlBrowser.set(
-                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false)));
+                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(headlessMode)));
                 break;
             case "edge":
                 tlBrowser.set(
-                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("msedge").setHeadless(false)));
+                        getPlaywright().chromium().launch(new LaunchOptions().setChannel("msedge").setHeadless(headlessMode)));
                 break;
 
             default:
@@ -86,6 +86,7 @@ public class PlaywrightFactory {
         tlPage.set(getBrowserContext().newPage());
 
         getPage().navigate(prop.getProperty("url").trim());
+        //return page;
         return getPage();
 
     }
@@ -93,11 +94,10 @@ public class PlaywrightFactory {
     /**
      * this method is used to initialize the properties from config file
      */
-    public Properties read_properties() {
-        System.out.println("------ Estoy en properties -------------");
-
+    public static Properties read_properties() {
         try {
-            FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
+            //FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
+            FileInputStream initialProperties = new FileInputStream(CONFIG_FILE_PATH);
             prop = new Properties();
             prop.load(initialProperties);
         } catch (FileNotFoundException e) {
@@ -107,7 +107,6 @@ public class PlaywrightFactory {
             System.out.println("Unable to open input file");
             e.printStackTrace();
         }
-        logger.info("Properties : " + prop);
         return prop;
     }
 
