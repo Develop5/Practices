@@ -16,6 +16,8 @@ import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Properties;
 
+import static qa.citroen.constants.AppConstants.CONFIG_FILE_PATH;
+
 
 public class PlaywrightFactory {
     public static Logger logger = LogManager.getLogger(PlaywrightFactory.class.getName());
@@ -94,7 +96,8 @@ public class PlaywrightFactory {
      */
     public static Properties read_properties() {
         try {
-            FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
+            //FileInputStream initialProperties = new FileInputStream("./src/test/resources/config/config.properties");
+            FileInputStream initialProperties = new FileInputStream(CONFIG_FILE_PATH);
             prop = new Properties();
             prop.load(initialProperties);
         } catch (FileNotFoundException e) {
@@ -104,7 +107,6 @@ public class PlaywrightFactory {
             System.out.println("Unable to open input file");
             e.printStackTrace();
         }
-        //logger.info("Properties : " + prop);
         return prop;
     }
 

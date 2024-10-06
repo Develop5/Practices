@@ -36,10 +36,11 @@ public class MainContext {
 
     @AfterAll
     public static void AfterAll(){
-        //sleep for 5 seconds for viewing result (headed mode)
+        //sleep for 500 milliseconds for viewing result (headed mode)
+        // Not needed in the future
         try {
-            loggerContext.info("-------->  After All --------");
-            Thread.sleep(2000);
+            loggerContext.info("-------->  After All ---------");
+            Thread.sleep(500);
         } catch(InterruptedException ex) {
             System.out.println(ex.getMessage());
         }
