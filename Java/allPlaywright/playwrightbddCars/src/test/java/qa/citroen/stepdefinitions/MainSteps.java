@@ -7,12 +7,11 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import qa.citroen.factory.PlaywrightFactory;
-import qa.citroen.utilities.AppUtil;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static qa.citroen.constants.AppConstants.HOME_PAGE_TITLE;
 import static qa.citroen.factory.MainContext.*;
-import static qa.citroen.pages.C4XHomePage.*;
+import static qa.citroen.pages.DaciaHomePage.*;
 import static qa.citroen.utilities.AppUtil.*;
 
 
@@ -77,11 +76,16 @@ public class MainSteps{
 	@Then("the user checks No Financiar")
 	public void the_user_checks_no_financiar() {
 		page.evaluate("document.body.style.zoom=0.7");
-		page.locator(locFormNoCredit).click();
+		// Ellaborate this locator
+		page.locator("label").nth(5).dispatchEvent("click");
 	}
+
 	@Then("the user checks Acepto")
 	public void the_user_checks_acepto() {
-		page.locator(locFormAccept).click();
+		//page.locator(locFormAccept).highlight();
+		// Ellaborate this locator
+		page.getByLabel("Acepto el aviso de protección de datos").click();
+
 	}
 
 	@Then("the user wants to wait until check")

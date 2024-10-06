@@ -1,7 +1,7 @@
 Feature: Products in main page
 
 
-  Scenario: User can see title in C4X page
+  Scenario: User can see title in page of cars
     Given the user is at homepage
     Then title of page is the initial one
 
@@ -21,7 +21,7 @@ Feature: Products in main page
     And the user fills in CódigoPostal with "<zipCode>"
     And the user fills in Teléfono with "<phoneNumber>"
     And the user checks No Financiar
-    #And the user checks Acepto
+    And the user checks Acepto
     #And the user wants to wait until check
     #And the user clicks 2nd Solicitar
     Examples:
