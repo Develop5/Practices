@@ -32,10 +32,49 @@ Feature: Products in main page
     #And the user just reloads the page
     #And the user reloads the page and clicks above
     Examples:
-      | name    | theEmail                     | zipCode | phoneNumber |
-      | Lourdes | lourdesalternativa@yahoo.com | 42005   | 697974309   |
+      | name | theEmail | zipCode | phoneNumber |
 
-      # Citroën. Soria
+  10600
+
+
+
+
+      # Ya enviados. Opel. Madrid y Toledo
+      #| Lourdes | lourdesalternativa@yahoo.com | 28029   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 28022   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 28031   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 28009   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 28008   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 28016   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 28850   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 45280   | 697974309   |
+
+
+
+      # Ya enviados. Opel. Casa
+      #| Lourdes | lourdesalternativa@yahoo.com | 28037   | 697974309   |
+
+      # Ya enviados. Opel. Andalucía
+      # | Lourdes | lourdesalternativa@yahoo.com | 21400   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 41927   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 11011   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 11540   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 41018   | 697974309   |
+
+      # Ya enviados. Citroën. Cantabria-Burgos
+      #| Lourdes | lourdesalternativa@yahoo.com | 39300   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 39770   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 34004   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 42005   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 50500   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 09007   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 26300   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 09200   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 48960   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 48015   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 48610   | 697974309   |
+
+      # Ya enviado. Citroën. Soria
       #| Lourdes | lourdesalternativa@yahoo.com | 42005   | 697974309   |
 
       # Ya enviado. Citroën. Cuenca
