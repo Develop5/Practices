@@ -34,9 +34,72 @@ Feature: Products in main page
     Examples:
       | name | theEmail | zipCode | phoneNumber |
 
-  10600
+
+      # Peugeot 308. Madrid. Y las otras comunidades
+      #| Lourdes | lourdesalternativa@yahoo.com | 28012   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 08006   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 47610   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 20180   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15008   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 41003   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 33010   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 50012   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 39200   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 45007   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 06800   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 26006   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 30009   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 01012   | 697974309   |
 
 
+
+
+      # Opel. Málaga. Albacete. Huelva. A Coruña. Santiago.
+      #| Lourdes | lourdesalternativa@yahoo.com | 29006   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 29004   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 02006   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 21007   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15008   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15180   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15141   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15703   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15570   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15830   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15145   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15270   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15703   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 15890   | 697974309   |
+
+
+      # Ya enviados. Opel. Murcia y Almería
+      #| Lourdes | lourdesalternativa@yahoo.com | 30100   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 30203   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 04230   | 697974309   |
+
+
+      # Ya enviados. Opel. País Vasco
+      #| Lourdes | lourdesalternativa@yahoo.com | 48015   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 48903   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 48940   | 697974309   |
+
+
+      # Ya enviados. Opel. Barcelona
+      #| Lourdes | lourdesalternativa@yahoo.com | 08030   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 08006   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 08907   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 08030   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 08013   | 697974309   |
+
+
+
+      # Ya enviados. Opel. Extremadura
+      #| Lourdes | lourdesalternativa@yahoo.com | 10600   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 06800   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 06400   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 06230   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 10195   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 06300   | 697974309   |
+      #| Lourdes | lourdesalternativa@yahoo.com | 10200   | 697974309   |
 
 
       # Ya enviados. Opel. Madrid y Toledo
