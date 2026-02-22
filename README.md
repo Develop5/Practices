@@ -1,51 +1,17 @@
-# All folder practices here #
++p
+# 📚 Practices
 
-## Notes about testing ##
-[How Google and Facebook test](https://www.youtube.com/watch?v=atcLRoK75ng)
+Consolidated repository for all programming exercises, projects, testing frameworks, and learning materials across multiple languages and technologies.
 
-### Resources ###
-[Drive with resources for testers](https://drive.google.com/drive/folders/1pBUYDXa2tcW_1UfI_SXdnMPQ797AHNZB)
+## 🎯 Purpose
 
-**Java**
+This repository serves as a central hub for:
+- Programming exercises in multiple languages (Python, Java, etc.)
+- Testing automation frameworks and demonstrations
+- Standalone projects and prototypes
+- Learning materials and code references
 
-    1. Multiple Cases
-    2. Payment1
-    
-_Multiple Cases almost completely **lost**. Search for the the source of exercises **remake** this folder from scratch._
-
-------------------------------------------------------
-The rest needs to be updated
+## 📂 Repository Structure
 
 
-**JMeter** 
-
-    Four plans
-
-        1. Plan 8
-        
-        2. Plan 4
-        
-        3. (Update the list, please)
-
-
-
-**SeleniumPython**
-
-    With Python
-
-
-**Behave**
-
-    BDD with Python
-
-
-**MrCodeDev-Docker**
-
-
-    Tutorial on Docker?
-
-
-**VBA**
-
-    An excercise for regular verbs in English
 
