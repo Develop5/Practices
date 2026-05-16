@@ -1,0 +1,107 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "as-an-api-i-can-update-posts;asan-api-i-can-not-update-a-post-that-does-not-exist",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Asan API I can not update a post that does not exist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 22561499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I update the 200th \"posts\" with an \"updated post\"",
+            "match": {
+              "location": "src\\step-definitions\\put-steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 292679299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the response was unsuccessful",
+            "match": {
+              "location": "src\\step-definitions\\assertions\\response-steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5125700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the response status code is 500",
+            "match": {
+              "location": "src\\step-definitions\\assertions\\response-steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2600499
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Cannot read properties of undefined (reading 'id')"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the response text contains the attributes:",
+            "match": {
+              "location": "src\\step-definitions\\assertions\\response-steps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4377799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@dev",
+            "line": 16
+          },
+          {
+            "name": "@smoke",
+            "line": 17
+          },
+          {
+            "name": "@regression",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "as-an-api-i-can-update-posts",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "As an API I can update posts",
+    "tags": [],
+    "uri": "src\\features\\PUT.feature"
+  }
+]
