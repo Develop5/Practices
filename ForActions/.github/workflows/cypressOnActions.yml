@@ -1,0 +1,20 @@
+name: cypress-actions-from-main
+on: 
+  push:
+    branches: [main]
+jobs:
+  test:
+    strategy:
+      # A job matrix generates a job for worflow run. Up to a maximum of 256
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os}}
+    steps:
+      - name: Just Checkout
+        uses: actions/checkout@v2
+      # Install npm dependencies and cache them
+      # Run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        
+          
