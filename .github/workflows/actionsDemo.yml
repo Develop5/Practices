@@ -1,0 +1,13 @@
+name: action-for-ubuntu
+on: 
+  push:
+    branches: [develop]
+jobs:
+  checking-flow-in-develop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run: |
+          echo This one will run only for the develop branch
+
+          
